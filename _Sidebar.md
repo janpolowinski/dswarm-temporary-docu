@@ -1,2 +1,2 @@
-[[Home]]
-[[Datamanagement Platform (backend)]]
+* [[Home]]
+* [[Datamanagement Platform (backend)]]
