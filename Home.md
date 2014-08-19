@@ -1,4 +1,4 @@
-# d:swarm documentation - Wiki Version
+# d:swarm documentation
 ____
     
 ## Introduction
