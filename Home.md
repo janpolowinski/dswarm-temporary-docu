@@ -24,6 +24,8 @@ link to detailed technical documentation
 anything that is needed to run the software. anything that is preventing the software from running.
 
 ## Installation
+Installation instructions can be found in the [[Server Install]] guide. 
+
 running  
 copy from server installation guide.
 
