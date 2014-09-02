@@ -1,3 +1,4 @@
 * [[Home]]
 * [[Datamanagement Platform (backend)]]
-* [[server install]]
+** [[server install]]
+** [[d:swarm configuration]]
