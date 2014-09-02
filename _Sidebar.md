@@ -1,4 +1,6 @@
 * [[Home]]
 * [[Datamanagement Platform (backend)]]
-  * [[server install]]
+  * [[Server Install]]
+    * [[Initial Installation|Server-Install#Initial-Installation]]
+    * [[Update the System|Server-Install#update-the-system]]
   * [[d:swarm Configuration|dswarm Configuration]]
