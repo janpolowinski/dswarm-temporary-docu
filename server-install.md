@@ -1,6 +1,6 @@
 # initial installation
 
-premise:
+premise: 
 - empty trusty (14.04)
 - three additional partitions (easier to increase sizes): 
 -- /data/log, 1-5GB depending on usage
