@@ -16,6 +16,7 @@ d:swarm is a web application that runs in all modern web browsers.
 
 ## Documentation
 link to detailed end user documentation (currently dswarm blog) - refers to backoffice 
+
 link to detailed technical documentation
 
 
