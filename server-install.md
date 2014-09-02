@@ -16,7 +16,7 @@ _Note: some commands require user input, this is no unattended installation_
 **These steps require root level access**
 
 
-**1**. install system packages required for running the software
+## **1**. install system packages required for running the software
 
 ```
 su
