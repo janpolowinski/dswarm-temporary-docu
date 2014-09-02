@@ -1,4 +1,4 @@
-# initial installation
+# Initial Installation
 
 premise:
 - empty trusty (14.04)
@@ -361,7 +361,7 @@ lookout for the correct path (/home/user)
 /home/user/datamanagement-platform/dev-tools/reset-dbs.bash
 ```
 
-# updates
+# Update the System
 
 ## **1**. update repository contents
 
