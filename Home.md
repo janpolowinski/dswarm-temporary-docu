@@ -10,11 +10,12 @@ d:swarm takes care of the **improvement** of the data quality facilitating the d
 
 d:swarm channels all **institutional data flows** and creates a highly customized master record for every individual resource as a [Single Version of the Truth](http://en.wikipedia.org/wiki/Single_version_of_the_truth) (SVOT).
 
-d:swarm is a web application that runs in all modern web browsers. 
-
-
+d:swarm is a web application that runs in all modern web browsers. An alpha release of our web application is available at [http://sdvdswarm01.slub-dresden.de](http://sdvdswarm01.slub-dresden.de). If you want to participate in the alpha tests, [drop us a note](http://dmp.slub-dresden.de/en/interesse/), and we will gladly add you to the group of testers. We are looking forward to your feedback, your ideas, your opinion and your contribution.
 
 ## Documentation
+
+Link to [d:swarm Prezi](http://prezi.com/0zh_ypsezu6i/)
+
 link to detailed end user documentation (currently dswarm blog) - refers to backoffice 
 
 ![d:swarm workflow](https://raw.githubusercontent.com/wiki/seventwenty/dswarm-documentation/img/simplified_linear_dmp_steps.png)
