@@ -1,7 +1,5 @@
 # d:swarm documentation
 ____
-    
-[//]: # (test comment) 
 
 ## Introduction
 d:swarm is a **data integration and data modelling tool** that is based on the concept of [community sharing](http://en.wikipedia.org/wiki/Sharing). It is used for the lossless transformation of data from heterogeneous sources into a flexible ([elastic](http://en.wikipedia.org/wiki/Elasticity_%28data_store%29)), graph-based data model that can be explicitly embedded in the (Linked) Open Data webgraph.
@@ -14,13 +12,21 @@ d:swarm channels all **institutional data flows** and creates a highly customize
 
 d:swarm is a web application that runs in all modern web browsers. An **alpha release** of our web application is available at [http://sdvdswarm01.slub-dresden.de](http://sdvdswarm01.slub-dresden.de). If you want to participate in the alpha tests, [drop us a note](http://dmp.slub-dresden.de/en/interesse/), and we will gladly add you to the group of testers. We are looking forward to your feedback, your ideas, your opinion and your contribution.
 
+
 ## Documentation
 
-Link to [d:swarm Prezi](http://prezi.com/0zh_ypsezu6i/)
+There are two types of documentation: an **end user documentation** and a **technical documentation**. As a base, the [d:swarm Prezi](http://prezi.com/0zh_ypsezu6i/) summarizes the motivation and goals on an abstract level.
+
+The end user documentation contains a step-by-step tutorial on how to use our web application. Start with the [general overview](http://dmp.slub-dresden.de/en/) and carry on reading the [alpha release help](http://dmp.slub-dresden.de/en/datenmanagement/dswarm-hilfe/). You will learn the basic workflow depicted below, i.e., how to 1) setup and configure data resources, 2) create projects to define mappings, transformations and filters, 3) explore the graph data model and 4) export data in [RDF](http://en.wikipedia.org/wiki/Resource_Description_Framework).
+
+![d:swarm workflow](https://raw.githubusercontent.com/wiki/seventwenty/dswarm-documentation/img/simplified_linear_dmp_steps.png)
+
+
+
 
 link to detailed end user documentation (currently dswarm blog) - refers to backoffice 
 
-![d:swarm workflow](https://raw.githubusercontent.com/wiki/seventwenty/dswarm-documentation/img/simplified_linear_dmp_steps.png)
+
 
 link to detailed technical documentation
 
