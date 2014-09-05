@@ -15,21 +15,17 @@ d:swarm is a web application that runs in all modern web browsers. An **alpha re
 
 ## Documentation
 
-There are two documentation types: an **end user documentation** and a **technical documentation**. As a base, the [d:swarm Prezi](http://prezi.com/0zh_ypsezu6i/) summarizes the motivation and goals on an abstract level.
+There are two documentation types: an **end user documentation** on how to use d:swarm and a **technical documentation** for software developers. As a base, the [d:swarm Prezi](http://prezi.com/0zh_ypsezu6i/) summarizes the motivation and goals on an abstract level.
+
+### End User Documentation
 
 The end user documentation contains a step-by-step tutorial on how to use our web application. Start with the [general overview](http://dmp.slub-dresden.de/en/) and carry on reading the [alpha release help](http://dmp.slub-dresden.de/en/datenmanagement/dswarm-hilfe/). You will learn the basic workflow depicted below, i.e., how to 1) setup and configure data resources, 2) create projects to define mappings, transformations and filters, 3) explore the graph data model and 4) export data in [RDF](http://en.wikipedia.org/wiki/Resource_Description_Framework).
 
 ![d:swarm workflow](https://raw.githubusercontent.com/wiki/seventwenty/dswarm-documentation/img/simplified_linear_dmp_steps.png)
 
+### Technical documentation
 
-
-
-link to detailed end user documentation (currently dswarm blog) - refers to backoffice 
-
-
-
-link to detailed technical documentation
-
+this wiki. 
 
 ## Requirements
 anything that is needed to run the software. anything that is preventing the software from running.
