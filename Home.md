@@ -1,6 +1,8 @@
 # d:swarm documentation
 ____
     
+[//]: # (test comment) 
+
 ## Introduction
 d:swarm is a **data integration and data modelling tool** that is based on the concept of [community sharing](http://en.wikipedia.org/wiki/Sharing). It is used for the lossless transformation of data from heterogeneous sources into a flexible ([elastic](http://en.wikipedia.org/wiki/Elasticity_%28data_store%29)), graph-based data model that can be explicitly embedded in the (Linked) Open Data webgraph.
 
