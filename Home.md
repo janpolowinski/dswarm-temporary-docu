@@ -19,7 +19,7 @@ There are two documentation types: an **end user documentation** on how to use t
 
 ### End User Documentation
 
-The end user documentation contains a step-by-step tutorial on how to use our web application. Start with the [general overview](http://dmp.slub-dresden.de/en/) and carry on reading the [alpha release help](http://dmp.slub-dresden.de/en/datenmanagement/dswarm-hilfe/). You will learn the basic workflow depicted below, i.e., how to 1) setup and configure data resources, 2) create projects to define mappings, transformations and filters, 3) explore the graph data model and 4) export data in [RDF](http://en.wikipedia.org/wiki/Resource_Description_Framework).
+The end user documentation contains a step-by-step tutorial on how to use our web application. Start with the [general overview](http://dmp.slub-dresden.de/en/) and carry on reading the [alpha release help](http://dmp.slub-dresden.de/en/datenmanagement/dswarm-hilfe/). You will learn the basic workflow depicted below, i.e., how to setup and configure data resources; create projects to define mappings, transformations and filters; explore the graph data model; and export data in [RDF](http://en.wikipedia.org/wiki/Resource_Description_Framework).
 
 ![d:swarm workflow](https://raw.githubusercontent.com/wiki/seventwenty/dswarm-documentation/img/simplified_linear_dmp_steps.png)
 
