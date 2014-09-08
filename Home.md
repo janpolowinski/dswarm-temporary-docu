@@ -30,8 +30,8 @@ this wiki.
 ## Requirements
 anything that is needed to run the software. anything that is preventing the software from running.
 
-## Installation
-Installation instructions can be found in the [[Server Install]] guide. 
+## Installation and Configuration
+Installation instructions can be found in the [[Server Install]] guide,  [[d:swarm Configuration|dswarm Configuration]] provides details on how to configure the system.
 
 running  
 copy from server installation guide.
