@@ -26,7 +26,9 @@ The end user documentation contains a step-by-step tutorial on how to use our we
 
 ### Technical documentation
 
-this wiki. 
+As shown below, the overall architecture consists of two major parts: the Backoffice [[frontend]] and the [[backend]]. The backend consists of 4 modules: a [[controller]] module that controls the program flow and provides a REST API, a [[converter]] that encapsulates [Metafacture](https://github.com/culturegraph/metafacture-core) to transform data and a [[persistence]] layer to access a MySQL database and a graph database ([Neo4j](http://www.neo4j.org)). 
+There is an additional [[initialization|init]] module that is not shown in the figure.
+The MySQL database is used as a metadata repository to store our [[domain model]], data is stored in the graph database. Our unmanaged extension *dmp-graph* extends the REST API of Neo4j and is accessed by the persistence module. End users, e.g., system librarians, usually interact with the Backoffice frontend and may use the Neo4j browser to inspect or visualize the data stored by d:swarm.
 
 [enlarge figure](https://raw.githubusercontent.com/wiki/seventwenty/dswarm-documentation/img/dswarm-architecture.png)
 <!--- update image at https://intranet.slub-dresden.de/display/DAT/Architecture+d%3Aswarm -->
