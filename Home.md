@@ -27,6 +27,7 @@ The end user documentation contains a step-by-step tutorial on how to use our we
 
 this wiki. 
 
+[enlarged architecture](https://raw.githubusercontent.com/wiki/seventwenty/dswarm-documentation/img/dswarm-architecture.png)
 <!--- update image at https://intranet.slub-dresden.de/display/DAT/Architecture+d%3Aswarm -->
 ![d:swarm overall architecture](https://raw.githubusercontent.com/wiki/seventwenty/dswarm-documentation/img/dswarm-architecture.png)
 
