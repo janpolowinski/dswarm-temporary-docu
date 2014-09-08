@@ -288,7 +288,7 @@ git clone --depth 1 --branch builds/unstable git@git.slub-dresden.de:dmp/dmp-bac
 
 ## **13**. configure d:swarm
 
-Follow the instructions in `datamanagement-platform/doc/configuration.md`. 
+Follow the instructions in [[d:swarm Configuration|dswarm Configuration]]. 
 
 
 ## **14**. build neo4j extension
