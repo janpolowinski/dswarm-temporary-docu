@@ -1,5 +1,5 @@
 * [[Home]]
-* [[Datamanagement Platform (backend)]]
+* [[back end]]
   * [[Server Install]]
     * [[Initial Installation|Server-Install#Initial-Installation]]
     * [[Update the System|Server-Install#update-the-system]]
