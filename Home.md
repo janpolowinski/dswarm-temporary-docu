@@ -26,7 +26,7 @@ The end user documentation contains a step-by-step tutorial on how to use our we
 
 ### Technical documentation
 
-As shown below, the overall architecture consists of two major parts: the Backoffice [[frontend]] and the [[backend]]. The backend consists of 4 modules: a [[controller]] module that controls the program flow and provides a REST API, a [[converter]] that encapsulates [Metafacture](https://github.com/culturegraph/metafacture-core) to transform data and a [[persistence]] layer to access a MySQL database and a graph database ([Neo4j](http://www.neo4j.org)). 
+As shown below, the overall architecture consists of two major parts: the Backoffice [[front end]] and the [[back end]]. The back end consists of 4 modules: a [[controller]] module that controls the program flow and provides a REST API, a [[converter]] that encapsulates [Metafacture](https://github.com/culturegraph/metafacture-core) to transform data and a [[persistence]] layer to access a MySQL database and a graph database ([Neo4j](http://www.neo4j.org)). 
 There is an additional [[initialization|init]] module that is not shown in the figure.
 The MySQL database is used as a metadata repository to store our [[domain model]], data is stored in the graph database. Our unmanaged extension *dmp-graph* extends the REST API of Neo4j and is accessed by the persistence module. End users, e.g., system librarians, usually interact with the Backoffice frontend and may use the Neo4j browser to inspect or visualize the data stored by d:swarm.
 
@@ -38,7 +38,10 @@ The MySQL database is used as a metadata repository to store our [[domain model]
 ## Requirements
 anything that is needed to run the software. anything that is preventing the software from running.
 
+
 ## Installation and Configuration
+
+It might be a good idea to run the front end and back end locally to get full insight into, e.g., how data resources that that are uploaded and configured via the front end are stored in the databases.
 Installation instructions can be found in the [[Server Install]] guide,  [[d:swarm Configuration|dswarm Configuration]] provides details on how to configure the system.
 
 running  
