@@ -15,7 +15,7 @@ d:swarm is a web application that runs in all modern web browsers. An **alpha re
 
 ## Documentation
 
-There are two documentation types: an **end user documentation** on how to use d:swarm and a **technical documentation** for software developers. As a base, the [d:swarm Prezi](http://prezi.com/0zh_ypsezu6i/) summarizes the motivation and goals on an abstract level.
+There are two documentation types: an **end user documentation** on how to use the web application and a **technical documentation** for software developers. As a base, the [d:swarm Prezi](http://prezi.com/0zh_ypsezu6i/) summarizes the motivation and goals on an abstract level.
 
 ### End User Documentation
 
