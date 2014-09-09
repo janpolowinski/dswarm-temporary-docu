@@ -2,6 +2,7 @@
 * [[front end]]
 * [[back end]]
 * [[Neo4j extension]]
+  * [[Cypher Cheat Sheet]]
 * [[installation and configuration|home#installation-and-configuration]]
   * [[Server Install]]
     * [[Initial Installation|Server-Install#Initial-Installation]]
