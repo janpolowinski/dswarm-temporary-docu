@@ -8,6 +8,8 @@
     * [[Initial Installation|Server-Install#Initial-Installation]]
     * [[Update the System|Server-Install#update-the-system]]
   * [[d:swarm Configuration|dswarm Configuration]]
+* contributing
+  * [[Code Repository Handling]]
 * diagrams
   * [[Domain Model]]
   * [[Example Task Execution]]
