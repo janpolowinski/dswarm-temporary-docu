@@ -1,6 +1,7 @@
 * [[Home]]
 * [[front end]]
 * [[back end]]
+* [[Neo4j extension]]
 * [[installation and configuration|home#installation-and-configuration]]
   * [[Server Install]]
     * [[Initial Installation|Server-Install#Initial-Installation]]
