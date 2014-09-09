@@ -57,8 +57,8 @@ Once installed, the local front end runs at *http://localhost:9999*, the local N
 
 You like to contribute? Awesome!
 
-[[Code Repository Structure]]
-[[Code Repository Handling]]
-TODO: Link to issue tracker
+* [[Code Repository Structure]]
+* [[Code Repository Handling]]
+* TODO: Link to issue tracker
 
 ## License
