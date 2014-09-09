@@ -3,7 +3,7 @@
 * [[back end]]
 * [[Neo4j extension]]
   * [[Cypher Cheat Sheet]]
-* [[installation and configuration|home#installation-and-configuration]]
+* [[Installation and Configuration|home#installation-and-configuration]]
   * [[Initial Installation|Server-Install#Initial-Installation]]
   * [[d:swarm Configuration|dswarm Configuration]]
   * [[Update the System|Server-Install#update-the-system]]
