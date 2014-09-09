@@ -372,3 +372,17 @@ pushd dmp-backoffice-web; git pull; popd
 ```
 
 ## **2**. repeat steps 14 to 19 from installation as necessary
+
+
+# Checklist on Errors
+
+* Check your [[dswarm Configuration]]. Are database name and password correct, i.e. the ones used when installed MySQL (step [[Server-Install#6-setup-mysql]])? Compare _datamanagement-platform/persistence/src/main/resources/create_database.sql_ and _datamanagement-platform/dswarm.conf_ or any other configuration option you use.
+* [[initialize the databases|Server-Install#19-initializereset-database]]. The may be empty or contain corrupted data caused by failed unit tests.
+
+If you don't know which of the four components front end, back end, MySQL and Neo4j database does not run...
+
+* [[front end]]: open `http://localhost:9999` in a browser. The front end should be displayed. 
+* [[back end]]: open `http://localhost:8087/dmp/_ping` in a browser. The expected response is a page with the word _pong_.
+* MySQL database: open a terminal and type `mysql -udmp -p dmp` to open a connection to MySQL and select the database _dmp_. Hint: check for correct user name, password and database name in case you did not use the default values. If you can log in, type `select * from data_model;`. Three internal data models should be listed. 
+* Neo4j database: open `http://localhost:7474/browser/` in a browser. The Neo4j browser should open.
+
