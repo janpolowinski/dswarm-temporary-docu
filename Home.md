@@ -30,9 +30,9 @@ As shown below, the overall architecture consists of two major parts: the Backof
 There is an additional [[initialization|init]] module that is not shown in the figure.
 The MySQL database is used as a metadata repository to store our [[domain model]], data is stored in the graph database. Our unmanaged extension *dmp-graph* extends the REST API of Neo4j and is accessed by the persistence module. End users, e.g., system librarians, usually interact with the Backoffice frontend and may use the Neo4j browser to inspect or visualize the data stored by d:swarm.
 
-[enlarge figure](https://raw.githubusercontent.com/wiki/seventwenty/dswarm-documentation/img/dswarm-architecture.png)
 <!--- update image at https://intranet.slub-dresden.de/display/DAT/Architecture+d%3Aswarm -->
-![d:swarm overall architecture](https://raw.githubusercontent.com/wiki/seventwenty/dswarm-documentation/img/dswarm-architecture.png)
+[[enlarge figure|img/dswarm-architecture.png]]
+[[img/dswarm-architecture.png]]
 
 
 ## Requirements
