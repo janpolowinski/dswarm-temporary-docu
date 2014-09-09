@@ -9,4 +9,5 @@
     * [[Update the System|Server-Install#update-the-system]]
   * [[d:swarm Configuration|dswarm Configuration]]
 * diagrams
-  * [[domain model]]
+  * [[Domain Model]]
+  * [[Example Task Execution]]
