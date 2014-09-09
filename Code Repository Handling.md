@@ -16,11 +16,9 @@ If you are new to git, its worth getting familiar with the concepts and syntax.
 1. Create a feature branch in your repository fork by deriving the new branch from the builds/unstable of your repository fork or of the main repository (i.e. not from another feature branch), e.g., sprint-10/dd-329
 
         git checkout -b sprint-10/dd-329 builds/unstable
-
 hint: not too fine grained, corse-grained á la story ticket number is enough
 
-2. Commit all your changes to this branch until the feature is completely implemented and ensure that all tests of the project are still executing successfully (ideally)
-
+2. Commit all your changes to this branch until the feature is completely implemented and ensure that all tests of the project are still executing successfully (ideally).
 note: please commit (+ push) early and often - to guarantee (somehow) that no code will get lost by other circumstances, e.g., commit (+ push) even your unfinished/not running code at the end of a working day to save the code somewhere else
 
 3. Clean up ([rebase](https://www.atlassian.com/git/tutorial/rewriting-git-history)) your feature branch if you did work-in-progress commits
@@ -32,14 +30,16 @@ To avoid unnecessary complex merge conflicts, checkout builds/unstable and pull 
         git pull origin builds/unstable # or whatever your upstream remote is called, .e.g. slub
         git merge sprint-10/dd-329
 
-5. Create a merge request from the builds/unstable branch of your repository fork to the builds/unstable branch of the main repository (where your fork was created from)
-note: assign thereby another project member for review. The the gitlab system will automatically inform the assignee via e-mail.
-note: within minutes, a jenkins build is automatically triggered. Jenkins adds the start of the build as a comment to the merge request and adds another comment with build results. 
-In case the build was successful andtests are passed, the assignee can start reviewing the merge request. 
-In case the build or tests failed, it is up to the developer that created the request to solve the problems. A new commit will trigger jenkins to build again. 
-(Warnung) important: if you commit new changesets to the builds/unstable branch in your repository fork in between, then these changes will automatically be included in the changeset of the merge request as well - so be careful with committing changes to the builds/unstable branch of your repository fork until the merge request was approved (or closed) by the assignee of the merge request. Rather see, that you only push to your builds/unstable when there are no pending merge requests
-The merge request needs to be approved (or closed) by the assignee of the merge request
-Commit Message Format
+5. Create a [[pull request|https://help.github.com/articles/using-pull-requests]] from the builds/unstable branch of your repository fork to the builds/unstable branch of the main repository (where your fork was created from)
+ * note: assign thereby another project member for review. The the gitlab system will automatically inform the assignee via e-mail.
+ * note: within minutes, a jenkins build is automatically triggered. Jenkins adds the start of the build as a comment to the merge request and adds another comment with build results. 
+   - In case the build was successful and tests are passed, the assignee can start reviewing the merge request.
+   - In case the build or tests failed, it is up to the developer that created the request to solve the problems. A new commit will trigger jenkins to build again. 
+ * important: if you commit new changesets to the builds/unstable branch in your repository fork in between, then these changes will automatically be included in the changeset of the merge request as well - so be careful with committing changes to the builds/unstable branch of your repository fork until the merge request was approved (or closed) by the assignee of the merge request. Rather see, that you only push to your builds/unstable when there are no pending merge requests
+6. The pull request will be processed by the project maintainers.
+
+
+## Commit Message Format
  Language to be used is English.
  The commit message format is based on typo 3's format. Basically, a message consists of a topic description in the first line and optional details, separated by a single blank line.
 Topic description (first line)
