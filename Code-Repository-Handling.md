@@ -1,3 +1,5 @@
+To keep the code base manageable, we need to enforce consistency. Even though some rules may sound restrictive, a consistent code base facilitates reading and understanding the code by new developers. 
+
 ## New to git?
 
 If you are new to git, its worth getting familiar with the concepts and syntax.
@@ -75,8 +77,11 @@ Example message:
 ## Code clean-up
 
 Use separate clean-up commits if you clean-up a lot of code. Do not mix clean-ups with feature implementation, bug fixes etc. within one commit. This makes it easier to understand changesets and (more or less) ignore clean-up commits when reviewing a merge request and understanding the changes in commits later on. 
-For eclipse IDE, please use the following configurations
-dswarm_cleanup_eclipse.xml (Window > Preferences > Java > Code Style > Clean Up > Import... )
-dswarm_formatter_eclipse.xml (Window > Preferences > Java > Code Style > Formatter > Import... )
-dswarm_importorder_eclipse.xml (Window > Preferences > Java > Code Style > Organize Imports > Import )
+
+For eclipse IDE, please use the following configurations that can be found in the repository *datamanagement-platform/dev-tools/*
+
+* dswarm_cleanup_eclipse.xml (Window > Preferences > Java > Code Style > Clean Up > Import... )
+* dswarm_formatter_eclipse.xml (Window > Preferences > Java > Code Style > Formatter > Import... )
+* dswarm_importorder_eclipse.xml (Window > Preferences > Java > Code Style > Organize Imports > Import )
+
 In case one updates the rule set, all developers should be notified to update these profiles since eclipse uses local copies of the imported profiles. 
