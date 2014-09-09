@@ -41,30 +41,39 @@ To avoid unnecessary complex merge conflicts, checkout *builds/unstable* and pul
 
 
 ## Commit Message Format
- Language to be used is English.
- The commit message format is based on typo 3's format. Basically, a message consists of a topic description in the first line and optional details, separated by a single blank line.
-Topic description (first line)
-Prefix the line with a proper tag: [BUGFIX], [IMPROVEMENT] or [TASK], followed by a reference to the corresponding JIRA issue, e.g. [DD-123].
-Keep the whole line below 52 characters if possible, but below 80 in any case. 
+
+ The commit message format is based on [[typo 3's format|http://wiki.typo3.org/CommitMessage_Format_(Git)]]. Basically, a message consists of a topic description in the first line and optional details, separated by a single blank line.
+
+Topic description (first line):
+ * Prefix the line with a proper tag: _[BUGFIX]_, _[IMPROVEMENT]_ or _[TASK]_, followed by a reference to the corresponding JIRA issue, e.g. _[DD-123]_.
+ *Keep the whole line below 52 characters if possible, but below 80 in any case. 
+
 Possible tags are:
-[IMPROVEMENT]: A new feature (also small additions). Most likely it will be an added feature, but it could also be removed.
-[BUGFIX]: A fix for a bug.
-[TASK]: Anything not covered by the above categories, e.g. coding style cleanup.
+ * _[IMPROVEMENT]_: A new feature (also small additions). Most likely it will be an added feature, but it could also be removed.
+ * _[BUGFIX]_: A fix for a bug.
+ * _[TASK]_: Anything not covered by the above categories, e.g. coding style cleanup.
+
 Additionally other flags might be added under certain circumstances:
-[!!!]: Breaking change. After this patch, something works differently than before and the user / admin / developer will have to change something. If used, tag must be the first one to not be overseen.
-[DB]: Something has changed in the database definition and requires a database reset after merging.
-[CONF]: Some configuration changed. That could be a changed default value, a new setting or the removal of some setting that used to exist.
-[WIP]: Work In Progress. Not to be committed to upstream, must be rebased before merge request.
+
+* _[!!!]_: Breaking change. After this patch, something works differently than before and the user / admin / developer will have to change something. If used, tag must be the first one to not be overseen.
+* _[DB]_: Something has changed in the database definition and requires a database reset after merging.
+* _[CONF]_: Some configuration changed. That could be a changed default value, a new setting or the removal of some setting that used to exist.
+* _[WIP]_: Work In Progress. Not to be committed to upstream, must be rebased before pull request.
+
 Example message:
-[!!!][DB][BUGFIX][DD-567] fix schema inconsistencies
- 
-Fix relational database schema inconsistencies. Some attribute namings of n:m relationships are inverted.
- 
-When merging this fix, one needs to reset the database and manually remove the renamed tables: 
-DROP TABLE IF EXISTS attributes_attribute_paths; 
-DROP TABLE IF EXISTS attribute_paths_schemas;
+
+    [!!!][DB][BUGFIX][DD-567] fix schema inconsistencies
+    
+    Fix relational database schema inconsistencies. Some attribute namings of n:m relationships are inverted.
+    
+    When merging this fix, one needs to reset the database and manually remove the renamed tables: 
+    DROP TABLE IF EXISTS attributes_attribute_paths; 
+    DROP TABLE IF EXISTS attribute_paths_schemas;
+
 (The message describes a database bug fix, as described in JIRA issue DD-567, that alters the schema. It therefore causes others to take extra precaution when merging since a reset of the db is required.)
-Code clean-up
+
+## Code clean-up
+
 Use separate clean-up commits if you clean-up a lot of code. Do not mix clean-ups with feature implementation, bug fixes etc. within one commit. This makes it easier to understand changesets and (more or less) ignore clean-up commits when reviewing a merge request and understanding the changes in commits later on. 
 For eclipse IDE, please use the following configurations
 dswarm_cleanup_eclipse.xml (Window > Preferences > Java > Code Style > Clean Up > Import... )
