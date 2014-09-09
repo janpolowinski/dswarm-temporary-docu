@@ -113,4 +113,5 @@ NOTE: the internal data models have the URIs "http://data.slub-dresden.de/datamo
       mabxmlrecord.__URI__, collect(value.__VALUE__)[1];
 
 
-See also [[Graph Data Model Overview]] <!--- original link to https://intranet.slub-dresden.de/pages/viewpage.action?pageId=45190236 --> 
+See also [[Graph Data Model Overview]] 
+<!--- original link to https://intranet.slub-dresden.de/pages/viewpage.action?pageId=45190236 --> 
