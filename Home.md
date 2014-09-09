@@ -46,7 +46,7 @@ Installation instructions can be found in the [[Server Install]] guide,  [[d:swa
 
 ## Running the System
 
-Once installed, the local front end runs at *http://localhost:9999*, the local Neo4j browser may be accessed at *http://localhost:7474/browser/*. Hint: see [[Neo4j Server + Unmanaged Extension Cheat Sheet]] and [[Cypher Cheat Sheet]] for details on Neo4j. You may also want to have a look at the [[MySQL Cheat Sheet]] with our database schema and use a tool of your choice to explore the db.
+Once installed, the local front end runs at *http://localhost:9999*, the local Neo4j browser may be accessed at *http://localhost:7474/browser/*. Hint: see [[Cypher Cheat Sheet]] for details on Neo4j. You may also want to have a look at the [[MySQL Cheat Sheet]] with our database schema and use a tool of your choice to explore the db.
 
 
 ## Contributing
