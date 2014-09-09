@@ -34,6 +34,10 @@ The MySQL database is used as a metadata repository to store our [[domain model]
 [[enlarge figure|img/dswarm-architecture.png]]
 [[img/dswarm-architecture.png]]
 
+The HTTP API provided by the controller module is [[Swagger|https://github.com/wordnik/swagger-ui]]-compliant  and hence can be explored via the Swagger UI. This is very convenient way to explore the back end's functionality. 
+
+
+
 
 ## Requirements
 anything that is needed to run the software. anything that is preventing the software from running.
@@ -53,8 +57,8 @@ Once installed, the local front end runs at *http://localhost:9999*, the local N
 
 You like to contribute? Awesome!
 
+[[Code Repository Structure]]
 [[Code Repository Handling]]
-
-coding guidelines, issue tracker
+TODO: Link to issue tracker
 
 ## License
