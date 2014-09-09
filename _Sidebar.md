@@ -4,10 +4,10 @@
 * [[Neo4j extension]]
   * [[Cypher Cheat Sheet]]
 * [[installation and configuration|home#installation-and-configuration]]
-  * [[Server Install]]
-    * [[Initial Installation|Server-Install#Initial-Installation]]
-    * [[Update the System|Server-Install#update-the-system]]
+  * [[Initial Installation|Server-Install#Initial-Installation]]
   * [[d:swarm Configuration|dswarm Configuration]]
+  * [[Update the System|Server-Install#update-the-system]]
+  * [[Checklist on Errors|Server-Install#checklist-on-errors]]
 * contributing
   * [[Code Repository Handling]]
 * diagrams
