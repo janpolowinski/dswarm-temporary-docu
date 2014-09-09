@@ -1,7 +1,7 @@
 * [[Home]]
 * [[front end]]
 * [[back end]]
-* installation and configuration
+* [[installation and configuration|home#installation-and-configuration]]
   * [[Server Install]]
     * [[Initial Installation|Server-Install#Initial-Installation]]
     * [[Update the System|Server-Install#update-the-system]]
