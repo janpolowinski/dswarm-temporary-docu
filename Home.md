@@ -41,7 +41,7 @@ anything that is needed to run the software. anything that is preventing the sof
 
 ## Installation and Configuration
 
-It might be a good idea to run the [[front end ]] and [[back end]] locally to get full insight into, e.g., how data resources that that are uploaded and configured via the front end are stored in the databases.
+It might be a good idea to run the [[front end ]] and [[back end]] locally to get full insight into, e.g., how data resources that are uploaded and configured via the front end are stored in the databases.
 Installation instructions can be found in the [[Server Install]] guide,  [[d:swarm Configuration|dswarm Configuration]] provides details on how to configure the system.
 
 ## Running the System
