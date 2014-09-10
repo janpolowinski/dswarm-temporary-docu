@@ -129,7 +129,7 @@ A mapping can refer to multiple input [[Attribute Path|Glossary#attribute-path]]
 
 ### Metadata Repository
 
-Some physical data storage system that contains all available metadata for each Entity used in the DMP.
+Some physical data storage system that contains all available metadata for each [[Entity|Glossary#entity]] used in d:swarm.
 
 ### Meta Data Model
 
@@ -137,12 +137,12 @@ A meta data model or simply data model is knowledge representation structure to 
 
 ### Node
 
-A node or vertex is a fundamental part in a Graph Data Model of a graph data base. A node can have attributes (key-value pairs), i.e., properties. A node can have labels or types to categorise the node.
+A node or vertex is a fundamental part in a [[Graph Data Model|Glossary#graph-data-model]] of a graph data base. A node can have attributes (key-value pairs), i.e., properties. A node can have labels or types to categorise the node.
 
 ### Perspectives
 
 Perspectives are individual sites in the web-based UI which serve a certain scope.
-alternative name : view
+* alternative name : view
 
 ### Modelling Perspective
 
