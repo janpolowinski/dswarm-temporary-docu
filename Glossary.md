@@ -192,7 +192,7 @@ A node or vertex is a fundamental part in a [[Graph Data Model|Glossary#graph-da
 ### Perspectives
 
 Perspectives are individual sites in the web-based UI which serve a certain scope.
-* Examples for perspectives are Data Perspective, Administration Perspective and [[Modelling Perspective|Glossary#modelling-perspective]]
+* Examples for perspectives are [[Data Perspective|Glossary#data-perspective]], Administration Perspective and [[Modelling Perspective|Glossary#modelling-perspective]]
 * alternative name : view
 
 ### Project
