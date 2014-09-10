@@ -25,9 +25,9 @@
 * [[Mapping|Glossary#mapping]]
 * [[Metadata Repository|Glossary#metadata-repository]]
 * [[Meta Data Model|Glossary#meta-data-model]]
+* [[Modelling Perspective|Glossary#modelling-perspective]]
 * [[Node|Glossary#node]]
 * [[Perspectives|Glossary#perspectives]]
-* [[Modelling Perspective|Glossary#modelling-perspective]]
 * [[Project|Glossary#project]]
 * [[Property Graph|Glossary#property-graph]]
 * [[RDF|Glossary#rdf]]
@@ -171,7 +171,7 @@ A literal represents a value of an attribute of an entity, e.g., in “The book 
 
 ### Mapping
 
-A mapping can refer to multiple input [[Attribute Path|Glossary#attribute-path]]s (that should be part of the input [[Data Model|Glossary#data-model]]), an output attribute path (that should be part of the output data model) and is an instantiation or utilisation of a [[Function|Glossary#function]] or [[Transformation|Glossary#transformation]], i.e., the input attribute paths of a mapping are mapped to the parameters of the function or transformation and the output attribute path is mapped/connected to the output of the function or transformation. This instantiation/utilisation is realized by that same mechanism as applied by transformations – [[Components|Glossary#component]], i.e., each mapping can have a (transformation) component that describes the parameter mappings and refers to the utilised function or transformation. Additionally, a mapping can have an input [[Filter|Glossary#filter]], to reduce or specify the amount of [[Records|Glossary#record]] that should be processed via this mapping from the input data model, and an output filter, to specify the way where the result of this mapping should be written to in the output data model.
+A mapping encapsulates a [[Function|Glossary#function]] (or [[Transformation|Glossary#transformation]], since we handle them as specific functions). It can refer to __multiple__ input [[Attribute Paths|Glossary#attribute-path]] and __one__ output attribute path. (Input and output attribute paths must be part of the input data model respectively output data model.) The input attribute paths are mapped to the parameters of the function and the output attribute path is mapped to the output of the function. The instantiation/utilisation of transformations by mappings is realized in the same way transformations utilise (other) functions - by means of [[Components|Glossary#components]]: Each mapping can have a (transformation) component that describes the parameter mappings and refers to the utilised function. Additionally, a mapping can have an input [[Filter|Glossary#filter]], to reduce or specify the amount of [[Records|Glossary#record]] that should be processed via this mapping from the input data model, and an output filter, to specify the way the result of this mapping should be written to the output data model.
 
 ### Metadata Repository
 
@@ -181,6 +181,10 @@ Some physical data storage system that contains all available metadata for each 
 
 A meta data model or simply data model is knowledge representation structure to describe something, e.g., graphs.
 
+### Modelling Perspective
+
+The modelling perspective is the central working space for the system librarian for designing, testing and debugging transformation logics.
+
 ### Node
 
 A node or vertex is a fundamental part in a [[Graph Data Model|Glossary#graph-data-model]] of a graph data base. A node can have attributes (key-value pairs), i.e., properties. A node can have labels or types to categorise the node.
@@ -188,11 +192,8 @@ A node or vertex is a fundamental part in a [[Graph Data Model|Glossary#graph-da
 ### Perspectives
 
 Perspectives are individual sites in the web-based UI which serve a certain scope.
+* Examples for perspectives are Data Perspective, Administration Perspective and [[Modelling Perspective|Glossary#modelling-perspective]]
 * alternative name : view
-
-### Modelling Perspective
-
-The modelling perspective is the central working space for the system librarian for designing, testing and debugging transformation logics.
 
 ### Project
 
