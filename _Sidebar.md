@@ -1,5 +1,6 @@
 ### For everyone
 * [[Home]]
+* [[Glossary]]
 
 ### For users
 * [[Installation and Configuration|home#installation-and-configuration]]
