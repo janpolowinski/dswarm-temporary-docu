@@ -20,7 +20,7 @@ A blank node or bnode is an anonymous resource that belongs to another resource 
 
 ### Class
 
-A class is a type or universal to specify or categorize a concrete object or particular, e.g., a Record class (as part of a Schema) can be book or document. Classes can be part of a Vocabulary.
+A class is a type or [universal](http://en.wikipedia.org/wiki/Universal_%28metaphysics%29) to specify or categorize a concrete object or [particular](http://en.wikipedia.org/wiki/Particular), e.g., a [[Record|Glossary#record]] class (as part of a [[Schema|Glossary#schema]]) can be book or document. Classes can be part of a [[Vocabulary|Glossary#vocabulary]].
 
 ### Component
 
