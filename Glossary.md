@@ -150,19 +150,19 @@ The modelling perspective is the central working space for the system librarian 
 
 ### Project
 
-A project refers to all related parts that are relevant to design a whole data processing workflow, i.e., especially an (sample) input Data Model, a bunch of Mappings (that can selectively export as a Job) and optionally self-defined Functions (or Transformations).
+A project refers to all related parts that are relevant to design a whole [[data processing workflow|Glossary#job]], i.e., especially an (sample) input [[Data Model|Glossary#data-model]], a bunch of [[Mappings|Glossary#mapping]] (that can selectively export as a [[Job|Glossary#job]]) and optionally self-defined [[Functions|Glossary#function]] (or [[Transformations|Glossary#transformation]]).
 
 ### Property Graph
 
-A property graph is a Graph Data Model that consists of Nodes and Relationships. Whereby, the relationships are directed and binary, i.e., each relationship has always one source and one target node.
+A property graph is a [[Graph Data Model|Glossary#graph-data-model]] that consists of [[Nodes|Glossary#node]] and [[Relationships|Glossary#relationship]]. Whereby, the relationships are directed and binary, i.e., each relationship has always one source and one target node.
 
 ### RDF
 
-The resource description framework is a (meta) data model that consists of Statement that are simple sentences of the structure: subject, predicate, object. Whereby, subjects can be resources with a URI as identifier or Blank Nodes. Predicates are usually represented by a URI. And objects can be a resource with a URI, a blank node or a Literal.
+The resource description framework is a (meta) data model that consists of [[Statements|Glossary#statement]] that are simple sentences of the structure: subject, predicate, object. Whereby, subjects can be resources with a [[URI|Glossary#uri]] as identifier or [[Blank Nodes|Glossary#blank-node]]. Predicates are usually represented by a URI. And objects can be a resource with a URI, a blank node or a [[Literal|Glossary#literal]].
 
 A similar (meta) data model is EAV (entity-attribute-value).
 
-See also entity-attribute-value model @ Wikipedia
+* See also [entity-attribute-value model @ Wikipedia](http://en.wikipedia.org/wiki/Entity-attribute-value_model)
 
 ### Record
 
@@ -173,7 +173,7 @@ see : Bibliographic Record @ Wikipedia
 
 ### Relationship
 
-A relationship or Edge is a fundamental part in a graph data model of a graph data base. A relationship can connect two or more Nodes to each other. A relationship can be directed or undirected. A relationship can have a type or label to categorise it. A relationship can have properties to qualify it.
+A relationship or [[Edge|Glossary#edge]] is a fundamental part in a [[Graph Data Model|Glossary#graph-data-model]] of a graph data base. A relationship can connect two or more [[Nodes|Glossary#node]] to each other. A relationship can be directed or undirected. A relationship can have a type or label to categorise it. A relationship can have properties to qualify it.
 
 ### Schema
 
