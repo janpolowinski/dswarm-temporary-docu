@@ -20,7 +20,9 @@ A blank node or bnode is an anonymous resource that belongs to another resource 
 
 ### Class
 
-A class is a type or [universal](http://en.wikipedia.org/wiki/Universal_%28metaphysics%29) to specify or categorize a concrete object or [particular](http://en.wikipedia.org/wiki/Particular), e.g., a [[Record|Glossary#record]] class (as part of a [[Schema|Glossary#schema]]) can be book or document. Classes can be part of a [[Vocabulary|Glossary#vocabulary]].
+A class is a type or universal to specify or categorize a concrete object or particular, e.g., a [[Record|Glossary#record]] class (as part of a [[Schema|Glossary#schema]]) can be book or document. Classes can be part of a [[Vocabulary|Glossary#vocabulary]].
+
+* see also: [universal @ Wikipedia](http://en.wikipedia.org/wiki/Universal_%28metaphysics%29) and [particular @ Wikipedia](http://en.wikipedia.org/wiki/Particular)
 
 ### Component
 
@@ -58,7 +60,7 @@ A data resource refers to or denotes the actual data (“bits and bytes”) that
 
 ### Data Resource Type
 
-A data resource type refers to or denotes a certain type of data source system (eg. csv, xml, mysql…). It can be compare to media type/content type (see [Internet media type](http://en.wikipedia.org/wiki/Internet_media_type) or [RFC 2046: MIME type](http://tools.ietf.org/html/rfc2046)), e.g., _text/xml_ (as example for a generic media type) or _application/vnd.openxmlformats-officedocument.presentationml.presentation_ (as example for a rather specific media type (on top of a more generic type)).
+A data resource type refers to or denotes a certain type of data source system (eg. csv, xml, mysql…). It can be compare to media type/content type (see [Internet media type @ Wikipedia](http://en.wikipedia.org/wiki/Internet_media_type) or [RFC 2046: MIME type](http://tools.ietf.org/html/rfc2046)), e.g., _text/xml_ (as example for a generic media type) or _application/vnd.openxmlformats-officedocument.presentationml.presentation_ (as example for a rather specific media type (on top of a more generic type)).
 
 ### Data Type
 
@@ -177,11 +179,11 @@ A relationship or [[Edge|Glossary#edge]] is a fundamental part in a [[Graph Data
 
 ### Schema
 
-A schema is a collection of [[Attribute Path|Glossary#attribute-path]]s and a (generic) Class for Records. Each Data Model refers to a schema. All pieces of information in a data model should be addressable via the attribute paths of its schema. The schema of a CSV file (Data Resource), for example, consists of the names (or positions) of the headers, i.e., each header is an [[Attribute|Glossary#attribute]] (thereby, the Attribute Paths are equal to those attributes, since CSV files have a flat hierarchy). A schema can refer to certain sub-schemas or make use of other existing schemas to describe records (resources) at specific attribute paths, .e.g., a <strongdcterms:creator attribute (path) can refer to a specific schema for describing persons etc. Hence, a schema can be a composition of schemas.
+A schema is a collection of [[Attribute Path|Glossary#attribute-path]]s and a (generic) [[Class|Glossary#class]] for [[Records|Glossary#record]]. Each [[Data Model|Glossary#data-model]] refers to a schema. All pieces of information in a data model should be addressable via the attribute paths of its schema. The schema of a CSV file ([[Data Resource|Glossary#data-resource]]), for example, consists of the names (or positions) of the headers, i.e., each header is an [[Attribute|Glossary#attribute]] (thereby, the Attribute Paths are equal to those attributes, since CSV files have a flat hierarchy). A schema can refer to certain sub-schemas or make use of other existing schemas to describe records (resources) at specific attribute paths, .e.g., a _dcterms:creator_ attribute (path) can refer to a specific schema for describing persons etc. Hence, a schema can be a composition of schemas.
 
 ### Statement
 
-A statement – a simple sentence with the structure: subject, predicate, object – is the fundamental knowledge representation structure of the graph data model in our Datahub. Whereby, each subject and object is represented by a Node and the predicate is always a Relationship (Edge). Hence, a statement made of subject, predicate, object is represented by a node, edge, node structure. This enables the ability to add fine-grained external context information, e.g., provenance, version or evidence, at the level of statements or to qualify a statement more precise, e.g., weighting etc.
+A statement – a simple sentence with the structure: subject, predicate, object – is the fundamental knowledge representation structure of the graph data model in our [[Datahub|Glossary#datahub]]. Whereby, each subject and object is represented by a [[Node|Glossary#node]] and the predicate is always a [[Relationship|Glossary#relationship]] ([[Edge|Glossary#edge]]). Hence, a statement made of subject, predicate, object is represented by a node, edge, node structure. This enables the ability to add fine-grained external context information, e.g., provenance, version or evidence, at the level of statements or to qualify a statement more precise, e.g., weighting etc.
 
 ### Subject
 
@@ -189,33 +191,31 @@ The subject denotes the resource.
 
 ### Task
 
-A task is a concrete execution unit of a Job, i.e., besides the Mappings from a job, a task defines an input Data Model and an output data model on which the job can be executed, i.e., it refers to the concrete data source and target of the data processing workflow.
+A task is a concrete execution unit of a [[Job|Glossary#job]], i.e., besides the [[Mappings|Glossary#mapping]] from a job, a task defines an input [[Data Model|Glossary#data-model]] and an output data model on which the job can be executed, i.e., it refers to the concrete data source and target of the [[data processing workflow|Glossary#job]].
 
 ### Transformation
 
-A transformation is an extended Function, i.e., it is a composition of existing functions or transformations that are utilised/instantiated by Components of the transformation. The data processing workflow of a transformation is the ordered list or sequence of its components, i.e., components can be connected to each other and describe thereby the processing pipeline of the workflow. The detailed workflow of a transformation can be viewed and manipulated in the transformation logic widget. Transformations or functions can be instantiated/utilised by a Mapping, i.e., the (transformation) component of the mapping instantiates a transformation or functions by its parameter mapping.
+A transformation is an extended [[Function|Glossary#function]], i.e., it is a composition of existing functions or transformations that are utilised/instantiated by [[Components|Glossary#component]] of the transformation. The data processing workflow of a transformation is the ordered list or sequence of its components, i.e., components can be connected to each other and describe thereby the processing pipeline of the workflow. The detailed workflow of a transformation can be viewed and manipulated in the [[transformation logic widget|Glossary#widgets]]. Transformations or functions can be instantiated/utilised by a [[Mapping|Glossary#mapping]], i.e., the (transformation) component of the mapping instantiates a transformation or functions by its parameter mapping.
 
-alternative names : transformation process, transformation pipeline, transformation logic
-note: transformation is also used in more abstract descriptions (context), where transformation refers to the transformation pipeline or logic of a mapping
+* alternative names: -transformation process, transformation pipeline, transformation logic-
+* note: transformation is also used in more abstract descriptions (context), where transformation refers to the transformation pipeline or logic of a mapping
 
 ### URI
 
 A URI is a uniform resource identifier for denoting something, e.g., resources, properties or resource types.
 
-See also URI @ Wikipedia
+See also [URI @ Wikipedia](http://en.wikipedia.org/wiki/URI)
 
 ### Vocabulary
 
-A vocabulary or ontology is a set of terms (universals). Terms can be [[Attribute|Glossary#attribute]]s (properties) or Classes (types).
+A vocabulary or ontology is a set of terms (universals). Terms can be [[Attribute|Glossary#attribute]]s (properties) or [[Classes|Glossary#class]] (types).
 
 ### Widgets
 
-Every box in the modelling perspective in the web-based UI is called a widget
-
-The following widgets are available
-source data
-source schema
-target schema
-target data
-transformation
-function component
+Every box in the modelling perspective in the web-based UI is called a widget. The following widgets are available:
+* source data
+* source schema
+* target schema
+* target data
+* transformation
+* function component
