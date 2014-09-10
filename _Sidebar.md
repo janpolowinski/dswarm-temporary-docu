@@ -1,13 +1,19 @@
+### For everyone
 * [[Home]]
-* [[front end]]
-* [[back end]]
-* [[Neo4j extension]]
-  * [[Cypher Cheat Sheet]]
+
+### For users
 * [[Installation and Configuration|home#installation-and-configuration]]
   * [[Initial Installation|Server-Install#Initial-Installation]]
   * [[d:swarm Configuration|dswarm Configuration]]
   * [[Update the System|Server-Install#update-the-system]]
   * [[Checklist on Errors|Server-Install#checklist-on-errors]]
+
+### For developers
+* [[front end]]
+* [[back end]]
+* [[MySQL Cheat Sheet]]
+* [[Neo4j extension]]
+  * [[Cypher Cheat Sheet]]
 * contributing
   * [[Code Repository Handling]]
 * diagrams
