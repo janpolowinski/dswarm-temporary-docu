@@ -7,7 +7,7 @@ alternative names: property, relationship type, edge type, edge label, predicate
 
 ### Attribute Path
 
-An attribute path is an identifier or way to a certain element(s) or value(s) of a Record in a Data Model. Attribute paths are an ordered lists of Attributes. A bunch of attribute paths can be composed to a Schema. A Mapping can refer to certain attribute paths.
+An attribute path is an identifier or way to a certain element(s) or value(s) of a Record in a Data Model. Attribute paths are an ordered lists of [[Attribute|Glossary#attribute]]s. A bunch of attribute paths can be composed to a Schema. A Mapping can refer to certain attribute paths.
 
 This might be a column header in a CSV file or a certain node in a nested XML structure
 Examples: /dc:creator/foaf:family_name (to adresse attributes in an RDF graph), /autor/name (to address attributes in an XML file) or /name (to address “flat” attributes – the column headers – in a CSV file)
@@ -62,7 +62,7 @@ A data resource type refers to or denotes a certain type of data source system (
 
 ### Data Type
 
-A data type specifies the value type of a literal (a simple value of an Attribute/[[Attribute Path|Glossary#attribute-path]]), e.g., xsd:string, xsd:dateTime.
+A data type specifies the value type of a literal (a simple value of an [[Attribute|Glossary#attribute]]/[[Attribute Path|Glossary#attribute-path]]), e.g., xsd:string, xsd:dateTime.
 
 ### DMP
 
@@ -177,7 +177,7 @@ A relationship or Edge is a fundamental part in a graph data model of a graph da
 
 ### Schema
 
-A schema is a collection of [[Attribute Path|Glossary#attribute-path]]s and a (generic) Class for Records. Each Data Model refers to a schema. All pieces of information in a data model should be addressable via the attribute paths of its schema. The schema of a CSV file (Data Resource), for example, consists of the names (or positions) of the headers, i.e., each header is an Attribute (thereby, the Attribute Paths are equal to those attributes, since CSV files have a flat hierarchy). A schema can refer to certain sub-schemas or make use of other existing schemas to describe records (resources) at specific attribute paths, .e.g., a <strongdcterms:creator attribute (path) can refer to a specific schema for describing persons etc. Hence, a schema can be a composition of schemas.
+A schema is a collection of [[Attribute Path|Glossary#attribute-path]]s and a (generic) Class for Records. Each Data Model refers to a schema. All pieces of information in a data model should be addressable via the attribute paths of its schema. The schema of a CSV file (Data Resource), for example, consists of the names (or positions) of the headers, i.e., each header is an [[Attribute|Glossary#attribute]] (thereby, the Attribute Paths are equal to those attributes, since CSV files have a flat hierarchy). A schema can refer to certain sub-schemas or make use of other existing schemas to describe records (resources) at specific attribute paths, .e.g., a <strongdcterms:creator attribute (path) can refer to a specific schema for describing persons etc. Hence, a schema can be a composition of schemas.
 
 ### Statement
 
@@ -206,7 +206,7 @@ See also URI @ Wikipedia
 
 ### Vocabulary
 
-A vocabulary or ontology is a set of terms (universals). Terms can be Attributes (properties) or Classes (types).
+A vocabulary or ontology is a set of terms (universals). Terms can be [[Attribute|Glossary#attribute]]s (properties) or Classes (types).
 
 ### Widgets
 
