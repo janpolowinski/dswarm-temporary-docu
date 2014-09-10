@@ -1,6 +1,6 @@
 ### Attribute
 
-An attribute is a property or a type of a relationship, e.g., “name”, “knows”. Attributes can be chained into an [[#Attribute Path]]. Attributes can be part of a Vocabulary. In a simple (natural language) sentence that consists of three parts (subject, predicate, objects), e.g., “Walter knows Claire.”, attributes are predicates. In a property graph model attributes are properties or edges of a node.
+An attribute is a property or a type of a relationship, e.g., “name”, “knows”. Attributes can be chained into an [[Glossary#Attribute Path]]. Attributes can be part of a Vocabulary. In a simple (natural language) sentence that consists of three parts (subject, predicate, objects), e.g., “Walter knows Claire.”, attributes are predicates. In a property graph model attributes are properties or edges of a node.
 
 Hint: In non-hierarchical data structures like CSV files, the attribute corresponds to the attribute path
 alternative names: property, relationship type, edge type, edge label, predicate
@@ -62,7 +62,7 @@ A data resource type refers to or denotes a certain type of data source system (
 
 ### Data Type
 
-A data type specifies the value type of a literal (a simple value of an Attribute/[[#Attribute Path]]), e.g., xsd:string, xsd:dateTime.
+A data type specifies the value type of a literal (a simple value of an Attribute/[[Glossary#Attribute Path]]), e.g., xsd:string, xsd:dateTime.
 
 ### DMP
 
@@ -70,7 +70,7 @@ Acronym for Data Management Plattfrom.
 
 ### Domain Model
 
-An application or data has a domain model that describes all entities and relationships of this application or data. In a data processing tool (e.g. DMP) the domain model of the application is not the domain model of the data that can be processed with this application, i.e., the domain model of the application is on another higher (meta) level. The DMP, for example, is designed for primarily working with bibliographic records, i.e., the data domain model is library (with Entities such as resource (document, book), person (author, contributor), etc.), however, the application domain model of the DMP is data processing (with entities such as Mapping, Job, [[#Attribute Path]]).
+An application or data has a domain model that describes all entities and relationships of this application or data. In a data processing tool (e.g. DMP) the domain model of the application is not the domain model of the data that can be processed with this application, i.e., the domain model of the application is on another higher (meta) level. The DMP, for example, is designed for primarily working with bibliographic records, i.e., the data domain model is library (with Entities such as resource (document, book), person (author, contributor), etc.), however, the application domain model of the DMP is data processing (with entities such as Mapping, Job, [[Glossary#Attribute Path]]).
 
 see: domain model (@ Wikipedia), domain-driven design (@ Wikipedia)
 
@@ -84,7 +84,7 @@ See Relationship.
 
 ### Entity
 
-An entity is the hypernym for describing all terms, parts, classes or types of a Domain Model. These are in our application domain model for example, [[#Attribute Path]]s, Mappings, Transformations etc.
+An entity is the hypernym for describing all terms, parts, classes or types of a Domain Model. These are in our application domain model for example, [[Glossary#Attribute Path]]s, Mappings, Transformations etc.
 
 alternative names: resource
 
@@ -114,7 +114,7 @@ A graph data model is a data model or Meta Data Model to describe the knowledge 
 
 ### Job
 
-A job is a collection of Mappings that can be executed with an input Data Model that contains data that make use of the utilised input [[#Attribute Path]]s of the mappings. Mappings from a job are independent from an input data model and an output data model. A job can be configured to a concrete Task with an input data model and an output data model, i.e., a job can be instantiated/utilised by a bunch of tasks.
+A job is a collection of Mappings that can be executed with an input Data Model that contains data that make use of the utilised input [[Glossary#Attribute Path]]s of the mappings. Mappings from a job are independent from an input data model and an output data model. A job can be configured to a concrete Task with an input data model and an output data model, i.e., a job can be instantiated/utilised by a bunch of tasks.
 
 alternative names: data processing workflow, data transformation workflow
 note: job is also used in more abstract descriptions (context), where a job refers to both the job and the task(s) that utilise the job
@@ -125,7 +125,7 @@ A literal represents a value of an attribute of an entity, e.g., in “The book 
 
 ### Mapping
 
-A mapping can refer to multiple input [[#Attribute Path]]s (that should be part of the input Data Model), an output attribute path (that should be part of the output data model) and is an instantation or utilisation of a Function or Transformation, i.e., the input attribute paths of a mapping are mapped to the parameters of the function or transformation and the output attribute path is mapped/connected to the output of the function or transformation. This instantiation/utilisation is realized by that same mechanism as applied by transformations – Components, i.e., each mapping can have a (transformation) component that describes the parameter mappings and refers to the utilised function or tranformation. Additionally, a mapping can have an input Filter, to reduce or specify the amount of Records that should be processed via this mapping from the input data model, and an output filter, to specify the way where the result of this mapping should be written to in the output data model.
+A mapping can refer to multiple input [[Glossary#Attribute Path]]s (that should be part of the input Data Model), an output attribute path (that should be part of the output data model) and is an instantation or utilisation of a Function or Transformation, i.e., the input attribute paths of a mapping are mapped to the parameters of the function or transformation and the output attribute path is mapped/connected to the output of the function or transformation. This instantiation/utilisation is realized by that same mechanism as applied by transformations – Components, i.e., each mapping can have a (transformation) component that describes the parameter mappings and refers to the utilised function or tranformation. Additionally, a mapping can have an input Filter, to reduce or specify the amount of Records that should be processed via this mapping from the input data model, and an output filter, to specify the way where the result of this mapping should be written to in the output data model.
 
 ### Metadata Repository
 
@@ -177,7 +177,7 @@ A relationship or Edge is a fundamental part in a graph data model of a graph da
 
 ### Schema
 
-A schema is a collection of [[#Attribute Path]]s and a (generic) Class for Records. Each Data Model refers to a schema. All pieces of information in a data model should be addressable via the attribute paths of its schema. The schema of a CSV file (Data Resource), for example, consists of the names (or positions) of the headers, i.e., each header is an Attribute (thereby, the Attribute Paths are equal to those attributes, since CSV files have a flat hierarchy). A schema can refer to certain sub-schemas or make use of other existing schemas to describe records (resources) at specific attribute paths, .e.g., a <strongdcterms:creator attribute (path) can refer to a specific schema for describing persons etc. Hence, a schema can be a composition of schemas.
+A schema is a collection of [[Glossary#Attribute Path]]s and a (generic) Class for Records. Each Data Model refers to a schema. All pieces of information in a data model should be addressable via the attribute paths of its schema. The schema of a CSV file (Data Resource), for example, consists of the names (or positions) of the headers, i.e., each header is an Attribute (thereby, the Attribute Paths are equal to those attributes, since CSV files have a flat hierarchy). A schema can refer to certain sub-schemas or make use of other existing schemas to describe records (resources) at specific attribute paths, .e.g., a <strongdcterms:creator attribute (path) can refer to a specific schema for describing persons etc. Hence, a schema can be a composition of schemas.
 
 ### Statement
 
