@@ -24,45 +24,45 @@ A class is a type or [universal](http://en.wikipedia.org/wiki/Universal_%28metap
 
 ### Component
 
-A component is a mechanism to describe the instantiation/utilisation of a Function or Transformation, i.e., a mapping of variables or static values to the parameters of the utilised function or transformation. A can be part of a Transformation or Mapping that make use of existing functions or transformation in a concrete context.
+A component is a mechanism to describe the instantiation/utilisation of a [[Function|Glossary#function]] or [[Transformation|Glossary#transformation]], i.e., a mapping of variables or static values to the parameters of the utilised function or transformation. A component can be part of a Transformation or [[Mapping|Glossary#mapping]] that make use of existing functions or transformation in a concrete context.
 
 ### Configuration
 
-A configuration is a bunch of settings or parameters that are necessary to interpret the data of a Data Resource. A CSV file, for example, can be parsed by a given column delimiter, row delimiter, the encoding of the content, etc.. Those settings are required to interpret the dumb plain data into useful bits of information. The result of the application of a configuration to a data resource is a Data Model.
+A configuration is a bunch of settings or parameters that are necessary to interpret the data of a [[Data Resource|Glossary#data-resuorce]]. A CSV file, for example, can be parsed by a given column delimiter, row delimiter, the encoding of the content, etc.. Those settings are required to interpret the dumb plain data into useful bits of information. The result of the application of a configuration to a data resource is a [[Data Model|Glossary#data-model]].
 
 ### Datahub
 
 The data hub is the central database within the DMP storing all available/registered data, ie. no metadata from the domain model
 
-hint: The data used in the domain model is stored in the Metadata Repository, the data is represented in a Graph
-alternatives: internal data storage
+* hint: The data used in the domain model is stored in the [[Metadata Repository|Glossary#metadata-repository]], the data is represented in a [[Graph|Glossary#graph]]
+* alternative name: internal data storage
 
 ### Data Model
 
-A data model is an interpretation of a Data Resource through its Configuration (e.g. a csv file can be parsed by a given column delimiter, row delimiter, the encoding of the content, etc.). A data model consists of a bunch of Records. Each input data resource is processed/loaded via a configuration into the internal data storage of the Data Management Platform. The result is a data model that refers to its data resource, configuration and the Schema of the data (records).
+A data model is an interpretation of a [[Data Resource|Glossary#data-resource]] through its [[Configuration|Glossary#configuration]] (e.g. a csv file can be parsed by a given column delimiter, row delimiter, the encoding of the content, etc.). A data model consists of a bunch of [[Records|Glossary#record]]. Each input data resource is processed/loaded via a configuration into the [[internal data storage|Glossary#datahub]] of the Data Management Platform. The result is a data model that refers to its data resource, configuration and the [[Schema|Glossary#schema]] of the data (records).
 
-note: data model is sometimes utilised as replacement for Meta Data Model (which has a different meaning)
+* note: data model is sometimes utilised as replacement for [[Meta Data Model|Glossary#meta-data-model]] (which has a different meaning)
 
 ### Data Perspective
 
-In the web-based UI the data perspective enables the user to perform all data ingestion and configuration in order to produce the correct data model which can be used for modelling puposes.
+In the web-based UI the data perspective enables the user to perform all data ingestion and configuration in order to produce the correct data model which can be used for modelling purposes.
 
-alternative names : data view
+* alternative name: data view
 
 ### Data Resource
 
-A data resource refers to or denotes the actual data (“bits and bytes”) that is contained in a source or a target without any interpretation. A data resource (the data of a data resource) can be interpreted by a configuration. The result of this interpretation/processing is a Data Model. A data resource can have a certain type.
+A data resource refers to or denotes the actual data (“bits and bytes”) that is contained in a source or a target without any interpretation. A data resource (the data of a data resource) can be interpreted by a [[Configuration|Glossary#configuration]]. The result of this interpretation/processing is a [[Data Model|Glossary#data-model]]. A data resource can have a certain [[type|Glossary#data-resource-type]].
 
-alternative names : raw data, Datenquelle, data source (for input data resource), resource, data
-note: a data resource can be on both ends, i.e., there are input data resources and output data resource
+* alternative names : raw data, data source (for input data resource), resource, data
+* note: a data resource can be on both ends, i.e., there are input data resources and output data resource
 
 ### Data Resource Type
 
-A data resource type refers to or denotes a certain type of data source system (eg. csv, xml, mysql…). It can be compare to media type/content type (see Internet media type @ Wikipedia or RFC 2046: MIME type), e.g., text/xml (as example for a generic media type) or application/vnd.openxmlformats-officedocument.presentationml.presentation (as example for a rather specific media type (on top of a more generic type)).
+A data resource type refers to or denotes a certain type of data source system (eg. csv, xml, mysql…). It can be compare to media type/content type (see [Internet media type](http://en.wikipedia.org/wiki/Internet_media_type) or [RFC 2046: MIME type](http://tools.ietf.org/html/rfc2046)), e.g., _text/xml_ (as example for a generic media type) or _application/vnd.openxmlformats-officedocument.presentationml.presentation_ (as example for a rather specific media type (on top of a more generic type)).
 
 ### Data Type
 
-A data type specifies the value type of a literal (a simple value of an [[Attribute|Glossary#attribute]]/[[Attribute Path|Glossary#attribute-path]]), e.g., xsd:string, xsd:dateTime.
+A data type specifies the value type of a literal (a simple value of an [[Attribute|Glossary#attribute]]/[[Attribute Path|Glossary#attribute-path]]), e.g., _xsd:string_, _xsd:dateTime_.
 
 ### DMP
 
