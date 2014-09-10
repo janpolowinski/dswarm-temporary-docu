@@ -70,39 +70,39 @@ Acronym for Data Management Plattfrom.
 
 ### Domain Model
 
-An application or data has a domain model that describes all entities and relationships of this application or data. In a data processing tool (e.g. DMP) the domain model of the application is not the domain model of the data that can be processed with this application, i.e., the domain model of the application is on another higher (meta) level. The DMP, for example, is designed for primarily working with bibliographic records, i.e., the data domain model is library (with Entities such as resource (document, book), person (author, contributor), etc.), however, the application domain model of the DMP is data processing (with entities such as Mapping, Job, [[Attribute Path|Glossary#attribute-path]]).
+An application or data has a domain model that describes all entities and relationships of this application or data. In a data processing tool (e.g. d:swarm) the domain model of the application is not the domain model of the data that can be processed with this application, i.e., the domain model of the application is on another higher (meta) level. d:swarm, for example, is designed for primarily working with bibliographic records, i.e., the data domain model is library (with [[Entities|Glossary#entity]] such as resource (document, book), person (author, contributor), etc.), however, the application domain model of the DMP is data processing (with entities such as [[Mapping|Glossary#mapping]], [[Job|Glossary#job]], [[Attribute Path|Glossary#attribute-path]]).
 
-see: domain model (@ Wikipedia), domain-driven design (@ Wikipedia)
+* see: [domain model (@ Wikipedia)](http://en.wikipedia.org/wiki/Domain_model), [domain-driven design (@ Wikipedia)](http://en.wikipedia.org/wiki/Domain-driven_design)
 
 ### Draft (Mode)
 
-While creating, updating, deleting mappings, filter or transformations in the Modelling Perspective and not yet saving the work, it is locally stored in the browser.
+While creating, updating, deleting mappings, filter or transformations in the [[Modelling Perspective|Glossary#modelling-perspective]] and not yet saving the work, it is locally stored in the browser.
 
 ### Edge
 
-See Relationship.
+See [[Relationship|Glossary#relationship]].
 
 ### Entity
 
-An entity is the hypernym for describing all terms, parts, classes or types of a Domain Model. These are in our application domain model for example, [[Attribute Path|Glossary#attribute-path]]s, Mappings, Transformations etc.
+An entity is the hypernym for describing all terms, parts, classes or types of a [[Domain Model|Glossary#domain-model]]. In our application domain model, these are for example [[Attribute Path|Glossary#attribute-path]]s, [[Mappings|Glossary#mapping]], [[Transformations|Glossary#transformation]].
 
-alternative names: resource
+* alternative name: resource
 
 ### Execution Environment
 
-The execution environment is the server infrastructure where the Tasks are executed, i.e. where the modeled business logics are applied on the ingested data and the Graph is generated/updated.
+The execution environment is the server infrastructure where the [[Tasks|Glossary#task]] are executed, i.e. where the modeled business logics are applied on the ingested data and the [[Graph|Glossary#graph]] is generated/updated.
 
-alternative names : runtime environment, execution engine, execution system, runtime architecture
+* alternative names : runtime environment, execution engine, execution system, runtime architecture
 
 ### Filter
 
-A business logic (graph pattern, e.g., a Cypher query) that reduces or specify the amount/candidates of Records that should be addressed/processed via a Mapping. Filters can be defined on both endings of a mapping, i.e., there can be input filters and output filters.
+A business logic (graph pattern, e.g., a Cypher query) that reduces or specify the amount/candidates of [[Records|Glossary#record]] that should be addressed/processed via a [[Mapping|Glossary#mapping]]. Filters can be defined on both endings of a mapping, i.e., there can be input filters and output filters.
 
 ### Function
 
-A function is a data processing method or operation. It consists of a bunch of (input) parameters, an output (parameter) and a certain transformation logic that will be applied to the data in a data stream of a data processing workflow. A simple function is a kind of atomic operation. Extended or composed functions are Transformations. Functions (or transformations) can be (re-)utilised in transformations or Mappings (via Components).
+A function is a data processing method or operation. It consists of a bunch of (input) parameters, an output (parameter) and a certain transformation logic that will be applied to the data in a data stream of a data processing workflow ([[Job|Glossary#job]]). A simple function is a kind of atomic operation. Extended or composed functions are [[Transformations|Glossary#transformation]]. Functions (or transformations) can be (re-)utilised in transformations or [[Mappings|Glossary#mapping]] (via [[Components|Glossary#component]]).
 
-Example : A replacement function replaces a certain value <a> with a defined value <b>.
+* Example : A replacement function replaces a certain value \<a\> with a defined value \<b\>.
 
 ### Graph
 
