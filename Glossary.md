@@ -10,7 +10,7 @@ An attribute is a property or a type of a relationship, e.g., “name”, “kno
 An attribute path is an identifier or way to a certain element(s) or value(s) of a [[Record|Glossary#record]] in a [[Data Model|Glossary#data-mpdel]]. Attribute paths are an ordered lists of [[Attribute|Glossary#attribute]]s. A bunch of attribute paths can be composed to a [[Schema|Glossary#schema]]. A [[Mapping|Glossary#mapping]] can refer to certain attribute paths.
 
 * This might be a column header in a CSV file or a certain node in a nested XML structure
-* Examples: __/dc:creator/foaf:family_name__ (to adresse attributes in an RDF graph), __/autor/name__ (to address attributes in an XML file) or __/name__ (to address “flat” attributes – the column headers – in a CSV file)
+* Examples: _/dc:creator/foaf:family_name_ (to adresse attributes in an RDF graph), _/autor/name_ (to address attributes in an XML file) or _/name_ (to address “flat” attributes – the column headers – in a CSV file)
 * Note: attribute paths are not always a unique identifier or way to certain element(s) or value(s); sometimes more complex [[Filters|Glossary#filter]] need to be defined to address element(s) or value(s) uniquely (or more precise).
 * alternative names: property path
 
