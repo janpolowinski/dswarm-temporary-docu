@@ -42,6 +42,8 @@
 * [[Vocabulary|Glossary#vocabulary]]
 * [[Widgets|Glossary#widgets]]
 
+---
+
 ### Attribute
 
 An attribute is a property or a type of a relationship, e.g., “name”, “knows”. Attributes can be chained into an [[Attribute Path|Glossary#attribute-path]]. Attributes can be part of a Vocabulary. In a simple (natural language) sentence that consists of three parts (subject, predicate, objects), e.g., “Walter knows Claire.”, attributes are predicates. In a property graph model attributes are properties or edges of a node.
