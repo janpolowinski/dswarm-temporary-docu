@@ -106,18 +106,18 @@ A function is a data processing method or operation. It consists of a bunch of (
 
 ### Graph
 
-The data of the Data Models of the DMP is stored in a graph. This graph relies on a Property Graph based representation.
+The data of the [[Data Models|Glossary#data-model]] of d:swarm is stored in a graph. This graph relies on a [[Property Graph|Glossary#property-graph]] based representation.
 
 ### Graph Data Model
 
-A graph data model is a data model or Meta Data Model to describe the knowledge representation structure in a Graph. An example of an abstract graph data model is the Property Graph. (Graph) data model can be layered, e.g., the property graph data model can act as a meta data model for another data model, e.g., RDF.
+A graph data model is a data model or [[Meta Data Model|Glossary#meta-data-model]] to describe the knowledge representation structure in a [[Graph|Glossary#graph]]. An example of an abstract graph data model is the [[Property Graph|Glossary#property-graph]]. (Graph) data model can be layered, e.g., the property graph data model can act as a meta data model for another data model, e.g., [[RDF|Glossary#rdf]].
 
 ### Job
 
-A job is a collection of Mappings that can be executed with an input Data Model that contains data that make use of the utilised input [[Attribute Path|Glossary#attribute-path]]s of the mappings. Mappings from a job are independent from an input data model and an output data model. A job can be configured to a concrete Task with an input data model and an output data model, i.e., a job can be instantiated/utilised by a bunch of tasks.
+A job is a collection of [[Mappings|Glossary#mapping]] that can be executed with an input [[Data Model|Glossary#data-model]] that contains data that make use of the utilised input [[Attribute Path|Glossary#attribute-path]]s of the mappings. Mappings from a job are independent from an input data model and an output data model. A job can be configured to a concrete [[Task|Glossary#task]] with an input data model and an output data model, i.e., a job can be instantiated/utilised by a bunch of tasks.
 
-alternative names: data processing workflow, data transformation workflow
-note: job is also used in more abstract descriptions (context), where a job refers to both the job and the task(s) that utilise the job
+* alternative names: data processing workflow, data transformation workflow
+* note: job is also used in more abstract descriptions (context), where a job refers to both the job and the task(s) that utilise the job
 
 ### Literal
 
@@ -125,7 +125,7 @@ A literal represents a value of an attribute of an entity, e.g., in “The book 
 
 ### Mapping
 
-A mapping can refer to multiple input [[Attribute Path|Glossary#attribute-path]]s (that should be part of the input Data Model), an output attribute path (that should be part of the output data model) and is an instantiation or utilisation of a Function or Transformation, i.e., the input attribute paths of a mapping are mapped to the parameters of the function or transformation and the output attribute path is mapped/connected to the output of the function or transformation. This instantiation/utilisation is realized by that same mechanism as applied by transformations – Components, i.e., each mapping can have a (transformation) component that describes the parameter mappings and refers to the utilised function or transformation. Additionally, a mapping can have an input Filter, to reduce or specify the amount of Records that should be processed via this mapping from the input data model, and an output filter, to specify the way where the result of this mapping should be written to in the output data model.
+A mapping can refer to multiple input [[Attribute Path|Glossary#attribute-path]]s (that should be part of the input [[Data Model|Glossary#data-model]]), an output attribute path (that should be part of the output data model) and is an instantiation or utilisation of a [[Function|Glossary#function]] or [[Transformation|Glossary#transformation]], i.e., the input attribute paths of a mapping are mapped to the parameters of the function or transformation and the output attribute path is mapped/connected to the output of the function or transformation. This instantiation/utilisation is realized by that same mechanism as applied by transformations – [[Components|Glossary#component]], i.e., each mapping can have a (transformation) component that describes the parameter mappings and refers to the utilised function or transformation. Additionally, a mapping can have an input [[Filter|Glossary#filter]], to reduce or specify the amount of [[Records|Glossary#record]] that should be processed via this mapping from the input data model, and an output filter, to specify the way where the result of this mapping should be written to in the output data model.
 
 ### Metadata Repository
 
