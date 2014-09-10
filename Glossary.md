@@ -102,7 +102,7 @@ A business logic (graph pattern, e.g., a Cypher query) that reduces or specify t
 
 A function is a data processing method or operation. It consists of a bunch of (input) parameters, an output (parameter) and a certain transformation logic that will be applied to the data in a data stream of a data processing workflow ([[Job|Glossary#job]]). A simple function is a kind of atomic operation. Extended or composed functions are [[Transformations|Glossary#transformation]]. Functions (or transformations) can be (re-)utilised in transformations or [[Mappings|Glossary#mapping]] (via [[Components|Glossary#component]]).
 
-* Example : A replacement function replaces a certain value \<a\> with a defined value \<b\>.
+* Example : A replacement function replaces a certain value _\<a\>_ with a defined value _\<b\>_.
 
 ### Graph
 
