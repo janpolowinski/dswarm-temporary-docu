@@ -284,6 +284,7 @@ ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa -N ''
 git clone --depth 1 --branch builds/unstable git@git.slub-dresden.de:dmp/datamanagement-platform.git
 git clone --depth 1 --branch master git@git.slub-dresden.de:dmp/dmp-graph.git
 git clone --depth 1 --branch builds/unstable git@git.slub-dresden.de:dmp/dmp-backoffice-web.git
+git clone --depth 1 --branch master git@git.slub-dresden.de:dmp/ci-tools.git
 ```
 
 ## **13**. configure d:swarm
@@ -358,8 +359,17 @@ When running the backend the first time, the MySQL database needs to be initiali
 lookout for the correct path (/home/user)
 
 ```
-/home/user/datamanagement-platform/dev-tools/reset-dbs.bash
+pushd ci-tools/scripts
+python reset-dbs.py \
+  --persistence-module=../../datadatamanagement-platform/persistence \
+  --user=dmp \
+  --password=dmp \
+  --db=dmp \
+  --neo4j=http://localhost:7474/graph
 ```
+
+Or provide the credentials and values you configured.
+Check `python reset-dbs.py --help` for additional information.
 
 # Update the System
 
