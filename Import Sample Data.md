@@ -4,7 +4,7 @@ __Note:__ Imports are achieved via file uploads in the alpha release. In future 
 
 ## Import Workflow
 
-Use the import function to import sample data:
+Use the import function to import sample data ([[enlarge figure|img/import.png]]):
 
 [[img/import.png]]
 
