@@ -4,7 +4,7 @@ The alpha release version of d:swarm serves purposes of demonstration and testin
 
 At the stage of the alpha release you can model these [ETL processes](http://en.wikipedia.org/wiki/Extract,_transform,_load):
 
-1. [[Import sample data]] (of small size up to 1,000 records) in CSV and XML formats to d:swarm.
+1. [[Import sample data|Import Sample Data]] (of small size up to 1,000 records) in CSV and XML formats to d:swarm.
 2. [[Configure the schema|Select Data for Schema Configuration]] of the imported sample data.
 3. [[Create projects|Create and Edit Projects]] for bundling all transformation processes necessary for converting [[data resources|Glossary#data-resource]] into target data based on a [[graph model|Glossary#data-model]].
 4. [[Map|Define Mappings]] a configured input [[schema|Glossary#schema]] of a sample data resource to an output schema.
