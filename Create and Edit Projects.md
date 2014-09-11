@@ -24,7 +24,7 @@ After [[configuring the data schema|Select Data for Schema Configuration]] you c
 The modelling perspective is the central d:swarm tool for defining schema mappings and model data transformations. The modelling perspective is divided in six panels and a lightbox.
 
 ([[enlarge figure|img/modeling-perspective-labeled-widgets.png]])
-[[img/modeling-perspective-labeled-widgets.png]])
+[[img/modeling-perspective-labeled-widgets.png]]
 
 <table >
 <thead>
