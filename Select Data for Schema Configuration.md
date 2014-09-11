@@ -2,7 +2,7 @@ After [[importing sample data|Import Sample Data]], the [[schema|Glossary#schema
 
 ## Selection Workflow
 
-[[enlarge figure|img/available-for-configuration.png]]
+([[enlarge figure|img/available-for-configuration.png]])
 
 [[img/available-for-configuration.png]]
 
