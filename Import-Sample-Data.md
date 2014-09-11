@@ -6,7 +6,7 @@ __Note:__ Imports are achieved via file uploads in the alpha release. In future 
 
 Use the import function to import sample data:
 
-[[import.png]]
+[[img/import.png]]
 
 * Click the tab “Import” (1).
 * Click on “Search” or “Choose File” (depending on the browser you use) (2). A dialog box will open.
