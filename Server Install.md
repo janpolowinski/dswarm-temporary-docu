@@ -371,7 +371,7 @@ pushd dmp-graph; git pull; popd
 pushd dmp-backoffice-web; git pull; popd
 ```
 
-## **2**. repeat steps 14 to 19 from installation as necessary
+## **2**. repeat steps [[14|Server-Install#14-build-neo4j-extension]] to [[19|Server-Install#19-initializereset-database]] from installation as necessary
 
 
 # Checklist on Errors
@@ -390,5 +390,4 @@ Now that you know which component does not run, go through
 * Check your [[dswarm Configuration]]. Are database name and password correct, i.e. the ones used when installing MySQL (step [[Server-Install#6-setup-mysql]])? Compare _datamanagement-platform/persistence/src/main/resources/create_database.sql_ with _datamanagement-platform/dswarm.conf_ or any other configuration option you use.
 * [[initialize the databases|Server-Install#19-initializereset-database]]. They may be empty or contain corrupted data caused by a failed unit tests.
 <!--- even though it is most likely that the databases contain corrupted data, this is not the first point on the list since previous steps are be required to initialize the dbs. -->
-
 
