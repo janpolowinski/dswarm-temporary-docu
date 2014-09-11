@@ -22,9 +22,10 @@ Load at most ... rows of data (Checkbox)  |  Defines the number of rows to be lo
 
 ## Configuration Workflow
 
+([[enlarge figure|img/data-config-as-csv.png]])
+[[img/data-config-as-csv.png]]
 
-
-Configure the properties of the CSV schema as needed.
-Click on “Preview” if an adjustment does not take immediate effect in the preview box.
-Save the configuration by clicking on “Save”.
-Click on “Cancel” if you want to discard your adjustments and get back to the “Data” tab.
+* Configure the properties of the CSV schema as needed.
+* Click on “Preview” if an adjustment does not take immediate effect in the preview box.
+* Save the configuration by clicking on “Save”.
+* Click on “Cancel” if you want to discard your adjustments and get back to the “Data” tab.
