@@ -9,7 +9,7 @@
 
 ### For users
 * [[Alpha Release Help]]
-  * [[Functional Range of the Alpha Release]]
+  * [[Functional Range|Functional Range of the Alpha Release]]
   * [[Import Sample Data]]
   * [[Select Data for Schema Configuration]]
     * [[Configure CSV Data Resources]]
