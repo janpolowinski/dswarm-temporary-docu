@@ -111,5 +111,7 @@ The modelling perspective is the central d:swarm tool for defining schema mappin
 </tbody>
 </table>
 
+You can save your work at any time by clicking on the button “Save project” (on the upper left in the source data widget). Additionally, all changes will be saved  automatically. If you happen to leave the modelling perspective without manually saving your project, you will be asked to save or discard your last modifications after reloading the project.
+
 ([[enlarge figure|img/save-or-discard.png]])
 [[img/save-or-discard.png]]
