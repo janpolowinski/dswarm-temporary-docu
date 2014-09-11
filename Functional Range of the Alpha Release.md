@@ -17,5 +17,5 @@ At the stage of the alpha release you can model these [ETL processes](http://en.
 ## Functional Restriction of the Alpha Release
 
 * Our design ideas for the GUI are not yet realized in the alpha release.
-* A user or rights management model is not implemented yet. Consequently, all users are allowed to do everything. All users have access to all data resources imported to d:swarm and can manipulate and overwrite projects of other all other users. The data in the central data hub is the result of the work of all users.
+* A user or rights management model is not implemented yet. Consequently, all users are allowed to do everything. All users have access to all data resources imported to d:swarm and can manipulate and overwrite [[projects|Glossary#project]] of other all other users. The data in the central [[data hub|Glossary#data-hub]] is the result of the work of all users.
 * There are further functional restrictions that will be resolved in due time according to our [[roadmap]].
