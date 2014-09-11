@@ -4,7 +4,7 @@
 * [[Class|Glossary#class]]
 * [[Component|Glossary#component]]
 * [[Configuration|Glossary#configuration]]
-* [[Datahub|Glossary#datahub]]
+* [[Data Hub|Glossary#data-hub]]
 * [[Data Model|Glossary#data-model]]
 * [[Data Perspective|Glossary#data-perspective]]
 * [[Data Resource|Glossary#data-resource]]
@@ -78,7 +78,7 @@ A component is a mechanism to describe the instantiation/utilisation of a [[Func
 
 A configuration is a bunch of settings or parameters that are necessary to interpret the data of a [[Data Resource|Glossary#data-resuorce]]. A CSV file, for example, can be parsed by a given column delimiter, row delimiter, the encoding of the content, etc.. Those settings are required to interpret the dumb plain data into useful bits of information. The result of the application of a configuration to a data resource is a [[Data Model|Glossary#data-model]].
 
-### Datahub
+### Data Hub
 
 The data hub is the central database within the DMP storing all available/registered data, ie. no metadata from the domain model
 
@@ -87,7 +87,7 @@ The data hub is the central database within the DMP storing all available/regist
 
 ### Data Model
 
-A data model is an interpretation of a [[Data Resource|Glossary#data-resource]] through its [[Configuration|Glossary#configuration]] (e.g. a csv file can be parsed by a given column delimiter, row delimiter, the encoding of the content, etc.). A data model consists of a bunch of [[Records|Glossary#record]]. Each input data resource is processed/loaded via a configuration into the [[internal data storage|Glossary#datahub]] of the Data Management Platform. The result is a data model that refers to its data resource, configuration and the [[Schema|Glossary#schema]] of the data (records).
+A data model is an interpretation of a [[Data Resource|Glossary#data-resource]] through its [[Configuration|Glossary#configuration]] (e.g. a csv file can be parsed by a given column delimiter, row delimiter, the encoding of the content, etc.). A data model consists of a bunch of [[Records|Glossary#record]]. Each input data resource is processed/loaded via a configuration into the [[internal data storage|Glossary#data-hub]] of the Data Management Platform. The result is a data model that refers to its data resource, configuration and the [[Schema|Glossary#schema]] of the data (records).
 
 * note: data model is sometimes utilised as replacement for [[Meta Data Model|Glossary#meta-data-model]] (which has a different meaning)
 
@@ -230,7 +230,7 @@ A schema is a collection of [[Attribute Path|Glossary#attribute-path]]s and a (g
 
 ### Statement
 
-A statement – a simple sentence with the structure: subject, predicate, object – is the fundamental knowledge representation structure of the graph data model in our [[Datahub|Glossary#datahub]]. Whereby, each subject and object is represented by a [[Node|Glossary#node]] and the predicate is always a [[Relationship|Glossary#relationship]] ([[Edge|Glossary#edge]]). Hence, a statement made of subject, predicate, object is represented by a node, edge, node structure. This enables the ability to add fine-grained external context information, e.g., provenance, version or evidence, at the level of statements or to qualify a statement more precise, e.g., weighting etc.
+A statement – a simple sentence with the structure: subject, predicate, object – is the fundamental knowledge representation structure of the graph data model in our [[Data Hub|Glossary#data-hub]]. Whereby, each subject and object is represented by a [[Node|Glossary#node]] and the predicate is always a [[Relationship|Glossary#relationship]] ([[Edge|Glossary#edge]]). Hence, a statement made of subject, predicate, object is represented by a node, edge, node structure. This enables the ability to add fine-grained external context information, e.g., provenance, version or evidence, at the level of statements or to qualify a statement more precise, e.g., weighting etc.
 
 ### Subject
 
