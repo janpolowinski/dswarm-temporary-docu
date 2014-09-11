@@ -41,7 +41,7 @@ The modelling perspective is the central d:swarm tool for defining schema mappin
 <td>
 <ul>
 <li>In order to make the modelling of <a title="d:swarm Glossary" href="Glossary#mapping">mappings</a> and <a title="d:swarm Glossary" href="Glossary#transformation">data transformations</a> easy, sample records of the configured <a title="d:swarm Glossary" href="Glossary#data-resource">data resource</a> are presented.</li>
-<li>If there is more than one <a title="d:swarm Glossary" href="Glossary#Record">record</a> in the resource, the first few are presented in individual tabs.
+<li>If there is more than one <a title="d:swarm Glossary" href="Glossary#record">record</a> in the resource, the first few are presented in individual tabs.
 <ul>
 <li><em><strong>Note:</strong> The alpha release does not allow for selection of specific records other than the first few.</em></li>
 </ul>
