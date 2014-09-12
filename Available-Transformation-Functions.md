@@ -1,13 +1,13 @@
 __Note:__ d:swarm uses functions of the Metamorph framework for data transformation. You can find more detailed information about these functions at https://github.com/culturegraph/metafacture-core/wiki/Metamorph-functions.
 
-<table class="confluenceTable">
+<table>
 <tbody>
 <tr>
-<th class="confluenceTh">Function</th>
-<th class="confluenceTh">Description</th>
-<th class="confluenceTh">Parameter</th>
-<th class="confluenceTh"> Explanation</th>
-<th class="confluenceTh">Example</th>
+<th>Function</th>
+<th>Description</th>
+<th>Parameter</th>
+<th> Explanation</th>
+<th>Example</th>
 </tr>
 <tr>
 <td rowspan="3">case</td>
