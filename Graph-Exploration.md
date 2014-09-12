@@ -33,7 +33,7 @@ These are the basic functions directly accessible from the starting page:
   * __Note:__  Double clicking a node will show all in-coming and out-going edges (and their starting or ending nodes) of the node.
 
 
-### Example
+#### Example
 
 This is an example of a record imported from a CSV file an its mapping. It can be retrieved with this query:
 
@@ -56,6 +56,18 @@ This is an example of a record imported from a CSV file an its mapping. It can b
 __Note:__ If a relationship (edge) is selected, the detail view shows all property keys of the relationship (edge attributes and edge type, i.e. attribute or predicate of the statement).
 
 
+### Useful Cypher Queries
+
+This overview can provide only a brief glance at Cypher queries. There are more d:swarm related queries in the [[Cypher Cheat Sheet]]. For a detailed explanation of the capabilities of Cypher, please refer to [[Cypher Reference Card|http://docs.neo4j.org/refcard/2.0/]].
+
+* Retrival (recursive) of all statements that belong to record of the record type ‘http://www.openarchives.org/OAI/2.0/recordType‘, i.e. “show me all (hierarchically structured) records of this resource type in the graph”:
+    ``MATCH (n:`http://www.openarchives.org/OAI/2.0/recordType`)-[r*]->(m) RETURN n, r, m;``
+* Retrieval of all statements with the following attributes: ‘http://data.slub-dresden.de/resources/1/schema#description‘
+    ``MATCH (n)-[r:`http://data.slub-dresden.de/resources/1/schema#description`]->(m) RETURN n, r, m;``
+* Retrieval of all resource types used in the graph, i.e. “show me all resource type nodes of the resource type rdfs:Class” :
+    ``MATCH (n:`http://www.w3.org/2000/01/rdf-schema#Class`) RETURN n;``
+
+__Note:__ In the graph exploration tab, all resource types in the graph will be shown. A possible difference of this Cyber query is the fact that it will show all resource types currently existent in the graph, while the exploration tab lists also those types that used to be existent but have been deleted.
 
 
 ([[enlarge figure|img/.png]])
