@@ -1,4 +1,4 @@
-A [[graph data model|Glossary#graph-data-model]] implies the notion of [[nodes|Glossary#node]] and [[edges|Glossary#relationship. In the graph data model, [[statements|Glossary#statement]] are represented as directed binary graphs – they always consist of a subject __node__, a predicate __edge__ and an object __node__.
+A [[graph data model|Glossary#graph-data-model]] implies the notion of [[nodes|Glossary#node]] and [[edges|Glossary#relationship]]. In the graph data model, [[statements|Glossary#statement]] are represented as directed binary graphs – they always consist of a subject __node__, a predicate __edge__ and an object __node__.
 
 ## Nodes
 
