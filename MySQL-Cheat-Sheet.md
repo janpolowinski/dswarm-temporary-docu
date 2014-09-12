@@ -1,15 +1,15 @@
-# Database Schema
+## Database Schema
 
 The figure below is done with [[SchemaSpy|http://schemaspy.sourceforge.net/]] (that may be used to create interactive pages to visualize and explore the database schema). 
 
 [[enlarge figure|img/mysql_database_schema.png]]
 [[img/mysql_database_schema.png]]
 
-#  Initialize/Reset DB
+##  Initialize/Reset DB
 
 See [[Server Install|Server-Install#19-initializereset-database]] for initializing or resetting the database. 
 
-# Backup DB
+## Backup DB
 
 to create a data dump, run the command
 
