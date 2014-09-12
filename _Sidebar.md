@@ -5,6 +5,7 @@
   * [[d:swarm Configuration|dswarm Configuration]]
   * [[Update the System|Server-Install#update-the-system]]
   * [[Checklist on Errors|Server-Install#checklist-on-errors]]
+* [[Roadmap]]
 * [[Glossary]]
 
 ### For users
