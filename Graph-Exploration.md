@@ -97,3 +97,10 @@ At this stage, there are only node indices. You can, however, create edge indice
   * Index attribute: **\_\_VALUE\_\_**
 
 **Note**: Index attributes have no direct relation to node attributes or edge attributes, even if they have the same label.
+
+
+-----------------------------------
+### Alpha Release Help Step by Step
+
+* next: [[Export Data in RDF]]
+* previous: [[Graph Data Model]]
