@@ -23,4 +23,4 @@ Having successfully imported the data resource it will be available in the tab â
 ### Alpha Release Help Step by Step
 
 * next: [[Select Data for Schema Configuration]]
-* previous: [[Import Sample Data]]
+* previous: [[Functional Range of the Alpha Release]]
