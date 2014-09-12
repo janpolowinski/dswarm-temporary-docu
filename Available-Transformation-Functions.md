@@ -68,6 +68,9 @@ __Note:__ d:swarm uses functions of the Metamorph framework for data transformat
 <td></td>
 </tr>
 <tr>
+<td class="highlight-grey confluenceTd" colspan="5" data-highlight-colour="grey"></td>
+</tr>
+<tr>
 <td>constant</td>
 <td>Replaces the value with a constant string.</td>
 <td>value</td>
