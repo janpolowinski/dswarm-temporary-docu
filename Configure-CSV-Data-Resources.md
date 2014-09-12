@@ -29,3 +29,10 @@ Load at most ... rows of data (Checkbox)  |  Defines the number of rows to be lo
 * Click on “Preview” if an adjustment does not take immediate effect in the preview box.
 * Save the configuration by clicking on “Save”.
 * Click on “Cancel” if you want to discard your adjustments and get back to the “Data” tab.
+
+
+-----------------------------------
+### Alpha Release Help Step by Step
+
+* next: [[Configure XML Data Resources]]
+* previous: [[Select Data for Schema Configuration]]
