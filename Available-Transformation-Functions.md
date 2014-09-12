@@ -69,7 +69,9 @@ __Note:__ d:swarm uses functions of the Metamorph framework for data transformat
 <td>postfix string</td>
 <td></td>
 </tr>
-<!---  ---------------------------  -->
+<tr>
+<td colspan="5"></td>
+</tr>
 <tr>
 <td>constant</td>
 <td>Replaces the value with a constant string.</td>
@@ -99,7 +101,7 @@ __Note:__ d:swarm uses functions of the Metamorph framework for data transformat
 </tr>
 </tbody>
 </table>
-
+<!---  ---------------------------  -->
 <table>
 <thead>
 <tr>
@@ -179,9 +181,20 @@ Result: &lt;a href="http://www.slub-dresden.de/"&gt;Homepage SLUB Dresden&lt;/a&
 <td>comparison value</td>
 <td></td>
 </tr>
+</tbody>
+</table>
+<!---  ---------------------------  -->
+<table>
+<thead>
 <tr>
-<td colspan="5"></td>
+<th>Function</th>
+<th>Description</th>
+<th>Parameter</th>
+<th> Explanation</th>
+<th>Example</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td rowspan="2">occurence</td>
 <td rowspan="2">Filtering based on occurrence.</p>
