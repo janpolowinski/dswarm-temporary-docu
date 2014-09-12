@@ -89,11 +89,11 @@ Apart from the built-in indices for node labels and relationship types you shoul
 At this stage, there are only node indices. You can, however, create edge indices. Node indices always have the prefix ‘node’. The following indices are currently provided:
 
 * **resources**: contains all resource identifiers
-  * Index attribute: \_\_URI\_\_
+  * Index attribute: **\_\_URI\_\_**
 * **resources_w_provenance**: contains all resource identifiers + provenance identifiers , e.g. ‘http://data.slub-dresden.de/datamodels/2/records/788e0248-f417-4e72-a6ed-e8cf0baa4546 http://data.slub-dresden.de/datamodel/2/data‘ where the resource identifier is separated from the provenance identifier by a space within the key.
-  * Index attribute: \_\_URI_W_PROVENANCE\_\_
+  * Index attribute: **\_\_URI_W_PROVENANCE\_\_**
   * **Note**: this index is useful for efficient access to resources of a certain provenance.
 * **values**: contains all values of literals
-  * Index attribute: \_\_VALUE\_\_
+  * Index attribute: **\_\_VALUE\_\_**
 
 **Note**: Index attributes have no direct relation to node attributes or edge attributes, even if they have the same label.
