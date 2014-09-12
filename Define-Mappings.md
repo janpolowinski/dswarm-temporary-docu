@@ -26,3 +26,10 @@ Complex mappings such as combining two input [[attribute paths|Glossary#attribut
 * The button “Add to selected mapping” will be shown (2).
 * Create an integrated mapping by clicking on “Add to selected mapping”.
 * If multiple input attribute paths should not combined into one, you can achieve this by clicking on “New Mapping” (3). This will create two unconnected mappings.
+
+
+-----------------------------------
+### Alpha Release Help Step by Step
+
+* next: [[Design and Execute Transformations]]
+* previous: [[Create and Edit Projects]]
