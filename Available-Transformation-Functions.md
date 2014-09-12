@@ -108,13 +108,10 @@ __Note:__ d:swarm uses functions of the Metamorph framework for data transformat
 <td class="confluenceTd" rowspan="3">htmlanchor</td>
 <td class="confluenceTd" rowspan="3">Creates an HTML anchor tag with the following pattern:
 
+<p>&lg;a href="prefix + wert + postfix"&gt;title&lg;/a&gt;</p>
 
-&lg;a href="prefix + wert + postfix"&gt;title&lg;/a&gt;
-
-Example to be mapped: "slub-dresden"
-Ergebnis (ohne "+"): &lt;a href="http://www.+slub-dresden+.de/"&gt;Homepage SLUB Dresden&lt;/a&gt;
-
-
+<p>Example to be mapped: "slub-dresden"<br />
+Ergebnis (ohne "+"): &lt;a href="http://www.+slub-dresden+.de/"&gt;Homepage SLUB Dresden&lt;/a&gt;</p>
 </td>
 <td class="confluenceTd" colspan="1">prefix</td>
 <td class="confluenceTd" colspan="1">prefix string</td>
