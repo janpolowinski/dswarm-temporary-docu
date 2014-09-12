@@ -69,9 +69,7 @@ __Note:__ d:swarm uses functions of the Metamorph framework for data transformat
 <td>postfix string</td>
 <td></td>
 </tr>
-<tr>
-<td colspan="5"></td>
-</tr>
+<!---  ---------------------------  -->
 <tr>
 <td>constant</td>
 <td>Replaces the value with a constant string.</td>
@@ -99,7 +97,20 @@ __Note:__ d:swarm uses functions of the Metamorph framework for data transformat
 <td>comparison value</td>
 <td></td>
 </tr>
-<!---  ---------------------------  -->
+</tbody>
+</table>
+
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+<th>Parameter</th>
+<th> Explanation</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
 <tr>
 <td rowspan="3">htmlanchor</td>
 <td rowspan="3">Creates an HTML anchor tag with the following pattern (without "+" and spaces):
@@ -126,20 +137,6 @@ Result: &lt;a href="http://www.slub-dresden.de/"&gt;Homepage SLUB Dresden&lt;/a&
 <tr>
 <td colspan="5"></td>
 </tr>
-</tbody>
-</table>
-<!---  ---------------------------  -->
-<table>
-<thead>
-<tr>
-<th>Function</th>
-<th>Description</th>
-<th>Parameter</th>
-<th> Explanation</th>
-<th>Example</th>
-</tr>
-</thead>
-<tbody>
 <tr>
 <td rowspan="4">isbn</td>
 <td rowspan="4">ISBN cleaning, checkdigit verication and transformation between ISBN 10 and ISBN 13. Non-digit characters can be eliminated. ISBN can be validated.</td>
