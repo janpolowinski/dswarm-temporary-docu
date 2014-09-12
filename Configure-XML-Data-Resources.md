@@ -11,3 +11,10 @@ __Note:__ XSD schema definitions of XML files will not be automatically extracte
 * You can discard any changes and go back to the “Data” tab by clicking on “Cancel”.
 
 __Note:_ If you enter a denominator that does not exist in the data resource or does not denote records, the resource will be imported imporperly. You will receive no notification about any errors but you can check the result by means of [[graph exploration|Graph Exploration]].
+
+
+-----------------------------------
+### Alpha Release Help Step by Step
+
+* next: [[Create and Edit Projects]]
+* previous: [[Configure CSV Data Resources]]
