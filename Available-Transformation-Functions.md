@@ -295,3 +295,10 @@ Result: &lt;a href="http://www.slub-dresden.de/"&gt;Homepage SLUB Dresden&lt;/a&
 </tr>
 </tbody>
 </table>
+
+
+-----------------------------------
+### Alpha Release Help Step by Step
+
+* next: [[Graph Data Model]]
+* previous: [[Define Filters]]
