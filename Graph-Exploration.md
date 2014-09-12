@@ -75,5 +75,25 @@ This overview can provide only a brief glance at Cypher queries. There are more 
 __Note:__ In the graph exploration tab, all resource types in the graph will be shown. A possible difference of this Cyber query is the fact that it will show all resource types currently existent in the graph, while the exploration tab lists also those types that used to be existent but have been deleted.
 
 
-([[enlarge figure|img/.png]])
-[[img/.png]]
+### Use of Indices
+
+Apart from the built-in indices for node labels and relationship types you should use further indices (which, at this stage, are implemented as [[Neo4j legacy indices|http://docs.neo4j.org/chunked/milestone/indexing.html]] that differ from the [[schema indices|http://docs.neo4j.org/chunked/milestone/query-schema-index.html]]) in order to achieve fast runtimes for your queries.
+
+* Retrieval of all statements connected with nodes with the node identifier ‘http://data.slub-dresden.de/datamodels/2/records/788e0248-f417-4e72-a6ed-e8cf0baa4546‘, i.e. statements whose subject has this identifier:
+
+    ``START n=node:resources(__URI__="http://data.slub-dresden.de/datamodels/2/records/788e0248-f417-4e72-a6ed-e8cf0baa4546") MATCH (n)-[r]->(m) RETURN n, r, m;``
+
+
+#### Available Indices
+
+At this stage, there are only node indices. You can, however, create edge indices. Node indices always have the prefix ‘node’. The following indices are currently provided:
+
+* **resources**: contains all resource identifiers
+  * Index attribute: \_\_URI\_\_
+* **resources_w_provenance**: contains all resource identifiers + provenance identifiers , e.g. ‘http://data.slub-dresden.de/datamodels/2/records/788e0248-f417-4e72-a6ed-e8cf0baa4546 http://data.slub-dresden.de/datamodel/2/data‘ where the resource identifier is separated from the provenance identifier by a space within the key.
+  * Index attribute: \_\_URI_W_PROVENANCE\_\_
+  * **Note**: this index is useful for efficient access to resources of a certain provenance.
+* **values**: contains all values of literals
+  * Index attribute: \_\_VALUE\_\_
+
+**Note**: Index attributes have no direct relation to node attributes or edge attributes, even if they have the same label.
