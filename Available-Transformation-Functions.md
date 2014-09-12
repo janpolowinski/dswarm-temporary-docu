@@ -1,7 +1,7 @@
 __Note:__ d:swarm uses functions of the Metamorph framework for data transformation. You can find more detailed information about these functions at https://github.com/culturegraph/metafacture-core/wiki/Metamorph-functions.
 
 <table>
-<tbody>
+<thead>
 <tr>
 <th>Function</th>
 <th>Description</th>
@@ -9,6 +9,8 @@ __Note:__ d:swarm uses functions of the Metamorph framework for data transformat
 <th> Explanation</th>
 <th>Example</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td rowspan="3">case</td>
 <td rowspan="3">Letter characters are transformed to lower or upper case.</td>
