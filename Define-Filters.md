@@ -24,6 +24,6 @@ A light box will open:
 
 __Note:__ These restrictions apply in the alpha release:
 
-* Filters can only be used for fields on the level as the field that is being mapped. In our example, you can map the elements type, nr, and ind, but not, for instance, value, which is on a sublevel (4).
+* Filters can only be used for fields on the level as the field that is being mapped. In our example, you can map the elements _type_, _nr_, and _ind_, but not, for instance, _value_, which is on a sublevel (4).
 * You can change filter rules, but you cannot delete a filter rule. You can, however, accomplish a ‘deletion’ of a rule by emptying all fields.
 * You cannot select a specific record set from the sample data.
