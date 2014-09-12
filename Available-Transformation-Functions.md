@@ -69,9 +69,20 @@ __Note:__ d:swarm uses functions of the Metamorph framework for data transformat
 <td>postfix string</td>
 <td></td>
 </tr>
+</tbody>
+</table>
+
+<table>
+<thead>
 <tr>
-<td colspan="5"></td>
+<th>Function</th>
+<th>Description</th>
+<th>Parameter</th>
+<th> Explanation</th>
+<th>Example</th>
 </tr>
+</thead>
+<tbody>
 <tr>
 <td>constant</td>
 <td>Replaces the value with a constant string.</td>
