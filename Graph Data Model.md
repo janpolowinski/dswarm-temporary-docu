@@ -98,3 +98,10 @@ Edges are always attributes of resources or parts of resources, e.g. mabxml:nr (
 </tbody>
 </table>
 
+
+-----------------------------------
+### Alpha Release Help Step by Step
+
+* next: [[Graph Exploration]]
+* previous: [[Available Transformation Functions]]
+
