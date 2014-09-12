@@ -7,7 +7,7 @@ An universal cheat sheet is the [Neo4j Cypher Refcard 2.0](http://docs.neo4j.org
 
 This section provides some common cypher queries that may be used programmatically or to explore the graph via the Neo4j browser that usually runs at *http://localhost:7474/browser/*. 
 
-##### extract all statements from the DB (re. currently graph model)
+#### extract all statements from the DB (re. currently graph model)
 
     MATCH n-[r]->m RETURN DISTINCT n, n.__URI__,n.__NODETYPE__, r, r.__URI__, m, m.__URI__, m.__NODETYPE__, m.__VALUE__
 
