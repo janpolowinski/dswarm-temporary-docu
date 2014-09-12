@@ -63,3 +63,37 @@ A [[record|Glossary#record]] is always a resource so the node type of the record
 
 [[URIs|Glossary#uri]] are used as denominators for resource identifiers, types and attributes (predicates) of [[statements|Glossary#statement]]. All edges and resource nodes have a provenance attribute (**\_\_PROVENANCE\_\_**). It references the [[data model|Glossary#data-model]] the statement or resource belongs to. Resource identifiers are connected with resource nodes by the attribute **\_\_URI\_\_**. Values of literals are connected with literal nodes by the attribute **\_\_VALUE\_\_**.
 
+
+## Edges
+
+Edges are always attributes of resources or parts of resources, e.g. mabxml:nr (http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#nr).
+
+### Attributes of Edges
+
+<table>
+<thead>
+<tr>
+<th> Attribute </th>
+<th> Definition </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>__PROVENANCE__</strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>__RESOURCE__</strong></td>
+<td><span style="color: #000000;">Signifies the resource the node belongs to (if it is, for instance, a literal node or a BNode)</span></td>
+</tr>
+<tr>
+<td><strong>__ORDER__</strong></td>
+<td><span style="color: #000000;">Signifies the &#8220;In-Elements&#8221; order of values of a certain type, e.g. &#8220;mixed XML elements&#8221;<br />
+</span></td>
+</tr>
+<tr>
+<td><strong>__INDEX__</strong></td>
+<td><span style="color: #000000;">Signifies the statement index of a resource (i.e. of the original element order as occurs in XML files)</span></td>
+</tr>
+</tbody>
+</table>
