@@ -97,3 +97,4 @@ Edges are always attributes of resources or parts of resources, e.g. mabxml:nr (
 </tr>
 </tbody>
 </table>
+
