@@ -14,3 +14,10 @@ The export function can be accessed on the tab “Data”.
 __Note:__
 * In the alpha release, all data in the data hub will be exported. An export generator for specifying a selection of data to be exported will be available in future releases (cf. [[d:swarm Roadmap|Roadmap]]).
 * URI-use in exported RDF data: New URIs will not yet be generated for transformed resources in the alpha release. If source records have a URI already, it will reappear in the exported data.
+
+
+-----------------------------------
+### Alpha Release Help Step by Step
+
+* next: [[Give Feedback to the Developers]]
+* previous: [[Graph Exploration]]
