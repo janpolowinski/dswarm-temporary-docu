@@ -260,9 +260,9 @@ A vocabulary or ontology is a set of terms (universals). Terms can be [[Attribut
 ### Widgets
 
 Every box in the modelling perspective in the web-based UI is called a widget. The following widgets are available:
-* source data
-* source schema
-* target schema
-* target data
-* transformation
-* function component
+* Source Data Widget
+* Mapping Area
+* Target Data Widget
+* Configuration Widget
+* Transformation Logic Widget
+* Function List Widget
