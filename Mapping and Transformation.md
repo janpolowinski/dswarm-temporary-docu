@@ -15,5 +15,5 @@ clean-up:Transformation does three steps:
 Since the same 3 steps are applied to both input parameters, the whole clean-up transformation is reutilised in myTransformation:Transformation (wrapped as a function by component1 and component2).
 
 <!--- update figure at https://intranet.slub-dresden.de/pages/viewpage.action?pageId=37071934 -->
-[[enlarge figure|img/mapping_object_diagramm.png]]
-[[img/mapping_object_diagramm.png]]
+[[enlarge figure|img/mapping-object-diagramm.png]]
+[[img/mapping-object-diagramm.png]]
