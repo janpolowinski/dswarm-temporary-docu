@@ -17,8 +17,8 @@
 
 You can also download the alpha release help as [[PDF file in German language|Alpha-Release-Hilfe-DE.pdf]].
 
----
 
+-----------------------------------
 ### Alpha Release Help Step by Step
 
 * next: [[Functional Range of the Alpha Release]]
