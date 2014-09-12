@@ -17,3 +17,10 @@ Use the import function to import sample data ([[enlarge figure|img/import.png]]
 * Finish the upload process by clicking on “Submit” (4).
 
 Having successfully imported the data resource it will be available in the tab “Data” in the list “Available for configuration”.
+
+
+-----------------------------------
+### Alpha Release Help Step by Step
+
+* next: [[Select Data for Schema Configuration]]
+* previous: [[Import Sample Data]]
