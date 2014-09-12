@@ -19,6 +19,6 @@ You can also download the alpha release help as [[PDF file in German language|Al
 
 ---
 
-###Step by Step
+### Alpha Release Help Step by Step
 
 * next: [[Functional Range of the Alpha Release]]
