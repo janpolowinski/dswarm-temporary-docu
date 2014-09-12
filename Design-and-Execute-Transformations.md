@@ -48,3 +48,10 @@ Any transformation is executable at all times:
 * Click on “Run _this_ transformation” (1) in order to execute the transformation logic currently displayed and view the results of the transformation executed on the sample data in the target data widget on the upper right (2).
 * Click on “Run _all_ Transformations” (3) in order to execute the transformations for all mappings in the project.
 * Click on “Save all transformations” (4) in order to run all transformations for the entire data resource, and save the results in the [[data hub|Glossary#data-hub]]. You can access the results via the database GUI as described in [[Graph Data Model]].
+
+
+-----------------------------------
+### Alpha Release Help Step by Step
+
+* next: [[Define Filters]]
+* previous: [[Define Mappings]]
