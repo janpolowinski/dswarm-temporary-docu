@@ -33,8 +33,30 @@ These are the basic functions directly accessible from the starting page:
   * __Note:__  Double clicking a node will show all in-coming and out-going edges (and their starting or ending nodes) of the node.
 
 
-([[enlarge figure|img/.png]])
-[[img/.png]]
+### Example
+
+This is an example of a record imported from a CSV file an its mapping. It can be retrieved with this query:
+
+    MATCH (n)-[r]->(m) WHERE n.__URI__ = "http://data.slub-dresden.de/datamodels/2/records/788e0248-f417-4e72-a6ed-e8cf0baa4546" RETURN n, r, m;
+
+([[enlarge figure|img/graph-example.png]])
+[[img/graph-example.png]]
+
+* (1) the record selected in the input data model (resource node) http://data.slub-dresden.de/datamodels/2/records/788e0248-f417-4e72-a6ed-e8cf0baa4546
+* (2)The detail view of the selected resource node with the following node attributes:
+  * \_\_URI\_\_ = http://data.slub-dresden.de/datamodels/2/records/788e0248-f417-4e72-a6ed-e8cf0baa4546
+  * \_\_PROVENANCE\_\_ = http://data.slub-dresden.de/datamodel/2/data
+  * \_\_NODETYPE\_\_ = \_\_RESOURCE\_\_
+  * the node label (as resource type): http://data.slub-dresden.de/resources/1/schema#RecordType
+* (3) the correlating resource type node
+  * __Note:__ Double clicking a resource type node will show all resource nodes that are categorized with this type.
+* (4) visualization of a statement (node – edge – node)
+  * This example shows the resource node of the record http://data.slub-dresden.de/datamodels/2/records/788e0248-f417-4e72-a6ed-e8cf0baa4546 in the output data model with the attribute  http://data.slub-dresden.de/resources/1/schema#description and the value (literal) “muh muh”. 
+
+__Note:__ If a relationship (edge) is selected, the detail view shows all property keys of the relationship (edge attributes and edge type, i.e. attribute or predicate of the statement).
+
+
+
 
 ([[enlarge figure|img/.png]])
 [[img/.png]]
