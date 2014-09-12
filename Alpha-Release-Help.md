@@ -15,4 +15,4 @@
 * [[Export Data in RDF]]
 * [[Give Feedback to the Developers]]
 
-You can also [[download the alpha release help in german|Alpha-Release-Hilfe-DE.pdf]] as PDF file.
+You can also download the alpha release help as [[PDF file in german language|Alpha-Release-Hilfe-DE.pdf]].
