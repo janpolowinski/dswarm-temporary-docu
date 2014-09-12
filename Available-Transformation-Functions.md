@@ -3,7 +3,7 @@ __Note:__ d:swarm uses functions of the Metamorph framework for data transformat
 <table class="confluenceTable">
 <tbody>
 <tr>
-<th class="confluenceTh">Transformation</th>
+<th class="confluenceTh">Function</th>
 <th class="confluenceTh" colspan="1">Description</th>
 <th class="confluenceTh">Parameter</th>
 <th class="confluenceTh"> Explanation</th>
