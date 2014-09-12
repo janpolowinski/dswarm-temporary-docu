@@ -8,7 +8,7 @@ At the stage of the alpha release you can model these [ETL processes](http://en.
 2. [[Configure the schema|Select Data for Schema Configuration]] of the imported sample data.
 3. [[Create projects|Create and Edit Projects]] for bundling all transformation processes necessary for converting [[data resources|Glossary#data-resource]] into target data based on a [[graph model|Glossary#data-model]].
 4. [[Map|Define Mappings]] a configured input [[schema|Glossary#schema]] of a sample data resource to an output schema.
-5. Define [[data transformation routines||Design and Execute Transformations]] for each [[mapping|Glossary#mapping]] using a basic set of [[transformation functions|Available Transformation Functions]].
+5. Define [[data transformation routines|Design and Execute Transformations]] for each [[mapping|Glossary#mapping]] using a basic set of [[transformation functions|Available Transformation Functions]].
 6. [[Configure filters|Define Filters]] that define the conditions for transformation processes.
 7. Execute data transformations on the imported sample data while modelling and save the results in a central [[data hub|Glossary#data-hub]] in a [[property graph|Graph Data Model]].
 8. [[View and explore|Graph Exploration]] the results within the graphical user interface of the graph database.
