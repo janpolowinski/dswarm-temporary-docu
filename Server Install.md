@@ -355,7 +355,7 @@ su
 
 ### **19**. initialize/reset database
 
-** This step requires less privileged access **
+**This step requires less privileged access**
 
 When running the backend the first time, the MySQL database needs to be initialized. When updated, a reset is required in case the schema or initial data has changed.
 lookout for the correct path (/home/user)
