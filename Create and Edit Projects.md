@@ -115,3 +115,10 @@ You can save your work at any time by clicking on the button “Save project” 
 
 ([[enlarge figure|img/save-or-discard.png]])
 [[img/save-or-discard.png]]
+
+
+-----------------------------------
+### Alpha Release Help Step by Step
+
+* next: [[Define Mappings]]
+* previous: [[Configure XML Data Resources]]
