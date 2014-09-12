@@ -198,10 +198,10 @@ Result: &lt;a href="http://www.slub-dresden.de/"&gt;Homepage SLUB Dresden&lt;/a&
 <tr>
 <td rowspan="2">occurence</td>
 <td rowspan="2">Filtering based on occurrence.</p>
-<p>Values to be mapped (e.g. result of split): &#8220;SLUB&#8221; &#8220;Dresden&#8221; &#8220;d:swarm&#8221; &#8220;Datenmanagement&#8221;</p>
+<p>Values to be mapped (e.g. result of split): &#8220;SLUB&#8221; &#8220;Dresden&#8221; &#8220;d:swarm&#8221; &#8220;DMP&#8221;</p>
 <p>only: &#8220;moreThen 2&#8243;</p>
 <p>sameEntity: &#8220;True&#8221;</p>
-<p>Result: &#8220;d:swarm&#8221; &#8220;Datenmanagement&#8221;</td>
+<p>Result: &#8220;d:swarm&#8221; &#8220;DMP&#8221;</td>
 <td>only</td>
 <td>Position of element</td>
 <td>moreThen 2</p>
