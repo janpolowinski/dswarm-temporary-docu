@@ -27,7 +27,7 @@ __Note:__ d:swarm uses functions of the Metamorph framework for data transformat
 <td>slub desden</td>
 </tr>
 <tr>
-<td class="highlight-grey confluenceTd" colspan="5" data-highlight-colour="grey"></td>
+<td colspan="5"></td>
 </tr>
 <tr>
 <td rowspan="2">compose</td>
@@ -42,7 +42,7 @@ __Note:__ d:swarm uses functions of the Metamorph framework for data transformat
 <td></td>
 </tr>
 <tr>
-<td class="highlight-grey confluenceTd" colspan="5" data-highlight-colour="grey"></td>
+<td colspan="5"></td>
 </tr>
 <tr>
 <td rowspan="3">concat</td>
@@ -68,7 +68,7 @@ __Note:__ d:swarm uses functions of the Metamorph framework for data transformat
 <td></td>
 </tr>
 <tr>
-<td class="highlight-grey confluenceTd" colspan="5" data-highlight-colour="grey"></td>
+<td colspan="5"></td>
 </tr>
 <tr>
 <td>constant</td>
@@ -78,7 +78,7 @@ __Note:__ d:swarm uses functions of the Metamorph framework for data transformat
 <td></td>
 </tr>
 <tr>
-<td class="highlight-grey confluenceTd" colspan="5" data-highlight-colour="grey"></td>
+<td colspan="5"></td>
 </tr>
 <tr>
 <td>count</td>
@@ -88,7 +88,7 @@ __Note:__ d:swarm uses functions of the Metamorph framework for data transformat
 <td></td>
 </tr>
 <tr>
-<td class="highlight-grey confluenceTd" colspan="5" data-highlight-colour="grey"></td>
+<td colspan="5"></td>
 </tr>
 <tr>
 <td>equals</td>
@@ -98,7 +98,7 @@ __Note:__ d:swarm uses functions of the Metamorph framework for data transformat
 <td></td>
 </tr>
 <tr>
-<td class="highlight-grey confluenceTd" colspan="5" data-highlight-colour="grey"></td>
+<td colspan="5"></td>
 </tr>
 <tr>
 <td rowspan="3">htmlanchor</td>
@@ -124,7 +124,7 @@ Result: &lt;a href="http://www.slub-dresden.de/"&gt;Homepage SLUB Dresden&lt;/a&
 <td>Homepage SLUB Dresden</td>
 </tr>
 <tr>
-<td class="highlight-grey confluenceTd" colspan="5" data-highlight-colour="grey"></td>
+<td colspan="5"></td>
 </tr>
 <tr>
 <td rowspan="4">isbn</td>
@@ -149,7 +149,7 @@ Result: &lt;a href="http://www.slub-dresden.de/"&gt;Homepage SLUB Dresden&lt;/a&
 <td></td>
 </tr>
 <tr>
-<td class="highlight-grey confluenceTd" colspan="5" data-highlight-colour="grey"></td>
+<td colspan="5"></td>
 </tr>
 <tr>
 <td>normalize-utf8</td>
@@ -159,7 +159,7 @@ Result: &lt;a href="http://www.slub-dresden.de/"&gt;Homepage SLUB Dresden&lt;/a&
 <td></td>
 </tr>
 <tr>
-<td class="highlight-grey confluenceTd" colspan="5" data-highlight-colour="grey"></td>
+<td colspan="5"></td>
 </tr>
 <tr>
 <td>not-equals</td>
@@ -169,7 +169,7 @@ Result: &lt;a href="http://www.slub-dresden.de/"&gt;Homepage SLUB Dresden&lt;/a&
 <td></td>
 </tr>
 <tr>
-<td class="highlight-grey confluenceTd" colspan="5" data-highlight-colour="grey"></td>
+<td colspan="5"></td>
 </tr>
 <tr>
 <td rowspan="2">occurence</td>
@@ -191,7 +191,7 @@ Result: &lt;a href="http://www.slub-dresden.de/"&gt;Homepage SLUB Dresden&lt;/a&
 <p>False</td>
 </tr>
 <tr>
-<td class="highlight-grey confluenceTd" colspan="5" data-highlight-colour="grey"></td>
+<td colspan="5"></td>
 </tr>
 <tr>
 <td rowspan="2">regexp</td>
@@ -206,7 +206,7 @@ Result: &lt;a href="http://www.slub-dresden.de/"&gt;Homepage SLUB Dresden&lt;/a&
 <td>^isbn\d\d\-(\d{10,13})</td>
 </tr>
 <tr>
-<td class="highlight-grey confluenceTd" colspan="5" data-highlight-colour="grey"></td>
+<td colspan="5"></td>
 </tr>
 <tr>
 <td rowspan="2">replace</td>
@@ -221,7 +221,7 @@ Result: &lt;a href="http://www.slub-dresden.de/"&gt;Homepage SLUB Dresden&lt;/a&
 <td></td>
 </tr>
 <tr>
-<td class="highlight-grey confluenceTd" colspan="5" data-highlight-colour="grey"></td>
+<td colspan="5"></td>
 </tr>
 <tr>
 <td>split</td>
@@ -234,7 +234,7 @@ Result: &lt;a href="http://www.slub-dresden.de/"&gt;Homepage SLUB Dresden&lt;/a&
 <td></td>
 </tr>
 <tr>
-<td class="highlight-grey confluenceTd" colspan="5" data-highlight-colour="grey"></td>
+<td colspan="5"></td>
 </tr>
 <tr>
 <td rowspan="2">substring</td>
@@ -250,7 +250,7 @@ Result: &lt;a href="http://www.slub-dresden.de/"&gt;Homepage SLUB Dresden&lt;/a&
 <td></td>
 </tr>
 <tr>
-<td class="highlight-grey confluenceTd" colspan="5" data-highlight-colour="grey"></td>
+<td colspan="5"></td>
 </tr>
 <tr>
 <td>trim</td>
@@ -260,7 +260,7 @@ Result: &lt;a href="http://www.slub-dresden.de/"&gt;Homepage SLUB Dresden&lt;/a&
 <td></td>
 </tr>
 <tr>
-<td class="highlight-grey confluenceTd" colspan="5" data-highlight-colour="grey"></td>
+<td colspan="5"></td>
 </tr>
 <tr>
 <td>urlencode</td>
