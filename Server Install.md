@@ -1,4 +1,4 @@
-# Initial Installation
+## Initial Installation
 
 premise:
 - empty trusty (14.04)
@@ -17,7 +17,7 @@ _Note: some commands require user input, this is no unattended installation_
 **These steps require root level access**
 
 
-## **1**. install system packages required for running the software
+### **1**. install system packages required for running the software
 
 ```
 su
@@ -53,14 +53,14 @@ su
 apt-get install oracle-java7-set-default
 ```
 
-## **2**. install system packages required for building the software
+### **2**. install system packages required for building the software
 
 ```
 su
 apt-get install --no-install-recommends --yes git-core maven nodejs npm build-essential
 ```
 
-## **3**. install Neo4j 
+### **3**. install Neo4j 
 
 we need to use Neo4j version 2.0.1
 
@@ -87,7 +87,7 @@ Pin: version 2.0.1
 Pin-Priority: 1000
 ```
 
-## **4**. make sure, permissions are correctly
+### **4**. make sure, permissions are correctly
 
 ```
 su
@@ -96,7 +96,7 @@ chown -R mysql:mysql /data/mysql
 chown -R neo4j:adm /data/neo4j
 ```
 
-## **5**. install build environment for frontend
+### **5**. install build environment for frontend
 
 ```
 su
@@ -104,7 +104,7 @@ ln -s /usr/bin/nodejs /usr/bin/node
 npm install -g grunt-cli karma bower
 ```
 
-## **6**. setup MySQL
+### **6**. setup MySQL
 
 Create a database and a user for d:swarm. To customize the settings, edit `persistence/src/main/resources/create_database.sql`. Do not check in this file in case you modify it. Hint: remember settings for step 13 (configure d:swarm).
 
@@ -137,7 +137,7 @@ cp -pr /var/lib/mysql/ /data/mysql/
 ```
 
 
-## **7.**  setup Nginx
+### **7.**  setup Nginx
 
 edit `/etc/nginx/sites-available/default` and add this just below the `location /` block
 
@@ -156,7 +156,7 @@ mv /usr/share/nginx/{html,-old}
 ln -s /home/user/dmp-backoffice-web/yo/publish /usr/share/nginx/html
 ```
 
-## **8**. setup tomcat
+### **8**. setup tomcat
 
 open /etc/tomcat7/server.xml at line 33 and add a `driverManagerProtection="false"` so that the line reads
 
@@ -181,7 +181,7 @@ su
 echo 'CATALINA_OPTS="-Xms4G -Xmx4G -XX:+CMSClassUnloadingEnabled -XX:+UseConcMarkSweepGC -XX:MaxPermSize=512M"' >> /usr/share/tomcat7/bin/setenv.sh
 ```
 
-## **9**. setup Neo4j
+### **9**. setup Neo4j
 
 increase file handlers at `/etc/security/limits.conf`
 
@@ -263,13 +263,13 @@ By default, the Neo4j Server is bundled with a Web server that binds to host loc
 **These steps require less privileged access**
 
 
-## **10**. create ssh key
+### **10**. create ssh key
 
 ```
 ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa -N ''
 ```
 
-## **11**. add ssh key to deployment hooks in gitlab
+### **11**. add ssh key to deployment hooks in gitlab
 
 - copy the contents of the public key at `~/.ssh/id_rsa.pub`
 - open https://git.slub-dresden.de/dmp/datamanagement-platform/deploy_keys/new to add a new deploy key
@@ -278,7 +278,7 @@ ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa -N ''
 - open https://git.slub-dresden.de/dmp/dmp-graph/deploy_keys and click on `Enable` next to the just added key
 - repeat for https://git.slub-dresden.de/dmp/dmp-backoffice-web/deploy_keys
 
-## **12**. clone repositories
+### **12**. clone repositories
 
 ```
 git clone --depth 1 --branch builds/unstable git@git.slub-dresden.de:dmp/datamanagement-platform.git
@@ -287,12 +287,12 @@ git clone --depth 1 --branch builds/unstable git@git.slub-dresden.de:dmp/dmp-bac
 git clone --depth 1 --branch master git@git.slub-dresden.de:dmp/ci-tools.git
 ```
 
-## **13**. configure d:swarm
+### **13**. configure d:swarm
 
 Follow the instructions in [[d:swarm Configuration|dswarm Configuration]]. 
 
 
-## **14**. build neo4j extension
+### **14**. build neo4j extension
 
 ```
 pushd dmp-graph
@@ -302,7 +302,7 @@ mv dmp-graph/target/graph-1.0-jar-with-dependencies.jar dmp-graph.jar
 ```
 
 
-## **15**. build backend
+### **15**. build backend
 
 ```
 pushd datamanagement-platform
@@ -313,7 +313,7 @@ popd; popd
 mv datamanagement-platform/controller/target/dswarm-controller-0.1-SNAPSHOT.war dmp.war
 ```
 
-## **16**. build frontend
+### **16**. build frontend
 
 ```
 pushd dmp-backoffice-web; pushd yo
@@ -330,7 +330,7 @@ popd
 **These steps require root level access**
 
 
-## **17**. wire everything together
+### **17**. wire everything together
 
 lookout for the correct path (/home/user)
 
@@ -343,7 +343,7 @@ cp /home/user/dmp-graph.jar /usr/share/neo4j/plugins/
 ```
 
 
-## **18**. restart everything, if needed
+### **18**. restart everything, if needed
 
 ```
 su
@@ -353,7 +353,7 @@ su
 /etc/init.d/tomcat7 restart
 ```
 
-## **19**. initialize/reset database
+### **19**. initialize/reset database
 
 When running the backend the first time, the MySQL database needs to be initialized. When updated, a reset is required in case the schema or initial data has changed.
 lookout for the correct path (/home/user)
@@ -371,9 +371,9 @@ python reset-dbs.py \
 Or provide the credentials and values you configured.
 Check `python reset-dbs.py --help` for additional information.
 
-# Update the System
+## Update the System
 
-## **1**. update repository contents
+### **1**. update repository contents
 
 ```
 pushd datamanagement-platform; git pull; popd
@@ -381,10 +381,10 @@ pushd dmp-graph; git pull; popd
 pushd dmp-backoffice-web; git pull; popd
 ```
 
-## **2**. repeat steps [[14|Server-Install#14-build-neo4j-extension]] to [[19|Server-Install#19-initializereset-database]] from installation as necessary
+### **2**. repeat steps [[14|Server-Install#14-build-neo4j-extension]] to [[19|Server-Install#19-initializereset-database]] from installation as necessary
 
 
-# Checklist on Errors
+## Checklist on Errors
 
 First of all it's a good idea to know which of the four components front end, back end, MySQL and Neo4j database does not run. If you already know, skip this list.
 
