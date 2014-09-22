@@ -401,6 +401,6 @@ Now that you know which component does not run, go through
 * when building the projects with maven, did you use the `-U` option to update project dependencies?
 * Check your [[dswarm Configuration]]. Are database name and password correct, i.e. the ones used when installing MySQL (step [[Server-Install#6-setup-mysql]])? Compare _datamanagement-platform/persistence/src/main/resources/create_database.sql_ with _datamanagement-platform/dswarm.conf_ or any other configuration option you use.
 * [[initialize the databases|Server-Install#19-initializereset-database]]. They may be empty or contain corrupted data caused by a failed unit tests.
+* Did you miss an update of, e.g., the neo4j version? Compare your installed version with the required version (see [[step 3|Server-Install#3-install-neo4j]])
 
 <!--- even though it is most likely that the databases contain corrupted data, this is not the first point on the list since previous steps are be required to initialize the dbs. -->
-
