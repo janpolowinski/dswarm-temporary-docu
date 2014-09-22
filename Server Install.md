@@ -62,14 +62,14 @@ apt-get install --no-install-recommends --yes git-core maven nodejs npm build-es
 
 ### **3**. install Neo4j 
 
-we need to use Neo4j version 2.0.1
+we need to use Neo4j version 2.0.3
 
 ```
 su
 wget -O - http://debian.neo4j.org/neotechnology.gpg.key| apt-key add -
 echo 'deb http://debian.neo4j.org/repo stable/' > /etc/apt/sources.list.d/neo4j.list
 apt-get update
-apt-get install --no-install-recommends --yes neo4j=2.0.1
+apt-get install --no-install-recommends --yes neo4j=2.0.3
 ```
 
 Make sure Neo4j does not get updated when updating packages. You can use apt-pinning to do so. As root, create a file
@@ -83,7 +83,7 @@ and add the following lines to this file.
 
 ``` 
 Package: neo4j
-Pin: version 2.0.1
+Pin: version 2.0.3
 Pin-Priority: 1000
 ```
 
