@@ -72,6 +72,8 @@ apt-get update
 apt-get install --no-install-recommends --yes neo4j=2.0.3
 ```
 
+You can open the Neo4j Browser at `http://localhost:7474/browser/` to check that the correct version has been installed.
+
 Make sure Neo4j does not get updated when updating packages. You can use apt-pinning to do so. As root, create a file
 
 ```
