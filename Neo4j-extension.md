@@ -6,6 +6,8 @@ TODO add content
 
 As long as there is no swagger UI for dmp-graph, here are some links for convenient testing
 
+* http://localhost:7474/graph/maintain/ping (result should be "pong")
+
 _Attention: links go to localhost and datamodel 4 is expected to exist! datamodels 1,2 and 3 are special datamodels, which will only contain data after storing transformation results_
 
   * http://localhost:7474/graph/rdf/getall
