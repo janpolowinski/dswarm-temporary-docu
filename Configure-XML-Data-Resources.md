@@ -10,8 +10,9 @@ __Note:__ XSD schema definitions of XML files will not be automatically extracte
 * Save the configuration by clicking on “Save”.
 * You can discard any changes and go back to the “Data” tab by clicking on “Cancel”.
 
-__Note:_ If you enter a denominator that does not exist in the data resource or does not denote records, the resource will be imported imporperly. You will receive no notification about any errors but you can check the result by means of [[graph exploration|Graph Exploration]].
-
+__Notes:__ 
+* If you enter a denominator that does not exist in the data resource or does not denote records, the resource will be imported imporperly. You will receive no notification about any errors but you can check the result by means of [[graph exploration|Graph Exploration]].
+* At the moment, all XML files are interpreted as UTF-8. In case you have a file with different encoding you need to convert it to UTF-8 before importing it to d:swarm
 
 -----------------------------------
 ### Alpha Release Help Step by Step
