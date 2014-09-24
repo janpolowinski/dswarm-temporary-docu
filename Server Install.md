@@ -108,7 +108,7 @@ npm install -g grunt-cli karma bower
 
 ### **6**. setup MySQL
 
-Create a database and a user for d:swarm. To customize the settings, edit `persistence/src/main/resources/create_database.sql`. Do not check in this file in case you modify it. Hint: remember settings for step 13 (configure d:swarm).
+Create a database and a user for d:swarm. To customize the settings, edit `persistence/src/main/resources/create_database.sql`. Do not check in this file in case you modify it. Hint: remember settings for step 13 (configure d:swarm). (TODO: Here we expect you already have cloned the respective repository described further below. If you do it now, make sure you are not root but the normal user)
 
     mysql -uroot -p < persistence/src/main/resources/create_database.sql
 
@@ -280,7 +280,7 @@ ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa -N ''
 - open https://git.slub-dresden.de/dmp/dmp-graph/deploy_keys and click on `Enable` next to the just added key
 - repeat for https://git.slub-dresden.de/dmp/dmp-backoffice-web/deploy_keys
 
-### **12**. clone repositories
+### **12**. clone repositories (not as root!)
 
 ```
 git clone --depth 1 --branch builds/unstable git@git.slub-dresden.de:dmp/datamanagement-platform.git
@@ -300,7 +300,7 @@ Follow the instructions in [[d:swarm Configuration|dswarm Configuration]].
 pushd dmp-graph
 mvn -U -PRELEASE -DskipTests clean package
 popd
-mv dmp-graph/target/graph-1.0-jar-with-dependencies.jar dmp-graph.jar
+mv dmp-graph/target/graph-1.1-jar-with-dependencies.jar dmp-graph.jar
 ```
 
 
