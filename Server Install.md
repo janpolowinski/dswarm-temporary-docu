@@ -365,7 +365,7 @@ lookout for the correct path (/home/user)
 ```
 pushd ci-tools/scripts
 python reset-dbs.py \
-  --persistence-module=../../datadatamanagement-platform/persistence \
+  --persistence-module=../../datamanagement-platform/persistence \
   --user=dmp \
   --password=dmp \
   --db=dmp \
