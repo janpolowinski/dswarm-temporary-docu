@@ -66,7 +66,7 @@ we need to use Neo4j version 2.0.3
 
 ```
 su
-wget -O - http://debian.neo4j.org/neotechnology.gpg.key| apt-key add -
+wget -O - http://debian.neo4j.org/neotechnology.gpg.key | apt-key add -
 echo 'deb http://debian.neo4j.org/repo stable/' > /etc/apt/sources.list.d/neo4j.list
 apt-get update
 apt-get install --no-install-recommends --yes neo4j=2.0.3
@@ -295,7 +295,7 @@ Follow the instructions in [[d:swarm Configuration|dswarm Configuration]].
 
 
 ### **14**. build neo4j extension
-
+(TODO: during the developer installation I had to configure maven to use the slub nexus server (add settings.xml (LINK to example file!) to  the ./m2 folder.)
 ```
 pushd dmp-graph
 mvn -U -PRELEASE -DskipTests clean package
