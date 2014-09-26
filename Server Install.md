@@ -14,10 +14,42 @@ _Note: some commands require user input, this is no unattended installation_
 
 * * *
 
+**These steps require less privileged access**
+
+
+### **1**. create ssh key
+
+```
+ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa -N ''
+```
+
+### **2**. add ssh key to deployment hooks in gitlab
+
+- copy the contents of the public key at `~/.ssh/id_rsa.pub`
+- open https://git.slub-dresden.de/dmp/datamanagement-platform/deploy_keys/new to add a new deploy key
+  - enter a title (e.g. user@host)
+  - paste the public key
+- open https://git.slub-dresden.de/dmp/dmp-graph/deploy_keys and click on `Enable` next to the just added key
+- repeat for https://git.slub-dresden.de/dmp/dmp-backoffice-web/deploy_keys
+
+### **3**. clone repositories (not as root!)
+
+lookout for the correct path (/home/user)
+
+```
+cd /home/user
+git clone --depth 1 --branch builds/unstable git@git.slub-dresden.de:dmp/datamanagement-platform.git
+git clone --depth 1 --branch master git@git.slub-dresden.de:dmp/dmp-graph.git
+git clone --depth 1 --branch builds/unstable git@git.slub-dresden.de:dmp/dmp-backoffice-web.git
+git clone --depth 1 --branch master git@git.slub-dresden.de:dmp/ci-tools.git
+```
+
+* * *
+
 **These steps require root level access**
 
 
-### **1**. install system packages required for running the software
+### **4**. install system packages required for running the software
 
 ```
 su
@@ -53,14 +85,14 @@ su
 apt-get install oracle-java7-set-default
 ```
 
-### **2**. install system packages required for building the software
+### **5**. install system packages required for building the software
 
 ```
 su
 apt-get install --no-install-recommends --yes git-core maven nodejs npm build-essential
 ```
 
-### **3**. install Neo4j 
+### **6**. install Neo4j 
 
 we need to use Neo4j version 2.0.3
 
@@ -89,7 +121,7 @@ Pin: version 2.0.3
 Pin-Priority: 1000
 ```
 
-### **4**. make sure, permissions are correctly
+### **7**. make sure, permissions are correctly
 
 ```
 su
@@ -98,7 +130,7 @@ chown -R mysql:mysql /data/mysql
 chown -R neo4j:adm /data/neo4j
 ```
 
-### **5**. install build environment for frontend
+### **8**. install build environment for frontend
 
 ```
 su
@@ -106,9 +138,9 @@ ln -s /usr/bin/nodejs /usr/bin/node
 npm install -g grunt-cli karma bower
 ```
 
-### **6**. setup MySQL
+### **9**. setup MySQL
 
-Create a database and a user for d:swarm. To customize the settings, edit `persistence/src/main/resources/create_database.sql`. Do not check in this file in case you modify it. Hint: remember settings for step 13 (configure d:swarm). (TODO: Here we expect you already have cloned the respective repository described further below. If you do it now, make sure you are not root but the normal user)
+Create a database and a user for d:swarm. To customize the settings, edit `datamanagement-platform/persistence/src/main/resources/create_database.sql`. Do not check in this file in case you modify it. Hint: remember settings for step 13 (configure d:swarm). 
 
     mysql -uroot -p < persistence/src/main/resources/create_database.sql
 
@@ -139,7 +171,7 @@ cp -pr /var/lib/mysql/ /data/mysql/
 ```
 
 
-### **7.**  setup Nginx
+### **10.**  setup Nginx
 
 edit `/etc/nginx/sites-available/default` and add this just below the `location /` block
 
@@ -158,7 +190,7 @@ mv /usr/share/nginx/{html,-old}
 ln -s /home/user/dmp-backoffice-web/yo/publish /usr/share/nginx/html
 ```
 
-### **8**. setup tomcat
+### **11**. setup tomcat
 
 open /etc/tomcat7/server.xml at line 33 and add a `driverManagerProtection="false"` so that the line reads
 
@@ -183,7 +215,7 @@ su
 echo 'CATALINA_OPTS="-Xms4G -Xmx4G -XX:+CMSClassUnloadingEnabled -XX:+UseConcMarkSweepGC -XX:MaxPermSize=512M"' >> /usr/share/tomcat7/bin/setenv.sh
 ```
 
-### **9**. setup Neo4j
+### **12**. setup Neo4j
 
 increase file handlers at `/etc/security/limits.conf`
 
@@ -264,38 +296,13 @@ By default, the Neo4j Server is bundled with a Web server that binds to host loc
 
 **These steps require less privileged access**
 
-
-### **10**. create ssh key
-
-```
-ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa -N ''
-```
-
-### **11**. add ssh key to deployment hooks in gitlab
-
-- copy the contents of the public key at `~/.ssh/id_rsa.pub`
-- open https://git.slub-dresden.de/dmp/datamanagement-platform/deploy_keys/new to add a new deploy key
-  - enter a title (e.g. user@host)
-  - paste the public key
-- open https://git.slub-dresden.de/dmp/dmp-graph/deploy_keys and click on `Enable` next to the just added key
-- repeat for https://git.slub-dresden.de/dmp/dmp-backoffice-web/deploy_keys
-
-### **12**. clone repositories (not as root!)
-
-```
-git clone --depth 1 --branch builds/unstable git@git.slub-dresden.de:dmp/datamanagement-platform.git
-git clone --depth 1 --branch master git@git.slub-dresden.de:dmp/dmp-graph.git
-git clone --depth 1 --branch builds/unstable git@git.slub-dresden.de:dmp/dmp-backoffice-web.git
-git clone --depth 1 --branch master git@git.slub-dresden.de:dmp/ci-tools.git
-```
-
 ### **13**. configure d:swarm
 
 Follow the instructions in [[d:swarm Configuration|dswarm Configuration]]. 
 
 
 ### **14**. build neo4j extension
-(TODO: during the developer installation I had to configure maven to use the slub nexus server (add settings.xml (LINK to example file!) to  the ./m2 folder.)
+(TODO: during the developer installation Jan had to configure maven to use the slub nexus server (add settings.xml (LINK to example file!) to  the ~/.m2 folder.)
 ```
 pushd dmp-graph
 mvn -U -PRELEASE -DskipTests clean package
@@ -394,15 +401,15 @@ First of all it's a good idea to know which of the four components front end, ba
 
 * [[front end]]: open `http://localhost:9999` in a browser. The front end should be displayed. 
 * [[back end]]: open `http://localhost:8087/dmp/_ping` in a browser. The expected response is a page with the word _pong_.
-* MySQL database: open a terminal and type `mysql -udmp -p dmp` to open a connection to MySQL and select the database _dmp_. Hint: check for correct user name, password and database name in case you did not use the default values. If you can log in, type `select * from data_model;`. Three internal data models should be listed. 
+* MySQL database: open a terminal and type `mysql -udmp -p dmp` to open a connection to MySQL and select the database _dmp_. Hint: check for correct user name, password and database name in case you did not use the default values. If you can log in, type `select * from data_model;`. At least three internal data models should be listed. 
 * Neo4j database: open `http://localhost:7474/browser/` in a browser. The Neo4j browser should open.
 
 Now that you know which component does not run, go through 
+
+<!--- even though it is most likely that the databases contain corrupted data, this is not the first point on the list since previous steps are required to initialize the dbs. -->
 
 * is _curl_ installed?
 * when building the projects with maven, did you use the `-U` option to update project dependencies?
 * Check your [[dswarm Configuration]]. Are database name and password correct, i.e. the ones used when installing MySQL (step [[Server-Install#6-setup-mysql]])? Compare _datamanagement-platform/persistence/src/main/resources/create_database.sql_ with _datamanagement-platform/dswarm.conf_ or any other configuration option you use.
 * [[initialize the databases|Server-Install#19-initializereset-database]]. They may be empty or contain corrupted data caused by a failed unit tests.
-* Did you miss an update of, e.g., the neo4j version? Compare your installed version with the required version (see [[step 3|Server-Install#3-install-neo4j]])
-
-<!--- even though it is most likely that the databases contain corrupted data, this is not the first point on the list since previous steps are be required to initialize the dbs. -->
+* Did you miss an update of, e.g., the neo4j version? Compare your installed version with the required version (see [[step 6|Server-Install#6-install-neo4j]])
