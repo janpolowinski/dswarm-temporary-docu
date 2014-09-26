@@ -13,17 +13,27 @@ premise:
 _Note: some commands require user input, this is no unattended installation_
 
 * * *
+**This step requires root level access**
+
+### **1**. install system packages required for building the software
+
+```
+su
+apt-get install --no-install-recommends --yes git-core maven nodejs npm build-essential
+```
+
+* * *
 
 **These steps require less privileged access**
 
 
-### **1**. create ssh key
+### **2**. create ssh key
 
 ```
 ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa -N ''
 ```
 
-### **2**. add ssh key to deployment hooks in gitlab
+### **3**. add ssh key to deployment hooks in gitlab
 
 - copy the contents of the public key at `~/.ssh/id_rsa.pub`
 - open https://git.slub-dresden.de/dmp/datamanagement-platform/deploy_keys/new to add a new deploy key
@@ -32,7 +42,7 @@ ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa -N ''
 - open https://git.slub-dresden.de/dmp/dmp-graph/deploy_keys and click on `Enable` next to the just added key
 - repeat for https://git.slub-dresden.de/dmp/dmp-backoffice-web/deploy_keys
 
-### **3**. clone repositories (not as root!)
+### **4**. clone repositories (not as root!)
 
 lookout for the correct path (/home/user)
 
@@ -49,7 +59,7 @@ git clone --depth 1 --branch master git@git.slub-dresden.de:dmp/ci-tools.git
 **These steps require root level access**
 
 
-### **4**. install system packages required for running the software
+### **5**. install system packages required for running the software
 
 ```
 su
@@ -83,13 +93,6 @@ update-java-alternatives -s java-7-oracle
 ```
 su
 apt-get install oracle-java7-set-default
-```
-
-### **5**. install system packages required for building the software
-
-```
-su
-apt-get install --no-install-recommends --yes git-core maven nodejs npm build-essential
 ```
 
 ### **6**. install Neo4j 
