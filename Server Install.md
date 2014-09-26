@@ -8,7 +8,7 @@ premise:
 -- /data/neo4j, up to 20GB
 - let the $HOME of the less privileged user be '/home/user'
 - all commands boxes start as the less privileges user and in their $HOME.
-- Requiring root is explicitly marked (with `su` rather than `sudo ...`)
+- Requiring root is explicitly marked (with `su` rather than `sudo ...` ; note that using sudo before each line is suffienct to yield the same results as with su. Using su may require you to set a password for root if not already done!)
 
 _Note: some commands require user input, this is no unattended installation_
 
