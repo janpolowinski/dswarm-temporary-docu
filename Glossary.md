@@ -1,3 +1,5 @@
+
+<!--- this index can be semi-automatically created by running src-java/CreateIndexFromGlossary.java -->
 * [[Attribute|Glossary#attribute]]
 * [[Attribute Path|Glossary#attribute-path]]
 * [[Blank Node|Glossary#blank-node]]
