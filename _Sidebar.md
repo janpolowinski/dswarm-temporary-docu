@@ -33,6 +33,7 @@
   * [[Cypher Cheat Sheet]]
 * contributing
   * [[Code Repository Handling]]
+  * [[Development Tips]]
 * diagrams
   * [[Domain Model]]
   * [[Example Task Execution]]
