@@ -6,7 +6,7 @@ The communication between the front end and the back end's RESTful API is based 
 
 The _Headers_ tab of the developer tools gives an overview, e.g. which d:swarm API endpoint was requested, e.g. http://127.0.0.1:8087/dmp/resources on a local installation when opening the d:swarm [[Data Perspective|Glossary#data-perspective]].
 
-The _Response_ tab of the developer tools contains data received from the d:swarm back end. Copy the JSON string, open http://jsbeautifier.org in a separate browser, paste the content and hit "Beautify ..." to get a human readable version of the response.
+The _Response_ tab of the developer tools contains data received from the d:swarm back end. Copy the JSON string and a) open http://jsbeautifier.org in a separate browser, paste the content and hit "Beautify ..." to get a human readable version of the response, or b) open http://jsonviewer.stack.hu and use the viewer to interactively explore the JSON.
 
 
 ### Back End Log Files 
