@@ -69,3 +69,5 @@ We see the first element of an (ordered) array of attribute paths. This element 
         "id": -2323909237623843453
       }]
     }, [...]
+
+So far, different Entities got different dummy IDs. To keep the same entities same, lookout for `-4070983487343468340` in `datamanagement-platform/controller/src/test/resources/project_to_remove_mapping_from_with_dummy_IDs.json`. You will find 4 occurrences since this attribute path with the attribute "type" is part of both of the schemas (input data model, line 29; output data model, line 296) and part of a mapping as input attribute path, line 113 and output attribute path, line 126. These 4 occurrences must have equal dummy IDs. Puhhh. We know it's not easy and will replace the dummy IDs by UUIDs one day - maybe you want to contribute to this ticket :)
