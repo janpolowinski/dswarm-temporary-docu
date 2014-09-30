@@ -42,11 +42,11 @@ Go through the following steps to create a custom project JSON with dummy IDs th
 9. Select the element with _Request Method: PUT_ in the _Headers_. 
 10. Below, go to _Request Payload_ and click _view source_. An unformatted block of JSON should be shown. Copy the whole JSON to clipboard.
 11. Open http://jsbeautifier.org in a new tab, paste the JSON from clipboard, hit the beautify button and copy & paste the human readable JSON to a local file. This file may look like `datamanagement-platform/controller/src/test/resources/project_to_remove_mapping_from_with_original_IDs_and_output_data_model.json`
-12. systematically replace all non-negative, i.e. valid IDs by negative dummy IDs. See details on pitfalls below! To speedup this process, you may remove all Attribute Paths from the Output Data Model that are not part of any Mapping.
+12. systematically replace all non-negative, i.e. valid IDs by negative dummy IDs. See [[Pitfalls when Replacing dummy IDs|Development-Tips#pitfalls-when-replacing-dummy-ids]]! To speedup this process, you may remove all Attribute Paths from the Output Data Model that are not part of any Mapping.
 13. save the JSON with dummy IDs as new file and use it in an integration test. The file may look like `datamanagement-platform/controller/src/test/resources/project_to_remove_mapping_from_with_dummy_IDs.json`. You can use a [[diff tool|http://en.wikipedia.org/wiki/Diff_utility]] to compare the two files from the example to see the changes that have been done in step 12. (additionally, some "id":value pairs of JSON objects have been put to other positions to enhance readability)
 14. you can "verify" the result of the steps above by resetting the database, starting the integration test and loading the file with dummy IDs, pause execution. Now open the front end, load the project and check that all mappings are displayed. Since we did not save the data itself too, Neo4j does not contain any data, hence there is no example data displayed!
 
-#### Details on Replacing dummy IDs
+#### Pitfalls when Replacing dummy IDs
 
 Caution! The _same [[Entity|Glossary#entity]]_, i.e. the same [[Attribute Path|Glossary#attribute-path]] may occur several times in the JSON and needs to get the _same dummy ID_. The pitfall is, that dummy IDs from _different entities must not be equal_. Have a look at `datamanagement-platform/controller/src/test/resources/project_to_remove_mapping_from_with_original_IDs_and_output_data_model.json`, lines 27-34:
 
