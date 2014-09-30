@@ -33,5 +33,5 @@ Go through the following steps to create a custom project JSON with dummy IDs th
 7. In Mapping Perspective, do everything you need as a basis for the integration test, e.g., select Output Data Model, add Mappings with Filters etc.
 8. Click Save Project and notice the request in the Developer Tools. There should be something like `http://127.0.0.1:8087/dmp/projects/1` in the list. 
 9. Select the element with _Request Method: PUT_ in the _Headers_. 
-10. Below, go to _Request Payload_ and click _view source_. An unformatted block of JSON should be shown. Copy the whole JSON and save it to a file. The file will lo
-11. 
+10. Below, go to _Request Payload_ and click _view source_. An unformatted block of JSON should be shown. Copy the whole JSON to clipboard.
+11. Open http://jsbeautifier.org in a new tab, paste the JSON from clipboard, hit the beautify button and copy & paste the human readable JSON to a local file. This file may look like `datamanagement-platform/controller/src/test/resources/project_to_remove_mapping_from_with_original_IDs_and_output_data_model.json`
