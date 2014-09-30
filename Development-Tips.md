@@ -26,4 +26,4 @@ Go through the following steps to create a custom project JSON with dummy IDs th
 
 1. have front end, back end, neo4j and mySQL running 
 2. reset the database (not necessarily required but recommended to avoid confusion)
-3. Open front end in Chrome and activate Developer Tools (see also 
+3. Open front end in Chrome and activate Developer Tools (see also [[Explore Communication|Development-Tips#explore-communication-between-front-end-and-back-end]]
