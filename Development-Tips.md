@@ -30,4 +30,8 @@ Go through the following steps to create a custom project JSON with dummy IDs th
 4. Go to Import Perspective, import a Data Resource
 5. Go to Data Perspective and configure the Data Resource
 6. In Data Perspective, create a new Project. From here, __do not__ click save project until told to do so!
-7. In Mapping Perspective, 
+7. In Mapping Perspective, do everything you need as a basis for the integration test, e.g., select Output Data Model, add Mappings with Filters etc.
+8. Click Save Project and notice the request in the Developer Tools. There should be something like `http://127.0.0.1:8087/dmp/projects/1` in the list. 
+9. Select the element with _Request Method: PUT_ in the _Headers_. 
+10. Below, go to _Request Payload_ and click _view source_. An unformatted block of JSON should be shown. Copy the whole JSON and save it to a file. The file will lo
+11. 
