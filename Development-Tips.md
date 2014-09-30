@@ -40,6 +40,7 @@ Go through the following steps to create a custom project JSON with dummy IDs th
 11. Open http://jsbeautifier.org in a new tab, paste the JSON from clipboard, hit the beautify button and copy & paste the human readable JSON to a local file. This file may look like `datamanagement-platform/controller/src/test/resources/project_to_remove_mapping_from_with_original_IDs_and_output_data_model.json`
 12. systematically replace all non-negative, i.e. valid IDs by negative dummy IDs. Caution! The _same [[Entity|Glossary#entity]]_, i.e. the same [[Attribute Path|Glossary#attribute-path]] may occur several times in the JSON and needs to get the _same dummy ID_. The pitfall is, that dummy IDs from _different entities must not be equal_. Have a look at `datamanagement-platform/controller/src/test/resources/project_to_remove_mapping_from_with_original_IDs_and_output_data_model.json`, lines 27-34:
 
+
     "attribute_paths": [{
       "id": 1,
       "attributes": [{
