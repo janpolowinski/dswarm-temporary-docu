@@ -14,7 +14,9 @@ The _Response_ tab of the developer tools contains data received from the d:swar
 When playing around with the [[front end]], open a terminal and use `tail -f` on one of the log files written to `datamanagement-platform/log` to observe whats happening in the [[back end]].
 
 
-### Integration Tests
+### Integration Tests for [[Metadata Repository|Glossary#metadata-repository]]
+
+__Note__: This description is for testing the [[Metadata Repository|Glossary#metadata-repository]] only, no data is written to Neo4j!
 
 For writing integration tests, have look at `org.dswarm.controller.resources.job.test.ProjectRemoveMappingResourceTest.testPUTProjectWithRemovedMapping()` as an example. The test simulates a user loading an already persisted project in front end, removing a mapping (that contains filters and functions) and saving the updated project (by putting the whole project JSON to the respective API end point). 
 
