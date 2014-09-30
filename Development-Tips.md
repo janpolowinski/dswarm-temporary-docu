@@ -48,10 +48,7 @@ Go through the following steps to create a custom project JSON with dummy IDs th
 
 #### Pitfalls when Replacing dummy IDs
 
-Caution! The _same [[Entity|Glossary#entity]]_, i.e. the same [[Attribute Path|Glossary#attribute-path]] may occur several times in the JSON and needs to get the _same dummy ID_. The pitfall is, that dummy IDs from _different entities must not be equal_. Have a look at `datamanagement-platform/controller/src/test/resources/project_to_remove_mapping_from_with_original_IDs_and_output_data_model.json`, lines 27-34:
-
-
-
+Caution! The _same [[Entity|Glossary#entity]]_, i.e. the same [[Attribute Path|Glossary#attribute-path]] may occur several times in the JSON and needs to get the _same dummy ID_. The pitfall is, that dummy IDs from _different entities must not be equal_. Have a look at the file from step 11, `datamanagement-platform/controller/src/test/resources/project_to_remove_mapping_from_with_original_IDs_and_output_data_model.json`, lines 27-34:
 
     "attribute_paths": [{
       "id": 1,
@@ -60,4 +57,15 @@ Caution! The _same [[Entity|Glossary#entity]]_, i.e. the same [[Attribute Path|G
         "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
         "id": 1
       }]
-    },
+    }, [...]
+
+We see the first element of an (ordered) array of attribute paths. This element has the attribute path ID 1 and contains exactly one attribute. The attribute has the attribute ID 1. When replacing these IDs by dummy IDs, they need to be _different_ negative numbers. The snippet with dummy IDs may be, see also `datamanagement-platform/controller/src/test/resources/project_to_remove_mapping_from_with_dummy_IDs.json`, lines 28-35
+
+    "attribute_paths": [{
+      "id": -4070983487343468340,
+      "attributes": [{
+        "name": "type",
+        "uri": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+        "id": -2323909237623843453
+      }]
+    }, [...]
