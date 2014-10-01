@@ -6,7 +6,7 @@ The central [[data hub|Glossary#data-hub]] of d:swarm is powered by the graph da
 
 These are the basic functions directly accessible from the starting page:
 
-[![alt text](https://github.com/seventwenty/dswarm-documentation/wiki/img/neo4j-overview.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/neo4j-overview.png "Neo4j Browser")
+[![an image of the Neo4j browser](https://github.com/seventwenty/dswarm-documentation/wiki/img/neo4j-overview.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/neo4j-overview.png "Neo4j Browser")
 
 * (1) shows an overview or the [[node|Glossary#node]] labels, [[edges|Glossary#relationship]] (relationship types), [[attributes|Glossary#attribute]] (property keys) that can be used as entry points into the graph.
 * (2) lets you manipulate the graph; contains sample queries and shows details of the graph configuration.
