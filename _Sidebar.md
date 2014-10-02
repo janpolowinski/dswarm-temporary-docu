@@ -1,5 +1,6 @@
 ### For everyone
 * [[Home]]
+* [[Domain Model]]
 * [[Installation and Configuration|home#installation-and-configuration]]
   * [[Initial Installation|Server-Install#Initial-Installation]]
   * [[d:swarm Configuration|dswarm Configuration]]
@@ -20,21 +21,22 @@
     * [[Design and Execute Transformations]]
     * [[Define Filters]]
     * [[Available Transformation Functions]]
-  * [[Graph Data Model]]
-    * [[Graph Exploration]]
   * [[Export Data in RDF]]
   * [[Give Feedback to the Developers]]
+
+### For advanced users
+* [[Graph Data Model]]
+    * [[Graph Exploration]]
+    * [[Cypher Cheat Sheet]]
 
 ### For developers
 * [[front end]]
 * [[back end]]
 * [[MySQL Cheat Sheet]]
 * [[Neo4j extension]]
-  * [[Cypher Cheat Sheet]]
 * contributing
   * [[Code Repository Handling]]
   * [[Development Tips]]
 * diagrams
-  * [[Domain Model]]
   * [[Example Task Execution]]
   * [[Mapping and Transformation]]
