@@ -33,7 +33,7 @@ The user documentation contains a step-by-step tutorial on how to use our backof
 As shown below, the overall architecture consists of two major parts: the Backoffice [[front end]] and the [[back end]]. The back end consists of 4 modules: 
  * a [[controller]] module that controls the program flow and provides a HTTP API
  * a [[converter]] that encapsulates [Metafacture](https://github.com/culturegraph/metafacture-core) to transform data
- * and a [[persistence]] layer to access the [[metadata repository|Glossary#metadata-repository]] (currently a relational database; MySQL) and the [[datahub|Glossary#data-hub]] (currently a graph database; [Neo4j](http://www.neo4j.org)).
+ * and a [[persistence]] layer to access the [[metadata repository|Glossary#metadata-repository]] (currently a relational database; MySQL) and the [[data hub|Glossary#data-hub]] (currently a graph database; [Neo4j](http://www.neo4j.org)).
  
 End users, e.g., system librarians, usually interact with the Backoffice frontend and may use the [[Neo4j browser|Graph-Exploration]] to inspect or visualize the data stored by d:swarm.
 
