@@ -1,4 +1,4 @@
-After [[importing sample data|Import Sample Data]], the [[schema|Glossary#schema]] of the [[data resource|Glossary#data-resource]] needs to be configured. At this stage, CSV, XML and MABXML data resources can be configured.
+After [[importing sample data|Import Sample Data]], the parsing ([[schema|Glossary#schema]] generation/definition etc.) of the [[data resource|Glossary#data-resource]] needs to be configured. At this stage, CSV, XML and MABXML data resources can be configured.
 
 ## Selection Workflow
 
