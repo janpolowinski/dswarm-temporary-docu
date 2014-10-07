@@ -43,7 +43,7 @@ Nodes can be
 <td>if __NODETYPE__ == __LITERAL__, the literal being a typified literal</td>
 </tr>
 <tr>
-<td><strong>__PROVENANCE__</strong></td>
+<td><strong>__DATA_MODEL__</strong></td>
 <td>if __NODETYPE__ == __RESOURCE__, the node type of the node not being __TYPE_RESOURCE__</td>
 </tr>
 <tr>
@@ -61,7 +61,7 @@ A [[record|Glossary#record]] is always a resource so the node type of the record
 * a MABXML record, for instance, is of the type ‘Datensatz’ (record, http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#datensatzType) and
 * a field within the MABXML record is of the type ‘Feld’ (field, http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#feldType).
 
-[[URIs|Glossary#uri]] are used as denominators for resource identifiers, types and attributes (predicates) of [[statements|Glossary#statement]]. All edges and resource nodes have a provenance attribute (**\_\_PROVENANCE\_\_**). It references the [[data model|Glossary#data-model]] the statement or resource belongs to. Resource identifiers are connected with resource nodes by the attribute **\_\_URI\_\_**. Values of literals are connected with literal nodes by the attribute **\_\_VALUE\_\_**.
+[[URIs|Glossary#uri]] are used as denominators for resource identifiers, types and attributes (predicates) of [[statements|Glossary#statement]]. All edges and resource nodes have a data model attribute (**\_\_DATA\_MODEL\_\_**). It references the [[data model|Glossary#data-model]] the statement or resource belongs to. Resource identifiers are connected with resource nodes by the attribute **\_\_URI\_\_**. Values of literals are connected with literal nodes by the attribute **\_\_VALUE\_\_**.
 
 
 ## Edges
@@ -79,7 +79,7 @@ Edges are always attributes of resources or parts of resources, e.g. mabxml:nr (
 </thead>
 <tbody>
 <tr>
-<td><strong>__PROVENANCE__</strong></td>
+<td><strong>__DATA_MODEL__</strong></td>
 <td></td>
 </tr>
 <tr>
