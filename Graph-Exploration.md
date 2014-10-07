@@ -1,4 +1,4 @@
-The central [[data hub|Glossary#data-hub]] of d:swarm is powered by the graph database [[Neo4j|http://neo4j.com]]. The web-based Neo4j Graph Browser lets you explore the contents of the data hub. The web application can be accessed at this URL http://sdvdswarm01.slub-dresden.de/neo/.
+The central [[data hub|Glossary#data-hub]] of d:swarm is powered by the graph database [[Neo4j|http://neo4j.com]]. The web-based Neo4j Graph Browser offers the exploration of the content of the data hub. The web application can be accessed at http://sdvdswarm01.slub-dresden.de/neo/.
 
 ## The Neo4j Graph Browser
 
