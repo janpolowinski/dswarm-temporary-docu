@@ -4,9 +4,9 @@ __Note:__ Imports are achieved via file uploads in the alpha release. In future 
 
 ## Import Workflow
 
-Use the import function to import sample data ([[enlarge figure|img/import.png]]):
+Use the import function to import sample data:
 
-[[img/import.png]]
+[![import dialogue](https://github.com/seventwenty/dswarm-documentation/wiki/img/import.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/import.png "Import Dialogue")
 
 * Click the tab “Import” (1).
 * Click on “Search” or “Choose File” (depending on the browser you use) (2). A dialog box will open.
