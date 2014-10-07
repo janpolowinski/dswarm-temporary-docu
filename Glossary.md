@@ -48,7 +48,7 @@
 
 ### Attribute
 
-An attribute is a property or a type of a [[relationship|Glossary#relationship]], e.g., “name”, “knows”. Attributes can be chained into an [[Attribute Path|Glossary#attribute-path]]. Attributes can be part of a [[Vocabulary|Glossary#vocabulary]]. In a simple (natural language) sentence that consists of three parts (subject, predicate, objects), e.g., “Walter knows Claire.”, attributes are predicates. In a [[property graph model|Glossary#property-graph-model]] attributes are properties or [[edges|Glossary#relationship]] of a [[node|Glossary#node]].
+An attribute is a property or a type of a [[relationship|Glossary#relationship]], e.g., “name”, “knows”. Attributes can be chained into an [[Attribute Path|Glossary#attribute-path]]. Attributes can be part of a [[Vocabulary|Glossary#vocabulary]]. In a simple (natural language) sentence that consists of three parts (subject, predicate, objects), e.g., “Walter knows Claire.”, attributes are predicates. In a [[property graph model|Glossary#property-graph]] attributes are properties or [[edges|Glossary#relationship]] of a [[node|Glossary#node]].
 
 * Hint: In non-hierarchical data structures like CSV files, the attribute corresponds to the attribute path
 * alternative names: property, relationship type, edge type, edge label, predicate
@@ -58,8 +58,8 @@ An attribute is a property or a type of a [[relationship|Glossary#relationship]]
 An attribute path is an identifier or way to a certain element(s) or value(s) of a [[Record|Glossary#record]] in a [[Data Model|Glossary#data-mpdel]]. Attribute paths are an ordered lists of [[Attribute|Glossary#attribute]]s. A bunch of attribute paths can be composed to a [[Schema|Glossary#schema]]. A [[Mapping|Glossary#mapping]] can refer to certain attribute paths.
 
 * This might be a column header in a CSV file or a certain node in a nested XML structure
-* Examples: _/dc:creator/foaf:family_name_ (to adresse attributes in an RDF graph), _/autor/name_ (to address attributes in an XML file) or _/name_ (to address “flat” attributes – the column headers – in a CSV file)
-* Note: attribute paths are not always a unique identifier or way to certain element(s) or value(s); sometimes more complex [[Filters|Glossary#filter]] need to be defined to address element(s) or value(s) uniquely (or more precise).
+* Examples: _/dc:creator/foaf:family_name_ (to address attributes in an RDF graph), _/autor/name_ (to address attributes in an XML file) or _/name_ (to address “flat” attributes – the column headers – in a CSV file)
+* Note: attribute paths are not always a unique identifier or way to certain element(s) or value(s); sometimes more complex [[Filters|Glossary#filter]] are necessary to address element(s) or value(s) uniquely (or more precise).
 * alternative names: property path
 
 ### Blank Node
@@ -78,13 +78,13 @@ A component is a mechanism to describe the instantiation/utilisation of a [[Func
 
 ### Configuration
 
-A configuration is a bunch of settings or parameters that are necessary to interpret the data of a [[Data Resource|Glossary#data-resuorce]]. A CSV file, for example, can be parsed by a given column delimiter, row delimiter, the encoding of the content, etc.. Those settings are required to interpret the dumb plain data into useful bits of information. The result of the application of a configuration to a data resource is a [[Data Model|Glossary#data-model]].
+A configuration is a bunch of settings or parameters that are necessary to interpret the data of a [[Data Resource|Glossary#data-resource]]. A CSV file, for example, can be parsed by a given column delimiter, row delimiter, the encoding of the content, etc.. Those settings are required to interpret the dumb plain data into useful bits of information. The result of the application of a configuration to a data resource is a [[Data Model|Glossary#data-model]].
 
 ### Data Hub
 
-The data hub is the central database within the DMP storing all available/registered data, ie. no metadata from the domain model
+The data hub is the central database within the DMP storing all available/registered data, i.e., all the (normalized) content from the [[data resources|Glossary#data-resource]] (represented/partitioned as [[data models|Glossary#data-model). Currently, the data is represented in a [[Graph|Glossary#graph]].
 
-* hint: The data used in the domain model is stored in the [[Metadata Repository|Glossary#metadata-repository]], the data is represented in a [[Graph|Glossary#graph]]
+* hint: The data describing the processing workflows is stored in the [[Metadata Repository|Glossary#metadata-repository]]
 * alternative name: internal data storage
 
 ### Data Model
@@ -108,7 +108,7 @@ A data resource refers to or denotes the actual data (“bits and bytes”) that
 
 ### Data Resource Type
 
-A data resource type refers to or denotes a certain type of data source system (eg. csv, xml, mysql…). It can be compare to media type/content type (see [Internet media type @ Wikipedia](http://en.wikipedia.org/wiki/Internet_media_type) or [RFC 2046: MIME type](http://tools.ietf.org/html/rfc2046)), e.g., _text/xml_ (as example for a generic media type) or _application/vnd.openxmlformats-officedocument.presentationml.presentation_ (as example for a rather specific media type (on top of a more generic type)).
+A data resource type refers to or denotes a certain type of data source system (eg. csv, xml, mysql, ...). It can be compared to media type/content type (see [Internet media type @ Wikipedia](http://en.wikipedia.org/wiki/Internet_media_type) or [RFC 2046: MIME type](http://tools.ietf.org/html/rfc2046)), e.g., _text/xml_ (as example for a generic media type) or _application/vnd.openxmlformats-officedocument.presentationml.presentation_ (as example for a rather specific media type (on top of a more generic type)).
 
 ### Data Type
 
@@ -146,7 +146,7 @@ The execution environment is the server infrastructure where the [[Tasks|Glossar
 
 ### Filter
 
-A business logic (graph pattern, e.g., a Cypher query) that reduces or specify the amount/candidates of [[Records|Glossary#record]] that should be addressed/processed via a [[Mapping|Glossary#mapping]]. Filters can be defined on both endings of a mapping, i.e., there can be input filters and output filters.
+A business logic (graph pattern, e.g., a Cypher query) that reduces or specifies the data that should be addressed/processed via a [[Mapping|Glossary#mapping]]. Filters can be defined on both endings of a mapping, i.e., there can be input filters (in [[Mapping Inputs|Glossary#mapping-input]]) and output filters (in [[Mapping Outputs|Glossary#mapping-output]]).
 
 ### Function
 
@@ -160,7 +160,7 @@ The data of the [[Data Models|Glossary#data-model]] of d:swarm is stored in a gr
 
 ### Graph Data Model
 
-A graph data model is a data model or [[Meta Data Model|Glossary#meta-data-model]] to describe the knowledge representation structure in a [[Graph|Glossary#graph]]. An example of an abstract graph data model is the [[Property Graph|Glossary#property-graph]]. (Graph) data model can be layered, e.g., the property graph data model can act as a meta data model for another data model, e.g., [[RDF|Glossary#rdf]].
+A graph data model is a data model or [[Meta Data Model|Glossary#meta-data-model]] to describe the knowledge representation structure in a [[Graph|Glossary#graph]]. An example of an abstract graph data model is the [[Property Graph|Glossary#property-graph]]. (Graph) data models can be layered, e.g., the property graph data model can act as a meta data model for another data model, e.g., [[RDF|Glossary#rdf]].
 
 ### Job
 
@@ -175,15 +175,23 @@ A literal represents a value of an attribute of an entity, e.g., in “The book 
 
 ### Mapping
 
-A mapping encapsulates a [[Function|Glossary#function]] (or [[Transformation|Glossary#transformation]], since we handle them as specific functions). It can refer to __multiple__ input [[Attribute Paths|Glossary#attribute-path]] and __one__ output attribute path. (Input and output attribute paths must be part of the input data model respectively output data model.) The input attribute paths are mapped to the parameters of the function and the output attribute path is mapped to the output of the function. The instantiation/utilisation of transformations by mappings is realized in the same way transformations utilise (other) functions - by means of [[Components|Glossary#components]]: Each mapping can have a (transformation) component that describes the parameter mappings and refers to the utilised function. Additionally, a mapping can have an input [[Filter|Glossary#filter]], to reduce or specify the amount of [[Records|Glossary#record]] that should be processed via this mapping from the input data model, and an output filter, to specify the way the result of this mapping should be written to the output data model.
+A mapping encapsulates a [[Function|Glossary#function]] (or [[Transformation|Glossary#transformation]]). It can refer to __multiple__ [[Mapping Inputs|Glossary#mapping-input]] and __one__ [[Mapping Output|Glossary#mapping-output]]. The mapping inputs are mapped to the parameters of the function and the mapping output is mapped to the output of the function. The instantiation/utilisation of transformations by mappings is realized in the same way transformations utilise (other) functions - by means of [[Components|Glossary#component]]: Each mapping can have a (transformation) component that describes the parameter mappings and refers to the utilised function.
+
+### Mapping Input
+
+A Mapping Input is an [Attribute Path|Glossary#attribute-path]] applied in a concrete mapping on the input [[Data Model|Glossary#data-model]]. A mapping input can consist of a (optional) [[Filter|Glossary#filter]] to reduce the amount of data for a certain attribute path.
+
+### Mapping Output
+
+A Mapping Output is an [[Attribute Path|Glossary#attribute-path]] applied in a concrete mapping on the output [[Data Model|Glossary#data-model]]. A mapping input can consist of a (optional) [[Filter|Glossary#filter]] to reduce the amount of data for a certain attribute path.
 
 ### Metadata Repository
 
-Some physical data storage system that contains all available metadata for each [[Entity|Glossary#entity]] used in d:swarm.
+A physical data storage system that contains all available metadata for each [[Entity|Glossary#entity]] utilised in d:swarm.
 
 ### Meta Data Model
 
-A meta data model or simply data model is knowledge representation structure to describe something, e.g., graphs.
+A meta data model or simply data model is a knowledge representation structure to describe something, e.g., graphs.
 
 ### Modelling Perspective
 
@@ -201,7 +209,7 @@ Perspectives are individual sites in the web-based UI which serve a certain scop
 
 ### Project
 
-A project refers to all related parts that are relevant to design a whole [[data processing workflow|Glossary#job]], i.e., especially an (sample) input [[Data Model|Glossary#data-model]], a bunch of [[Mappings|Glossary#mapping]] (that can selectively export as a [[Job|Glossary#job]]) and optionally self-defined [[Functions|Glossary#function]] (or [[Transformations|Glossary#transformation]]).
+A project refers to all related parts that are relevant to design a whole [[data processing workflow|Glossary#job]], i.e., especially an (sample) input [[Data Model|Glossary#data-model]], a bunch of [[Mappings|Glossary#mapping]] (that can selectively be exported as a [[Job|Glossary#job]]) and optionally self-defined [[Functions|Glossary#function]] (or [[Transformations|Glossary#transformation]]).
 
 ### Property Graph
 
@@ -209,7 +217,7 @@ A property graph is a [[Graph Data Model|Glossary#graph-data-model]] that consis
 
 ### RDF
 
-The resource description framework is a (meta) data model that consists of [[Statements|Glossary#statement]] that are simple sentences of the structure: subject, predicate, object. Whereby, subjects can be resources with a [[URI|Glossary#uri]] as identifier or [[Blank Nodes|Glossary#blank-node]]. Predicates are usually represented by a URI. And objects can be a resource with a URI, a blank node or a [[Literal|Glossary#literal]].
+The resource description framework is a [[(meta) data model|Glossary#meta-data-model]] that consists of [[Statements|Glossary#statement]] that are simple sentences of the structure: subject, predicate, object. Whereby, subjects can be resources with a [[URI|Glossary#uri]] as identifier or [[Blank Nodes|Glossary#blank-node]]. Predicates are usually represented by a URI. Objects can be a resource with a URI, a blank node or a [[Literal|Glossary#literal]].
 
 A similar (meta) data model is EAV (entity-attribute-value).
 
@@ -217,7 +225,7 @@ A similar (meta) data model is EAV (entity-attribute-value).
 
 ### Record
 
-A record is a resource description or object that describes a certain thing, e.g., a book. A book, for example, has an author, a publishing date, a publisher, etc. Records are the main unit of work of the Data Management Platform. A Data Model consists of a bunch of records (of a certain record Class).
+A record is a resource description or object that describes a certain thing, e.g., a book. A book, for example, has an author, a publishing date, a publisher, etc. Records are the main unit of work of the Data Management Platform. A [[Data Model|Glossary#data-model]] consists of a bunch of records (of a certain record [[Class|Glossary#class]]).
 
 alternative names : bibliographic record, Datensatz
 see : Bibliographic Record @ Wikipedia
