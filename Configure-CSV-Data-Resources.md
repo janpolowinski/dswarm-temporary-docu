@@ -22,8 +22,7 @@ Load at most ... rows of data (Checkbox)  |  Defines the number of rows to be lo
 
 ## Configuration Workflow
 
-([[enlarge figure|img/data-config-as-csv.png]])
-[[img/data-config-as-csv.png]]
+[![CSV configuration dialogue](https://github.com/seventwenty/dswarm-documentation/wiki/img/data-config-as-csv.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/data-config-as-csv.png "CSV Configuration Dialogue")
 
 * Configure the properties of the CSV schema as needed.
 * Click on “Preview” if an adjustment does not take immediate effect in the preview box.
