@@ -16,7 +16,7 @@ These are the basic functions directly accessible from the starting page:
 
 ### Graph Exploration
 
-[![an image of an example graph](https://github.com/seventwenty/dswarm-documentation/wiki/img/graph-exploration.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/graph-exploration.png "an example graph")
+[![an image of a graph exploration](https://github.com/seventwenty/dswarm-documentation/wiki/img/graph-exploration.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/graph-exploration.png "Graph Exploration")
 
 * (1) an overview of all node labels (i.e. resource types, cf. [[graph data model|Glossary#graph-data-model]]) in the graph.
   * __Note:__ Node labels cannot be deleted from the graph database, i.e. node labels of deleted nodes will still show up in this overview.
