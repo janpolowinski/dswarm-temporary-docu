@@ -48,7 +48,7 @@
 
 ### Attribute
 
-An attribute is a property or a type of a relationship, e.g., “name”, “knows”. Attributes can be chained into an [[Attribute Path|Glossary#attribute-path]]. Attributes can be part of a Vocabulary. In a simple (natural language) sentence that consists of three parts (subject, predicate, objects), e.g., “Walter knows Claire.”, attributes are predicates. In a property graph model attributes are properties or edges of a node.
+An attribute is a property or a type of a [[relationship|Glossary#relationship]], e.g., “name”, “knows”. Attributes can be chained into an [[Attribute Path|Glossary#attribute-path]]. Attributes can be part of a [[Vocabulary|Glossary#vocabulary]]. In a simple (natural language) sentence that consists of three parts (subject, predicate, objects), e.g., “Walter knows Claire.”, attributes are predicates. In a [[property graph model|Glossary#property-graph-model]] attributes are properties or [[edges|Glossary#relationship]] of a [[node|Glossary#node]].
 
 * Hint: In non-hierarchical data structures like CSV files, the attribute corresponds to the attribute path
 * alternative names: property, relationship type, edge type, edge label, predicate
