@@ -1,7 +1,6 @@
 ## Mapping Workflow
 
-([[enlarge figure|img/mapping-workflow.png]])
-[[img/mapping-workflow.png]]
+[![an image of the metadata repository schema](https://github.com/seventwenty/dswarm-documentation/wiki/img/mapping-workflow.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/mapping-workflow.png "Metadata Repository Schema Overview")
 
 * Select the desired output [[schema|Glossary#schema]] by clicking on the button “Select output schema” or change the output schema by clicking on the gear wheel symbol on the upper right in the mapping panel (1).
 * [[Mappings|Glossary#mapping]] are created by clicking first on a rectangle symbol in the input schema (2) and then on the respective symbol in the output schema (3).
@@ -14,13 +13,11 @@ __Note:__ In the alpha release you can map to [[attributes|Glossary#attribute]] 
 
 ## Complex Mappings
 
-([[enlarge figure|img/complex-mappings.png]])	
-[[img/complex-mappings.png]]
+[![complex mapping definition pt. 1](https://github.com/seventwenty/dswarm-documentation/wiki/img/complex-mappings.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/complex-mappings.png "Complex Mapping Definition pt. 1")
 
 Complex mappings such as combining two input [[attribute paths|Glossary#attribute-path]] into one output attribute path (e.g. first name + family name) can be achieved by mapping a second input attribute path (1) to an output attribute path that has been used before (2). A light box will open:
 
-([[enlarge figure|img/add-endpoint-to-mapping.png]])	
-[[img/add-endpoint-to-mapping.png]]
+[![complex mapping definition pt. 2](https://github.com/seventwenty/dswarm-documentation/wiki/img/add-endpoint-to-mapping.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/add-endpoint-to-mapping.png "Complex Mapping Definition pt. 2")
 
 * Select an existing output attribute path by clicking in the list (1).
 * The button “Add to selected mapping” will be shown (2).
