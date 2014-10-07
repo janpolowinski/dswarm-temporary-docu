@@ -6,7 +6,7 @@ After [[importing sample data|Import Sample Data]], the [[schema|Glossary#schema
 
 * Select your data resource by clicking in the list of sets "available for configuration" (1).
 * “Show Details” lets you view detail information of the selected data resource.
-* Click on “Configure” and, from the pop-up menu, choose one of (currently) three options “[[as CSV|Configure CSV Data Resources]]” or “[[as XML|Configure XML Data Resources]]” or "[[as MABXML|Configure MABXML Data Resources]]"(2).
+* Click on “Configure ...” and, from the pop-up menu, choose one of (currently) three options “[[as CSV|Configure CSV Data Resources]]” or “[[as XML|Configure XML Data Resources]]” or "[[as MABXML|Configure MABXML Data Resources]]"(2).
 
 
 -----------------------------------
