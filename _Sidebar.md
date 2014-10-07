@@ -10,7 +10,7 @@
 * [[Glossary]]
 
 ### For users
-* [[Alpha Release Help]]
+* [[Overview]]
   * [[Functional Range|Functional Range of the Alpha Release]]
   * [[Import Sample Data]]
   * [[Select Data for Schema Configuration]]
