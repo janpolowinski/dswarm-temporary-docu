@@ -2,8 +2,7 @@ After [[configuring the data schema|Select Data for Schema Configuration]] you c
 
 ## Create Projects – Workflow 
 
-([[enlarge figure|img/available-for-projects.png]])
-[[img/available-for-projects.png]]
+[![create project dialogue](https://github.com/seventwenty/dswarm-documentation/wiki/img/available-for-projects.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/available-for-projects.png "Create Project Dialogue")
 
 * Click on the tab “Data”.
 * Select a data resource from the list “Available for projects” (the resource contains a configured schema) (1).
@@ -15,16 +14,14 @@ After [[configuring the data schema|Select Data for Schema Configuration]] you c
 
 ## Edit a Project – the Modelling Perspective
 
-([[enlarge figure|img/all-projects.png]])
-[[img/all-projects.png]]
+[![open project dialogue](https://github.com/seventwenty/dswarm-documentation/wiki/img/all-projects.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/all-projects.png "Open Project Dialogue")
 
 * Select your project by clicking in the list “All projects” (1).
 * Click on the button “Load for modelling” (2) in order to load the project in the modelling perspective.
 
 The modelling perspective is the central d:swarm tool for defining schema mappings and model data transformations. The modelling perspective is divided in six panels and a lightbox.
 
-([[enlarge figure|img/modeling-perspective-labeled-widgets.png]])
-[[img/modeling-perspective-labeled-widgets.png]]
+[![modelling perspective](https://github.com/seventwenty/dswarm-documentation/wiki/img/modeling-perspective-labeled-widgets.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/modeling-perspective-labeled-widgets.png "Modelling Perspective")
 
 <table >
 <thead>
@@ -113,8 +110,7 @@ The modelling perspective is the central d:swarm tool for defining schema mappin
 
 You can save your work at any time by clicking on the button “Save project” (on the upper left in the source data widget). Additionally, all changes will be saved  automatically. If you happen to leave the modelling perspective without manually saving your project, you will be asked to save or discard your last modifications after reloading the project.
 
-([[enlarge figure|img/save-or-discard.png]])
-[[img/save-or-discard.png]]
+[![save project dialogue](https://github.com/seventwenty/dswarm-documentation/wiki/img/save-or-discard.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/save-or-discard.png "Save Project Dialogue")
 
 
 -----------------------------------
