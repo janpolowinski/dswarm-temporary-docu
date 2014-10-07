@@ -3,9 +3,9 @@
 
 Note: 
  * not all parts are implemented and utilised right now in our application
- * the domain model may change and be modified as necessary in the future
+ * the [[domain model|Glossary#domain-model]] may change and be modified as necessary in the future
  * please have a look at the [[glossary|Glossary]] for clarification and descriptions of the utilised terms
 
 * [Gliffy Template (open for modification)](http://www.gliffy.com/go/publish/6250933)
 
-See [explanation](http://www.tdan.com/view-articles/7474) for notation details on the crow notation used.
+See this [explanation](http://www.tdan.com/view-articles/7474) for an introduction on the crow notation used.
