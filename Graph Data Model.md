@@ -95,6 +95,18 @@ Edges are always attributes of resources or resource parts, e.g. mabxml:nr (http
 <td><strong>__INDEX__</strong></td>
 <td><span style="color: #000000;">Signifies the statement index of a resource (i.e. of the original element order as occurs in XML files)</span></td>
 </tr>
+<tr>
+<td><strong>__UUID__</strong></td>
+<td><span style="color: #000000;">Identifies a statement uniquely (in a data model)</span></td>
+</tr>
+<tr>
+<td><strong>__VALID_FROM__</strong></td>
+<td><span style="color: #000000;">The version number upon this statement is valid</span></td>
+</tr>
+<tr>
+<td><strong>__VALID_TO__</strong></td>
+<td><span style="color: #000000;">The version number until this statement was valid (i.e. upon this version number the statement is invalid)</span></td>
+</tr>
 </tbody>
 </table>
 
