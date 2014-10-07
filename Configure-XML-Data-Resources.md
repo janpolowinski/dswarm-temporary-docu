@@ -17,5 +17,5 @@ __Notes:__
 -----------------------------------
 ### Alpha Release Help Step by Step
 
-* next: [[Create and Edit Projects]]
+* next: [[Configure MABXML Data Resources]]
 * previous: [[Configure CSV Data Resources]]
