@@ -4,16 +4,14 @@ Filter Definition Workflow
 
 A prerequisite for creating a filter is a mapping that can be selected in the transformation logic widget (lower middle).
 
-([[enlarge figure|img/filter-definition-workflow.png]])
-[[img/filter-definition-workflow.png]]
+[![open filter definition dialogue](https://github.com/seventwenty/dswarm-documentation/wiki/img/filter-definition-workflow.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/filter-definition-workflow.png "Open Filter Definition Dialogue")
 
 * In order to create a filter, select the mapping for which you want to define a filter rule (1).
 * Click on the input [[attribute path|Glossary#attribute-path]] on the left in the transformation logic pipeline (2).
 
 A light box will open:
 
-([[enlarge figure|img/filter-lightbox.png]])
-[[img/filter-lightbox.png]]
+[![filter definition dialogue](https://github.com/seventwenty/dswarm-documentation/wiki/img/filter-lightbox.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/filter-lightbox.png "Filter Definition Dialogue")
 
 * In the light box on the left, a sample record set lets you test the filter rule you are going to define.
 * Click on “add filter” (1) and enter your filter rule in the form next to the sample record.
