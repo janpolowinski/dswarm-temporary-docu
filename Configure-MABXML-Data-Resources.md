@@ -16,4 +16,4 @@ __Notes:__
 ### Alpha Release Help Step by Step
 
 * next: [[Create and Edit Projects]]
-* previous: [[Configure CSV Data Resources]]
+* previous: [[Configure XML Data Resources]]
