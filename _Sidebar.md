@@ -16,6 +16,7 @@
   * [[Select Data for Schema Configuration]]
     * [[Configure CSV Data Resources]]
     * [[Configure XML Data Resources]]
+    * [[Configure MABXML Data Resources]]
   * [[Create and Edit Projects]]
     * [[Define Mappings]]
     * [[Design and Execute Transformations]]
