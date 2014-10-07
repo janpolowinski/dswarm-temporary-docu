@@ -4,8 +4,7 @@ Data in the [[data hub|Glossary#data-hub]] can be exported to a file in the [[N-
 
 The export function can be accessed on the tab “Data”.
 
-([[enlarge figure|img/export-workflow.png]])
-[[img/export-workflow.png]]
+[![data export widget](https://github.com/seventwenty/dswarm-documentation/wiki/img/export-workflow.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/export-workflow.png "Data Export Widget")
 
 * Click on the drop-down button “Export All Data” at the bottom of the data tab.
   * __Note__: The alpha release supports exporting data in the N-Quads format. Further formats will be added in future releases.
