@@ -6,7 +6,7 @@ __Note:__ Imports are achieved via file uploads in the alpha release. In future 
 
 Use the import function to import sample data:
 
-[![import dialogue](https://github.com/seventwenty/dswarm-documentation/wiki/img/import.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/import.png "Import Dialogue")
+[![data import dialogue](https://avgl.mybalsamiq.com/mockups/2319102.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00)](https://avgl.mybalsamiq.com/mockups/2319102.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00 "Data Import Dialogue")
 
 * Click the tab “Import” (1).
 * Click on “Search” or “Choose File” (depending on the browser you use) (2). A dialog box will open.
