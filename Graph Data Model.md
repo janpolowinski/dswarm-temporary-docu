@@ -20,7 +20,7 @@ Nodes can be
 <tbody>
 <tr>
 <td><strong>__NODETYPE__</strong></td>
-<td>Nodes always have a node type (<strong>__NODETYPE__</strong>). Node types are used for orientation in the graph data model. They can be any of these:</p>
+<td>Nodes always have a node type (<strong>__NODETYPE__</strong>). Node types are utilised for orientation in the graph data model. They can be any of these:</p>
 <ul>
 <li>__RESOURCE__</li>
 <li>__BNODE__</li>
@@ -40,11 +40,11 @@ Nodes can be
 </tr>
 <tr>
 <td><strong>__DATATYPE__</strong></td>
-<td>if __NODETYPE__ == __LITERAL__, the literal being a typified literal</td>
+<td>if __NODETYPE__ == __LITERAL__ and the literal is a typed literal, i.e., of a certain data type, e.g., integer</td>
 </tr>
 <tr>
 <td><strong>__DATA_MODEL__</strong></td>
-<td>if __NODETYPE__ == __RESOURCE__, the node type of the node not being __TYPE_RESOURCE__</td>
+<td>if __NODETYPE__ == __RESOURCE__; indicates the data model the resource belongs to</td>
 </tr>
 <tr>
 <td><strong>__RESOURCE__</strong></td>
@@ -56,17 +56,17 @@ Nodes can be
 
 ### Explanation
 
-A [[record|Glossary#record]] is always a resource so the node type of the record’s entry node is **\_\_RESOURCE\_\_**. Resources or parts of resources can be typified. The types of resources are used as node labels in the graph:
+A [[record|Glossary#record]] is always a resource so the node type of the record’s entry node is **\_\_RESOURCE\_\_**. Resources or parts of resources can be typed. The types of resources are used as node labels in the graph:
 
 * a MABXML record, for instance, is of the type ‘Datensatz’ (record, http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#datensatzType) and
 * a field within the MABXML record is of the type ‘Feld’ (field, http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#feldType).
 
-[[URIs|Glossary#uri]] are used as denominators for resource identifiers, types and attributes (predicates) of [[statements|Glossary#statement]]. All edges and resource nodes have a data model attribute (**\_\_DATA\_MODEL\_\_**). It references the [[data model|Glossary#data-model]] the statement or resource belongs to. Resource identifiers are connected with resource nodes by the attribute **\_\_URI\_\_**. Values of literals are connected with literal nodes by the attribute **\_\_VALUE\_\_**.
+[[URIs|Glossary#uri]] are utilised as identifiers for resources, types and attributes (predicates) of [[statements|Glossary#statement]]. All edges and resource nodes have a data model attribute (**\_\_DATA\_MODEL\_\_**). It refers to the [[data model|Glossary#data-model]] the statement or resource belongs to. Resource identifiers are assigned to resource nodes by the attribute **\_\_URI\_\_**. Values of literals are assigned to literal nodes by the attribute **\_\_VALUE\_\_**.
 
 
 ## Edges
 
-Edges are always attributes of resources or parts of resources, e.g. mabxml:nr (http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#nr).
+Edges are always attributes of resources or resource parts, e.g. mabxml:nr (http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#nr).
 
 ### Attributes of Edges
 
