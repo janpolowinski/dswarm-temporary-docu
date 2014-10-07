@@ -1,8 +1,9 @@
 ## Initial Installation
 
 premise:
+- currently, we've deployed the application only on Ubuntu Linux distributions
 - empty trusty (14.04)
-- three additional partitions (easier to increase sizes): 
+- three additional partitions (for easier increasing the sizes of the partitions separately): 
 -- /data/log, 1-5GB depending on usage
 -- /data/mysql, up to 5GB
 -- /data/neo4j, up to 20GB
@@ -27,13 +28,13 @@ apt-get install --no-install-recommends --yes git-core maven nodejs npm build-es
 **These steps require less privileged access**
 
 
-### **2**. create ssh key
+### **2**. create ssh key 
 
 ```
 ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa -N ''
 ```
 
-### **3**. add ssh key to deployment hooks in gitlab
+### **3**. add ssh key to deployment hooks in gitlab (this is only necessary, if you want to integrate your server in certain CI deployment jobs; otherwise you only need to add the ssh key to your user profile)
 
 - copy the contents of the public key at `~/.ssh/id_rsa.pub`
 - open https://git.slub-dresden.de/dmp/datamanagement-platform/deploy_keys/new to add a new deploy key
@@ -97,7 +98,7 @@ apt-get install oracle-java7-set-default
 
 ### **6**. install Neo4j 
 
-we need to use Neo4j version 2.0.3
+currently, we rely on Neo4j version 2.0.3
 
 ```
 su
