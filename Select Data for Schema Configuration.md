@@ -2,9 +2,7 @@ After [[importing sample data|Import Sample Data]], the [[schema|Glossary#schema
 
 ## Selection Workflow
 
-([[enlarge figure|img/available-for-configuration.png]])
-
-[[img/available-for-configuration.png]]
+[![configuration dialogue](https://github.com/seventwenty/dswarm-documentation/wiki/img/available-for-configuration.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/available-for-configuration.png "Configuration Dialogue")
 
 * Click the tab “Data” (1).
 * Select your data resource by clicking in the list of sets available for configuration (2).
