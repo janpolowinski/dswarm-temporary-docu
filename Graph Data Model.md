@@ -5,7 +5,7 @@ A [[graph data model|Glossary#graph-data-model]] implies the notion of [[nodes|G
 Nodes can be
 
 1. a resource or the entry point of a resource,
-2. part of a resource ([[BNode|Glossary#blank-node]]), i.e. a subelement of a hierarchical description of a resources, e.g. a field in a MARCXML recordset ([[record|Glossary#record]]), or
+2. part of a resource ([[blank node|Glossary#blank-node]]), i.e. a subelement of a hierarchical description of a resources, e.g. a field in a MARCXML recordset ([[record|Glossary#record]]), or
 3. simple value nodes, i.e. [[literals|Glossary#literal]].
 
 ### Attributes of Nodes
@@ -48,7 +48,7 @@ Nodes can be
 </tr>
 <tr>
 <td><strong>__RESOURCE__</strong></td>
-<td>signifies the resource belonging to the node (in case it is a literal node or BNode)</td>
+<td>indicates the resource the node belongs to (in case it is a literal node or a blank node)</td>
 </tr>
 </tbody>
 </table>
@@ -80,15 +80,15 @@ Edges are always attributes of resources or parts of resources, e.g. mabxml:nr (
 <tbody>
 <tr>
 <td><strong>__DATA_MODEL__</strong></td>
-<td></td>
+<td><span style="color: #000000;">Indicates the data model the node belongs to</span></td>
 </tr>
 <tr>
 <td><strong>__RESOURCE__</strong></td>
-<td><span style="color: #000000;">Signifies the resource the node belongs to (if it is, for instance, a literal node or a BNode)</span></td>
+<td><span style="color: #000000;">Indicates the resource the edge belongs to</span></td>
 </tr>
 <tr>
 <td><strong>__ORDER__</strong></td>
-<td><span style="color: #000000;">Signifies the &#8220;In-Elements&#8221; order of values of a certain type, e.g. &#8220;mixed XML elements&#8221;<br />
+<td><span style="color: #000000;">Signifies the &#8220;element&#8221; order of values of a certain type, e.g. &#8220;mixed XML elements&#8221;<br />
 </span></td>
 </tr>
 <tr>
