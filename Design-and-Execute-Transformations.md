@@ -3,8 +3,7 @@ Data [[transformations|Glossary#transformation]] can be defined for existing [[m
 ## Design of a Transformation Workflow
 ### Simple Transformations
 
-([[enlarge figure|img/simple-transformations.png]])	
-[[img/simple-transformations.png]]
+[![define simple transformation](https://github.com/seventwenty/dswarm-documentation/wiki/img/simple-transformations.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/simple-transformations.png "Define Simple Transformation")
 
 A transformation logic can be modelled the following way:
 
@@ -26,11 +25,10 @@ __Note:__ It is not possible in the alpha release, yet, to delete a function fro
 
 Additionally, you can design complex transformations in the alpha release, e.g. concatenate two input attribute paths to one output attribute path. Within the transformation process, two data sources can be individually transformed as is suitable and eventually combined using the concat function:
 
-([[enlarge figure|img/complex-transformations.png]])	
-[[img/complex-transformations.png]]
+[![define complex transformation](https://github.com/seventwenty/dswarm-documentation/wiki/img/complex-transformations.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/complex-transformations.png "Define Complex Transformation")
 
 * Drag the concat function from the function list widget (lower right) to the grid in the transformation logic widget  (lower middle).
-* Clicking on the + symbol in the concat function box will open a lightbox that lets you select the component that you want to add the the attribute path ([[enlarge figure|img/add-component-to-component.png]]):
+* Clicking on the + symbol in the concat function box will open a lightbox that lets you select the component that you want to add the the attribute path:
 
 [[img/add-component-to-component.png]]
 * Select the component that you want to add to the current component by clicking in the list (1).
@@ -41,9 +39,7 @@ Additionally, you can design complex transformations in the alpha release, e.g. 
 
 Any transformation is executable at all times:
 
-([[enlarge figure|img/target-data.png]])
-
-[[img/target-data.png]]
+[![transformation execution](https://github.com/seventwenty/dswarm-documentation/wiki/img/target-data.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/target-data.png "Transformation Execution")
 
 * Click on “Run _this_ transformation” (1) in order to execute the transformation logic currently displayed and view the results of the transformation executed on the sample data in the target data widget on the upper right (2).
 * Click on “Run _all_ Transformations” (3) in order to execute the transformations for all mappings in the project.
