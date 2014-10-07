@@ -16,8 +16,7 @@ These are the basic functions directly accessible from the starting page:
 
 ### Graph Exploration
 
-([[enlarge figure|img/graph-exploration.png]])
-[[img/graph-exploration.png]]
+[![an image of an example graph](https://github.com/seventwenty/dswarm-documentation/wiki/img/graph-exploration.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/graph-exploration.png "an example graph")
 
 * (1) an overview of all node labels (i.e. resource types, cf. [[graph data model|Glossary#graph-data-model]]) in the graph.
   * __Note:__ Node labels cannot be deleted from the graph database, i.e. node labels of deleted nodes will still show up in this overview.
@@ -38,19 +37,18 @@ This is an example of a record imported from a CSV file an its mapping. It can b
 
     MATCH (n)-[r]->(m) WHERE n.__URI__ = "http://data.slub-dresden.de/datamodels/2/records/788e0248-f417-4e72-a6ed-e8cf0baa4546" RETURN n, r, m;
 
-([[enlarge figure|img/graph-example.png]])
-[[img/graph-example.png]]
+[![an image of an example graph](https://github.com/seventwenty/dswarm-documentation/wiki/img/graph-example.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/graph-example.png "an example graph")
 
 * (1) the record selected in the input data model (resource node) http://data.slub-dresden.de/datamodels/2/records/788e0248-f417-4e72-a6ed-e8cf0baa4546
 * (2)The detail view of the selected resource node with the following node attributes:
   * \_\_URI\_\_ = http://data.slub-dresden.de/datamodels/2/records/788e0248-f417-4e72-a6ed-e8cf0baa4546
-  * \_\_PROVENANCE\_\_ = http://data.slub-dresden.de/datamodel/2/data
+  * \_\_DATA\_MODEL\_\_ = http://data.slub-dresden.de/datamodel/2/data
   * \_\_NODETYPE\_\_ = \_\_RESOURCE\_\_
   * the node label (as resource type): http://data.slub-dresden.de/resources/1/schema#RecordType
 * (3) the correlating resource type node
   * __Note:__ Double clicking a resource type node will show all resource nodes that are categorized with this type.
 * (4) visualization of a statement (node – edge – node)
-  * This example shows the resource node of the record http://data.slub-dresden.de/datamodels/2/records/788e0248-f417-4e72-a6ed-e8cf0baa4546 in the output data model with the attribute  http://data.slub-dresden.de/resources/1/schema#description and the value (literal) “muh muh”. 
+  * This example shows the resource node of the record http://data.slub-dresden.de/datamodels/2/records/788e0248-f417-4e72-a6ed-e8cf0baa4546 in the output data model with the attribute http://data.slub-dresden.de/resources/1/schema#description and the value (literal) “muh muh”. 
 
 __Note:__ If a relationship (edge) is selected, the detail view shows all property keys of the relationship (edge attributes and edge type, i.e. attribute or predicate of the statement).
 
@@ -71,12 +69,12 @@ This overview can provide only a brief glance at Cypher queries. There are more 
 
     ``MATCH (n:`http://www.w3.org/2000/01/rdf-schema#Class`) RETURN n;``
 
-__Note:__ In the graph exploration tab, all resource types in the graph will be shown. A possible difference of this Cyber query is the fact that it will show all resource types currently existent in the graph, while the exploration tab lists also those types that used to be existent but have been deleted.
+__Note:__ In the graph exploration tab, all resource types in the graph will be shown. A possible difference of this Cypher query is the fact that it will show all resource types currently existent in the graph, while the exploration tab lists also those types that used to be existent but have been deleted.
 
 
 ### Use of Indices
 
-Apart from the built-in indices for node labels and relationship types you should use further indices (which, at this stage, are implemented as [[Neo4j legacy indices|http://docs.neo4j.org/chunked/milestone/indexing.html]] that differ from the [[schema indices|http://docs.neo4j.org/chunked/milestone/query-schema-index.html]]) in order to achieve fast runtimes for your queries.
+Apart from the built-in indices for node labels and relationship types you should make use of further indices (which, at this stage, are implemented as [[Neo4j legacy indices|http://docs.neo4j.org/chunked/milestone/indexing.html]] that differ from the [[schema indices|http://docs.neo4j.org/chunked/milestone/query-schema-index.html]]) in order to achieve fast runtimes for your queries.
 
 * Retrieval of all statements connected with nodes with the node identifier ‘http://data.slub-dresden.de/datamodels/2/records/788e0248-f417-4e72-a6ed-e8cf0baa4546‘, i.e. statements whose subject has this identifier:
 
@@ -89,9 +87,9 @@ At this stage, there are only node indices. You can, however, create edge indice
 
 * **resources**: contains all resource identifiers
   * Index attribute: **\_\_URI\_\_**
-* **resources_w_provenance**: contains all resource identifiers + provenance identifiers , e.g. ‘http://data.slub-dresden.de/datamodels/2/records/788e0248-f417-4e72-a6ed-e8cf0baa4546 http://data.slub-dresden.de/datamodel/2/data‘ where the resource identifier is separated from the provenance identifier by a space within the key.
-  * Index attribute: **\_\_URI_W_PROVENANCE\_\_**
-  * **Note**: this index is useful for efficient access to resources of a certain provenance.
+* **resources_w_data_model**: contains all resource identifiers + data model identifiers , e.g. ‘http://data.slub-dresden.de/datamodels/2/records/788e0248-f417-4e72-a6ed-e8cf0baa4546 http://data.slub-dresden.de/datamodel/2/data‘ where the resource identifier is separated from the data model identifier by a space within the key.
+  * Index attribute: **\_\_URI_W_DATA\_MODEL\_\_**
+  * **Note**: this index is useful for efficient access to resources of a certain data model.
 * **values**: contains all values of literals
   * Index attribute: **\_\_VALUE\_\_**
 
