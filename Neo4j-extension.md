@@ -4,7 +4,7 @@ TODO add content
 
 ## HTTP API Endpoints - DMP Graph (neo4j)
 
-As long as there is no swagger UI for dmp-graph, here are some links for convenient testing
+Here are some links for convenient testing
 
 * http://localhost:7474/graph/maintain/ping (result should be "pong")
 
