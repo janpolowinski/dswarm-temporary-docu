@@ -14,7 +14,7 @@ _Attention: links go to localhost and datamodel 4 is expected to exist!_
 
  * return all data models as RDF
 
-        curl -H "Accept:application/n-quads" http://localhost:7474/graph/rdf/getall
+        curl http://localhost:7474/graph/rdf/getall
 
 (default serialization is N-Quads)
 
