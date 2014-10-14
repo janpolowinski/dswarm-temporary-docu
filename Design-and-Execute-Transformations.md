@@ -3,27 +3,25 @@ Data [[transformations|Glossary#transformation]] can be defined for existing [[m
 ## Design of a Transformation Workflow
 ### Simple Transformations
 
-[![define simple transformation](https://github.com/seventwenty/dswarm-documentation/wiki/img/simple-transformations.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/simple-transformations.png "Define Simple Transformation")
+[![define simple transformation](https://avgl.mybalsamiq.com/mockups/1843685.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00)](https://avgl.mybalsamiq.com/mockups/1843685.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00 "Define Simple Transformation")
 
 A transformation logic can be modelled the following way:
 
 * Select the mapping whose transformation you want to design by clicking on the respective tab in the transformation logic widget (1).
 * Initially every mapping has an empty transformation in which the input [[attribute path|Glossary#attribute-path]] and the output attribute path are directly linked with each other.
-* In order to design a transformation logic, drag a [[function|Glossary#function]] (2) from the  function list widget on the lower right into the grid of the transformation logic widget (3).
-  * A list of [[transformation functions|Available Transformation Functions]] available in the alpha release.
-  * The transformation process is visualized by arrows.
+* In order to design a transformation logic, drag a [[function|Glossary#function]] (2) from the [[function list|Available Transformation Functions]] widget on the lower right into the grid of the transformation logic widget (3).
+  * The transformation process is visualized by arrows between the [[components|Glossary#component]].
   * Drag more functions to the desired grid position in the transformation process.
-  * Rearrange the order of the functions in the grid as to modify the transformation process.
-* You can configure a function by clicking on its representation in the transformation logic widget (4) and entering the required parameters in the configuration widget (5).
-* Enter all parameters and quit the configuration by clicking on the button “Save” (6).
+  * Rearrange the order of the components in the grid as to modify the transformation process.
+* You can configure a component by clicking on its representation in the transformation logic widget (4) and entering the required parameters in the configuration widget (5).
+* Enter all parameters and (optionally) quit the configuration by clicking on the button “Close” (6).
 * Repeat these steps for all mappings that have been defined.
-
-__Note:__ It is not possible in the alpha release, yet, to delete a function from the transformation process once it has been added.
-
+* A component can be deleted by clicking the "x" (7) in the configuration widget.
+* A mapping can be deleted by clicking the "x" (8) in the transformation logic widget.
 
 ### Complex Transformations
 
-Additionally, you can design complex transformations in the alpha release, e.g. concatenate two input attribute paths to one output attribute path. Within the transformation process, two data sources can be individually transformed as is suitable and eventually combined using the concat function:
+Additionally, you can design complex transformations in the alpha release, e.g. concatenate two input attribute paths to one output attribute path. Within the transformation process, two data sources can be individually transformed as is suitable and eventually combined using the ````concat```` function:
 
 [![define complex transformation](https://github.com/seventwenty/dswarm-documentation/wiki/img/complex-transformations.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/complex-transformations.png "Define Complex Transformation")
 
