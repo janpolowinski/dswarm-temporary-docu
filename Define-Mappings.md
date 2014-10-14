@@ -1,6 +1,6 @@
 ## Mapping Workflow
 
-[![an image of the metadata repository schema](https://github.com/seventwenty/dswarm-documentation/wiki/img/mapping-workflow.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/mapping-workflow.png "Metadata Repository Schema Overview")
+[![an image of mapping widget](https://avgl.mybalsamiq.com/mockups/1839138.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00)](https://avgl.mybalsamiq.com/mockups/1839138.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00 "Mapping Widget")
 
 * Select the desired output [[schema|Glossary#schema]] by clicking on the button “Select output schema” or change the output schema by clicking on the gear wheel symbol on the upper right in the mapping panel (1).
 * [[Mappings|Glossary#mapping]] are created by clicking first on a rectangle symbol in the input schema (2) and then on the respective symbol in the output schema (3).
@@ -13,11 +13,11 @@ __Note:__ In the alpha release you can map to [[attributes|Glossary#attribute]] 
 
 ## Complex Mappings
 
-[![complex mapping definition pt. 1](https://github.com/seventwenty/dswarm-documentation/wiki/img/complex-mappings.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/complex-mappings.png "Complex Mapping Definition pt. 1")
+[![complex mapping definition pt. 1](https://avgl.mybalsamiq.com/mockups/1839281.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00)](https://avgl.mybalsamiq.com/mockups/1839281.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00 "Complex Mapping Definition pt. 1")
 
 Complex mappings such as combining two input [[attribute paths|Glossary#attribute-path]] into one output attribute path (e.g. first name + family name) can be achieved by mapping a second input attribute path (1) to an output attribute path that has been used before (2). A light box will open:
 
-[![complex mapping definition pt. 2](https://github.com/seventwenty/dswarm-documentation/wiki/img/add-endpoint-to-mapping.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/add-endpoint-to-mapping.png "Complex Mapping Definition pt. 2")
+[![complex mapping definition pt. 2](https://avgl.mybalsamiq.com/mockups/1839246.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00)](https://avgl.mybalsamiq.com/mockups/1839246.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00 "Complex Mapping Definition pt. 2")
 
 * Select an existing output attribute path by clicking in the list (1).
 * The button “Add to selected mapping” will be shown (2).
