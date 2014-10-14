@@ -1,4 +1,15 @@
-A [[graph data model|Glossary#graph-data-model]] implies the notion of [[nodes|Glossary#node]] and [[edges|Glossary#relationship]]. In the graph data model, [[statements|Glossary#statement]] are represented as directed binary graphs – they always consist of a subject __node__, a predicate __edge__ and an object __node__.
+#GDM Domain Model
+[![gdm domain model](http://www.gliffy.com/go/publish/image/6315806/L.png)](http://www.gliffy.com/go/publish/image/6315806/L.png "GDM Domain Model")
+
+A [[graph data model|Glossary#graph-data-model]] consists of a set of [[resources|Glossary#record]]. A resource has an identifier, e.g., an [[URI|Glossary#URI]], and is a bunch of [[statements|Glossary#statement]] that describe this resource. A statement follows the simple sentence structure: subject - predicate - object. Whereby, 
+* a subject can be a reference (by identifier, i.e., URI) to a resource, i.e., it is a resource node, or a [[blank node|Glossary#BNode]]
+* a predicate is a reference (by identifier, i.e., URI) to a property
+* an object can be a reference (by identifier, i.e., URI) to a resource, or a blank node or a [[literal|Glossary#Literal]].
+So a [[nodes|Glossary#node]] can be of the following types: resource, blank node or literal.
+
+# GDM in a Property Graph
+
+A graph data model implies the notion of nodes and [[edges|Glossary#relationship]]. In the graph data model, statements are represented as directed binary graphs – they always consist of a subject __node__, a predicate __edge__ and an object __node__.
 
 ## Nodes
 
