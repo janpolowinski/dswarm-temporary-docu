@@ -23,12 +23,13 @@ A transformation logic can be modelled the following way:
 
 Additionally, you can design complex transformations in the alpha release, e.g. concatenate two input attribute paths to one output attribute path. Within the transformation process, two data sources can be individually transformed as is suitable and eventually combined using the ````concat```` function:
 
-[![define complex transformation](https://github.com/seventwenty/dswarm-documentation/wiki/img/complex-transformations.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/complex-transformations.png "Define Complex Transformation")
+[![define complex transformation](https://avgl.mybalsamiq.com/mockups/1866963.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00)](https://avgl.mybalsamiq.com/mockups/1866963.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00 "Define Complex Transformation")
 
-* Drag the concat function from the function list widget (lower right) to the grid in the transformation logic widget  (lower middle).
-* Clicking on the + symbol in the concat function box will open a lightbox that lets you select the component that you want to add the the attribute path:
+* Drag the ````concat```` function from the function list widget (lower right) to the grid in the transformation logic widget (lower middle).
+* Clicking on the "+" symbol in the ````concat```` component will open a lightbox that lets you select the component that you want to add the attribute path:
 
-[[img/add-component-to-component.png]]
+[![add component to concat component](https://avgl.mybalsamiq.com/mockups/1866985.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00)](https://avgl.mybalsamiq.com/mockups/1866985.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00 "Add Component to Concat Component")
+
 * Select the component that you want to add to the current component by clicking in the list (1).
 * Click on the button “Add selected component” to quit and concat the two components to a single output attribute path (2).
 
