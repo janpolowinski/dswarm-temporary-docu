@@ -5,7 +5,7 @@ After [[configuring the data schema|Select Data for Schema Configuration]] you c
 [![create project dialogue](https://avgl.mybalsamiq.com/mockups/2345652.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00)](https://avgl.mybalsamiq.com/mockups/2345652.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00 "Create Project Dialogue")
 
 * Click on the tab “Data”.
-* Select a data resource from the list “Available for projects” (the resource contains a configured schema) (1).
+* Select a [[data model|Glossary#data-model]] from the list “Available for projects” (the data model refers to a schema) (1).
 * Two buttons “Show details” and “Use for new project” will be shown.
 * You can view and edit the configuration by clicking on “Show details”.
 * Click on “Use for new project”  in order to create a new project. Type telling name (obligatory) and a short description of your project (optional) in the pop-up box (2) and click on “Create” (3).
@@ -21,7 +21,7 @@ After [[configuring the data schema|Select Data for Schema Configuration]] you c
 
 The modelling perspective is the central d:swarm tool for defining schema mappings and model data transformations. The modelling perspective is divided in six panels and a lightbox.
 
-[![modelling perspective](https://github.com/seventwenty/dswarm-documentation/wiki/img/modeling-perspective-labeled-widgets.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/modeling-perspective-labeled-widgets.png "Modelling Perspective")
+[![modelling perspective](https://avgl.mybalsamiq.com/mockups/1838341.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00)](https://avgl.mybalsamiq.com/mockups/1838341.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00 "Modelling Perspective")
 
 <table >
 <thead>
@@ -37,7 +37,7 @@ The modelling perspective is the central d:swarm tool for defining schema mappin
 <td>Upper left (1)</td>
 <td>
 <ul>
-<li>In order to make the modelling of <a title="d:swarm Glossary" href="Glossary#mapping">mappings</a> and <a title="d:swarm Glossary" href="Glossary#transformation">data transformations</a> easy, sample records of the configured <a title="d:swarm Glossary" href="Glossary#data-resource">data resource</a> are presented.</li>
+<li>In order to make the modelling of <a title="d:swarm Glossary" href="Glossary#mapping">mappings</a> and <a title="d:swarm Glossary" href="Glossary#transformation">data transformations</a> easy, sample records of the <a title="d:swarm Glossary" href="Glossary#data-model">data model</a> are presented.</li>
 <li>If there is more than one <a title="d:swarm Glossary" href="Glossary#record">record</a> in the resource, the first few are presented in individual tabs.
 <ul>
 <li><em><strong>Note:</strong> The alpha release does not allow for selection of specific records other than the first few.</em></li>
@@ -81,7 +81,7 @@ The modelling perspective is the central d:swarm tool for defining schema mappin
 <ul>
 <li>The <a href="Available-Transformation-Functions">set of functions</a> available for data transformation is shown in the function list widget.
 <ul>
-<li><em><strong>Note:</strong> In the alpha release, only record-centered functions are available. Future versions of d:swarm will also provide functions for integrating records from different resources (e.g. look-up functions) or for nesting transformations recursively.</em></li>
+<li><em><strong>Note:</strong> In the alpha release, only record-centered functions are available. Future versions of d:swarm will also provide functions for integrating records from different sources (e.g. look-up functions) or for nesting transformations recursively.</em></li>
 </ul>
 </li>
 </ul>
@@ -101,7 +101,7 @@ The modelling perspective is the central d:swarm tool for defining schema mappin
 <td>Lightbox</td>
 <td>
 <ul>
-<li><a title="d:swarm Glossary" href="Glossary#filter">Filters</a> can be used for restricting transformations to a given specific of the input <a title="d:swarm Glossary" href="Glossary#attribute-path">attribute path</a> so that complex conditions for the execution of a transformation logic can be constructed.</li>
+<li><a title="d:swarm Glossary" href="Glossary#filter">Filters</a> can be used for restricting transformations to specific values of an input <a title="d:swarm Glossary" href="Glossary#attribute-path">attribute path</a> so that complex conditions for the execution of a transformation logic can be constructed.</li>
 </ul>
 </td>
 </tr>
