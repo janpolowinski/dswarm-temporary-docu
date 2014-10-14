@@ -5,6 +5,7 @@ A [[graph data model|Glossary#graph-data-model]] consists of a set of [[resource
 * a subject can be a reference (by identifier, i.e., URI) to a resource, i.e., it is a resource node, or a [[blank node|Glossary#BNode]]
 * a predicate is a reference (by identifier, i.e., URI) to a property
 * an object can be a reference (by identifier, i.e., URI) to a resource, or a blank node or a [[literal|Glossary#Literal]].
+
 So a [[nodes|Glossary#node]] can be of the following types: resource, blank node or literal.
 
 # GDM in a Property Graph
