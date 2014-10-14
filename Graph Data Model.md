@@ -6,7 +6,7 @@ A [[graph data model|Glossary#graph-data-model]] consists of a set of [[resource
 * a predicate is a reference (by identifier, i.e., URI) to a property
 * an object can be a reference (by identifier, i.e., URI) to a resource, or a blank node or a [[literal|Glossary#Literal]].
 
-So a [[nodes|Glossary#node]] can be of the following types: resource, blank node or literal.
+So a [[nodes|Glossary#node]] can be of the following types: resource, blank node or literal. A Statement can have an arbitrary number of qualified attributes, e.g., order, evidence or confidence. A resource node can refer to an arbitrary resource in a specific [[data model|Glossary#data-model]]. This opens the possibility to connect to resources between different data models.
 
 # GDM in a Property Graph
 
