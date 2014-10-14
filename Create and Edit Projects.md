@@ -14,7 +14,7 @@ After [[configuring the data schema|Select Data for Schema Configuration]] you c
 
 ## Edit a Project – the Modelling Perspective
 
-[![open project dialogue](https://github.com/seventwenty/dswarm-documentation/wiki/img/all-projects.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/all-projects.png "Open Project Dialogue")
+[![open project dialogue](https://avgl.mybalsamiq.com/mockups/2345680.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00)](https://avgl.mybalsamiq.com/mockups/2345680.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00 "Open Project Dialogue")
 
 * Select your project by clicking in the list “All projects” (1).
 * Click on the button “Load for modelling” (2) in order to load the project in the modelling perspective.
