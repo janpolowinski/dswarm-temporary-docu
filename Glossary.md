@@ -37,7 +37,6 @@
 * [[Relationship|Glossary#relationship]]
 * [[Schema|Glossary#schema]]
 * [[Statement|Glossary#statement]]
-* [[Subject|Glossary#subject]]
 * [[Task|Glossary#task]]
 * [[Transformation|Glossary#transformation]]
 * [[URI|Glossary#uri]]
@@ -241,10 +240,6 @@ A schema is a collection of [[Attribute Path|Glossary#attribute-path]]s and a (g
 ### Statement
 
 A statement – a simple sentence with the structure: subject, predicate, object – is the fundamental knowledge representation structure of the graph data model in our [[Data Hub|Glossary#data-hub]]. Whereby, each subject and object is represented by a [[Node|Glossary#node]] and the predicate is always a [[Relationship|Glossary#relationship]] ([[Edge|Glossary#edge]]). Hence, a statement made of subject, predicate, object is represented by a node, edge, node structure. This enables the ability to add fine-grained external context information, e.g., provenance, version or evidence, at the level of statements or to qualify a statement more precise, e.g., weighting etc.
-
-### Subject
-
-The subject denotes the resource.
 
 ### Task
 
