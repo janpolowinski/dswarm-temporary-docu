@@ -1,10 +1,10 @@
 #GDM Domain Model
 [![gdm domain model](http://www.gliffy.com/go/publish/image/6315806/L.png)](http://www.gliffy.com/go/publish/image/6315806/L.png "GDM Domain Model")
 
-A [[graph data model|Glossary#graph-data-model]] consists of a set of [[resources|Glossary#record]]. A resource has an identifier, e.g., an [[URI|Glossary#URI]], and is a bunch of [[statements|Glossary#statement]] that describe this resource. A statement follows the simple sentence structure: subject - predicate - object. Whereby, 
-* a subject can be a reference (by identifier, i.e., URI) to a resource, i.e., it is a resource node, or a [[blank node|Glossary#BNode]]
+A [[graph data model|Glossary#graph-data-model]] consists of a set of [[resources|Glossary#record]]. A resource has an identifier, e.g., an [[URI|Glossary#uri]], and is a bunch of [[statements|Glossary#statement]] that describe this resource. A statement follows the simple sentence structure: subject - predicate - object. Whereby, 
+* a subject can be a reference (by identifier, i.e., URI) to a resource, i.e., it is a resource node, or a [[blank node|Glossary#blank-node]]
 * a predicate is a reference (by identifier, i.e., URI) to a property
-* an object can be a reference (by identifier, i.e., URI) to a resource, or a blank node or a [[literal|Glossary#Literal]].
+* an object can be a reference (by identifier, i.e., URI) to a resource, or a blank node or a [[literal|Glossary#literal]].
 
 So a [[nodes|Glossary#node]] can be of the following types: resource, blank node or literal. A Statement can have an arbitrary number of qualified attributes, e.g., order, evidence or confidence. A resource node can refer to an arbitrary resource in a specific [[data model|Glossary#data-model]]. This opens the possibility to connect to resources between different data models.
 
