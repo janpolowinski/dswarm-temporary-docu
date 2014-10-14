@@ -2,7 +2,7 @@ After [[configuring the data schema|Select Data for Schema Configuration]] you c
 
 ## Create Projects – Workflow 
 
-[![create project dialogue](https://github.com/seventwenty/dswarm-documentation/wiki/img/available-for-projects.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/available-for-projects.png "Create Project Dialogue")
+[![create project dialogue](https://avgl.mybalsamiq.com/mockups/2345652.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00)](https://avgl.mybalsamiq.com/mockups/2345652.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00 "Create Project Dialogue")
 
 * Click on the tab “Data”.
 * Select a data resource from the list “Available for projects” (the resource contains a configured schema) (1).
