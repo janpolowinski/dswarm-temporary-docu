@@ -180,11 +180,11 @@ A mapping encapsulates a [[Function|Glossary#function]] (or [[Transformation|Glo
 
 ### Mapping Input
 
-A Mapping Input is an [Attribute Path|Glossary#attribute-path]] applied in a concrete mapping on the input [[Data Model|Glossary#data-model]]. A mapping input can consist of a (optional) [[Filter|Glossary#filter]] to reduce the amount of data for a certain attribute path.
+A Mapping Input is an [[Attribute Path|Glossary#attribute-path]] applied in a concrete [[Mapping|Glossary#mapping]] on the input [[Data Model|Glossary#data-model]]. A mapping input can consist of a (optional) [[Filter|Glossary#filter]] to reduce the amount of data for a certain attribute path.
 
 ### Mapping Output
 
-A Mapping Output is an [[Attribute Path|Glossary#attribute-path]] applied in a concrete mapping on the output [[Data Model|Glossary#data-model]]. A mapping input can consist of a (optional) [[Filter|Glossary#filter]] to reduce the amount of data for a certain attribute path.
+A Mapping Output is an [[Attribute Path|Glossary#attribute-path]] applied in a concrete [[Mapping|Glossary#mapping]] on the output [[Data Model|Glossary#data-model]]. A mapping input can consist of a (optional) [[Filter|Glossary#filter]] to reduce the amount of data for a certain attribute path.
 
 ### Metadata Repository
 
