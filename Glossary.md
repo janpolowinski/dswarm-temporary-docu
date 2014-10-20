@@ -25,6 +25,8 @@
 * [[Job|Glossary#job]]
 * [[Literal|Glossary#literal]]
 * [[Mapping|Glossary#mapping]]
+* [[Mapping Input|Glossary#mapping-input]]
+* [[Mapping Output|Glossary#mapping-output]]
 * [[Metadata Repository|Glossary#metadata-repository]]
 * [[Meta Data Model|Glossary#meta-data-model]]
 * [[Modelling Perspective|Glossary#modelling-perspective]]
