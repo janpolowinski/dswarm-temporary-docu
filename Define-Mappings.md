@@ -1,4 +1,4 @@
-## Mapping Workflow
+## Simple Mappings
 
 [![an image of mapping widget](https://avgl.mybalsamiq.com/mockups/1839138.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00)](https://avgl.mybalsamiq.com/mockups/1839138.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00 "Mapping Widget")
 
