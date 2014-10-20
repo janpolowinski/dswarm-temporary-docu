@@ -36,13 +36,13 @@ Additionally, you can design complex transformations in the alpha release, e.g. 
 
 ### Execute Transformations
 
-Any transformation is executable at all times:
+Any mapping (incl. transformation logic) is executable at all times:
 
-[![transformation execution](https://github.com/seventwenty/dswarm-documentation/wiki/img/target-data.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/target-data.png "Transformation Execution")
+[![transformation execution](https://avgl.mybalsamiq.com/mockups/1904784.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00)](https://avgl.mybalsamiq.com/mockups/1904784.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00 "Transformation Execution")
 
-* Click on “Run _this_ transformation” (1) in order to execute the transformation logic currently displayed and view the results of the transformation executed on the sample data in the target data widget on the upper right (2).
+* Click on “Run _this_ transformation” (1) in order to execute the transformation logic of the mapping currently displayed and view the results of the mapping executed on the sample data in the target data widget on the upper right (2).
 * Click on “Run _all_ Transformations” (3) in order to execute the transformations for all mappings in the project.
-* Click on “Save all transformations” (4) in order to run all transformations for the entire data resource, and save the results in the [[data hub|Glossary#data-hub]]. You can access the results via the database GUI as described in [[Graph Data Model]].
+* Click on “Save all transformations” (4) in order to run all transformations for the entire data model, and save the results in the [[data hub|Glossary#data-hub]]. You can access the results via a web GUI as described in [[Graph Exploration|Graph-Exploration]].
 
 
 -----------------------------------
