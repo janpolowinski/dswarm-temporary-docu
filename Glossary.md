@@ -24,6 +24,7 @@
 * [[Graph|Glossary#graph]]
 * [[Graph Data Model|Glossary#graph-data-model]]
 * [[Job|Glossary#job]]
+* [[Key Definition|Glossary#key-definition]]
 * [[Literal|Glossary#literal]]
 * [[Mapping|Glossary#mapping]]
 * [[Mapping Input|Glossary#mapping-input]]
@@ -174,6 +175,10 @@ A job is a collection of [[Mappings|Glossary#mapping]] that can be executed with
 
 * alternative names: data processing workflow, data transformation workflow
 * note: job is also used in more abstract descriptions (context), where a job refers to both the job and the task(s) that utilise the job
+
+### Key Definition
+
+A key definition is a specific [[Filter|Glossary#filter]] that can be offered and utilised, when a [[Schema|Glossary#schema]] contains a [[Content Schema|Glossary#content-schema]]. This filter refers then to a certain key in a content schema, e.g., "102b" in the [MAB](http://www.dnb.de/DE/Standardisierung/Formate/MAB/mab_node.html) format.
 
 ### Literal
 
