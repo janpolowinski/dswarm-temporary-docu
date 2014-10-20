@@ -1,19 +1,30 @@
-Data in the [[data hub|Glossary#data-hub]] can be exported to a file in the [[N-Quads format|http://sw.deri.org/2008/07/n-quads/]].
+[![export tab](https://avgl.mybalsamiq.com/mockups/2366036.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00)](https://avgl.mybalsamiq.com/mockups/2366036.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00 "Export Tab")
 
-## Export Workflow
+Data in the [[data hub|Glossary#data-hub]] can be exported into a file. The export functions can be accessed at the “Export” tab. The export can be done selectively, i.e. by [[data model|Glossary#data-model]] or everything at once. Currently, all available export formats are based on [RDF](http://wikipedia.org/wiki/Resource_Description_Framework).
 
-The export function can be accessed on the tab “Data”.
+## Export All Data
 
-[![data export widget](https://github.com/seventwenty/dswarm-documentation/wiki/img/export-workflow.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/export-workflow.png "Data Export Widget")
+You can export all data as [N-Quads](http://sw.deri.org/2008/07/n-quads/) or [TriG](http://www.w3.org/TR/trig/)
 
-* Click on the drop-down button “Export All Data” at the bottom of the data tab.
-  * __Note__: The alpha release supports exporting data in the N-Quads format. Further formats will be added in future releases.
-* Click on “N-Quads” to open the browser’s save dialogue and specify a location and a filename for the export.
+[![all data export](https://avgl.mybalsamiq.com/mockups/2366062.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00)](https://avgl.mybalsamiq.com/mockups/2366062.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00 "ALL Data Export")
+
+* Click on the drop-down button “Export All Data” (1) at the bottom of the export tab.
+* Choose the desired export format (2).
+* The browser’s save dialogue will be opened where you can specify a location and a file name for the export.
+
+## Export Data of a specific Data Model
+
+You can export data of a specific data model as [N-Quads](http://sw.deri.org/2008/07/n-quads/), [RDF/XML](http://www.w3.org/TR/REC-rdf-syntax/), [TriG](http://www.w3.org/TR/trig/), [Turtle](http://www.w3.org/TR/turtle/) or [N3](http://www.w3.org/TeamSubmission/n3/)
+
+[![data model export](https://avgl.mybalsamiq.com/mockups/2366157.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00)](https://avgl.mybalsamiq.com/mockups/2366157.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00 "Data Model Export")
+
+* Choose the desired data model in the list of data models (1)
+* Click on the drop-down button “Export Model Data” (2) below the data model list.
+* Choose the desired export format (3).
+* The browser’s save dialogue will be opened where you can specify a location and a file name for the export.
 
 __Note:__
-* In the alpha release, all data in the data hub will be exported. An export generator for specifying a selection of data to be exported will be available in future releases (cf. [[d:swarm Roadmap|Roadmap]]).
-* URI-use in exported RDF data: New URIs will not yet be generated for transformed resources in the alpha release. If source records have a URI already, it will reappear in the exported data.
-
+* URI utilisation in exported data: New URIs will not yet be generated for transformed [[records|Glossary#record]] in the alpha release, i.e., the URIs from the source records will be re-utilised in the target data model.
 
 -----------------------------------
 ### Alpha Release Help Step by Step
