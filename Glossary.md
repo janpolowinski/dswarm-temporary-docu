@@ -6,6 +6,7 @@
 * [[Class|Glossary#class]]
 * [[Component|Glossary#component]]
 * [[Configuration|Glossary#configuration]]
+* [[Content Schema|Glossary#content-schema]]
 * [[Data Hub|Glossary#data-hub]]
 * [[Data Model|Glossary#data-model]]
 * [[Data Perspective|Glossary#data-perspective]]
@@ -80,6 +81,10 @@ A component is a mechanism to describe the instantiation/utilisation of a [[Func
 ### Configuration
 
 A configuration is a bunch of settings or parameters that are necessary to interpret the data of a [[Data Resource|Glossary#data-resource]]. A CSV file, for example, can be parsed by a given column delimiter, row delimiter, the encoding of the content, etc.. Those settings are required to interpret the dumb plain data into useful bits of information. The result of the application of a configuration to a data resource is a [[Data Model|Glossary#data-model]].
+
+### Content Schema
+
+A content schema is a schema that builds on top of a structure schema ([[meta data model|Glossary#meta-data-model]]), e.g., '[MABxml](http://www.dnb.de/DE/Standardisierung/Formate/MABxml/mabxml_node.html)' is a structure schema for '[MAB](http://de.wikipedia.org/wiki/Maschinelles_Austauschformat_f%C3%BCr_Bibliotheken)', which is a content schema. Usually content schemata follow a key/value structure. That's why, a content schema refers to a (possible) ordered list of [[Attribute Paths|Glossary#attribute-path]] that hold the parts of the key, i.e., their values form the key, e.g., in MABxml these are 'nr' and 'ind'. Furthermore, a content schema knows the attribute path where the values can be found re. the structure schema, e.g., in MABxml this 'feld > value'.
 
 ### Data Hub
 
@@ -237,7 +242,7 @@ A relationship or [[Edge|Glossary#edge]] is a fundamental part in a [[Graph Data
 
 ### Schema
 
-A schema is a collection of [[Attribute Path|Glossary#attribute-path]]s and a (generic) [[Class|Glossary#class]] for [[Records|Glossary#record]]. Each [[Data Model|Glossary#data-model]] refers to a schema. All pieces of information in a data model should be addressable via the attribute paths of its schema. The schema of a CSV file ([[Data Resource|Glossary#data-resource]]), for example, consists of the names (or positions) of the headers, i.e., each header is an [[Attribute|Glossary#attribute]] (thereby, the Attribute Paths are equal to those attributes, since CSV files have a flat hierarchy). A schema can refer to certain sub-schemas or make use of other existing schemas to describe records (resources) at specific attribute paths, .e.g., a _dcterms:creator_ attribute (path) can refer to a specific schema for describing persons etc. Hence, a schema can be a composition of schemas.
+A schema is a collection of [[Attribute Path|Glossary#attribute-path]]s, a (generic) [[Class|Glossary#class]] for [[Records|Glossary#record]] and (optionally) a [[Content Schema|Glossary#content-schema]]. Each [[Data Model|Glossary#data-model]] refers to a schema. All pieces of information in a data model should be addressable via the attribute paths of its schema. The schema of a CSV file ([[Data Resource|Glossary#data-resource]]), for example, consists of the names (or positions) of the headers, i.e., each header is an [[Attribute|Glossary#attribute]] (thereby, the Attribute Paths are equal to those attributes, since CSV files have a flat hierarchy). A schema can refer to certain sub-schemata or make use of other existing schemas to describe records (resources) at specific attribute paths, .e.g., a _dcterms:creator_ attribute (path) can refer to a specific schema for describing persons etc. Hence, a schema can be a composition of schemata.
 
 ### Statement
 
