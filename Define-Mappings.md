@@ -12,7 +12,7 @@
 * The new mapping will now be visualized by a red arrow (4).
 * Repeat these steps for each mapping you want to create.
 
-__Note:__ In the alpha release you can map to [[attributes|Glossary#attribute]] only on the first level. For example, you will not be able to map to “contributor/givenName” yet. You can, however, map on first-level attributes such as “title” or “shortTitle”.
+__Note:__ In the alpha release you can only map to [[attribute paths|Glossary#attribute-paths]] on the first level. For example, you will not be able to map to “contributor > givenName” yet. You can, however, map on first-level attributes such as “title” or “shortTitle”.
 
 ## Complex Mappings
 
