@@ -23,7 +23,7 @@ A filter definition dialogue will be opened:
 
 __Note:__ These restrictions apply in the alpha release:
 
-* You can change filter rules, but you cannot delete a filter rule. You can, however, accomplish a ‘deletion’ of a rule by emptying all fields.
+* You can change filter rules, but you cannot delete a filter rule. You can, however, accomplish a ‘deletion’ of a rule by emptying all fields or can the delete the whole mapping at once (see [[here|Design-and-Execute-Transformations]]).
 * You cannot select a specific record set from the sample data.
 
 
