@@ -2,7 +2,7 @@ Example of call sequences in d:swarm at the example of processes involved in the
 
 <!--- update image at https://intranet.slub-dresden.de/display/DAT/Call+Sequences+-+Example%3A+Task+Execution --> 
 
-[![an image of an task excution workflow](https://github.com/seventwenty/dswarm-documentation/wiki/img/sequence-diagram-run-transformations.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/sequence-diagram-run-transformations.png "A Task Execution Workflow")
+[![an image of an task excution workflow](https://github.com/dswarm/dswarm-documentation/wiki/img/sequence-diagram-run-transformations.png)](https://github.com/dswarm/dswarm-documentation/wiki/img/sequence-diagram-run-transformations.png "A Task Execution Workflow")
 
 <!-- TODO:  add Metafacture Pipe stuff from https://intranet.slub-dresden.de/display/DAT/Call+Sequences+-+Example%3A+Task+Execution -->
 
