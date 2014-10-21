@@ -1,8 +1,14 @@
-Please test the alpha release thoroughly and give us feedback. Click on the question mark in the lower right corner of the web page and tell us what you think. You can add a screenshot to your message.
+[![feedback button](https://avgl.mybalsamiq.com/mockups/2368674.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00)](https://avgl.mybalsamiq.com/mockups/2368674.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00 "Feedback Button")
 
-[[img/feedback-overlay.png]]
+Please test the alpha release thoroughly and give us feedback. Click on the feedback button on the right side of the web page and tell us what you think or report an issue. This will open a feedback dialogue:
 
-If you have questions about the functions of d:swarm, you can type some keywords in the feedback box. After clicking on “Next”, we will try to present some suitable entries from our [[knowledge base|http://dswarm.uservoice.com/knowledgebase]] or functional suggestions made by other testers. Please go to dswarm.uservoice.com (Feedback) and tell us you ideas. You can also vote for ideas of other testers and take an influence on the subsequent development of d:swarm.
+[![feedback dialogue](https://avgl.mybalsamiq.com/mockups/2368679.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00)](hhttps://avgl.mybalsamiq.com/mockups/2368679.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00 "Feedback Dialogue")
+
+* Enter a summary or title for issue (1).
+* Describe your issue a bit more in detail (2).
+* Enter your name (3).
+* Enter your E-Mail address (4).
+* Click the "Submit" button to submit your issue to the issue tracker (5) or "Close" (6) to leave the feedback dialogue.
 
 
 -----------------------------------
