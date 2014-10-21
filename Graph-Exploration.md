@@ -6,9 +6,9 @@ The central [[data hub|Glossary#data-hub]] of d:swarm is powered by the graph da
 
 These are the basic functions directly accessible from the starting page:
 
-[![an image of the Neo4j browser](https://github.com/seventwenty/dswarm-documentation/wiki/img/neo4j-overview.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/neo4j-overview.png "Neo4j Browser")
+[![an image of the Neo4j browser](https://avgl.mybalsamiq.com/mockups/1798342.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00)](https://avgl.mybalsamiq.com/mockups/1798342.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00 "Neo4j Browser")
 
-* (1) shows an overview or the [[node|Glossary#node]] labels, [[edges|Glossary#relationship]] (relationship types), [[attributes|Glossary#attribute]] (property keys) that can be used as entry points into the graph.
+* (1) shows an overview of the [[node|Glossary#node]] labels ([[classes|Glossary#class]]), [[edge|Glossary#relationship]] types (relationship types), [[attributes|Glossary#attribute]] (property keys) that can be used as entry points into the graph.
 * (2) lets you manipulate the graph; contains sample queries and shows details of the graph configuration.
 * (3) lets you browse Neo4j’s documentation, help, tutorials etc.
 * (4) input field for [[Cypher queries|http://en.wikipedia.org/wiki/Cypher_Query_Language]]. There is also an [[overview and short introduction to Cypher|http://docs.neo4j.org/refcard/2.0/]].
@@ -16,9 +16,9 @@ These are the basic functions directly accessible from the starting page:
 
 ### Graph Exploration
 
-[![an image of a graph exploration](https://github.com/seventwenty/dswarm-documentation/wiki/img/graph-exploration.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/graph-exploration.png "Graph Exploration")
+[![an image of a graph exploration](https://avgl.mybalsamiq.com/mockups/1799060.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00)](https://avgl.mybalsamiq.com/mockups/1799060.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00 "Graph Exploration")
 
-* (1) an overview of all node labels (i.e. resource types, cf. [[graph data model|Glossary#graph-data-model]]) in the graph.
+* (1) an overview of all node labels (i.e. resource types or classes, cf. [[graph data model|Glossary#graph-data-model]]) in the graph.
   * __Note:__ Node labels cannot be deleted from the graph database, i.e. node labels of deleted nodes will still show up in this overview.
 * (2) an overview of all relationship types (i.e. attributes or predicates) in the graph.
   * __Note:__ Relationship types cannot be deleted from the graph database, i.e. relationship types of deleted edges (relationships) will still show up in this overview.
