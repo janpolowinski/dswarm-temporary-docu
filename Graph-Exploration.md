@@ -23,11 +23,11 @@ These are the basic functions directly accessible from the starting page:
 * (2) an overview of all relationship types (i.e. attributes or predicates) in the graph.
   * __Note:__ Relationship types cannot be deleted from the graph database, i.e. relationship types of deleted edges (relationships) will still show up in this overview.
 * (3) an overview of all property keys (attributes of nodes and edges) in the graph.
-* (4) a currently selected node label (http://data.slub-dresden.de/resources/1/schema#RecordType). Selecting a node label sends a Cypher query. The result is presented visually or in a grid.
-* (5) sample Cypher query for retrieving a node with the node label ‘http://data.slub-dresden.de/resources/1/schema#RecordType‘ limited to 25 results maximum:
+* (4) a currently selected node label (`http://data.slub-dresden.de/resources/1/schema#RecordType`). Selecting a node label sends a Cypher query. The result is presented visually or in a grid.
+* (5) sample Cypher query for retrieving a node with the node label `http://data.slub-dresden.de/resources/1/schema#RecordType` limited to 25 results maximum:
     
     ``MATCH (n:`http://data.slub-dresden.de/resources/1/schema#RecordType`) RETURN n LIMIT 25``
-* (6) the visual representation of the results showing nodes and their identifiers (e.g. http://data.slub-dresden.de/datamodels/2/records/788e0248-f417-4e72-a6ed-e8cf0baa4546)
+* (6) the visual representation of the results showing nodes and their identifiers (e.g. `http://data.slub-dresden.de/datamodels/2/records/788e0248-f417-4e72-a6ed-e8cf0baa4546`)
   * __Note:__  Double clicking a node will show all in-coming and out-going edges (and their starting or ending nodes) of the node.
 
 
@@ -41,14 +41,14 @@ This is an example of a [[record|Glossary#record]] imported from a CSV file and 
 
 * (1) The record with the identifier `http://data.slub-dresden.de/datamodels/8/records/716d7486-1fa7-41f6-a490-f210051f5ffa` in the input [[data model|Glossary#data-model]]
 * (2) The detail view of the selected [[statement|Glossary#statement]] with the property (relationship type) `http://data.slub-dresden.de/resources/2/schema#isbn` and the following relationship attributes:
-  * \_\_DATA\_MODEL\_\_ = http://data.slub-dresden.de/datamodel/8/data
+  * \_\_DATA\_MODEL\_\_ = `http://data.slub-dresden.de/datamodel/8/data`
   * \_\_INDEX\_\_ = 5
   * \_\_UUID\_\_ = 92fa7ad5-7582-4da6-b1a0-4589cbc52664
   * \_\_VALID\_FROM\_\_ = 1
   * \_\_VALID_TO\_\_ = 2147483647
-  * \_\_RESOURCE\_\_ = http://data.slub-dresden.de/datamodels/8/records/716d7486-1fa7-41f6-a490-f210051f5ffa
+  * \_\_RESOURCE\_\_ = `http://data.slub-dresden.de/datamodels/8/records/716d7486-1fa7-41f6-a490-f210051f5ffa`
 i.e. the statement with the uuid `92fa7ad5-7582-4da6-b1a0-4589cbc52664` of the data model with the identifier `http://data.slub-dresden.de/datamodel/8/data` belongs to the resource with the identifier `http://data.slub-dresden.de/datamodels/8/records/716d7486-1fa7-41f6-a490-f210051f5ffa` and is valid from the first version of the data model until now (2147483647 is the upper limit of the integer range)
-* (3) A resource type (class) node for http://purl.org/ontology/bibo/Document` of the record in the output data model
+* (3) A resource type (class) node for `http://purl.org/ontology/bibo/Document` of the record in the output data model
   * __Note:__ Double clicking a resource type node will show all resource nodes that are categorized with this type.
 * (4) visualization of a statement (node – edge – node)
   * This example shows the resource node of the record `http://data.slub-dresden.de/datamodels/8/records/716d7486-1fa7-41f6-a490-f210051f5ffa` in the output data model with the attribute (relationship type) `http://data.slub-dresden.de/resources/2/schema#isbn` and the value ([[literal|Glossary#literal]]) “66633344455”. 
@@ -60,11 +60,11 @@ __Note:__ If a node is selected, the detail view shows all property keys of the 
 
 This overview can provide only a brief glance at Cypher queries. There are more d:swarm related queries in the [[Cypher Cheat Sheet]]. For a detailed explanation of the capabilities of Cypher, please refer to [[Cypher Reference Card|http://docs.neo4j.org/refcard/2.0/]].
 
-* Retrieval (recursively) of all statements that belong to records of the record type ‘http://www.openarchives.org/OAI/2.0/recordType‘, i.e. “show me all (hierarchically structured) records of this resource type in the graph”:
+* Retrieval (recursively) of all statements that belong to records of the record type `http://www.openarchives.org/OAI/2.0/recordType`, i.e. “show me all (hierarchically structured) records of this resource type in the graph”:
 
     ``MATCH (n:`http://www.openarchives.org/OAI/2.0/recordType`)-[r*]->(m) RETURN n, r, m;``
 
-* Retrieval of all statements with the attribute http://data.slub-dresden.de/resources/1/schema#description
+* Retrieval of all statements with the attribute `http://data.slub-dresden.de/resources/1/schema#description`
 
     ``MATCH (n)-[r:`http://data.slub-dresden.de/resources/1/schema#description`]->(m) RETURN n, r, m;``
 
@@ -79,7 +79,7 @@ __Note:__ In the graph exploration tab, all resource types in the graph will be 
 
 Apart from the built-in indices for node labels and relationship types you should make use of further indices (which, at this stage, are implemented as [[Neo4j legacy indices|http://docs.neo4j.org/chunked/milestone/indexing.html]] that differ from the [[schema indices|http://docs.neo4j.org/chunked/milestone/query-schema-index.html]]) in order to achieve fast runtimes for your queries.
 
-* Retrieval of all statements connected with nodes with the resource identifier ‘http://data.slub-dresden.de/datamodels/2/records/788e0248-f417-4e72-a6ed-e8cf0baa4546‘, i.e. statements whose subject have this identifier:
+* Retrieval of all statements connected with nodes with the resource identifier `http://data.slub-dresden.de/datamodels/2/records/788e0248-f417-4e72-a6ed-e8cf0baa4546`, i.e. statements whose subject have this identifier:
 
     ``START n=node:resources(__URI__="http://data.slub-dresden.de/datamodels/2/records/788e0248-f417-4e72-a6ed-e8cf0baa4546") MATCH (n)-[r]->(m) RETURN n, r, m;``
 
