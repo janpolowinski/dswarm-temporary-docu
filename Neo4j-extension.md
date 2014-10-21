@@ -1,7 +1,3 @@
-TODO add content
-
-* see also [[Cypher Cheat Sheet]]
-
 ## HTTP API Endpoints - DMP Graph (neo4j)
 
 Here are some links for convenient testing
