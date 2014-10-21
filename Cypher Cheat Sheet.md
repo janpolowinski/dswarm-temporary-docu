@@ -2,7 +2,7 @@
 
 An universal cheat sheet is the [Neo4j Cypher Refcard 2.0](http://docs.neo4j.org/refcard/2.0/). This section provides some common Cypher queries that can be used to explore the graph via the Neo4j browser that usually runs at *http://localhost:7474/browser/*. 
 
-__1. extract all statements from the DB:__
+__1. extract all [[statements|Glossary#statement]] from the DB:__
 
     MATCH (n)-[r]->(m) RETURN DISTINCT n, n.__URI__,n.__NODETYPE__, r, r.__URI__, m, m.__URI__, m.__NODETYPE__, m.__VALUE__;
 
@@ -21,7 +21,7 @@ __2. delete statements:__
 
 __Note:__ you may run this query multiple times until the result count of this query is 0, i.e., no statements are left in the DB, or you can run this query in the Neo4j shell with a higher limit or without a limit
 
-__3. get all statements that have a MABxml record as subject, i.e., which have the record class `http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#recordType`:__
+__3. get all statements that have a MABxml [[record|Glossary#record]] as subject, i.e., which have the record [[class|Glossary#class]] `http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#recordType`:__
 
     MATCH (n`http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#recordType`)-[r]->(m) RETURN n, r, m;
 
@@ -41,7 +41,7 @@ __6. get all statements (limited to 50) except those that have the property `htt
     RETURN DISTINCT a,b LIMIT 50;
 
 
-__7. get all statements (current limit is 100) that belong to OAI-PMH records up to a depths of except those that have the property `http://www.w3.org/1999/02/22-rdf-syntax-ns#type`:__
+__7. get all statements (current limit is 100) that belong to OAI-PMH records up to a depths of 4 except those that have the property `http://www.w3.org/1999/02/22-rdf-syntax-ns#type`:__
 
 (this query should have many OPTIONAL parts actually...)
 
@@ -52,12 +52,12 @@ __7. get all statements (current limit is 100) that belong to OAI-PMH records up
     AND type(r3) <> "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
     RETURN n,r,m,r1,l,r2,o,r3,p LIMIT 100;
 
-__8. show all data model URIs (current limit is 1000):__
+__8. show all [[data model|Glossary#data-model]] identifier (current limit is 1000):__
 
     MATCH (n)-[r]->(m)
     RETURN DISTINCT r.__DATA_MODEL__ LIMIT 1000;
 
-__9. show all statements (current limit is 1000) for the data model the identifier `http://data.slub-dresden.de/datamodel/15/data`:__
+__9. show all statements (current limit is 1000) for the data model with the identifier `http://data.slub-dresden.de/datamodel/15/data`:__
 
 __Note:__ currently, the pre-initialized (internal) data models have the URIs "http://data.slub-dresden.de/datamodel/1/data", "http://data.slub-dresden.de/datamodel/2/data" and "http://data.slub-dresden.de/datamodel/3/data"
 
