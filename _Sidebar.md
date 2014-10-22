@@ -38,6 +38,7 @@
 * contributing
   * [[Code Repository Handling]]
   * [[Development Tips]]
+  * [[Code Quality]]
 * diagrams
   * [[Example Task Execution]]
   * [[Mapping and Transformation]]
