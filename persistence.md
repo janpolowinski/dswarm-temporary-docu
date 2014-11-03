@@ -1,0 +1,1 @@
+This module is responsible for the metadata repository (currently a relational database; MySQL) and the data hub (currently a graph database; Neo4j). See the sub-pages to further information.
