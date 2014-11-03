@@ -1,1 +1,1 @@
-Module that controls the program flow and provides a HTTP API. A RESTful web service are used based on the JAX-RS specification. The implementation is made via [https://jersey.java.net/ | Jersey].
+Module that controls the program flow and provides a HTTP API. A RESTful web service are used based on the JAX-RS specification. The implementation is made via [Jersey](https://jersey.java.net/).
