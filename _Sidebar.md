@@ -33,8 +33,12 @@
 ### For developers
 * [[front end]]
 * [[back end]]
-* [[MySQL Cheat Sheet]]
-* [[Neo4j extension]]
+  * [[controller]]
+    * [[swagger]]
+  * [[converter]]
+  * [[persistence]]
+    * [[MySQL Cheat Sheet]]
+    * [[Neo4j extension]]
 * contributing
   * [[Code Repository Handling]]
   * [[Development Tips]]
