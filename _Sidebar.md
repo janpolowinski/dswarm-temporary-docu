@@ -36,6 +36,7 @@
   * [[controller]]
     * [[swagger]]
   * [[converter]]
+  * [[init]]
   * [[persistence]]
     * [[MySQL Cheat Sheet]]
     * [[Neo4j extension]]
