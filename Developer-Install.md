@@ -164,10 +164,10 @@ edit `/etc/neo4j/neo4j.properties` and:
 
 ```
 use_memory_mapped_buffers=true
-neostore.nodestore.db.mapped_memory=1024M
-neostore.relationshipstore.db.mapped_memory=4G
-neostore.propertystore.db.mapped_memory=1024M
-neostore.propertystore.db.strings.mapped_memory=1024M
+neostore.nodestore.db.mapped_memory=512M
+neostore.relationshipstore.db.mapped_memory=2G
+neostore.propertystore.db.mapped_memory=512M
+neostore.propertystore.db.strings.mapped_memory=512M
 cache_type=weak
 ```
 
