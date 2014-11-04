@@ -121,11 +121,3 @@ Edges are always attributes of resources or resource parts, e.g. mabxml:nr (http
 </tr>
 </tbody>
 </table>
-
-
------------------------------------
-### Alpha Release Help Step by Step
-
-* next: [[Graph Exploration]]
-* previous: [[Available Transformation Functions]]
-
