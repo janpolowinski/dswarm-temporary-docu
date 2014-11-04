@@ -8,7 +8,7 @@ Since we make use of [JPA](http://en.wikibooks.org/wiki/Java_Persistence) as abs
 
 When you've finished creating and/or modifying your POJOs in the model package, then you can re-create the schema of the [[metadata repository|Glossary#metadata-repository]] (see also [[here|mysql-cheat-sheet]]). You can simply make use of the following Maven command to generate schema script automatically (you need to call this command within the `persistence` module (directory)):
 
-    mvn hibernate4:export -PDEV
+    mvn hibernate4:export
 
 The result should be a `schema.sql` script in the `target` directory of the `persistence` module.
 
