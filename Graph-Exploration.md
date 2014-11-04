@@ -112,10 +112,3 @@ Edge indices always have the prefix ‘relationship’. The following edge indic
   * Index attribute: **\_\_UUID\_W\_DATA\_MODEL\_\_**
 
 **Note**: Index attributes have no direct relation to node attributes or edge attributes, even if they have the same label.
-
-
------------------------------------
-### Alpha Release Help Step by Step
-
-* next: [[Export Data in RDF]]
-* previous: [[Graph Data Model]]
