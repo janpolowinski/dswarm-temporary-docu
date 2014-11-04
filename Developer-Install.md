@@ -202,7 +202,8 @@ Follow the instructions in [[d:swarm Configuration|dswarm Configuration]].
 
 
 ### **12**. build neo4j extension
-(TODO: during the developer installation Jan had to configure maven to use the slub nexus server (add settings.xml (LINK to example file!) to  the ~/.m2 folder.)
+Add our [Nexus server](http://nexus.slub-dresden.de:8081/nexus) to your maven settings.xml. The file should be located in the folder "~/.m2". If the file doesn't exist create it simply using this [template](templates/settings.xml).
+
 ```
 pushd dswarm-graph-neo4j
 mvn -U -PRELEASE -DskipTests clean package
