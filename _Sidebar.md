@@ -40,6 +40,7 @@
   * [[persistence]]
     * [[MySQL Cheat Sheet]]
     * [[Neo4j extension]]
+  * [[Implement Domain Model Modification]]
 * contributing
   * [[Code Repository Handling]]
   * [[Development Tips]]
