@@ -54,7 +54,7 @@ git clone --depth 1 --branch builds/unstable git@github.com:dswarm/dswarm-backof
 
 ```
 su
-apt-get install --no-install-recommends --yes mysql-server tomcat7 openjdk-7-jdk curl
+apt-get install --no-install-recommends --yes mysql-server openjdk-7-jdk curl
 ```
 
 - note: neo4j suggest to install oracle-jdk instead of openjdk, to do so, please execute the following commands (see also http://community.linuxmint.com/tutorial/view/1414)
