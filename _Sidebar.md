@@ -2,13 +2,15 @@
 * [[Home]]
 * [[Domain Model]]
 * [[Installation and Configuration|home#installation-and-configuration]]
-  * [[Installation|Server-Install#Initial-Installation]]
-  * [[Installation (for Developers)|Developer-Install#Initial-Installation]]
-  * [[d:swarm Configuration|dswarm Configuration]]
-  * [[Update the System|Server-Install#update-the-system]]
-  * [[Update the System (for Developers)|Developer-Install#update-the-system]]
-  * [[Checklist on Errors|Server-Install#checklist-on-errors]]
-  * [[Checklist on Errors|Developer-Install#checklist-on-errors]]
+ * Server (Productive Environment)
+   * [[Installation|Server-Install#Initial-Installation]]
+    * [[Update the System|Server-Install#update-the-system]]
+    * [[Checklist on Errors|Server-Install#checklist-on-errors]]
+ * For Developers
+   * [[Installation|Developer-Install#Initial-Installation]]
+    * [[Update the System|Developer-Install#update-the-system]]
+    * [[Checklist on Errors|Developer-Install#checklist-on-errors]]
+ * [[d:swarm Configuration|dswarm Configuration]]
 * [[Roadmap]]
 * [[Glossary]]
 
