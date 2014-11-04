@@ -78,4 +78,4 @@ Example message:
 
 Use separate clean-up commits if you clean-up a lot of code. Do not mix clean-ups with feature implementation, bug fixes etc. within one commit. This makes it easier to understand changesets and (more or less) ignore clean-up commits when reviewing a merge request and understanding the changes in commits later on. 
 
-See als [[Code Quality]].
+See also [[Code Quality]].
