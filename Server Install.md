@@ -1,3 +1,5 @@
+_These are the installation instructions for a *server* and will add some steps that aim at a production environment, which are not described in the [Developer-Install](developer install)._
+
 ## Initial Installation
 
 premise:
