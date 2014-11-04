@@ -1,3 +1,5 @@
+_These are the installation instructions for *developers* and will skip some steps described in the [Server-Install](server install) that are not required for development._
+
 ## Initial Installation
 
 premise:
