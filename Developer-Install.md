@@ -1,7 +1,7 @@
 ## Initial Installation
 
 premise:
-- currently, we've developed the application only on Ubuntu Linux distributions (empty trusty, 14.04) and MacOS
+- currently, we've developed the application only on Ubuntu Linux distributions (empty trusty, 14.04) and MacOS. If you experience problems developing on Windows, please contact us.
 - let the $HOME of the less privileged user be '/home/user'
 - all commands boxes start as the less privileged user and in their $HOME.
 - Requiring root is explicitly marked (with `su` rather than `sudo ...` ; note that using sudo before each line is not suffienct to yield the same results as with su. Using su may require you to set a password for root if not already done!)
