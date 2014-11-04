@@ -116,7 +116,7 @@ Pin-Priority: 1000
 ```
 
 ### **7**. make sure, permissions are correctly
-(If you didn't change the default places where mysql and neo4j store their data, this step may not be necessary. The default places should be "/var/lib/mysql/" and "" )
+_If you didn't change the default places where mysql and neo4j store their data, this step should not be necessary._ If you still think you need to set the rights, the default places should be "/var/lib/mysql" and "/var/lib/neo4j/data" )
 
 ```
 su
@@ -262,17 +262,10 @@ When running the backend the first time, the MySQL database needs to be initiali
 lookout for the correct path (/home/user)
 
 ```
-pushd ci-tools/scripts
-python reset-dbs.py \
-  --persistence-module=../../datamanagement-platform/persistence \
-  --user=dmp \
-  --password=dmp \
-  --db=dmp \
-  --neo4j=http://localhost:7474/graph
+pushd dswarm/dev-tools
+./reset-dbs.bash
+popd
 ```
-
-Or provide the credentials and values you configured.
-Check `python reset-dbs.py --help` for additional information.
 
 ## Update the System
 
