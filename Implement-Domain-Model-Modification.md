@@ -43,6 +43,8 @@ That's why, the more important step is to create integration tests to verify the
 
 (the last two features are provided by persistence service test util classes starting from [BasicJPAServiceTestUtils](https://github.com/dswarm/dswarm/blob/builds/unstable/persistence/src/test/java/org/dswarm/persistence/service/test/utils/BasicJPAServiceTestUtils.java)).
 
+So, when you would like to create a new test class for your new concrete persistence service (of your new POJO), you can simply extend it from the appropriated abstract persistence service test class, set the pointers to the related POJO class etc. and start implementing your tests as necessary (see, e.g., [ContentSchemaServiceTest](https://github.com/dswarm/dswarm/blob/builds/unstable/persistence/src/test/java/org/dswarm/persistence/service/schema/test/ContentSchemaServiceTest.java)). Whereby, the object creation should mainly take place in the related persistence service test utils class (see, e.g., [ContentSchemaServiceTestUtils](https://github.com/dswarm/dswarm/blob/builds/unstable/persistence/src/test/java/org/dswarm/persistence/service/schema/test/utils/ContentSchemaServiceTestUtils.java)). This should ensure the re-usability of persistent domain model entity creation for other tests. This requires the creation of the companion persistence service test utils for your new domain model entity as well.
+
 **Note:** Please first read the following section ([[Initial Data Provisioning|Implement-Domain-Model-Modification#initial-data-provisioning]]) carefully before starting to test the persistence services after your domain model modification
 
 ### Initial Data Provisioning
