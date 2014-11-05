@@ -1,4 +1,3 @@
-That module encapsulates Metafacture to transform data. For this purpose, a metafacture object is created to assemble a processing pipeline. The transformation itself is declared in XML. The transformation who is modeled by system librarian in front end is send to back end. The back end then is building the Metamorph-XML, processing the pipe and return the result to the front end and/or save the result in data hub.
+This module makes use of [Metafacture](https://github.com/culturegraph/metafacture-core/wiki) to transform data. For this purpose, a [[Task|Glossary#task]] object is created to assemble a processing pipeline. The [[Job|Glossary#job]] that is modelled by a system librarian in the front end is send to the back end. The back end then converts its including [[mappings|Glossary#mapping]] to a [Metamorph](https://github.com/culturegraph/metafacture-core/wiki/Metamorph-User-Guide) script, processes the transformation pipeline and returns the result to the front end and/or saves the result in data hub.
 
-+ [metafacture github wiki](https://github.com/culturegraph/metafacture-core/wiki)
-+ the [metamorph data modell](http://b3e.net/metamorph-book/latest/) by Christoph Böhme (german)
++ the [metamorph data model](http://b3e.net/metamorph-book/latest/) by Christoph Böhme (german)
