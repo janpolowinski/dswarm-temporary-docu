@@ -39,7 +39,7 @@
 * [[front end]]
 * [[back end]]
   * [[controller]]
-    * [[swagger]]
+    * [[HTTP API discovery]]
   * [[converter]]
   * [[init]]
   * [[persistence]]
