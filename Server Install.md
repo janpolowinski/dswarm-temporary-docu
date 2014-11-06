@@ -398,7 +398,7 @@ pushd dswarm-graph-neo4j; git pull; popd
 pushd dswarm-backoffice-web; git pull; popd
 ```
 
-### **2**. repeat steps [[14|Server-Install#14-build-neo4j-extension]] to [[19|Server-Install#19-initializereset-database]] from installation as necessary
+### **2**. repeat steps [[14|Server-Install#14-build-neo4j-extension]] (Building neo4j-extension) to [[19|Server-Install#19-initializereset-database]] (Init DB) from the installation as necessary
 
 
 ## Checklist on Errors
