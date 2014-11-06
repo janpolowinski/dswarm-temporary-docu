@@ -285,4 +285,4 @@ pushd dswarm-backoffice-web; git pull; popd
 
 ## Checklist on Errors
 
-For now , please use the checklist from the [Server-Install#checklist-on-errors]. Please keep in mind that the links used there will take you to the server install not the developer version!
+For now , please use the checklist from the [[Server-Install#checklist-on-errors]]. Please keep in mind that the links used there will take you to the server install not to the developer version!
