@@ -285,19 +285,4 @@ pushd dswarm-backoffice-web; git pull; popd
 
 ## Checklist on Errors
 
-First of all it's a good idea to know which of the four components front end, back end, MySQL and Neo4j database does not run. If you already know, skip this list.
-
-* [[front end]]: open `http://localhost:9999` in a browser. The front end should be displayed. 
-* [[back end]]: open `http://localhost:8087/dmp/_ping` in a browser. The expected response is a page with the word _pong_.
-* MySQL database: open a terminal and type `mysql -udmp -p dmp` to open a connection to MySQL and select the database _dmp_. Hint: check for correct user name, password and database name in case you did not use the default values. If you can log in, type `select * from data_model;`. At least three internal data models should be listed. 
-* Neo4j database: open `http://localhost:7474/browser/` in a browser. The Neo4j browser should open.
-
-Now that you know which component does not run, go through 
-
-<!--- even though it is most likely that the databases contain corrupted data, this is not the first point on the list since previous steps are required to initialize the dbs. -->
-
-* is _curl_ installed?
-* when building the projects with maven, did you use the `-U` option to update project dependencies?
-* Check your [[dswarm Configuration]]. Are database name and password correct, i.e. the ones used when installing MySQL (step [[Developer-Install#6-setup-mysql]])? Compare _dswarm/persistence/src/main/resources/create_database.sql_ with _dswarm/dswarm.conf_ or any other configuration option you use.
-* [[initialize the databases|Developer-Install#17-initializereset-database]]. They may be empty or contain corrupted data caused by a failed unit test.
-* Did you miss an update of, e.g., the neo4j version? Compare your installed version with the required version (see [[step 6|Developer-Install#6-install-neo4j]])
+For now , please use the checklist from the [Server-Install#checklist-on-errors]. Please keep in mind that the links used there will take you to the server install not the developer version!
