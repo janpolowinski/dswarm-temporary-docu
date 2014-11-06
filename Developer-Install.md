@@ -272,17 +272,9 @@ popd
 
 ## Update the System
 
-### **1**. update repository contents
-
-```
-pushd dswarm; git pull; popd
-pushd dswarm-graph-neo4j; git pull; popd
-pushd dswarm-backoffice-web; git pull; popd
-```
-
-### **2**. repeat steps [[12|Developer-Install#12-build-neo4j-extension]] to [[17|Developer-Install#17-initializereset-database]] from installation as necessary
+For now , please refer to the [[Server-Install|Server-Install#update-the-system]] for updating the system.
 
 
 ## Checklist on Errors
 
-For now , please use the checklist from the [[Server-Install#checklist-on-errors]]. Please keep in mind that the links used there will take you to the server install not to the developer version!
+For now , please use the checklist from the [[Server-Install|Server-Install#checklist-on-errors]]. Please keep in mind that the links used there will take you to the server install not to the developer version!
