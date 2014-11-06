@@ -2,15 +2,6 @@
 * [[Home]]
 * [[Domain Model]]
 * [[Installation and Configuration|home#installation-and-configuration]]
- * Server (Productive Environment)
-   * [[Installation|Server-Install#Initial-Installation]]
-    * [[Update the System|Server-Install#update-the-system]]
-    * [[Checklist on Errors|Server-Install#checklist-on-errors]]
- * For Developers
-   * [[Installation|Developer-Install#Initial-Installation]]
-    * [[Update the System|Developer-Install#update-the-system]]
-    * [[Checklist on Errors|Developer-Install#checklist-on-errors]]
- * [[d:swarm Configuration|dswarm Configuration]]
 * [[Roadmap]]
 * [[Glossary]]
 
@@ -34,22 +25,32 @@
 * [[Graph Data Model]]
     * [[Graph Exploration]]
     * [[Cypher Cheat Sheet]]
+* Server-Installation (Productive Environment)
+  * [[Installation|Server-Install#Initial-Installation]]
+  * [[Update the System|Server-Install#update-the-system]]
+  * [[Checklist on Errors|Server-Install#checklist-on-errors]]
+  * [[d:swarm Configuration|dswarm Configuration]]
 
 ### For developers
-* [[front end]]
-* [[back end]]
-  * [[controller]]
+* Developer-Install
+  * [[Installation|Developer-Install#Initial-Installation]]
+  * [[Update the System|Developer-Install#update-the-system]]
+  * [[Checklist on Errors|Developer-Install#checklist-on-errors]]
+  * [[d:swarm Configuration|dswarm Configuration]]
+* [[Front end]]
+* [[Back end]]
+  * [[Controller]]
     * [[HTTP API discovery]]
-  * [[converter]]
-  * [[init]]
-  * [[persistence]]
+  * [[Converter]]
+  * [[Init]]
+  * [[Persistence]]
     * [[MySQL Cheat Sheet]]
     * [[Neo4j extension]]
   * [[Implement Domain Model Modification]]
-* contributing
+* Contributing
   * [[Code Repository Handling]]
   * [[Development Tips]]
   * [[Code Quality]]
-* diagrams
+* Diagrams
   * [[Example Task Execution]]
   * [[Mapping and Transformation]]
