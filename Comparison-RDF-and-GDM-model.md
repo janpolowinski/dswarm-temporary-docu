@@ -1,4 +1,4 @@
-The Graph Data Model (GDM) utilises RDF concepts on top of the (more powerful) property graph model, which allows relationships to have not only a type, but an arbitrary number of properties. Comparison by Example:
+The [Graph Data Model] (GDM) utilises RDF concepts on top of the (more powerful) property graph model, which allows relationships to have not only a type, but an arbitrary number of properties. Comparison by example:
 
 <table">
 <thead>
