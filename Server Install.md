@@ -36,17 +36,9 @@ apt-get install --no-install-recommends --yes git-core maven nodejs npm build-es
 ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa -N ''
 ```
 
-### **3**. add ssh key to deployment hooks in gitlab 
-(this is only necessary, if you want to integrate your server in certain CI deployment jobs; otherwise you only need to add the ssh key to your user profile)
+### **3**. add ssh key to to your github user profile
+see https://help.github.com/articles/generating-ssh-keys/
 
-TODO: change this from git.slub-dresden.de to github!
-
-- copy the contents of the public key at `~/.ssh/id_rsa.pub`
-- open https://git.slub-dresden.de/dmp/datamanagement-platform/deploy_keys/new to add a new deploy key
-  - enter a title (e.g. user@host)
-  - paste the public key
-- open https://git.slub-dresden.de/dmp/dmp-graph/deploy_keys and click on `Enable` next to the just added key
-- repeat for https://git.slub-dresden.de/dmp/dmp-backoffice-web/deploy_keys
 
 ### **4**. clone repositories (not as root!)
 
