@@ -33,11 +33,10 @@ To avoid unnecessary complex merge conflicts, checkout *builds/unstable* and pul
         git merge sprint-10/dd-329
 
 5. Create a [[pull request|https://help.github.com/articles/using-pull-requests]] from the *builds/unstable* branch of your repository fork to the *builds/unstable* branch of the main repository (where your fork was created from)
- * TODO: update this documentation to github workflow (was gitlab)
- * note: within minutes, a jenkins build is automatically triggered. Jenkins adds the start of the build as a comment to the merge request and adds another comment with build results.
-    + In case the build was successful and tests are passed, the assignee can start reviewing the merge request.
-    + In case the build or tests failed, it is up to the developer that created the request to solve the problems. A new commit will trigger jenkins to build again. 
- * important: if you commit new changesets to the builds/unstable branch in your repository fork in between, then these changes will automatically be included in the changeset of the merge request as well - so be careful with committing changes to the builds/unstable branch of your repository fork until the merge request was approved (or closed) by the assignee of the merge request. Rather see, that you only push to your builds/unstable when there are no pending merge requests
+ * note: within minutes, a Jenkins build is automatically triggered. Jenkins adds the start of the build as a comment to the pull request and adds another comment with build results.
+    + In case the build was successful and tests have passed, the assignee can start reviewing the pull request.
+    + In case the build or tests failed, it is up to the developer that created the request to solve the problems. A new commit will trigger Jenkins to build again. 
+ * important: if you commit new change sets to the builds/unstable branch in your repository fork in between, then these changes will automatically be included in the change set of the pull request as well - so be careful when committing changes to the builds/unstable branch of your repository fork until the pull request was approved (or closed) by the assignee of the pull request. As a rule of thumb, only push to your builds/unstable when there are no pending pull requests.
 
 6. The pull request will be processed by the project maintainers.
 
@@ -76,6 +75,6 @@ Example message:
 
 ## Code clean-up
 
-Use separate clean-up commits if you clean-up a lot of code. Do not mix clean-ups with feature implementation, bug fixes etc. within one commit. This makes it easier to understand changesets and (more or less) ignore clean-up commits when reviewing a merge request and understanding the changes in commits later on. 
+Use separate clean-up commits if you clean-up a lot of code. Do not mix clean-ups with feature implementation, bug fixes etc. within one commit. This makes it easier to understand changesets and (more or less) ignore clean-up commits when reviewing a pull request and understanding the changes in commits later on. 
 
 See also [[Code Quality]].
