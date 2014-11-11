@@ -266,9 +266,16 @@ lookout for the correct path (/home/user)
 
 ```
 pushd dswarm/dev-tools
-./reset-dbs.bash
-popd
+python reset-dbs.py \
+  --persistence-module=../persistence \
+  --user=dmp \
+  --password=dmp \
+  --db=dmp \
+  --neo4j=http://localhost:7474/graph
 ```
+Or provide the credentials and values you configured.
+Check `python reset-dbs.py --help` for additional information.
+
 
 ## Update the System
 
