@@ -18,6 +18,9 @@
     * [[Design and Execute Transformations]]
     * [[Define Filters]]
     * [[Available Transformation Functions]]
+	* [[Mapping and Transformation Examples]]
+		* [[Zoologie]]
+		* [[Informationen zur Raumentwicklung]]	
   * [[Export Data in RDF]]
   * [[Give Feedback to the Developers]]
 
