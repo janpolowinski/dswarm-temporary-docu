@@ -1,1 +1,1 @@
-TODO Christof, Paul
+For a quick guide to start frontend developing have a look at our [Start Development Guide](https://github.com/dswarm/dswarm-backoffice-web/blob/builds/unstable/yo/doc/dev.md). More detailed information will be added soon.
