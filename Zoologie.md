@@ -159,7 +159,7 @@ The appending Table gives an detailed overview to the Mappings and Transformatio
 <td colspan="3">dcterms:issued</td>
 </tr>
 <tr>
-<td colspan="4" bgcolor="#D3D3D3"><center><h4>owl:sameAs</h4></center></td> <!-- Next Mapping \\-->
+<td colspan="4" bgcolor="#D3D3D3"><center><h4>owl:sameAs (culturegraph)</h4></center></td> <!-- Next Mapping \\-->
 </tr>
 <tr>
 <td><b>MAB Source Tag(s)</b></td>
@@ -188,7 +188,7 @@ The appending Table gives an detailed overview to the Mappings and Transformatio
 <td colspan="3">owl:sameAs</td>
 </tr>
 <tr>
-<td colspan="4" bgcolor="#D3D3D3"><center><h4>owl:sameAs</h4></center></td> <!-- Next Mapping \\-->
+<td colspan="4" bgcolor="#D3D3D3"><center><h4>owl:sameAs (SWB)</h4></center></td> <!-- Next Mapping \\-->
 </tr>
 <tr>
 <td><b>MAB Source Tag(s)</b></td>
@@ -217,7 +217,7 @@ The appending Table gives an detailed overview to the Mappings and Transformatio
 <td colspan="3">owl:sameAs</td>
 </tr>
 <tr>
-<td colspan="4" bgcolor="#D3D3D3"><center><h4>bibo:isbn</h4></center></td> <!-- Next Mapping \\-->
+<td colspan="4" bgcolor="#D3D3D3"><center><h4>bibo:isbn (10)</h4></center></td> <!-- Next Mapping \\-->
 </tr>
 <tr>
 <td><b>MAB Source Tag(s)</b></td>
@@ -246,7 +246,7 @@ The appending Table gives an detailed overview to the Mappings and Transformatio
 <td colspan="3">bibo:isbn</td>
 </tr>
 <tr>
-<td colspan="4" bgcolor="#D3D3D3"><center><h4>bibo:isbn</h4></center></td> <!-- Next Mapping \\-->
+<td colspan="4" bgcolor="#D3D3D3"><center><h4>bibo:isbn (13)</h4></center></td> <!-- Next Mapping \\-->
 </tr>
 <tr>
 <td><b>MAB Source Tag(s)</b></td>
@@ -304,7 +304,7 @@ The appending Table gives an detailed overview to the Mappings and Transformatio
 <td colspan="3">dcterms:language</td>
 </tr>
 <tr>
-<td colspan="4" bgcolor="#D3D3D3"><center><h4>dcterms:isPartOf</h4></center></td> <!-- Next Mapping \\-->
+<td colspan="4" bgcolor="#D3D3D3"><center><h4>dcterms:isPartOf (1.GT)</h4></center></td> <!-- Next Mapping \\-->
 </tr>
 <tr>
 <td><b>MAB Source Tag(s)</b></td>
@@ -332,7 +332,7 @@ The appending Table gives an detailed overview to the Mappings and Transformatio
 <td colspan="3">dcterms:isPartOf</td>
 </tr>
 <tr>
-<td colspan="4" bgcolor="#D3D3D3"><center><h4>dcterms:isPartOf</h4></center></td> <!-- Next Mapping \\-->
+<td colspan="4" bgcolor="#D3D3D3"><center><h4>dcterms:isPartOf (Überordnung)</h4></center></td> <!-- Next Mapping \\-->
 </tr>
 <tr>
 <td><b>MAB Source Tag(s)</b></td>
