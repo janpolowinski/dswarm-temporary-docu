@@ -217,7 +217,7 @@ The appending Table gives an detailed overview to the Mappings and Transformatio
 <td colspan="3">dcterms:issued</td>
 </tr>
 <tr>
-<td colspan="4" bgcolor="#D3D3D3"><center><h4>owl:sameAs</h4></center></td> <!-- Next Mapping \\-->
+<td colspan="4" bgcolor="#D3D3D3"><center><h4>owl:sameAs (culturegraph)</h4></center></td> <!-- Next Mapping \\-->
 </tr>
 <tr>
 <td><b>MAB Source Tag(s)</b></td>
@@ -246,7 +246,7 @@ The appending Table gives an detailed overview to the Mappings and Transformatio
 <td colspan="3">owl:sameAs</td>
 </tr>
 <tr>
-<td colspan="4" bgcolor="#D3D3D3"><center><h4>owl:sameAs</h4></center></td> <!-- Next Mapping \\-->
+<td colspan="4" bgcolor="#D3D3D3"><center><h4>owl:sameAs (SWB)</h4></center></td> <!-- Next Mapping \\-->
 </tr>
 <tr>
 <td><b>MAB Source Tag(s)</b></td>
@@ -275,7 +275,7 @@ The appending Table gives an detailed overview to the Mappings and Transformatio
 <td colspan="3">owl:sameAs</td>
 </tr>
 <tr>
-<td colspan="4" bgcolor="#D3D3D3"><center><h4>owl:sameAs</h4></center></td> <!-- Next Mapping \\-->
+<td colspan="4" bgcolor="#D3D3D3"><center><h4>owl:sameAs (ZDB)</h4></center></td> <!-- Next Mapping \\-->
 </tr>
 <tr>
 <td><b>MAB Source Tag(s)</b></td>
@@ -362,7 +362,7 @@ The appending Table gives an detailed overview to the Mappings and Transformatio
 <td colspan="3">dcterms:language</td>
 </tr>
 <tr>
-<td colspan="4" bgcolor="#D3D3D3"><center><h4>dcterms:isFormatOf</h4></center></td> <!-- Next Mapping \\-->
+<td colspan="4" bgcolor="#D3D3D3"><center><h4>dcterms:isFormatOf (ZDB)</h4></center></td> <!-- Next Mapping \\-->
 </tr>
 <tr>
 <td><b>MAB Source Tag(s)</b></td>
@@ -394,7 +394,7 @@ The appending Table gives an detailed overview to the Mappings and Transformatio
 <td colspan="3">dcterms:isFormatOf</td>
 </tr>
 <tr>
-<td colspan="4" bgcolor="#D3D3D3"><center><h4>dcterms:isFormatOf</h4></center></td> <!-- Next Mapping \\-->
+<td colspan="4" bgcolor="#D3D3D3"><center><h4>dcterms:isFormatOf (SWB)</h4></center></td> <!-- Next Mapping \\-->
 </tr>
 <tr>
 <td><b>MAB Source Tag(s)</b></td>
@@ -424,7 +424,7 @@ The appending Table gives an detailed overview to the Mappings and Transformatio
 <td colspan="3">dcterms:isFormatOf</td>
 </tr>
 <tr>
-<td colspan="4" bgcolor="#D3D3D3"><center><h4>rda:precededBy</h4></center></td> <!-- Next Mapping \\-->
+<td colspan="4" bgcolor="#D3D3D3"><center><h4>rda:precededBy (ZDB)</h4></center></td> <!-- Next Mapping \\-->
 </tr>
 <tr>
 <td><b>MAB Source Tag(s)</b></td>
