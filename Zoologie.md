@@ -59,7 +59,7 @@ The appending Table gives an detailed overview to the Mappings and Transformatio
 <tr><td><b>Step</b></td><td><b>Transformation</b></td><td><b>Parameter</b></td></tr>
 <tr><td>1</td><td><a href="https://avgl.mybalsamiq.com/mockups/2391130.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00" target="_blank">compose</a></td><td>postfix: ":_"</td></tr>
 <tr><td>2</td><td><a href="https://avgl.mybalsamiq.com/mockups/2391140.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00" target="_blank">compose</a></td><td>postfix: "__"</td></tr>
-<tr><td>3</td><td><a href="https://avgl.mybalsamiq.com/mockups/2391145.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00" target="_blank">concat</a></td><td>-</td></tr>
+<tr><td>3</td><td><a href="https://avgl.mybalsamiq.com/mockups/2391145.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00" target="_blank">concat</a></td><td>delimiter: "__"</td></tr>
 </tr>
 <tr>
 <td rowspan="4"><b>Transformation Output</b></td>
