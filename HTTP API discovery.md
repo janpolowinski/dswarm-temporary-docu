@@ -1,3 +1,3 @@
-The HTTP API endpoints are annotated with [Swagger](http://swagger.io/) descriptions that allow every client to discover and test the API. You can feed every (open) [Swagger UI](https://github.com/swagger-api/swagger-ui) (e.g. http://petstore.swagger.wordnik.com) with the API specification available at http://127.0.0.1:8087/dmp/api-docs/ (if you run the backend application locally (otherwise you need to set the base URI as needed)).
+The HTTP API endpoints are annotated with [Swagger](http://swagger.io/) descriptions that allow every client to discover and test the API. You can access our Swagger instance to explore the API definitions [here](http://sdvdswarm01.slub-dresden.de/docs/?url=http://sdvdswarm01.slub-dresden.de/dmp/api-docs). To run example calls you would need a running local instance.
 
 <!-- TODO: document local swagger UI endpoint -->
