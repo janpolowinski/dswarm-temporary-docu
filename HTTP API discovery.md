@@ -1,3 +1,3 @@
-The HTTP API endpoints are annotated with [Swagger](http://swagger.io/) descriptions that allow every client to discover and test the API. You can access our Swagger instance to explore the API definitions [here](http://sdvdswarm01.slub-dresden.de/docs/?url=http://sdvdswarm01.slub-dresden.de/dmp/api-docs). To run example calls you would need a running local instance.
+The HTTP API endpoints are annotated with [Swagger](http://swagger.io/) descriptions that allow every client to discover and test the API. You can access our Swagger instance to explore the API definitions [here](http://sdvdswarm01.slub-dresden.de/docs/?url=http://sdvdswarm01.slub-dresden.de/dmp/api-docs).
 
 <!-- TODO: document local swagger UI endpoint -->
