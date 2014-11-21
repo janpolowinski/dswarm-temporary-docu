@@ -188,7 +188,7 @@ move old content root and link the new one. lookout for the correct user path! (
 ```
 su
 mv /usr/share/nginx/{html,-old}
-ln -s /home/user/dmp-backoffice-web/yo/publish /usr/share/nginx/html
+ln -s /home/user/dswarm-backoffice-web/yo/publish /usr/share/nginx/html
 ```
 
 ### **11**. setup tomcat
