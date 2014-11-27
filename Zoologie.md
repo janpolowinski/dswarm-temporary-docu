@@ -2,11 +2,13 @@
 * input: 
   * MABxml: [[Dataset Zoologie]]
   * [[GDM|Graph Data Model]]: [[example_1.gdm.json]]
+[![example 1 - source graph data model](https://raw.githubusercontent.com/wiki/dswarm/dswarm-documentation/assets/example_1.source.gdm.png)](https://raw.githubusercontent.com/wiki/dswarm/dswarm-documentation/assets/example_1.source.gdm.png "Example 1 - Source GDM")
 * [[task|Glossary#task]] (mappings + transformations):
   * [[example_1.task.json]]
   * Morph script: [[example_1.task.morph.xml]]
 * output:
   * [[GDM|Graph Data Model]]: [[example_1.task.result.json]]
+[![example 1 - target graph data model](https://raw.githubusercontent.com/wiki/dswarm/dswarm-documentation/assets/example_1.target.gdm.png)](https://raw.githubusercontent.com/wiki/dswarm/dswarm-documentation/assets/example_1.target.gdm.png "Example 1 - Target GDM")
 
 ### Mappings Overview
 The appending Table gives a detailed overview of the [[Mappings|Glossary#mapping]] and [[Transformations|Glossary#transformation]] which are used to prepare the first example [[Project|Glossary#project]] "[Example1](http://sdvdswarm01.slub-dresden.de/#/model/1)". 
