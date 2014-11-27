@@ -3,6 +3,13 @@
   * MABxml: [[Dataset Zoologie]]
   * [[GDM|Graph Data Model]]: [[example_1.gdm.json]]
 [![example 1 - source graph data model](https://raw.githubusercontent.com/wiki/dswarm/dswarm-documentation/assets/example_1.source.gdm.png)](https://raw.githubusercontent.com/wiki/dswarm/dswarm-documentation/assets/example_1.source.gdm.png "Example 1 - Source GDM")
+  * Cypher: 
+```cypher
+START n=node:resources(__URI__="http://data.slub-dresden.de/datamodels/4/records/2522048a-6d70-4a68-8737-4ccfb0d4feed") 
+MATCH (n)-[r*]->(m) 
+WHERE n.__DATA_MODEL__="http://data.slub-dresden.de/datamodel/4/data" 
+RETURN n, r, m;
+```
   * RDF: [[example_1.source.ttl]]
 * [[task|Glossary#task]] (mappings + transformations):
   * [[example_1.task.json]]
@@ -10,6 +17,15 @@
 * output:
   * [[GDM|Graph Data Model]]: [[example_1.task.result.json]]
 [![example 1 - target graph data model](https://raw.githubusercontent.com/wiki/dswarm/dswarm-documentation/assets/example_1.target.gdm.png)](https://raw.githubusercontent.com/wiki/dswarm/dswarm-documentation/assets/example_1.target.gdm.png "Example 1 - Target GDM")
+  * Cypher:
+```cypher
+START n=node:resources(__URI__="http://data.slub-dresden.de/datamodels/4/records/2522048a-6d70-4a68-8737-4ccfb0d4feed")
+MATCH (n)-[r*]->(m)
+WHERE n.__DATA_MODEL__="http://data.slub-dresden.de/datamodel/2/data"
+RETURN n, r, m;
+```
+* export:
+  * RDF: [[example_1_and_2.target.ttl]] (includes records of both examples in target [[data model|Glossary#data-model]])
 
 ### Mappings Overview
 The appending Table gives a detailed overview of the [[Mappings|Glossary#mapping]] and [[Transformations|Glossary#transformation]] which are used to prepare the first example [[Project|Glossary#project]] "[Example1](http://sdvdswarm01.slub-dresden.de/#/model/1)". 
