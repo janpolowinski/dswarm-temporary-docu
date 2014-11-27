@@ -1,5 +1,8 @@
-### Related Dataset
-* [[Dataset Informationen zur Raumentwicklung]]
+### Related Information
+* source: 
+  * [[Dataset Informationen zur Raumentwicklung]] (MABxml)
+  * [assets/example_1.gdm.json](https://raw.githubusercontent.com/wiki/dswarm/dswarm-documentation/assets/example_1.gdm.json) ([[GDM|Graph Data Model]])
+
 
 ### Mappings overview table
 The appending Table gives an detailed overview to the Mappings and Transformations which are used to prepare the first Example Project "Example1". 
