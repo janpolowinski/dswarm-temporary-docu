@@ -2,6 +2,7 @@
 * input: 
   * MABxml: [[Dataset Zoologie]]
   * [[GDM|Graph Data Model]]: [[example_1.gdm.json]]
+  * RDF: [[example_1.source.ttl]]
 [![example 1 - source graph data model](https://raw.githubusercontent.com/wiki/dswarm/dswarm-documentation/assets/example_1.source.gdm.png)](https://raw.githubusercontent.com/wiki/dswarm/dswarm-documentation/assets/example_1.source.gdm.png "Example 1 - Source GDM")
   * Cypher: 
 ```cypher
@@ -10,7 +11,6 @@ MATCH (n)-[r*]->(m)
 WHERE n.__DATA_MODEL__="http://data.slub-dresden.de/datamodel/4/data" 
 RETURN n, r, m;
 ```
-  * RDF: [[example_1.source.ttl]]
 * [[task|Glossary#task]] (mappings + transformations):
   * [[example_1.task.json]]
   * Morph script: [[example_1.task.morph.xml]]
