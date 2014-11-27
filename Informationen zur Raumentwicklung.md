@@ -1,9 +1,34 @@
 ### Related Information
 * source: 
   * MABxml: [[Dataset Informationen zur Raumentwicklung]]
+* [[GDM|Graph Data Model]]: [[example_2.gdm.json]]
+  * RDF: [[example_2.source.ttl]]
+[![example 2 - source graph data model](https://raw.githubusercontent.com/wiki/dswarm/dswarm-documentation/assets/example_2.source.gdm.png)](https://raw.githubusercontent.com/wiki/dswarm/dswarm-documentation/assets/example_2.source.gdm.png "Example 2 - Source GDM")
+  * Cypher: 
+```cypher
+START n=node:resources(__URI__="http://data.slub-dresden.de/datamodels/5/records/911c43ff-df20-4938-803c-2a7514900751")
+MATCH (n)-[r*]->(m)
+WHERE n.__DATA_MODEL__="http://data.slub-dresden.de/datamodel/5/data"
+RETURN n, r, m;
+```
+* [[task|Glossary#task]] (mappings + transformations):
+  * [[example_2.task.json]]
+  * Morph script: [[example_2.task.morph.xml]]
+* output:
+  * [[GDM|Graph Data Model]]: [[example_2.task.result.json]]
+[![example 2 - target graph data model](https://raw.githubusercontent.com/wiki/dswarm/dswarm-documentation/assets/example_2.target.gdm.png)](https://raw.githubusercontent.com/wiki/dswarm/dswarm-documentation/assets/example_2.target.gdm.png "Example 2 - Target GDM")
+  * Cypher:
+```cypher
+START n=node:resources(__URI__="http://data.slub-dresden.de/datamodels/5/records/911c43ff-df20-4938-803c-2a7514900751")
+MATCH (n)-[r*]->(m)
+WHERE n.__DATA_MODEL__="http://data.slub-dresden.de/datamodel/2/data"
+RETURN n, r, m;
+```
+* export:
+  * RDF: [[example_1_and_2.target.ttl]] (includes records of both examples in target [[data model|Glossary#data-model]])
 
-### Mappings overview table
-The appending Table gives an detailed overview to the Mappings and Transformations which are used to prepare the first Example Project "Example1". 
+### Mappings Overview
+The appending Table gives a detailed overview of the [[Mappings|Glossary#mapping]] and [[Transformations|Glossary#transformation]] which are used to prepare the first example [[Project|Glossary#project]] "[Example2](http://sdvdswarm01.slub-dresden.de/#/model/2)". 
 
 <table>
 <tbody>
