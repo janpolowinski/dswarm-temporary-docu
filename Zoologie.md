@@ -8,7 +8,7 @@
 * output:
   * [[GDM|Graph Data Model]]: [[example_1.task.result.json]]
 
-### Mappings overview table
+### Mappings Overview
 The appending Table gives a detailed overview of the [[Mappings|Glossary#mapping]] and [[Transformations|Glossary#transformation]] which are used to prepare the first example [[Project|Glossary#project]] "[Example1](http://sdvdswarm01.slub-dresden.de/#/model/1)". 
 
 <table>
