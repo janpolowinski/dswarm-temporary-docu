@@ -1,3 +1,5 @@
+* raw: [example_1.gdm.json](https://raw.githubusercontent.com/wiki/dswarm/dswarm-documentation/assets/example_1.gdm.json)
+
 ```json
 [ {
   "http://data.slub-dresden.de/datamodels/4/records/2522048a-6d70-4a68-8737-4ccfb0d4feed" : [ {
