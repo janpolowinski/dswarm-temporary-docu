@@ -1,12 +1,26 @@
-A [[graph data model|Glossary#graph-data-model]] implies the notion of [[nodes|Glossary#node]] and [[edges|Glossary#relationship]]. In the graph data model, [[statements|Glossary#statement]] are represented as directed binary graphs – they always consist of a subject __node__, a predicate __edge__ and an object __node__.
+#GDM Domain Model
+[![gdm domain model](http://www.gliffy.com/go/publish/image/6315806/L.png)](http://www.gliffy.com/go/publish/image/6315806/L.png "GDM Domain Model")
+
+A [[graph data model|Glossary#graph-data-model]] consists of a set of [[resources|Glossary#record]]. A resource has an identifier, e.g., an [[URI|Glossary#uri]], and is a bunch of [[statements|Glossary#statement]] that describe this resource. A statement follows the simple sentence structure: subject - predicate - object. Whereby, 
+* a subject can be a reference (by identifier, i.e., URI) to a resource, i.e., it is a resource node, or a [[blank node|Glossary#blank-node]]
+* a predicate is a reference (by identifier, i.e., URI) to a property
+* an object can be a reference (by identifier, i.e., URI) to a resource, or a blank node or a [[literal|Glossary#literal]].
+
+So a [[node|Glossary#node]] can be of the following types: resource, blank node or literal. A Statement can have an arbitrary number of qualified attributes, e.g., order, evidence or confidence. A resource node can refer to an arbitrary resource in a specific [[data model|Glossary#data-model]]. This opens the possibility to connect to resources between different data models.
+
+For those familiar to RDF, we offer a [[comparison table | Comparison RDF and GDM model]] for RDF and the GDM model.
+
+# GDM in a Property Graph
+
+A graph data model implies the notion of nodes and [[edges|Glossary#relationship]]. In the graph data model, statements are represented as directed binary graphs – they always consist of a subject __node__, a predicate __edge__ and an object __node__.
 
 ## Nodes
 
 Nodes can be
 
 1. a resource or the entry point of a resource,
-2. part of a resource ([[blank node|Glossary#blank-node]]), i.e. a subelement of a hierarchical description of a resources, e.g. a field in a MARCXML recordset ([[record|Glossary#record]]), or
-3. simple value nodes, i.e. [[literals|Glossary#literal]].
+2. part of a resource (blank node), i.e. a subelement of a hierarchical description of a resources, e.g. a field in a MARCXML recordset (record), or
+3. simple value nodes, i.e. literals.
 
 ### Attributes of Nodes
 
@@ -56,12 +70,12 @@ Nodes can be
 
 ### Explanation
 
-A [[record|Glossary#record]] is always a resource so the node type of the record’s entry node is **\_\_RESOURCE\_\_**. Resources or parts of resources can be typed. The types of resources are used as node labels in the graph:
+A record is always a resource so the node type of the record’s entry node is **\_\_RESOURCE\_\_**. Resources or parts of resources can be typed. The types of resources are used as node labels in the graph:
 
 * a MABXML record, for instance, is of the type ‘Datensatz’ (record, http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#datensatzType) and
 * a field within the MABXML record is of the type ‘Feld’ (field, http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#feldType).
 
-[[URIs|Glossary#uri]] are utilised as identifiers for resources, types and attributes (predicates) of [[statements|Glossary#statement]]. All edges and resource nodes have a data model attribute (**\_\_DATA\_MODEL\_\_**). It refers to the [[data model|Glossary#data-model]] the statement or resource belongs to. Resource identifiers are assigned to resource nodes by the attribute **\_\_URI\_\_**. Values of literals are assigned to literal nodes by the attribute **\_\_VALUE\_\_**.
+URIs are utilised as identifiers for resources, types and attributes (predicates) of statements. All edges and resource nodes have a data model attribute (**\_\_DATA\_MODEL\_\_**). It refers to the data model the statement or resource belongs to. Resource identifiers are assigned to resource nodes by the attribute **\_\_URI\_\_**. Values of literals are assigned to literal nodes by the attribute **\_\_VALUE\_\_**.
 
 
 ## Edges
@@ -109,11 +123,3 @@ Edges are always attributes of resources or resource parts, e.g. mabxml:nr (http
 </tr>
 </tbody>
 </table>
-
-
------------------------------------
-### Alpha Release Help Step by Step
-
-* next: [[Graph Exploration]]
-* previous: [[Available Transformation Functions]]
-

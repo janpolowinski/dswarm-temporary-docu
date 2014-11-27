@@ -1,0 +1,41 @@
+<settings>
+<mirrors>
+<mirror>
+<!--This sends everything else to /public -->
+<id>nexus</id>
+<mirrorOf>central,snapshots,releases,apache-snapshots</mirrorOf>
+<url>http://nexus.slub-dresden.de:8081/nexus/content/groups/public</url>
+</mirror>
+</mirrors>
+<servers>
+<server>
+<id>server-id</id>
+<!--deleted user name and password here for publishing on github, if you have problems using our nexus without the credentials please contact us -->
+<!--<username></username>
+<password></password>-->
+</server>
+</servers>
+<profiles>
+    <profile>
+      <id>nexus</id>
+      <!--Enable snapshots for the built in central repo to direct -->
+      <!--all requests to nexus via the mirror -->
+      <repositories>
+        <repository>
+          <id>central</id>
+          <url>http://central</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>true</enabled></snapshots>
+        </repository>
+      </repositories>
+     <pluginRepositories>
+        <pluginRepository>
+          <id>central</id>
+          <url>http://central</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>true</enabled></snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+</settings>

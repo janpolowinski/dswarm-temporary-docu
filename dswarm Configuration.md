@@ -222,6 +222,7 @@ These settings aren't strictly necessary, but will allow you to use the default 
 ### Eclipse
 
 Open `eclipse.ini`, go to `-vmargs` section and add the line `-Dconfig.file=/path/to/dswarm.conf`.
+If this does not work for you (it didn't on Ubuntu 14.04 with neither Eclipse Kepler nor Luna) go to `Window` > `Preferences` > `Java` > `Installed JRE` edit the JRE you are currently using and enter as default VM arguments: `-Dconfig.file=/path/to/dswarm.conf`.
 
 ### Intellij IDEA
 

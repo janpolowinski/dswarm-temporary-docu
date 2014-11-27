@@ -6,6 +6,7 @@
 * [[Class|Glossary#class]]
 * [[Component|Glossary#component]]
 * [[Configuration|Glossary#configuration]]
+* [[Content Schema|Glossary#content-schema]]
 * [[Data Hub|Glossary#data-hub]]
 * [[Data Model|Glossary#data-model]]
 * [[Data Perspective|Glossary#data-perspective]]
@@ -23,8 +24,11 @@
 * [[Graph|Glossary#graph]]
 * [[Graph Data Model|Glossary#graph-data-model]]
 * [[Job|Glossary#job]]
+* [[Key Definition|Glossary#key-definition]]
 * [[Literal|Glossary#literal]]
 * [[Mapping|Glossary#mapping]]
+* [[Mapping Input|Glossary#mapping-input]]
+* [[Mapping Output|Glossary#mapping-output]]
 * [[Metadata Repository|Glossary#metadata-repository]]
 * [[Meta Data Model|Glossary#meta-data-model]]
 * [[Modelling Perspective|Glossary#modelling-perspective]]
@@ -37,7 +41,6 @@
 * [[Relationship|Glossary#relationship]]
 * [[Schema|Glossary#schema]]
 * [[Statement|Glossary#statement]]
-* [[Subject|Glossary#subject]]
 * [[Task|Glossary#task]]
 * [[Transformation|Glossary#transformation]]
 * [[URI|Glossary#uri]]
@@ -79,6 +82,10 @@ A component is a mechanism to describe the instantiation/utilisation of a [[Func
 ### Configuration
 
 A configuration is a bunch of settings or parameters that are necessary to interpret the data of a [[Data Resource|Glossary#data-resource]]. A CSV file, for example, can be parsed by a given column delimiter, row delimiter, the encoding of the content, etc.. Those settings are required to interpret the dumb plain data into useful bits of information. The result of the application of a configuration to a data resource is a [[Data Model|Glossary#data-model]].
+
+### Content Schema
+
+A content schema is a schema that builds on top of a structure schema ([[meta data model|Glossary#meta-data-model]]), e.g., '[MABxml](http://www.dnb.de/DE/Standardisierung/Formate/MABxml/mabxml_node.html)' is a structure schema for '[MAB](http://de.wikipedia.org/wiki/Maschinelles_Austauschformat_f%C3%BCr_Bibliotheken)', which is a content schema. Usually content schemata follow a key/value structure. That's why, a content schema refers to a (possible) ordered list of [[Attribute Paths|Glossary#attribute-path]] that hold the parts of the key, i.e., their values form the key, e.g., in MABxml these are 'nr' and 'ind'. Furthermore, a content schema knows the attribute path where the values can be found re. the structure schema, e.g., in MABxml this 'feld > value'.
 
 ### Data Hub
 
@@ -169,6 +176,10 @@ A job is a collection of [[Mappings|Glossary#mapping]] that can be executed with
 * alternative names: data processing workflow, data transformation workflow
 * note: job is also used in more abstract descriptions (context), where a job refers to both the job and the task(s) that utilise the job
 
+### Key Definition
+
+A key definition is a specific [[Filter|Glossary#filter]] that can be offered and utilised, when a [[Schema|Glossary#schema]] contains a [[Content Schema|Glossary#content-schema]]. This filter refers then to a certain key in a content schema, e.g., "102b" in the [MAB](http://www.dnb.de/DE/Standardisierung/Formate/MAB/mab_node.html) format.
+
 ### Literal
 
 A literal represents a value of an attribute of an entity, e.g., in “The book has been published in 2011″ the value of the attribute ‘published (in)’ is ’2011′. A value can have a datatype, e.g., string or integer.
@@ -179,11 +190,11 @@ A mapping encapsulates a [[Function|Glossary#function]] (or [[Transformation|Glo
 
 ### Mapping Input
 
-A Mapping Input is an [Attribute Path|Glossary#attribute-path]] applied in a concrete mapping on the input [[Data Model|Glossary#data-model]]. A mapping input can consist of a (optional) [[Filter|Glossary#filter]] to reduce the amount of data for a certain attribute path.
+A Mapping Input is an [[Attribute Path|Glossary#attribute-path]] applied in a concrete [[Mapping|Glossary#mapping]] on the input [[Data Model|Glossary#data-model]]. A mapping input can consist of a (optional) [[Filter|Glossary#filter]] to reduce the amount of data for a certain attribute path.
 
 ### Mapping Output
 
-A Mapping Output is an [[Attribute Path|Glossary#attribute-path]] applied in a concrete mapping on the output [[Data Model|Glossary#data-model]]. A mapping input can consist of a (optional) [[Filter|Glossary#filter]] to reduce the amount of data for a certain attribute path.
+A Mapping Output is an [[Attribute Path|Glossary#attribute-path]] applied in a concrete [[Mapping|Glossary#mapping]] on the output [[Data Model|Glossary#data-model]]. A mapping input can consist of a (optional) [[Filter|Glossary#filter]] to reduce the amount of data for a certain attribute path.
 
 ### Metadata Repository
 
@@ -236,15 +247,11 @@ A relationship or [[Edge|Glossary#edge]] is a fundamental part in a [[Graph Data
 
 ### Schema
 
-A schema is a collection of [[Attribute Path|Glossary#attribute-path]]s and a (generic) [[Class|Glossary#class]] for [[Records|Glossary#record]]. Each [[Data Model|Glossary#data-model]] refers to a schema. All pieces of information in a data model should be addressable via the attribute paths of its schema. The schema of a CSV file ([[Data Resource|Glossary#data-resource]]), for example, consists of the names (or positions) of the headers, i.e., each header is an [[Attribute|Glossary#attribute]] (thereby, the Attribute Paths are equal to those attributes, since CSV files have a flat hierarchy). A schema can refer to certain sub-schemas or make use of other existing schemas to describe records (resources) at specific attribute paths, .e.g., a _dcterms:creator_ attribute (path) can refer to a specific schema for describing persons etc. Hence, a schema can be a composition of schemas.
+A schema is a collection of [[Attribute Path|Glossary#attribute-path]]s, a (generic) [[Class|Glossary#class]] for [[Records|Glossary#record]] and (optionally) a [[Content Schema|Glossary#content-schema]]. Each [[Data Model|Glossary#data-model]] refers to a schema. All pieces of information in a data model should be addressable via the attribute paths of its schema. The schema of a CSV file ([[Data Resource|Glossary#data-resource]]), for example, consists of the names (or positions) of the headers, i.e., each header is an [[Attribute|Glossary#attribute]] (thereby, the Attribute Paths are equal to those attributes, since CSV files have a flat hierarchy). A schema can refer to certain sub-schemata or make use of other existing schemas to describe records (resources) at specific attribute paths, .e.g., a _dcterms:creator_ attribute (path) can refer to a specific schema for describing persons etc. Hence, a schema can be a composition of schemata.
 
 ### Statement
 
 A statement – a simple sentence with the structure: subject, predicate, object – is the fundamental knowledge representation structure of the graph data model in our [[Data Hub|Glossary#data-hub]]. Whereby, each subject and object is represented by a [[Node|Glossary#node]] and the predicate is always a [[Relationship|Glossary#relationship]] ([[Edge|Glossary#edge]]). Hence, a statement made of subject, predicate, object is represented by a node, edge, node structure. This enables the ability to add fine-grained external context information, e.g., provenance, version or evidence, at the level of statements or to qualify a statement more precise, e.g., weighting etc.
-
-### Subject
-
-The subject denotes the resource.
 
 ### Task
 

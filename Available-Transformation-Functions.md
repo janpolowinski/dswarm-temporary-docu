@@ -1,4 +1,4 @@
-__Note:__ d:swarm uses functions of the Metamorph framework for data transformation. You can find more detailed information about these functions at https://github.com/culturegraph/metafacture-core/wiki/Metamorph-functions.
+__Note:__ d:swarm uses functions of the Metafacture framework for data transformation. You can find more detailed information about these functions at https://github.com/culturegraph/metafacture-core/wiki/Metamorph-functions.
 
 <table>
 <thead>
@@ -300,5 +300,5 @@ Result: &lt;a href="http://www.slub-dresden.de/"&gt;Homepage SLUB Dresden&lt;/a&
 -----------------------------------
 ### Alpha Release Help Step by Step
 
-* next: [[Graph Data Model]]
+* next: [[Export Data in RDF]]
 * previous: [[Define Filters]]

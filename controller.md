@@ -1,0 +1,1 @@
+Module that controls the program flow and provides a HTTP API. This web service is implemented in Java and follows the [JAX-RS](https://jax-rs-spec.java.net/) specification. The concrete framework that was choosen is [Jersey](https://jersey.java.net/).

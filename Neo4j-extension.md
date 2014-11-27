@@ -1,19 +1,39 @@
-TODO add content
-
-* see also [[Cypher Cheat Sheet]]
-
 ## HTTP API Endpoints - DMP Graph (neo4j)
 
-As long as there is no swagger UI for dmp-graph, here are some links for convenient testing
+Here are some links for convenient testing
 
-* http://localhost:7474/graph/maintain/ping (result should be "pong")
+    http://localhost:7474/graph/maintain/ping 
 
-_Attention: links go to localhost and datamodel 4 is expected to exist! datamodels 1,2 and 3 are special datamodels, which will only contain data after storing transformation results_
+(result should be "pong")
 
-  * http://localhost:7474/graph/rdf/getall
-  * http://localhost:7474/graph/rdf/getall?format=application/n-quads
-  * http://localhost:7474/graph/rdf/getall?format=application/trig
-  * http://localhost:7474/graph/rdf/export?format=application/n-quads&provenanceuri=http://data.slub-dresden.de/datamodel/4/data
-  * http://localhost:7474/graph/rdf/export?format=text/turtle&provenanceuri=http://data.slub-dresden.de/datamodel/4/data 
-  * http://localhost:7474/graph/rdf/export?format=text/n3&provenanceuri=http://data.slub-dresden.de/datamodel/4/data
-  * http://localhost:7474/graph/rdf/export?format=application/rdf%2Bxml&provenanceuri=http://data.slub-dresden.de/datamodel/4/data
+_Attention: links go to localhost and datamodel 4 is expected to exist!_
+
+ * return all data models as RDF
+
+        curl http://localhost:7474/graph/rdf/getall
+
+(default serialization is N-Quads)
+
+ * return all data models as RDF (serialized as N-Quads)
+    
+        curl -H "Accept:application/n-quads" http://localhost:7474/graph/rdf/getall
+
+ * return all data models as RDF (serialized as TriG)
+  
+        curl -H "Accept:application/trig" http://localhost:7474/graph/rdf/getall
+
+ * return the data model with the URI ````http://data.slub-dresden.de/datamodel/4/data```` as RDF (serialized as N-Quads)
+
+        curl -H "Accept:application/n-quads" http://localhost:7474/graph/rdf/export?data_model_uri=http://data.slub-dresden.de/datamodel/4/data
+
+ * return the data model with the URI ````http://data.slub-dresden.de/datamodel/4/data```` as RDF (serialized as Turtle)
+
+        curl -H "Accept:text/turtle" http://localhost:7474/graph/rdf/export?data_model_uri=http://data.slub-dresden.de/datamodel/4/data
+
+ * return the data model with the URI ````http://data.slub-dresden.de/datamodel/4/data```` as RDF (serialized as N3)
+
+        curl -H "Accept:text/n3" http://localhost:7474/graph/rdf/export?data_model_uri=http://data.slub-dresden.de/datamodel/4/data
+
+ * return the data model with the URI ````http://data.slub-dresden.de/datamodel/4/data```` as RDF (serialized as RDF/XML)
+
+        curl -H "Accept:application/rdf+xml" http://localhost:7474/graph/rdf/export?&data_model_uri=http://data.slub-dresden.de/datamodel/4/data

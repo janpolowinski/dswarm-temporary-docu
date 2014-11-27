@@ -1,3 +1,5 @@
+_These are the installation instructions for a *server* and will add some steps that aim at a production environment, which are not described in the [Developer-Install](developer install)._
+
 ## Initial Installation
 
 premise:
@@ -34,15 +36,9 @@ apt-get install --no-install-recommends --yes git-core maven nodejs npm build-es
 ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa -N ''
 ```
 
-### **3**. add ssh key to deployment hooks in gitlab 
-(this is only necessary, if you want to integrate your server in certain CI deployment jobs; otherwise you only need to add the ssh key to your user profile)
+### **3**. add ssh key to to your github user profile
+see https://help.github.com/articles/generating-ssh-keys/
 
-- copy the contents of the public key at `~/.ssh/id_rsa.pub`
-- open https://git.slub-dresden.de/dmp/datamanagement-platform/deploy_keys/new to add a new deploy key
-  - enter a title (e.g. user@host)
-  - paste the public key
-- open https://git.slub-dresden.de/dmp/dmp-graph/deploy_keys and click on `Enable` next to the just added key
-- repeat for https://git.slub-dresden.de/dmp/dmp-backoffice-web/deploy_keys
 
 ### **4**. clone repositories (not as root!)
 
@@ -50,10 +46,10 @@ lookout for the correct path (/home/user)
 
 ```
 cd /home/user
-git clone --depth 1 --branch builds/unstable git@git.slub-dresden.de:dmp/datamanagement-platform.git
-git clone --depth 1 --branch master git@git.slub-dresden.de:dmp/dmp-graph.git
-git clone --depth 1 --branch builds/unstable git@git.slub-dresden.de:dmp/dmp-backoffice-web.git
-git clone --depth 1 --branch master git@git.slub-dresden.de:dmp/ci-tools.git
+
+git clone --depth 1 --branch builds/unstable git@github.com:dswarm/dswarm.git
+git clone --depth 1 --branch master git@github.com:dswarm/dswarm-graph-neo4j.git
+git clone --depth 1 --branch builds/unstable git@github.com:dswarm/dswarm-backoffice-web.git
 ```
 
 * * *
@@ -145,7 +141,7 @@ npm install -g grunt-cli karma bower
 
 ### **9**. setup MySQL
 
-Create a database and a user for d:swarm. To customize the settings, edit `datamanagement-platform/persistence/src/main/resources/create_database.sql`. Do not check in this file in case you modify it. Hint: remember settings for step 13 (configure d:swarm). 
+Create a database and a user for d:swarm. To customize the settings, edit `dswarm/persistence/src/main/resources/create_database.sql`. Do not check in this file in case you modify it. Hint: remember settings for step 13 (configure d:swarm). 
 
     mysql -uroot -p < persistence/src/main/resources/create_database.sql
 
@@ -192,7 +188,7 @@ move old content root and link the new one. lookout for the correct user path! (
 ```
 su
 mv /usr/share/nginx/{html,-old}
-ln -s /home/user/dmp-backoffice-web/yo/publish /usr/share/nginx/html
+ln -s /home/user/dswarm-backoffice-web/yo/publish /usr/share/nginx/html
 ```
 
 ### **11**. setup tomcat
@@ -307,24 +303,25 @@ Follow the instructions in [[d:swarm Configuration|dswarm Configuration]].
 
 
 ### **14**. build neo4j extension
-(TODO: during the developer installation Jan had to configure maven to use the slub nexus server (add settings.xml (LINK to example file!) to  the ~/.m2 folder.)
+Add our [Nexus server](http://nexus.slub-dresden.de:8081/nexus) to your maven settings.xml. The file should be located in the folder "~/.m2". If the file doesn't exist, create it simply using this [template](templates/settings.xml).
+
 ```
 pushd dmp-graph
 mvn -U -PRELEASE -DskipTests clean package
 popd
-mv dmp-graph/target/graph-1.1-jar-with-dependencies.jar dmp-graph.jar
+mv dswarm-graph-neo4j/target/graph-1.1-jar-with-dependencies.jar dswarm-graph-neo4j.jar
 ```
 
 
 ### **15**. build backend
 
 ```
-pushd datamanagement-platform
+pushd dswarm
 mvn -U -DskipTests clean install
 pushd controller
 mvn -U -DskipTests war:war
 popd; popd
-mv datamanagement-platform/controller/target/dswarm-controller-0.1-SNAPSHOT.war dmp.war
+mv dswarm/controller/target/dswarm-controller-0.1-SNAPSHOT.war dmp.war
 ```
 
 ### **16**. build frontend
@@ -333,7 +330,7 @@ mv datamanagement-platform/controller/target/dswarm-controller-0.1-SNAPSHOT.war 
 pushd dmp-backoffice-web; pushd yo
 npm install
 bower install
-STAGE=unstable DMP_HOME=../../datamanagement-platform grunt build
+STAGE=unstable DMP_HOME=../../dswarm grunt build
 popd
 rsync --delete --verbose --recursive yo/dist/ yo/publish
 popd
@@ -353,7 +350,7 @@ su
 rm /var/lib/tomcat7/webapps/dmp.war
 rm -r /var/lib/tomcat7/webapps/dmp
 cp /home/user/dmp.war /var/lib/tomcat7/webapps/
-cp /home/user/dmp-graph.jar /usr/share/neo4j/plugins/
+cp /home/user/dswarm-graph-neo4j.jar /usr/share/neo4j/plugins/
 ```
 
 
@@ -375,9 +372,9 @@ When running the backend the first time, the MySQL database needs to be initiali
 lookout for the correct path (/home/user)
 
 ```
-pushd ci-tools/scripts
+pushd dswarm/dev-tools
 python reset-dbs.py \
-  --persistence-module=../../datamanagement-platform/persistence \
+  --persistence-module=../persistence \
   --user=dmp \
   --password=dmp \
   --db=dmp \
@@ -392,12 +389,12 @@ Check `python reset-dbs.py --help` for additional information.
 ### **1**. update repository contents
 
 ```
-pushd datamanagement-platform; git pull; popd
-pushd dmp-graph; git pull; popd
-pushd dmp-backoffice-web; git pull; popd
+pushd dswarm; git pull; popd
+pushd dswarm-graph-neo4j; git pull; popd
+pushd dswarm-backoffice-web; git pull; popd
 ```
 
-### **2**. repeat steps [[14|Server-Install#14-build-neo4j-extension]] to [[19|Server-Install#19-initializereset-database]] from installation as necessary
+### **2**. repeat steps [[14|Server-Install#14-build-neo4j-extension]] (Building neo4j-extension) to [[19|Server-Install#19-initializereset-database]] (Init DB) from the installation as necessary
 
 
 ## Checklist on Errors
@@ -415,6 +412,6 @@ Now that you know which component does not run, go through
 
 * is _curl_ installed?
 * when building the projects with maven, did you use the `-U` option to update project dependencies?
-* Check your [[dswarm Configuration]]. Are database name and password correct, i.e. the ones used when installing MySQL (step [[Server-Install#6-setup-mysql]])? Compare _datamanagement-platform/persistence/src/main/resources/create_database.sql_ with _datamanagement-platform/dswarm.conf_ or any other configuration option you use.
+* Check your [[dswarm Configuration]]. Are database name and password correct, i.e. the ones used when installing MySQL (step [[Server-Install#6-setup-mysql]])? Compare _dswarm/persistence/src/main/resources/create_database.sql_ with _dswarm/dswarm.conf_ or any other configuration option you use.
 * [[initialize the databases|Server-Install#19-initializereset-database]]. They may be empty or contain corrupted data caused by a failed unit tests.
 * Did you miss an update of, e.g., the neo4j version? Compare your installed version with the required version (see [[step 6|Server-Install#6-install-neo4j]])

@@ -1,128 +1,100 @@
 ## Universal Cypher Cheat Sheet
 
-An universal cheat sheet is the [Neo4j Cypher Refcard 2.0](http://docs.neo4j.org/refcard/2.0/).
+An universal cheat sheet is the [Neo4j Cypher Refcard 2.0](http://docs.neo4j.org/refcard/2.0/). This section provides some common Cypher queries that can be used to explore the graph via the [[Neo4j browser|Graph-Exploration]] that usually runs at *http://localhost:7474/browser/*. 
 
+1. __extract all [[statements|Glossary#statement]] from the DB:__
 
-## d:swarm specific Cypher Queries
+        MATCH (n)-[r]->(m) RETURN DISTINCT n, n.__URI__,n.__NODETYPE__, r, r.__URI__, m, m.__URI__, m.__NODETYPE__, m.__VALUE__;
 
-This section provides some common cypher queries that may be used programmatically or to explore the graph via the Neo4j browser that usually runs at *http://localhost:7474/browser/*. 
+    __Note:__ you may run this query with a limit, e.g.,
 
-----------------
-#### extract all statements from the DB (re. currently graph model)
+        MATCH (n)-[r]->(m) RETURN DISTINCT n, n.__URI__,n.__NODETYPE__, r, r.__URI__, m, m.__URI__, m.__NODETYPE__, m.__VALUE__ LIMIT 100;
 
-    MATCH n-[r]->m RETURN DISTINCT n, n.__URI__,n.__NODETYPE__, r, r.__URI__, m, m.__URI__, m.__NODETYPE__, m.__VALUE__
+2. __delete statements:__
 
-__Note:__ you may run this query with a limit, e.g.,
+        MATCH (a)
+        WITH a
+        LIMIT 10000
+        OPTIONAL MATCH (a)-[r]-()
+        DELETE a,r
+        RETURN COUNT(*);
 
-    MATCH n-[r]->m RETURN DISTINCT n, n.__URI__,n.__NODETYPE__, r, r.__URI__, m, m.__URI__, m.__NODETYPE__, m.__VALUE__ LIMIT 100
+    __Note:__ you may run this query multiple times until the result count of this query is 0, i.e., no statements are left in the DB, or you can run this query in the Neo4j shell with a higher limit or without a limit
 
-	
-----------------
-#### delete statements in a batch process
+3. __get all statements that have a MABxml [[record|Glossary#record]] as subject, i.e., which have the record [[class|Glossary#class]] `http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#recordType`:__
 
-    MATCH (a)
-    WITH a
-    LIMIT 10000
-    OPTIONAL MATCH (a)-[r]-()
-    DELETE a,r
-    RETURN COUNT(*)
+        MATCH (n`http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#recordType`)-[r]->(m) RETURN n, r, m;
 
-__Note:__ you may run this query multiple times until the result count of this query is 0, i.e., no statements are left in the DB, or you can run this query in the neo4j shell with a higher limit or without a limit
+4. __get all statements that have a OAI-PHM record as subject, i.e. which have the record class `http://www.openarchives.org/OAI/2.0/recordType`:__
 
+        MATCH (n`http://www.openarchives.org/OAI/2.0/recordType`)-[r]->(m) RETURN n, r, m;
 
-----------------
-#### get all nodes/resources (incl. it's directly outgoing relationships -> statements) for mabxml record type (http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#recordType)
+5. __get all resource types (classes) that are in the graph database:__
 
-    MATCH (n:`http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#recordType`) WITH n MATCH (n)-[r]->(m) RETURN n, r, m;
+        MATCH (n:`http://www.w3.org/2000/01/rdf-schema#Class`) RETURN n.__URI__;
 
+6. __get all statements (limited to 50) except those that have the property `http://www.w3.org/1999/02/22-rdf-syntax-ns#type`:__
 
-----------------
-#### get all nodes/resources (incl. it's directly outgoing relationships > statements) oai-pmh record type (http://www.openarchives.org/OAI/2.0/recordType)
+        MATCH (a)-[r]-(b)
+        WHERE type(r) <> "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        RETURN DISTINCT a,b LIMIT 50;
 
-    MATCH (n:`http://www.openarchives.org/OAI/2.0/recordType`) WITH n MATCH (n)-[r]->(m) RETURN n, r, m;
+7. __get all statements (current limit is 100) that belong to OAI-PMH records up to a depths of 4 except those that have the property `http://www.w3.org/1999/02/22-rdf-syntax-ns#type`:__
 
+    (this query should have many OPTIONAL parts actually...)
 
-----------------
-#### get all types (classes) that are in the graph database
-   MATCH (n:`http://www.w3.org/2000/01/rdf-schema#Class`) RETURN n.__URI__;
+        MATCH (n:`http://www.openarchives.org/OAI/2.0/recordType`)-[r]->(m)-[r1]->(l)-[r2]->(o)-[r3]->(p)
+        WHERE type(r) <> "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        AND type(r1) <> "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        AND type(r2) <> "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        AND type(r3) <> "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
+        RETURN n,r,m,r1,l,r2,o,r3,p LIMIT 100;
 
+8. __show all [[data model|Glossary#data-model]] identifier (current limit is 1000):__
 
-----------------
-#### all relations (limited to 50) except type-relations (these often lead to crossing edges)
+        MATCH (n)-[r]->(m)
+        RETURN DISTINCT r.__DATA_MODEL__ LIMIT 1000;
 
-    MATCH (a)-[r]-(b)
-    WHERE type(r) <> "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
-    RETURN DISTINCT a,b LIMIT 50
+9. __show all statements (current limit is 1000) for the data model with the identifier `http://data.slub-dresden.de/datamodel/15/data`:__
 
+        MATCH (n)-[r]->(m)
+        WHERE r.__DATA_MODEL__ = "http://data.slub-dresden.de/datamodel/15/data"
+        RETURN DISTINCT n,r,m LIMIT 1000;
 
-----------------
-#### display children of oai records to depth 4, except for type relations
+    __Note:__ currently, the pre-initialized (internal) data models have the URIs "http://data.slub-dresden.de/datamodel/1/data", "http://data.slub-dresden.de/datamodel/2/data" and "http://data.slub-dresden.de/datamodel/3/data"
 
-(this query should have many OPTIONAL parts actually...)
+10. __get all second MABxml field values where the key is "077p":__
 
-    MATCH (n:`http://www.openarchives.org/OAI/2.0/recordType`)
-    WITH n MATCH (n)-[r]->(m) , (m)-[r1]->(l), (l)-[r2]->(o), (o)-[r3]->(p)
-    WHERE type(r) <> "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
-    AND type(r1) <> "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
-    AND type(r2) <> "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
-    AND type(r3) <> "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"
-    RETURN n,r,m,r1,l,r2,o,r3,p LIMIT 100
+        MATCH 
+          (mabxmlrecord:`http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#datensatzType`)- [:`http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#feld`]->(mabxmlfield),
+          (mabxmlfield)-[:`http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#nr`]->(nr),  
+          (mabxmlfield)-[:`http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#ind`]->(ind),
+          (mabxmlfield)-[valueprop:`http://www.w3.org/1999/02/22-rdf-syntax-ns#value`]->(value)
+        WHERE
+          nr.__VALUE__ = "077" AND
+          ind.__VALUE__ = "p"
+        WITH 
+          mabxmlrecord, mabxmlfield, value
+        ORDER BY valueprop.__ORDER__
+        RETURN
+          mabxmlrecord.__URI__, id(mabxmlfield), collect(value.__VALUE__)[1];
 
+11. __get the second MABxml field value of the second occurrence of the field where the key is "077p":__
 
-----------------
-#### show all URIs used as provenance graphs
+        MATCH 
+          (mabxmlrecord:`http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#datensatzType`)-[feldprop:`http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#feld`]->(mabxmlfield),
+          (mabxmlfield)-[:`http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#nr`]->(nr),  
+          (mabxmlfield)-[:`http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#ind`]->(ind),
+          (mabxmlfield)-[valueprop:`http://www.w3.org/1999/02/22-rdf-syntax-ns#value`]->(value)
+        WHERE
+          nr.__VALUE__ = "077" AND
+          ind.__VALUE__ = "p"
+        WITH 
+          mabxmlrecord, feldprop, mabxmlfield, value
+        ORDER BY feldprop.__INDEX__, valueprop.__ORDER__
+        WITH
+          mabxmlrecord, collect(id(feldprop))[1] AS secondfield, mabxmlfield, value
+        RETURN
+          mabxmlrecord.__URI__, collect(value.__VALUE__)[1];
 
-    MATCH (n)-[r]->(m)
-    RETURN DISTINCT r.__PROVENANCE__ LIMIT 1000;
-
-
-----------------
-#### show all relationships for a specific provenance graph URI
-
-__Note:__ the internal data models have the URIs "http://data.slub-dresden.de/datamodel/1/data", "http://data.slub-dresden.de/datamodel/2/data", "http://data.slub-dresden.de/datamodel/3/data"
-
-    MATCH (n)-[r]->(m)
-    WHERE r.__PROVENANCE__ = "http://data.slub-dresden.de/datamodel/15/data"
-    RETURN DISTINCT n,r,m LIMIT 1000;
-
-
-----------------
-#### get all second mabxml field values, where the key is "077p"
-
-    MATCH 
-      (mabxmlrecord:`http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#datensatzType`)- [:`http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#feld`]->(mabxmlfield),
-      (mabxmlfield)-[:`http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#nr`]->(nr),  
-      (mabxmlfield)-[:`http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#ind`]->(ind),
-      (mabxmlfield)-[valueprop:`http://www.w3.org/1999/02/22-rdf-syntax-ns#value`]->(value)
-    WHERE
-      nr.__VALUE__ = "077" AND
-      ind.__VALUE__ = "p"
-    WITH 
-      mabxmlrecord, mabxmlfield, value
-    ORDER BY valueprop.__ORDER__
-    RETURN
-      mabxmlrecord.__URI__, id(mabxmlfield), collect(value.__VALUE__)[1];
-
-
-----------------
-#### get the second mabxml field value of the second occurrence of the field where the key is "077p"
-
-    MATCH 
-      (mabxmlrecord:`http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#datensatzType`)-[feldprop:`http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#feld`]->(mabxmlfield),
-      (mabxmlfield)-[:`http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#nr`]->(nr),  
-      (mabxmlfield)-[:`http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#ind`]->(ind),
-      (mabxmlfield)-[valueprop:`http://www.w3.org/1999/02/22-rdf-syntax-ns#value`]->(value)
-    WHERE
-      nr.__VALUE__ = "077" AND
-      ind.__VALUE__ = "p"
-    WITH 
-      mabxmlrecord, feldprop, mabxmlfield, value
-    ORDER BY feldprop.__INDEX__, valueprop.__ORDER__
-    WITH
-      mabxmlrecord, collect(id(feldprop))[1] AS secondfield, mabxmlfield, value
-    RETURN
-      mabxmlrecord.__URI__, collect(value.__VALUE__)[1];
-
-
-See also [[Graph Data Model]]
-<!--- original link to https://intranet.slub-dresden.de/pages/viewpage.action?pageId=45190236 --> 
+See also [[Graph Data Model]].

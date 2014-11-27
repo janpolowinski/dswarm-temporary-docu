@@ -2,10 +2,6 @@
 * [[Home]]
 * [[Domain Model]]
 * [[Installation and Configuration|home#installation-and-configuration]]
-  * [[Initial Installation|Server-Install#Initial-Installation]]
-  * [[d:swarm Configuration|dswarm Configuration]]
-  * [[Update the System|Server-Install#update-the-system]]
-  * [[Checklist on Errors|Server-Install#checklist-on-errors]]
 * [[Roadmap]]
 * [[Glossary]]
 
@@ -22,6 +18,9 @@
     * [[Design and Execute Transformations]]
     * [[Define Filters]]
     * [[Available Transformation Functions]]
+	* [[Mapping and Transformation Examples]]
+		* [[Zoologie]]
+		* [[Informationen zur Raumentwicklung]]	
   * [[Export Data in RDF]]
   * [[Give Feedback to the Developers]]
 
@@ -29,15 +28,32 @@
 * [[Graph Data Model]]
     * [[Graph Exploration]]
     * [[Cypher Cheat Sheet]]
+* Server-Installation (Productive Environment)
+  * [[Installation|Server-Install#Initial-Installation]]
+  * [[Update the System|Server-Install#update-the-system]]
+  * [[Checklist on Errors|Server-Install#checklist-on-errors]]
+  * [[d:swarm Configuration|dswarm Configuration]]
 
 ### For developers
-* [[front end]]
-* [[back end]]
-* [[MySQL Cheat Sheet]]
-* [[Neo4j extension]]
-* contributing
+* Developer-Install
+  * [[Installation|Developer-Install#Initial-Installation]]
+  * [[Update the System|Developer-Install#update-the-system]]
+  * [[Checklist on Errors|Developer-Install#checklist-on-errors]]
+  * [[d:swarm Configuration|dswarm Configuration]]
+* [[Front end]]
+* [[Back end]]
+  * [[Controller]]
+    * [[HTTP API discovery]]
+  * [[Converter]]
+  * [[Init]]
+  * [[Persistence]]
+    * [[MySQL Cheat Sheet]]
+    * [[Neo4j extension]]
+  * [[Implement Domain Model Modification]]
+* Contributing
   * [[Code Repository Handling]]
   * [[Development Tips]]
-* diagrams
+  * [[Code Quality]]
+* Diagrams
   * [[Example Task Execution]]
   * [[Mapping and Transformation]]

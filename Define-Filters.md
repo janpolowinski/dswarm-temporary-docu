@@ -1,29 +1,29 @@
-[[Filters|Glossary#filter]] can be used for specifying the (complex) conditions of a [[transformation|Glossary#transformation]] of a [[mapping|Glossary#mapping]]
+[[Filters|Glossary#filter]] can be used for specifying the (complex) conditions of a [[transformation|Glossary#transformation]] of a [[mapping|Glossary#mapping]].
 
-Filter Definition Workflow
+# Generic Filter Definition Workflow
 
 A prerequisite for creating a filter is a mapping that can be selected in the transformation logic widget (lower middle).
 
-[![open filter definition dialogue](https://github.com/seventwenty/dswarm-documentation/wiki/img/filter-definition-workflow.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/filter-definition-workflow.png "Open Filter Definition Dialogue")
+[![open filter definition dialogue](https://avgl.mybalsamiq.com/mockups/1894561.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00)](https://avgl.mybalsamiq.com/mockups/1894561.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00 "Open Filter Definition Dialogue")
 
 * In order to create a filter, select the mapping for which you want to define a filter rule (1).
-* Click on the input [[attribute path|Glossary#attribute-path]] on the left in the transformation logic pipeline (2).
+* Click on the [[mapping input|Glossary#mapping-input]] on the left in the transformation logic pipeline (2).
 
-A light box will open:
+A filter definition dialogue will be opened:
 
-[![filter definition dialogue](https://github.com/seventwenty/dswarm-documentation/wiki/img/filter-lightbox.png)](https://github.com/seventwenty/dswarm-documentation/wiki/img/filter-lightbox.png "Filter Definition Dialogue")
+[![filter definition dialogue - add filter](https://avgl.mybalsamiq.com/mockups/2365646.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00)](https://avgl.mybalsamiq.com/mockups/2365646.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00 "Filter Definition Dialogue - Add Filter")
 
-* In the light box on the left, a sample record set lets you test the filter rule you are going to define.
+* On the left, a sample [[record|Glossary#record]] lets you test the filter rule you are going to define.
 * Click on “add filter” (1) and enter your filter rule in the form next to the sample record.
+
+[![filter definition dialogue](https://avgl.mybalsamiq.com/mockups/1838911.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00)](https://avgl.mybalsamiq.com/mockups/1838911.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00 "Filter Definition Dialogue")
+
 * As you type (2) your rule is tested with the sample record set. If there is a match, the respective record is marked red (3).
-* Add further filter rules as needed by clicking on “add filter”.
-* The rules in one filter set are combined by a logical AND.
-* Click on “OK” to save and quit the filter lightbox (5).
+* Click on “OK” to save and quit the filter definition dialogue (4).
 
 __Note:__ These restrictions apply in the alpha release:
 
-* Filters can only be used for fields on the level as the field that is being mapped. In our example, you can map the elements _type_, _nr_, and _ind_, but not, for instance, _value_, which is on a sublevel (4).
-* You can change filter rules, but you cannot delete a filter rule. You can, however, accomplish a ‘deletion’ of a rule by emptying all fields.
+* You can change filter rules, but you cannot delete a filter rule. You can, however, accomplish a ‘deletion’ of a rule by emptying all fields or can the delete the whole mapping at once (see [[here|Design-and-Execute-Transformations]]).
 * You cannot select a specific record set from the sample data.
 
 
