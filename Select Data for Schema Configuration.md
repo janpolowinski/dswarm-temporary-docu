@@ -10,7 +10,7 @@ After [[importing sample data|Import Sample Data]], the parsing ([[schema|Glossa
 
 
 -----------------------------------
-### Alpha Release Help Step by Step
+### D:SWARM Help - Step by Step
 
 * next: [[Configure CSV Data Resources]]
 * previous: [[Import Sample Data]]
