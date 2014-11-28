@@ -41,6 +41,7 @@
   * [[Checklist on Errors|Developer-Install#checklist-on-errors]]
   * [[d:swarm Configuration|dswarm Configuration]]
 * [[Front end]]
+  * [[Backoffice Web GUI Wireframes/Sketches|Backoffice-Web-GUI---Wireframes---Sketches]]
 * [[Back end]]
   * [[Controller]]
     * [[HTTP API discovery]]
