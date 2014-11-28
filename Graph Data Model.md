@@ -135,3 +135,4 @@ Edges are always attributes of resources or resource parts, e.g. mabxml:nr (http
 
 # See Also
 * [[GDM Serialization Proposals|Graph Data Model Serialization]]
+* [[Versioning]]
