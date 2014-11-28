@@ -1,6 +1,6 @@
 ## Serialisation Proposals
 <!-- TODO note: for proposal 1-8 please also have a look at the examples at the related github repo: dmp-graph graph data model -->
-* __note:__ "statement" can often be seen as synonym for "relationship", e.g., "statement id" = "relationship id"
+__note:__ "statement" can often be seen as synonym for "relationship", e.g., "statement id" = "relationship id"
 
 * [[Proposal 1|Graph-Data-Model-Serialization#proposal-1]]
 * [[Proposal 2|Graph-Data-Model-Serialization#proposal-2]]
