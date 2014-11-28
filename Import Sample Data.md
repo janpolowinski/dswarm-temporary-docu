@@ -20,7 +20,7 @@ Having successfully imported the data resource you will be automatically delegat
 
 
 -----------------------------------
-### Alpha Release Help Step by Step
+### D:SWARM Help - Step by Step
 
 * next: [[Select Data for Schema Configuration]]
-* previous: [[Functional Range of the Alpha Release]]
+* previous: [[Functional Range of the current Release]]
