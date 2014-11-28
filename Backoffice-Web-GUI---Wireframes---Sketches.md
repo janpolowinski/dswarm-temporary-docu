@@ -9,7 +9,7 @@ __note:__ these wireframes may differ from the current design of the backoffice 
 ## Overview
 application layout v2:
 * left-hand side: source example [[records|Glossary#record]] widget
-* center: [[data mapping (overview) widget|]]
+* center: [[data mapping (overview) widget|Backoffice-Web-GUI---Wireframes---Sketches#data-mapping-widget]]
 * right-hand side: target (example) records widget (which are generated via applying the [[mappings|Glossary#mapping]] and [[transformations|Glossary#transformation]])
 * lower left: details of a transformation [[component|Glossary#component]] (in a transformation workflow)
 * lower center: transformation workflow detail widget
@@ -21,7 +21,7 @@ application layout v2:
 ### Overview with Overlay Dialogue for Filter Definition
 
 * You can open the (overlay) [[filter|Glossary#filter]] definition dialogue via pushing the "Define filter ..." button in the detail widget of a selected filter component in the transformation workflow widget
-* see also [[Filter (Facet) Definition Dialogue|]]
+* see also [[Filter (Facet) Definition Dialogue|Backoffice-Web-GUI---Wireframes---Sketches#filter-facet-definition-dialogue]]
 
 [![overview with overlay dialogue for filter definition](https://avgl.mybalsamiq.com/mockups/1118467.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00)](https://avgl.mybalsamiq.com/mockups/1118467.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00 "Overview with Overlay Dialogue for Filter Definition")
 [application layout v2 with filter definition overlay dialogue as poster print](https://raw.githubusercontent.com/wiki/dswarm/dswarm-documentation/assets/application_layout_04.pdf)
