@@ -46,7 +46,7 @@ Any mapping (incl. transformation logic) is executable at all times:
 
 
 -----------------------------------
-### Alpha Release Help Step by Step
+### D:SWARM Help - Step by Step
 
 * next: [[Define Filters]]
 * previous: [[Define Mappings]]
