@@ -114,7 +114,7 @@ You can save your work at any time by clicking on the button “Save project” 
 
 
 -----------------------------------
-### Alpha Release Help Step by Step
+### D:SWARM Help - Step by Step
 
 * next: [[Define Mappings]]
 * previous: [[Configure XML Data Resources]]
