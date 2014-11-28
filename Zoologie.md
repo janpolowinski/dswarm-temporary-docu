@@ -388,7 +388,7 @@ The appending Table gives a detailed overview of the [[Mappings|Glossary#mapping
 </tbody>
 </table>
 -----------------------------------
-### Alpha Release Help Step by Step
+### D:SWARM Help - Step by Step
 
 * next: [[Informationen zur Raumentwicklung]]
 * previous: [[Mapping and Transformation Examples]]
