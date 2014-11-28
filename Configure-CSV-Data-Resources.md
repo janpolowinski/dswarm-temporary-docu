@@ -31,7 +31,7 @@ The first row contains column headings (Checkbox) (12) |  Can be utilised, when 
 
 
 -----------------------------------
-### Alpha Release Help Step by Step
+### D:SWARM Help - Step by Step
 
 * next: [[Configure XML Data Resources]]
 * previous: [[Select Data for Schema Configuration]]
