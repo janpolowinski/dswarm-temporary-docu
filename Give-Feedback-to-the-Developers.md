@@ -12,6 +12,6 @@ Please test the alpha release thoroughly and give us feedback. Click on the "Fee
 
 
 -----------------------------------
-### Alpha Release Help Step by Step
+### D:SWARM Help - Step by Step
 
 * previous: [[Export Data in RDF]]
