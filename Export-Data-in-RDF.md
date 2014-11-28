@@ -27,7 +27,7 @@ __Note:__
 * URI utilisation in exported data: New URIs will not yet be generated for transformed [[records|Glossary#record]] in the alpha release, i.e., the URIs from the source records will be re-utilised in the target data model.
 
 -----------------------------------
-### Alpha Release Help Step by Step
+### D:SWARM Help - Step by Step
 
 * next: [[Give Feedback to the Developers]]
 * previous: [[Informationen zur Raumentwicklung]]
