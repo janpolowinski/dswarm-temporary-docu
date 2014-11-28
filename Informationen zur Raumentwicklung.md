@@ -484,7 +484,7 @@ The appending Table gives a detailed overview of the [[Mappings|Glossary#mapping
 
 
 -----------------------------------
-### Alpha Release Help Step by Step
+### D:SWARM Help - Step by Step
 
 * next: [[Export Data in RDF]]
 * previous: [[Zoologie]]
