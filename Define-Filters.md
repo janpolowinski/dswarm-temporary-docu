@@ -28,7 +28,7 @@ __Note:__ These restrictions apply in the alpha release:
 
 
 -----------------------------------
-### Alpha Release Help Step by Step
+### D:SWARM Help - Step by Step
 
 * next: [[Available Transformation Functions]]
 * previous: [[Design and Execute Transformations]]
