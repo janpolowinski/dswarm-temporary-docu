@@ -486,5 +486,5 @@ The appending Table gives a detailed overview of the [[Mappings|Glossary#mapping
 -----------------------------------
 ### Alpha Release Help Step by Step
 
-* next: [[Zoologie]]
-* previous: [[Mapping and Transformation Examples]]
+* next: [[Export Data in RDF]]
+* previous: [[Zoologie]]

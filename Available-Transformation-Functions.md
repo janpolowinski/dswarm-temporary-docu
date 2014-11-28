@@ -300,5 +300,5 @@ Result: &lt;a href="http://www.slub-dresden.de/"&gt;Homepage SLUB Dresden&lt;/a&
 -----------------------------------
 ### Alpha Release Help Step by Step
 
-* next: [[Export Data in RDF]]
+* next: [[Mapping and Transformation Examples]]
 * previous: [[Define Filters]]

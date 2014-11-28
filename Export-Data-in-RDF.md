@@ -30,4 +30,4 @@ __Note:__
 ### Alpha Release Help Step by Step
 
 * next: [[Give Feedback to the Developers]]
-* previous: [[Available Transformation Functions]]
+* previous: [[Informationen zur Raumentwicklung]]
