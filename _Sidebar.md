@@ -7,7 +7,7 @@
 
 ### For users
 * [[Overview]]
-  * [[Functional Range|Functional Range of the Alpha Release]]
+  * [[Functional Range|Functional Range of the current Release]]
   * [[Import Sample Data]]
   * [[Select Data for Schema Configuration]]
     * [[Configure CSV Data Resources]]
