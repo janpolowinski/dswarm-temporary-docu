@@ -1,5 +1,3 @@
-## Cypher Cheat Sheet
-
 An universal cheat sheet is the [Neo4j Cypher Refcard 2.0](http://docs.neo4j.org/refcard/2.0/). This section provides some common Cypher queries that can be used to explore the graph via the [[Neo4j browser|Graph-Exploration]] that usually runs at *http://localhost:7474/browser/*. 
 
 1. __extract all [[statements|Glossary#statement]] from the DB:__
