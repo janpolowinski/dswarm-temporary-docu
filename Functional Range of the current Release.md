@@ -22,7 +22,7 @@ At the stage of the alpha release you can model these [ETL processes](http://en.
 
 
 -----------------------------------
-### Alpha Release Help Step by Step
+### D:SWARM Help - Step by Step
 
 * next: [[Import Sample Data]]
-* previous: [[Alpha Release Help]]
+* previous: [[Overview]]
