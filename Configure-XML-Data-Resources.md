@@ -15,7 +15,7 @@ __Notes:__
 * At the moment, all XML files are interpreted as UTF-8. In case you have a file with different encoding you need to convert it to UTF-8 before importing it to d:swarm.
 
 -----------------------------------
-### Alpha Release Help Step by Step
+### D:SWARM Help - Step by Step
 
 * next: [[Configure MABXML Data Resources]]
 * previous: [[Configure CSV Data Resources]]
