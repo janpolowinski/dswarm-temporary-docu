@@ -1,4 +1,5 @@
-## Serialisation Proposals
+## Serialization Proposals
+These are various serialization format proposal for the [[GDM|Graph Data Model]].
 <!-- TODO note: for proposal 1-8 please also have a look at the examples at the related github repo: dmp-graph graph data model -->
 __note:__ "statement" can often be seen as synonym for "relationship", e.g., "statement id" = "relationship id"
 
