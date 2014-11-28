@@ -1,6 +1,6 @@
 ## Table of Contents
 
-* [[Functional Range of the Alpha Release]]
+* [[Functional Range of the current Release]]
 * [[Import Sample Data]]
 * [[Select Data for Schema Configuration]]
  * [[Configure CSV Data Resources]]
@@ -19,6 +19,6 @@ You can also download the alpha release help as [[PDF file in German language|Al
 
 
 -----------------------------------
-### Alpha Release Help Step by Step
+### D:SWARM Help - Step by Step
 
-* next: [[Functional Range of the Alpha Release]]
+* next: [[Functional Range of the current Release]]
