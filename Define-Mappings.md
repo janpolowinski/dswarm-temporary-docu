@@ -41,7 +41,7 @@ Schemata that contain a [[content schema|Glossary#content-schema]] (e.g. MABxml)
 __Note:__ You can view and/or modify the key definitions as described in [[Define Filters|Glossary#define-filters]].
 
 -----------------------------------
-### Alpha Release Help Step by Step
+### D:SWARM Help - Step by Step
 
 * next: [[Design and Execute Transformations]]
 * previous: [[Create and Edit Projects]]
