@@ -1,4 +1,13 @@
-#GDM Domain Model
+* [[GDM Domain Model|Graph-Data-Model#gdm-domain-model]]
+* [[GDM in a Property Graph|Graph-Data-Model#gdm-in-a-property-graph]]
+  * [[Nodes|Graph-Data-Model#nodes]]
+     * [[Attributes of Nodes|Graph-Data-Model#attributes-of-nodes]]
+     * [[Explanation|Graph-Data-Model#explanation]]
+  * [[Edges|Graph-Data-Model#edges]]
+     * [[Attributes of Edges|Graph-Data-Model#attributes-of-edges]]
+  * [[See Also|Graph-Data-Model#see-also]]
+
+# GDM Domain Model
 [![gdm domain model](http://www.gliffy.com/go/publish/image/6315806/L.png)](http://www.gliffy.com/go/publish/image/6315806/L.png "GDM Domain Model")
 
 A [[graph data model|Glossary#graph-data-model]] consists of a set of [[resources|Glossary#record]]. A resource has an identifier, e.g., an [[URI|Glossary#uri]], and is a bunch of [[statements|Glossary#statement]] that describe this resource. A statement follows the simple sentence structure: subject - predicate - object. Whereby, 
@@ -123,3 +132,6 @@ Edges are always attributes of resources or resource parts, e.g. mabxml:nr (http
 </tr>
 </tbody>
 </table>
+
+# See Also
+* [[GDM Serialization Proposals|Graph Data Model Serialization]]
