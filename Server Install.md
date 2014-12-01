@@ -403,7 +403,7 @@ First of all it's a good idea to know which of the four components front end, ba
 
 * [[front end]]: open `http://localhost:9999` in a browser. The front end should be displayed. 
 * [[back end]]: open `http://localhost:8087/dmp/_ping` in a browser. The expected response is a page with the word _pong_.
-* MySQL database: open a terminal and type `mysql -udmp -p dmp` to open a connection to MySQL and select the database _dmp_. Hint: check for correct user name, password and database name in case you did not use the default values. If you can log in, type `select * from data_model;`. At least three internal data models should be listed. 
+* MySQL database: open a terminal and type `mysql -udmp -p dmp` to open a connection to MySQL and select the database _dmp_. Hint: check for correct user name, password and database name in case you did not use the default values. If you can log in, type `select * from DATA_MODEL;`. At least three internal data models should be listed. 
 * Neo4j database: open `http://localhost:7474/browser/` in a browser. The Neo4j browser should open.
 
 Now that you know which component does not run, go through 
