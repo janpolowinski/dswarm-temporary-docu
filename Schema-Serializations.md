@@ -35,3 +35,5 @@ http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#feldhttp://www.w3.org/1999/
 http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#feldhttp://www.ddb.de/professionell/mabxml/mabxml-1.xsd#tf
 http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#feldhttp://www.ddb.de/professionell/mabxml/mabxml-1.xsd#tfhttp://www.w3.org/1999/02/22-rdf-syntax-ns#type
 ```
+
+__note__: the delimiter (which is a special UTF-8 character) between the URIs is not displayed
