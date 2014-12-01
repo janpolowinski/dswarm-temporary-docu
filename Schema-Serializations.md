@@ -3,7 +3,7 @@ Here are some proposals for serializing a [[schema|Glossary#schema]] (i.e. the [
 __note__: these proposals are already implemented and available in the source code
 
 * Minimal JSON schema
-  * example MABxml (see [here](https://github.com/dswarm/dswarm/blob/builds/unstable/persistence/src/test/resources/mabxml_schema.json)):
+  * example: MABxml (see [here](https://github.com/dswarm/dswarm/blob/builds/unstable/persistence/src/test/resources/mabxml_schema.json))
 ```json
 ["http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
  "http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#typ", 
@@ -21,7 +21,7 @@ __note__: these proposals are already implemented and available in the source co
 ```
 
 * All attribute paths of a schema
-  * example MABxml (see [here](https://github.com/dswarm/dswarm/blob/builds/unstable/persistence/src/test/resources/schema_attribute_paths.txt)):
+  * example: MABxml (see [here](https://github.com/dswarm/dswarm/blob/builds/unstable/persistence/src/test/resources/schema_attribute_paths.txt))
 ```
 http://www.w3.org/1999/02/22-rdf-syntax-ns#type
 http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#typ
