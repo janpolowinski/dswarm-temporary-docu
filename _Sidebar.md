@@ -48,6 +48,7 @@
   * [[Converter]]
   * [[Init]]
   * [[Persistence]]
+    * [[Schema Serializations]]
     * [[MySQL Cheat Sheet]]
     * [[Neo4j extension]]
   * [[Implement Domain Model Modification]]
