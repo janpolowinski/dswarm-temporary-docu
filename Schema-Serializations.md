@@ -1,4 +1,8 @@
-* Minimal JSON [[schema|Glossary#schema]]
+Here are some proposals for serializing a [[schema|Glossary#schema]] (i.e. the [[attribute paths|Glossary#attribute-path]]).
+
+__note__: these proposals are already implemented and available in the source code
+
+* Minimal JSON schema
   * example MABxml (see [here](https://github.com/dswarm/dswarm/blob/builds/unstable/persistence/src/test/resources/mabxml_schema.json)):
 ```json
 ["http://www.w3.org/1999/02/22-rdf-syntax-ns#type", 
@@ -16,7 +20,7 @@
 }]
 ```
 
-* All [[attribute paths|Glossary#attribute-path]] of a schema
+* All attribute paths of a schema
   * example MABxml (see [here](https://github.com/dswarm/dswarm/blob/builds/unstable/persistence/src/test/resources/schema_attribute_paths.txt)):
 ```
 http://www.w3.org/1999/02/22-rdf-syntax-ns#type
