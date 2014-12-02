@@ -6,9 +6,10 @@ Please test the alpha release thoroughly and give us feedback. Click on the "Fee
 
 * Enter a summary or title for issue (1).
 * Describe your issue a bit more in detail (2).
-* Enter your name (3).
-* Enter your E-Mail address (4).
-* Click the "Submit" button to submit your issue to the issue tracker (5) or "Close" (6) to leave the feedback dialogue.
+* Upload a file if necessary (3)
+* Enter your name (4).
+* Enter your E-Mail address (5).
+* Click the "Submit" button to submit your issue to the issue tracker (6) or "Close" (7) to leave the feedback dialogue.
 
 
 -----------------------------------
