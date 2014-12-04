@@ -1,0 +1,1 @@
+The [d:swarm](https://github.com/dswarm) organization at GitHub currently consists of a bunch of repositories that make the d:swarm application or that are utilised by it. Here is a brief overview about all project repositories.
