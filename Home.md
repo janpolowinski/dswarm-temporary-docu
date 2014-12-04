@@ -58,4 +58,5 @@ You like to contribute? Awesome!
 * [[Code Repository Handling]]
 * [Issue Tracker](https://jira.slub-dresden.de) (register [here](https://jira.slub-dresden.de/secure/ContactAdministrators!default.jspa))
 * [Mailing List](https://groups.google.com/forum/#!forum/dswarm)
+* [@dswarm at Twitter](https://twitter.com/dswarm)
 * [team contact](mailto:team@dswarm.org)
