@@ -60,3 +60,7 @@ You like to contribute? Awesome!
 * [Mailing List](https://groups.google.com/forum/#!forum/dswarm)
 * [@dswarm at Twitter](https://twitter.com/dswarm)
 * [team contact](mailto:team@dswarm.org)
+
+## License
+
+All code from the repositories that belong to our project (see [[here|Code Repository Structure]]) is published under [APL2](http://www.apache.org/licenses/LICENSE-2.0) license (except of the [d:swarm Neo4j unmanaged extension](https://github.com/dswarm/dswarm-graph-neo4j), which is published under [GPL3](http://www.gnu.org/copyleft/gpl.html) license).
