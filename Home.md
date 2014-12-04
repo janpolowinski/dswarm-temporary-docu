@@ -35,7 +35,7 @@ As shown below, the overall architecture consists of two major parts: the Backof
  * a [[converter]] that encapsulates [Metafacture](https://github.com/culturegraph/metafacture-core) to transform data
  * and a [[persistence]] layer to access the [[metadata repository|Glossary#metadata-repository]] (currently a relational database; MySQL) and the [[data hub|Glossary#data-hub]] (currently a graph database; [Neo4j](http://www.neo4j.org)).
  
-End users, e.g., system librarians, usually interact with the Backoffice frontend and may use the [[data hub browser|Graph-Exploration]] to inspect or visualize the data stored by d:swarm.
+End users, e.g., system librarians, usually interact with the [Backoffice we application](http://demo.dswarm.org) and may use the [[data hub browser|Graph-Exploration]] to inspect or visualize the data stored by d:swarm.
 
 [![an image of the architecture overview](https://avgl.mybalsamiq.com/mockups/1952636.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00)](https://avgl.mybalsamiq.com/mockups/1952636.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00 "Architecture Overview")
 
