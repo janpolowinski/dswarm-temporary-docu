@@ -53,7 +53,7 @@ Installation instructions can be found in the [[Server Install]] or [[Developer 
 
 ### Running the System
 
-Once installed, the local front end (usually) runs at *http://localhost:9999* and the local data hub browser may be accessed at *http://localhost:7474/browser/*. Hint: see [[Cypher Cheat Sheet]] for details on Neo4j. You may also want to have a look at the [[MySQL Cheat Sheet]] for our metadata repository schema (see also our [[domain model|Domain Model]]) and use a tool of your choice to explore the database.
+Once installed, the local front end (usually) runs at `http://localhost:9999` and the local data hub browser may be accessed at `http://localhost:7474/browser/`. Hint: see [[Cypher Cheat Sheet]] for details on Neo4j. You may also want to have a look at the [[MySQL Cheat Sheet]] for our metadata repository schema (see also our [[domain model|Domain Model]]) and use a tool of your choice to explore the database.
 
 
 ## Contributing
