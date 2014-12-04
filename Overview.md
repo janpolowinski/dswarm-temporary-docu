@@ -1,3 +1,5 @@
+This user guide should provide a (hopefully up-to-date) overview (and step-by-step descriptions) of how you can utilise the [d:swarm backoffice web application](http://demo.dswarm.org).
+
 ## Table of Contents
 
 * [[Functional Range of the current Release]]
@@ -15,7 +17,7 @@
 * [[Export Data in RDF]]
 * [[Give Feedback to the Developers]]
 
-You can download the alpha release help as [[PDF file in German language|Alpha-Release-Hilfe-DE.pdf]].
+You can download the __outdated__ alpha release help as [[PDF file in German language|Alpha-Release-Hilfe-DE.pdf]].
 
 
 -----------------------------------
