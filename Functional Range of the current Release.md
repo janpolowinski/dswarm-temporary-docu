@@ -1,8 +1,8 @@
-The alpha release version of d:swarm serves purposes of demonstration and testing and is meant to validate the working principles of the web-based graphical user interface (GUI).
+The currently released version of d:swarm serves purposes of demonstration and testing and is meant to validate the working principles of the web-based graphical user interface (GUI).
 
 ## Modelling Features
 
-At the stage of the alpha release you can model these [ETL processes](http://en.wikipedia.org/wiki/Extract,_transform,_load):
+At the stage of the current release you can model these [ETL processes](http://en.wikipedia.org/wiki/Extract,_transform,_load):
 
 1. [[Import sample data|Import Sample Data]] (of small size up to 1,000 records) in CSV and XML formats to d:swarm.
 2. [[Configure the schema|Select Data for Schema Configuration]] of the imported sample data.
@@ -14,9 +14,9 @@ At the stage of the alpha release you can model these [ETL processes](http://en.
 8. [[View and explore|Graph Exploration]] the results within the graphical user interface of the graph database.
 9. [[Export all data|Export Data in RDF]] of the central data hub in RDF for further use.
 
-## Functional Restriction of the Alpha Release
+## Functional Restriction of the Current Release
 
-* Our design ideas for the GUI are not yet realized in the alpha release.
+* Our design ideas for the GUI are not yet realized completely in the current release.
 * A user or rights management model is not implemented yet. Consequently, all users are allowed to do everything. All users have access to all data resources imported to d:swarm and can manipulate and overwrite [[projects|Glossary#project]] of other all other users. The data in the central [[data hub|Glossary#data-hub]] is the result of the work of all users.
 * There are further functional restrictions that will be resolved in due time according to our [[roadmap]].
 
