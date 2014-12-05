@@ -50,9 +50,10 @@
   * [[Persistence]]
     * [[Schema Serializations]]
     * [[MySQL Cheat Sheet]]
-    * [[Neo4j extension]]
+    * [[d:swarm Neo4j unmanaged extension|Neo4j extension]]
   * [[Implement Domain Model Modification]]
 * Contributing
+  * [[Code Repository Structure]]
   * [[Code Repository Handling]]
   * [[Development Tips]]
   * [[Code Quality]]
