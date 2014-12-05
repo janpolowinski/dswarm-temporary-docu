@@ -1,4 +1,6 @@
-## HTTP API Endpoints - DMP Graph (neo4j)
+The d:swarm Neo4j unmanaged extensions runs on server side of a Neo4j graph database. Please follow the steps in the [README](https://github.com/dswarm/dswarm-graph-neo4j/blob/master/README.md) to set it up on your server. The code of the d:swarm Neo4j unmanaged extension can be found in the [dswarm-graph-neo4j](https://github.com/dswarm/dswarm-graph-neo4j) repository.
+
+## HTTP API Endpoints of the d:swarm Neo4j Unmanaged Extension
 
 Here are some links for convenient testing
 
@@ -6,7 +8,7 @@ Here are some links for convenient testing
 
 (result should be "pong")
 
-_Attention: links go to localhost and datamodel 4 is expected to exist!_
+__note__: links go to localhost and datamodel 4 is expected to exist
 
  * return all data models as RDF
 
