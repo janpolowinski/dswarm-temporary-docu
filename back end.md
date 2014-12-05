@@ -1,6 +1,6 @@
 The code of the back end that provides the HTTP API and orchestrates the communication with persistence layer etc. is currently hosted in the [dswarm](https://github.com/dswarm/dswarm) repository.
 
-The d:swarm back end project consists of 4 modules  
+The d:swarm back end project is a multi-module Maven project that consists of 4 modules:  
 
 + [[controller]]
 + [[converter]]
