@@ -4,7 +4,7 @@ The d:swarm back end project is a multi-module Maven project that consists of 4 
 
 + [[controller]]
 + [[converter]]
-+ [[init]]
 + [[persistence]]
++ [[init]]
 
 The [JavaDoc](http://194.95.145.11/view/DMP%20Unstables/job/DMP%20Unstable%20%28Java%201.7%29/javadoc/) is available on the build server.
