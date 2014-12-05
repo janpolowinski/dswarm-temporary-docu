@@ -1,0 +1,1 @@
+[This module](https://github.com/dswarm/dswarm/tree/builds/unstable/init) is mainly for initialization purpose of the other (main) modules, i.e., [[controller]], [[converter]] and [[persistence]]. However, it also contains a generic common code base whose functionalities can be utilises by all modules of the back end.
