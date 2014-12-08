@@ -199,8 +199,17 @@ By default, the Neo4j Server is bundled with a Web server that binds to host loc
 **These steps require less privileged access**
 
 ### **11**. configure d:swarm
+Place a file named `dswarm.conf` somewhere in your filesystem and put in the following content
 
-Follow the instructions in [[d:swarm Configuration|dswarm Configuration]]. 
+    cat <<EOF>>dswarm.conf
+    dswarm.db.metadata.username=foo
+    dswarm.db.metadata.password=bar
+    EOF
+
+Username and password are used to access the MySQL database (hint: use same as in step `setup MySQL` in [server-insatll](server-insatll.md))
+You should not put this file under version control. Name it either `dswarm.conf` or `dmp.conf`, and place it in the root directory (of project `dswarm`). These files are already ignored by git.
+
+More information about configuration you get here: [[d:swarm Configuration|dswarm Configuration]]. 
 
 
 ### **12**. build neo4j extension
