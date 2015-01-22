@@ -74,7 +74,7 @@ You can verify your java version with
 java -version 2>&1 | grep -q "1.8" || echo "java 8 not available"
 ```
 
-Earlier versions of Tomcat (< 7.0.30) do not run with Java 8 albeit being advertised to do so (relatd to [this bug](https://issues.apache.org/bugzilla/show_bug.cgi?id=53735).
+Earlier versions of Tomcat (< 7.0.30) do not run with Java 8 albeit being advertised to do so (related to [this bug](https://issues.apache.org/bugzilla/show_bug.cgi?id=53735)).
 Ubuntu 12.04 Precise includes Tomcat in version 7.0.26, which therefore must be updated. If you run precise, execute these steps:
 
 ```
