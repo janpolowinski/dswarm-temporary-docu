@@ -62,7 +62,7 @@ apt-get update
 apt-get install oracle-java8-installer oracle-java8-set-default
 ```
 
-You can verify your java version with (empty output means)
+You can verify your java version with
 
 ```
 java -version 2>&1 | grep -q "1.8" && echo "OK, Java 8 is available" || echo "Uh oh, Java 8 is not available"
