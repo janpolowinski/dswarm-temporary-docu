@@ -30,26 +30,16 @@ apt-get install --no-install-recommends --yes git-core maven nodejs npm build-es
 **These steps require less privileged access**
 
 
-### **2**. create ssh key 
-
-```
-ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa -N ''
-```
-
-### **3**. add ssh key to to your github user profile
-see https://help.github.com/articles/generating-ssh-keys/
-
-
-### **4**. clone repositories (not as root!)
+### **2**. clone repositories (not as root!)
 
 lookout for the correct path (/home/user)
 
 ```
 cd /home/user
 
-git clone --depth 1 --branch builds/unstable git@github.com:dswarm/dswarm.git
-git clone --depth 1 --branch master git@github.com:dswarm/dswarm-graph-neo4j.git
-git clone --depth 1 --branch builds/unstable git@github.com:dswarm/dswarm-backoffice-web.git
+git clone --depth 1 --branch builds/unstable https://github.com/dswarm/dswarm.git
+git clone --depth 1 --branch master https://github.com/dswarm/dswarm-graph-neo4j.git
+git clone --depth 1 --branch builds/unstable https://github.com/dswarm/dswarm-backoffice-web.git
 ```
 
 * * *
@@ -57,7 +47,7 @@ git clone --depth 1 --branch builds/unstable git@github.com:dswarm/dswarm-backof
 **These steps require root level access**
 
 
-### **5.** install Java and Tomcat for the backend
+### **3**. install Java and Tomcat for the backend
 
 - D:SWARM requires Java 8, which is no longer available in the default package sources. Follow [these steps](http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html)
 
@@ -101,14 +91,14 @@ su
 apt-get install tomcat7
 ```
 
-### **6**. install system packages required for running the software
+### **4**. install system packages required for running the software
 
 ```
 su
 apt-get install --no-install-recommends --yes mysql-server nginx curl
 ```
 
-### **7**. install Neo4j 
+### **5**. install Neo4j 
 
 currently, we rely on Neo4j version 2.0.3
 
@@ -137,7 +127,7 @@ Pin: version 2.0.3
 Pin-Priority: 1000
 ```
 
-### **8**. make sure, permissions are correctly
+### **6**. make sure, permissions are correctly
 
 ```
 su
@@ -146,7 +136,7 @@ chown -R mysql:mysql /data/mysql
 chown -R neo4j:adm /data/neo4j
 ```
 
-### **9**. install build environment for frontend
+### **7**. install build environment for frontend
 
 ```
 su
@@ -154,7 +144,7 @@ ln -s /usr/bin/nodejs /usr/bin/node
 npm install -g grunt-cli karma bower
 ```
 
-### **10**. setup MySQL
+### **8**. setup MySQL
 
 Create a database and a user for d:swarm. To customize the settings, edit `dswarm/persistence/src/main/resources/create_database.sql`. Do not check in this file in case you modify it. Hint: remember settings for step 13 (configure d:swarm). 
 
@@ -187,7 +177,7 @@ cp -pr /var/lib/mysql/ /data/mysql/
 ```
 
 
-### **11.**  setup Nginx
+### **9**.  setup Nginx
 
 edit `/etc/nginx/sites-available/default` and add this just below the `location /` block
 
@@ -206,7 +196,7 @@ mv /usr/share/nginx/{html,-old}
 ln -s /home/user/dswarm-backoffice-web/yo/publish /usr/share/nginx/html
 ```
 
-### **12**. setup tomcat
+### **10**. setup tomcat
 
 open /etc/tomcat7/server.xml at line 33 and add a `driverManagerProtection="false"` so that the line reads
 
@@ -240,7 +230,7 @@ And finally, you have to tell Tomcat about Java 8. Open the file `/etc/default/t
 JAVA_HOME=/usr/lib/jvm/java-8-oracle
 ```
 
-### **13**. setup Neo4j
+### **11**. setup Neo4j
 
 increase file handlers at `/etc/security/limits.conf`
 
@@ -321,12 +311,12 @@ By default, the Neo4j Server is bundled with a Web server that binds to host loc
 
 **These steps require less privileged access**
 
-### **14**. configure d:swarm
+### **12**. configure d:swarm
 
 Follow the instructions in [[d:swarm Configuration|dswarm Configuration]]. 
 
 
-### **15**. build neo4j extension
+### **13**. build neo4j extension
 Add our [Nexus server](http://nexus.slub-dresden.de:8081/nexus) to your maven settings.xml. The file should be located in the folder "~/.m2". If the file doesn't exist, create it simply using this [template](templates/settings.xml).
 
 ```
@@ -337,7 +327,7 @@ mv dswarm-graph-neo4j/target/graph-1.1-jar-with-dependencies.jar dswarm-graph-ne
 ```
 
 
-### **16**. build backend
+### **14**. build backend
 
 ```
 pushd dswarm
@@ -348,7 +338,7 @@ popd; popd
 mv dswarm/controller/target/dswarm-controller-0.1-SNAPSHOT.war dmp.war
 ```
 
-### **17**. build frontend
+### **15**. build frontend
 
 ```
 pushd dmp-backoffice-web; pushd yo
@@ -365,7 +355,7 @@ popd
 **These steps require root level access**
 
 
-### **18**. wire everything together
+### **16**. wire everything together
 
 lookout for the correct path (/home/user)
 
@@ -378,7 +368,7 @@ cp /home/user/dswarm-graph-neo4j.jar /usr/share/neo4j/plugins/
 ```
 
 
-### **19**. restart everything, if needed
+### **17**. restart everything, if needed
 
 ```
 su
@@ -388,7 +378,7 @@ su
 /etc/init.d/tomcat7 restart
 ```
 
-### **20**. initialize/reset database
+### **18**. initialize/reset database
 
 **This step requires less privileged access**
 
@@ -418,7 +408,7 @@ pushd dswarm-graph-neo4j; git pull; popd
 pushd dswarm-backoffice-web; git pull; popd
 ```
 
-### **2**. repeat steps [[14|Server-Install#14-build-neo4j-extension]] (Building neo4j-extension) to [[19|Server-Install#19-initializereset-database]] (Init DB) from the installation as necessary
+### **2**. repeat steps [[13|Server-Install#13-build-neo4j-extension]] (Building neo4j-extension) to [[18|Server-Install#18-initializereset-database]] (Init DB) from the installation as necessary
 
 
 ## Checklist on Errors
@@ -436,6 +426,6 @@ Now that you know which component does not run, go through
 
 * is _curl_ installed?
 * when building the projects with maven, did you use the `-U` option to update project dependencies?
-* Check your [[dswarm Configuration]]. Are database name and password correct, i.e. the ones used when installing MySQL (step [[Server-Install#6-setup-mysql]])? Compare _dswarm/persistence/src/main/resources/create_database.sql_ with _dswarm/dswarm.conf_ or any other configuration option you use.
-* [[initialize the databases|Server-Install#19-initializereset-database]]. They may be empty or contain corrupted data caused by a failed unit tests.
-* Did you miss an update of, e.g., the neo4j version? Compare your installed version with the required version (see [[step 6|Server-Install#6-install-neo4j]])
+* Check your [[dswarm Configuration]]. Are database name and password correct, i.e. the ones used when installing MySQL (step [[Server-Install#8-setup-mysql]])? Compare _dswarm/persistence/src/main/resources/create_database.sql_ with _dswarm/dswarm.conf_ or any other configuration option you use.
+* [[initialize the databases|Server-Install#18-initializereset-database]]. They may be empty or contain corrupted data caused by a failed unit tests.
+* Did you miss an update of, e.g., the neo4j version? Compare your installed version with the required version (see [[step 5|Server-Install#5-install-neo4j]])
