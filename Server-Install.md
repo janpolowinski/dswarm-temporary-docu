@@ -5,7 +5,7 @@ _These are the installation instructions for a *server* and will add some steps 
 premise:
 - currently, we've deployed the application only on Ubuntu Linux distributions
 - empty trusty (14.04)
-- three additional partitions (for easier increasing the sizes of the partitions separately): 
+- three additional partitions (for easier increasing the sizes of the partitions separately):
 -- /data/log, 1-5GB depending on usage
 -- /data/mysql, up to 5GB
 -- /data/neo4j, up to 20GB
@@ -87,7 +87,7 @@ dpkg -i tomcat7_7.0.52-1ubuntu0.1_all.deb
 If you run a more recent version, just install tomcat from the official sources:
 
 ```
-su 
+su
 apt-get install tomcat7
 ```
 
@@ -98,7 +98,7 @@ su
 apt-get install --no-install-recommends --yes mysql-server nginx curl
 ```
 
-### **5**. install Neo4j 
+### **5**. install Neo4j
 
 currently, we rely on Neo4j version 2.0.3
 
@@ -119,9 +119,9 @@ su
 touch /etc/apt/preferences.d/neo4j.pref
 ```
 
-and add the following lines to this file. 
+and add the following lines to this file.
 
-``` 
+```
 Package: neo4j
 Pin: version 2.0.3
 Pin-Priority: 1000
@@ -146,7 +146,7 @@ npm install -g grunt-cli karma bower
 
 ### **8**. setup MySQL
 
-Create a database and a user for d:swarm. To customize the settings, edit `dswarm/persistence/src/main/resources/create_database.sql`. Do not check in this file in case you modify it. Hint: remember settings for step 13 (configure d:swarm). 
+Create a database and a user for d:swarm. To customize the settings, edit `dswarm/persistence/src/main/resources/create_database.sql`. Do not check in this file in case you modify it. Hint: remember settings for step 13 (configure d:swarm).
 
     mysql -uroot -p < persistence/src/main/resources/create_database.sql
 
@@ -313,7 +313,7 @@ By default, the Neo4j Server is bundled with a Web server that binds to host loc
 
 ### **12**. configure d:swarm
 
-Follow the instructions in [[d:swarm Configuration|dswarm Configuration]]. 
+Follow the instructions in [[d:swarm Configuration|dswarm Configuration]].
 
 
 ### **13**. build neo4j extension
@@ -415,12 +415,12 @@ pushd dswarm-backoffice-web; git pull; popd
 
 First of all it's a good idea to know which of the four components front end, back end, MySQL and Neo4j database does not run. If you already know, skip this list.
 
-* [[front end]]: open `http://localhost:9999` in a browser. The front end should be displayed. 
+* [[front end]]: open `http://localhost:9999` in a browser. The front end should be displayed.
 * [[back end]]: open `http://localhost:8087/dmp/_ping` in a browser. The expected response is a page with the word _pong_.
-* MySQL database: open a terminal and type `mysql -udmp -p dmp` to open a connection to MySQL and select the database _dmp_. Hint: check for correct user name, password and database name in case you did not use the default values. If you can log in, type `select * from DATA_MODEL;`. At least three internal data models should be listed. 
+* MySQL database: open a terminal and type `mysql -udmp -p dmp` to open a connection to MySQL and select the database _dmp_. Hint: check for correct user name, password and database name in case you did not use the default values. If you can log in, type `select * from DATA_MODEL;`. At least three internal data models should be listed.
 * Neo4j database: open `http://localhost:7474/browser/` in a browser. The Neo4j browser should open.
 
-Now that you know which component does not run, go through 
+Now that you know which component does not run, go through
 
 <!--- even though it is most likely that the databases contain corrupted data, this is not the first point on the list since previous steps are required to initialize the dbs. -->
 
