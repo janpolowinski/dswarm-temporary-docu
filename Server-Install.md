@@ -61,7 +61,7 @@ apt-get install oracle-java8-installer oracle-java8-set-default
 You can verify your java version with
 
 ```
-java -version 2>&1 | grep -q "1.8" || echo "java 8 not available"
+java -version 2>&1 | grep -q "1.8" && echo "OK, Java 8 is available" || echo "Uh oh, Java 8 is not available"
 ```
 
 Earlier versions of Tomcat (< 7.0.30) do not run with Java 8 albeit being advertised to do so (related to [this bug](https://issues.apache.org/bugzilla/show_bug.cgi?id=53735)).

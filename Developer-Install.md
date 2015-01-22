@@ -3,7 +3,7 @@ _These are the installation instructions for *developers* and will skip some ste
 ## Initial Installation
 
 premise:
-- currently, we've developed the application only on Ubuntu Linux distributions (empty trusty, 14.04) and MacOS. If you experience problems developing on Windows, please contact us.
+- currently, we've developed the application only on Ubuntu Linux distributions (empty trusty, 14.04) and OS X. If you experience problems developing on Windows, please contact us.
 - let the $HOME of the less privileged user be '/home/user'
 - all commands boxes start as the less privileged user and in their $HOME.
 - Requiring root is explicitly marked (with `su` rather than `sudo ...` ; note that using sudo before each line is not suffienct to yield the same results as with su. Using su may require you to set a password for root if not already done!)
@@ -25,7 +25,7 @@ apt-get install --no-install-recommends --yes git-core maven nodejs npm build-es
 **These steps require less privileged access**
 
 
-### **2**. create ssh key 
+### **2**. create ssh key
 
 ```
 ssh-keygen -t rsa -b 2048 -f ~/.ssh/id_rsa -N ''
@@ -51,44 +51,33 @@ git clone --depth 1 --branch builds/unstable git@github.com:dswarm/dswarm-backof
 
 **These steps require root level access**
 
+### **5**. install Java for the backend
 
-### **5**. install system packages required for running the software
-
-```
-su
-apt-get install --no-install-recommends --yes mysql-server openjdk-7-jdk curl
-```
-
-- note: neo4j suggest to install oracle-jdk instead of openjdk, to do so, please execute the following commands (see also http://community.linuxmint.com/tutorial/view/1414)
+- D:SWARM requires Java 8, which is no longer available in the default package sources. Follow [these steps](http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html)
 
 ```
 su
 add-apt-repository ppa:webupd8team/java
 apt-get update
-apt-get install oracle-java7-installer
+apt-get install oracle-java8-installer oracle-java8-set-default
 ```
 
-- you can check your java version with
+You can verify your java version with (empty output means)
 
 ```
-java -version
+java -version 2>&1 | grep -q "1.8" && echo "OK, Java 8 is available" || echo "Uh oh, Java 8 is not available"
 ```
 
-- if it's not oracle-jdk, then
 
-```
-su
-update-java-alternatives -s java-7-oracle
-```
-
-- optionally, you can also set the environment variables to oracle-jdk with
+### **6**. install system packages required for running the software
 
 ```
 su
-apt-get install oracle-java7-set-default
+apt-get install --no-install-recommends --yes mysql-server curl
 ```
 
-### **6**. install Neo4j 
+
+### **7**. install Neo4j
 
 currently, we rely on Neo4j version 2.0.3
 
@@ -109,15 +98,15 @@ su
 touch /etc/apt/preferences.d/neo4j.pref
 ```
 
-and add the following lines to this file. 
+and add the following lines to this file.
 
-``` 
+```
 Package: neo4j
 Pin: version 2.0.3
 Pin-Priority: 1000
 ```
 
-### **7**. make sure, permissions are correctly
+### **8**. make sure, permissions are correctly
 _If you didn't change the default places where mysql and neo4j store their data, this step should not be necessary._ If you still think you need to set the rights, the default places should be "/var/lib/mysql" and "/var/lib/neo4j/data" )
 
 ```
@@ -127,7 +116,7 @@ chown -R neo4j:adm <neo4j-data-directory>
 ```
 
 
-### **8**. install build environment for frontend
+### **9**. install build environment for frontend
 
 ```
 su
@@ -135,9 +124,9 @@ ln -s /usr/bin/nodejs /usr/bin/node
 npm install -g grunt-cli karma bower
 ```
 
-### **9**. setup MySQL
+### **10**. setup MySQL
 
-Create a database and a user for d:swarm. To customize the settings, edit `dswarm/persistence/src/main/resources/create_database.sql`. Do not check in this file in case you modify it. Hint: remember settings for step 13 (configure d:swarm). 
+Create a database and a user for d:swarm. To customize the settings, edit `dswarm/persistence/src/main/resources/create_database.sql`. Do not check in this file in case you modify it. Hint: remember settings for step 13 (configure d:swarm).
 
     mysql -uroot -p < persistence/src/main/resources/create_database.sql
 
@@ -147,7 +136,7 @@ Then, open `/etc/mysql/my.cnf` and add the following line to the section `[mysql
 wait_timeout = 1209600
 ```
 
-### **10**. setup Neo4j
+### **11**. setup Neo4j
 
 increase file handlers at `/etc/security/limits.conf`
 
@@ -198,7 +187,7 @@ By default, the Neo4j Server is bundled with a Web server that binds to host loc
 
 **These steps require less privileged access**
 
-### **11**. configure d:swarm
+### **12**. configure d:swarm
 Place a file named `dswarm.conf` somewhere in your filesystem and put in the following content
 
     cat <<EOF>>dswarm.conf
@@ -209,10 +198,10 @@ Place a file named `dswarm.conf` somewhere in your filesystem and put in the fol
 Username and password are used to access the MySQL database (hint: use same as in step `setup MySQL` in [server-insatll](server-insatll.md))
 You should not put this file under version control. Name it either `dswarm.conf` or `dmp.conf`, and place it in the root directory (of project `dswarm`). These files are already ignored by git.
 
-More information about configuration you get here: [[d:swarm Configuration|dswarm Configuration]]. 
+More information about configuration you get here: [[d:swarm Configuration|dswarm Configuration]].
 
 
-### **12**. build neo4j extension
+### **13**. build neo4j extension
 Add our [Nexus server](http://nexus.slub-dresden.de:8081/nexus) to your maven settings.xml. The file should be located in the folder "~/.m2". If the file doesn't exist, create it simply using this [template](templates/settings.xml).
 
 ```
@@ -223,7 +212,7 @@ mv dswarm-graph-neo4j/target/graph-1.1-jar-with-dependencies.jar dswarm-graph-ne
 ```
 
 
-### **13**. build backend
+### **14**. build backend
 
 ```
 pushd dswarm
@@ -231,7 +220,7 @@ mvn -U -DskipTests clean install
 popd
 ```
 
-### **14**. build frontend
+### **15**. build frontend
 
 ```
 pushd dswarm-backoffice-web; pushd yo
@@ -248,7 +237,7 @@ popd
 **These steps require root level access**
 
 
-### **15**. wire everything together
+### **16**. wire everything together
 
 lookout for the correct path (/home/user)
 
@@ -258,7 +247,7 @@ cp /home/user/dswarm-graph-neo4j.jar /usr/share/neo4j/plugins/
 ```
 
 
-### **16**. restart everything, if needed
+### **17**. restart everything, if needed
 
 ```
 su
@@ -266,7 +255,7 @@ su
 /etc/init.d/neo4j-service restart
 ```
 
-### **17**. initialize/reset database
+### **18**. initialize/reset database
 
 **This step requires less privileged access**
 
