@@ -10,8 +10,8 @@ premise:
 -- /data/mysql, up to 5GB
 -- /data/neo4j, up to 20GB
 - let the $HOME of the less privileged user be '/home/user'
-- all commands boxes start as the less privileges user and in their $HOME.
-- Requiring root is explicitly marked (with `su` rather than `sudo ...` ; note that using sudo before each line is not suffienct to yield the same results as with su. Using su may require you to set a password for root if not already done!)
+- all commands boxes start as the less privileged user and in their $HOME.
+- Requiring root is explicitly marked (with `su` rather than `sudo ...` ; note that using sudo before each line is not sufficient to yield the same results as with su. Using su may require you to set a password for root if not already done!)
 
 _Note: some commands require user input, this is no unattended installation_
 
@@ -57,43 +57,58 @@ git clone --depth 1 --branch builds/unstable git@github.com:dswarm/dswarm-backof
 **These steps require root level access**
 
 
-### **5**. install system packages required for running the software
+### **5.** install Java and Tomcat for the backend
 
-```
-su
-apt-get install --no-install-recommends --yes mysql-server nginx tomcat7 openjdk-7-jdk curl
-```
-
-- note: neo4j suggest to install oracle-jdk instead of openjdk, to do so, please execute the following commands (see also http://community.linuxmint.com/tutorial/view/1414)
+- D:SWARM requires Java 8, which is no longer available in the default package sources. Follow [these steps](http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html)
 
 ```
 su
 add-apt-repository ppa:webupd8team/java
 apt-get update
-apt-get install oracle-java7-installer
+apt-get install oracle-java8-installer oracle-java8-set-default
 ```
 
-- you can check your java version with
+You can verify your java version with
 
 ```
-java -version
+java -version 2>&1 | grep -q "1.8" || echo "java 8 not available"
 ```
 
-- if it's not oracle-jdk, then
+Earlier versions of Tomcat (< 7.0.30) do not run with Java 8 albeit being advertised to do so (relatd to [this bug](https://issues.apache.org/bugzilla/show_bug.cgi?id=53735).
+Ubuntu 12.04 Precise includes Tomcat in version 7.0.26, which therefore must be updated. If you run precise, execute these steps:
+
+```
+wget https://launchpad.net/ubuntu/+archive/primary/+files/libservlet3.0-java_7.0.52-1ubuntu0.1_all.deb
+wget https://launchpad.net/ubuntu/+archive/primary/+files/libtomcat7-java_7.0.52-1ubuntu0.1_all.deb
+wget https://launchpad.net/ubuntu/+archive/primary/+files/tomcat7-admin_7.0.52-1ubuntu0.1_all.deb
+wget https://launchpad.net/ubuntu/+archive/primary/+files/tomcat7-common_7.0.52-1ubuntu0.1_all.deb
+wget https://launchpad.net/ubuntu/+archive/primary/+files/tomcat7_7.0.52-1ubuntu0.1_all.deb
+```
 
 ```
 su
-update-java-alternatives -s java-7-oracle
+dpkg -i libservlet3.0-java_7.0.52-1ubuntu0.1_all.deb
+dpkg -i libtomcat7-java_7.0.52-1ubuntu0.1_all.deb
+dpkg -i tomcat7-common_7.0.52-1ubuntu0.1_all.deb
+dpkg -i tomcat7-admin_7.0.52-1ubuntu0.1_all.deb
+dpkg -i tomcat7_7.0.52-1ubuntu0.1_all.deb
 ```
 
-- optionally, you can also set the environment variables to oracle-jdk with
+If you run a more recent version, just install tomcat from the official sources:
+
+```
+su 
+apt-get install tomcat7
+```
+
+### **6**. install system packages required for running the software
 
 ```
 su
-apt-get install oracle-java7-set-default
+apt-get install --no-install-recommends --yes mysql-server nginx curl
 ```
 
-### **6**. install Neo4j 
+### **7**. install Neo4j 
 
 currently, we rely on Neo4j version 2.0.3
 
@@ -122,7 +137,7 @@ Pin: version 2.0.3
 Pin-Priority: 1000
 ```
 
-### **7**. make sure, permissions are correctly
+### **8**. make sure, permissions are correctly
 
 ```
 su
@@ -131,7 +146,7 @@ chown -R mysql:mysql /data/mysql
 chown -R neo4j:adm /data/neo4j
 ```
 
-### **8**. install build environment for frontend
+### **9**. install build environment for frontend
 
 ```
 su
@@ -139,7 +154,7 @@ ln -s /usr/bin/nodejs /usr/bin/node
 npm install -g grunt-cli karma bower
 ```
 
-### **9**. setup MySQL
+### **10**. setup MySQL
 
 Create a database and a user for d:swarm. To customize the settings, edit `dswarm/persistence/src/main/resources/create_database.sql`. Do not check in this file in case you modify it. Hint: remember settings for step 13 (configure d:swarm). 
 
@@ -172,7 +187,7 @@ cp -pr /var/lib/mysql/ /data/mysql/
 ```
 
 
-### **10.**  setup Nginx
+### **11.**  setup Nginx
 
 edit `/etc/nginx/sites-available/default` and add this just below the `location /` block
 
@@ -191,7 +206,7 @@ mv /usr/share/nginx/{html,-old}
 ln -s /home/user/dswarm-backoffice-web/yo/publish /usr/share/nginx/html
 ```
 
-### **11**. setup tomcat
+### **12**. setup tomcat
 
 open /etc/tomcat7/server.xml at line 33 and add a `driverManagerProtection="false"` so that the line reads
 
@@ -216,7 +231,16 @@ su
 echo 'CATALINA_OPTS="-Xms4G -Xmx4G -XX:+CMSClassUnloadingEnabled -XX:+UseConcMarkSweepGC -XX:MaxPermSize=512M"' >> /usr/share/tomcat7/bin/setenv.sh
 ```
 
-### **12**. setup Neo4j
+And finally, you have to tell Tomcat about Java 8. Open the file `/etc/default/tomcat7` and around line 12, add this setting
+
+```
+# The home directory of the Java development kit (JDK). You need at least
+# JDK version 1.5. If JAVA_HOME is not set, some common directories for
+# OpenJDK, the Sun JDK, and various J2SE 1.5 versions are tried.
+JAVA_HOME=/usr/lib/jvm/java-8-oracle
+```
+
+### **13**. setup Neo4j
 
 increase file handlers at `/etc/security/limits.conf`
 
@@ -297,12 +321,12 @@ By default, the Neo4j Server is bundled with a Web server that binds to host loc
 
 **These steps require less privileged access**
 
-### **13**. configure d:swarm
+### **14**. configure d:swarm
 
 Follow the instructions in [[d:swarm Configuration|dswarm Configuration]]. 
 
 
-### **14**. build neo4j extension
+### **15**. build neo4j extension
 Add our [Nexus server](http://nexus.slub-dresden.de:8081/nexus) to your maven settings.xml. The file should be located in the folder "~/.m2". If the file doesn't exist, create it simply using this [template](templates/settings.xml).
 
 ```
@@ -313,7 +337,7 @@ mv dswarm-graph-neo4j/target/graph-1.1-jar-with-dependencies.jar dswarm-graph-ne
 ```
 
 
-### **15**. build backend
+### **16**. build backend
 
 ```
 pushd dswarm
@@ -324,7 +348,7 @@ popd; popd
 mv dswarm/controller/target/dswarm-controller-0.1-SNAPSHOT.war dmp.war
 ```
 
-### **16**. build frontend
+### **17**. build frontend
 
 ```
 pushd dmp-backoffice-web; pushd yo
@@ -341,7 +365,7 @@ popd
 **These steps require root level access**
 
 
-### **17**. wire everything together
+### **18**. wire everything together
 
 lookout for the correct path (/home/user)
 
@@ -354,7 +378,7 @@ cp /home/user/dswarm-graph-neo4j.jar /usr/share/neo4j/plugins/
 ```
 
 
-### **18**. restart everything, if needed
+### **19**. restart everything, if needed
 
 ```
 su
@@ -364,7 +388,7 @@ su
 /etc/init.d/tomcat7 restart
 ```
 
-### **19**. initialize/reset database
+### **20**. initialize/reset database
 
 **This step requires less privileged access**
 
