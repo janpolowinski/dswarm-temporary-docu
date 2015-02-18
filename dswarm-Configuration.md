@@ -78,6 +78,12 @@ Every part can be overridden, conveniently so by using the properties-like synta
             # make a full dump of the configuration during startup (at INFO level)
             "log-config-on-start" : "off",
 
+            # the application-wide log level (all dswarm logging activities)
+            "loglevel": "DEBUG",
+
+            # the process-wide log level (all third-party logging activities)
+            "root-loglevel": "INFO",
+
             # paths to use in various places
             "paths" : {
 
