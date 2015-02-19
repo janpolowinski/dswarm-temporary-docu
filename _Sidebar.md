@@ -57,6 +57,7 @@
   * [[Code Repository Handling]]
   * [[Development Tips]]
   * [[Code Quality]]
+  * [[Ideas]]
 * Diagrams
   * [[Example Task Execution]]
   * [[Mapping and Transformation]]
