@@ -2,6 +2,8 @@ This is a place for dumping ideas and improvements.
 
 ## [Backend](https://github.com/dswarm/dswarm)
 
+### In General
+
 - replace guice-H2K-bridge with:
   - new jersey-guice adapter (von Squarespace)
 - replace guice persistence module:
@@ -14,7 +16,7 @@ This is a place for dumping ideas and improvements.
   - jersey
   - guice ((question) - 4.x is "only" beta right (since month and the next stable release is far away))
 
-## [knutwalker](https://github.com/knutwalker)'s Performance Analysis Conclusion ([DD-976](https://jira.slub-dresden.de/browse/DD-976))
+### [knutwalker](https://github.com/knutwalker)'s Performance Analysis Conclusion ([DD-976](https://jira.slub-dresden.de/browse/DD-976))
 
 - remove reflection for Jackson: https://github.com/FasterXML/jackson-module-afterburner =>
 - remove reflection based trace logging =>
