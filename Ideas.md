@@ -19,6 +19,7 @@ This is a place for dumping ideas and improvements.
 ### [knutwalker](https://github.com/knutwalker)'s Performance Analysis Conclusion ([DD-976](https://jira.slub-dresden.de/browse/DD-976))
 
 - remove reflection for Jackson: https://github.com/FasterXML/jackson-module-afterburner => [DD-990](https://jira.slub-dresden.de/browse/DD-990)
+- replace common CSV parser with [Jackson](https://github.com/FasterXML/jackson-dataformat-csv)
 - remove reflection based trace logging => [DD-991](https://jira.slub-dresden.de/browse/DD-991)
 - beefier CPU
 - investigate caching opportunities => [DD-992](https://jira.slub-dresden.de/browse/DD-992)
