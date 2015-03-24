@@ -57,6 +57,7 @@
   * [[Code Repository Handling]]
   * [[Development Tips]]
   * [[Code Quality]]
+  * [[IDE Configurations]]
   * [[Ideas]]
 * Diagrams
   * [[Example Task Execution]]
