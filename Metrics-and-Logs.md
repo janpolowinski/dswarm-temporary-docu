@@ -28,6 +28,3 @@ The following measures are logged. Cumulative means the sum of measures in the s
 * stream-input.literals
 * stream-input.records
 * stream-input.cumulative
-
-
-
