@@ -4,10 +4,11 @@ For configuring metrics logging and general logging see [dswarm Configuration].
 
 Metrics will currently be reported to elastic search (1) and logged to the monitoring log file folder (default {$DSWARM-HOME}/controller/log/monitoring/info (2).
 
-# 1. Logging to elastic search
+### 1. Logging to elastic search
 
-# 2. Logging to the monitoring folder
-The following measures are logged, cumulative means the sum of measures in the same block, e.g.: if we have gdm-triples.closes, gdm-triples.resets, and gdm-triples.process, then gdm-triples.cumulative is the combined metrics for those three.
+### 2. Logging to the monitoring folder
+
+The following measures are logged. Cumulative means the sum of measures in the same block, e.g.: if we have gdm-triples.closes, gdm-triples.resets, and gdm-triples.process, then gdm-triples.cumulative is the combined metrics for those three.
 
 * gdm-models.closes
 * gdm-models.resets
@@ -27,7 +28,6 @@ The following measures are logged, cumulative means the sum of measures in the s
 * stream-input.literals
 * stream-input.records
 * stream-input.cumulative
-
 
 
 
