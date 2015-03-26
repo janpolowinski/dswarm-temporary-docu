@@ -52,6 +52,7 @@
     * [[MySQL Cheat Sheet]]
     * [[d:swarm Neo4j unmanaged extension|Neo4j extension]]
   * [[Implement Domain Model Modification]]
+  * [[Metrics and Logs]]
 * Contributing
   * [[Code Repository Structure]]
   * [[Code Repository Handling]]
