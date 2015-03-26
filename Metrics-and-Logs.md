@@ -14,7 +14,7 @@ The following files are created per task (?)
 
 For the detailed monitoring of the transformation task, the following measures are logged. Cumulative means the sum of measures in the same block, e.g.: if we have gdm-triples.closes, gdm-triples.resets, and gdm-triples.process, then gdm-triples.cumulative is the combined metrics for those three.
 
-* gdm-models.closes -- number of succesfully closed streams (?)
+* *gdm-models.closes* -- number of succesfully closed streams (?)
 * gdm-models.resets -- ?
 * gdm-models.process -- count = number of transformed records successfully written (?) to the gdm model
 * gdm-models.cumulative -- count = number of all gdm-models.* events ; ignore other values
