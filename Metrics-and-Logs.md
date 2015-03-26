@@ -8,9 +8,9 @@ Metrics will currently be reported to elastic search (1) and logged to the monit
 
 ### 2. Logging to the monitoring folder
 The following files are created per task (?)
-* executions-{TASK-NAME} -- one entry per transform task execution (count always 1, min, mean irrelevant)
-* ingests-{TASK-NAME} -- one entry per ingest process (?) ()
-* metrics-{TASK-NAME} -- detailed measures of the transfom task execution.
+* **executions-{TASK-NAME}** -- one entry per transform task execution (count always 1, min, mean irrelevant)
+* **ingests-{TASK-NAME}** -- one entry per ingest process (?) ()
+* **metrics-{TASK-NAME}** -- detailed measures of the transfom task execution.
 
 For the detailed monitoring of the transformation task, the following measures are logged. Cumulative means the sum of measures in the same block, e.g.: if we have gdm-triples.closes, gdm-triples.resets, and gdm-triples.process, then gdm-triples.cumulative is the combined metrics for those three.
 
