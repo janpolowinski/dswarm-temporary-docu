@@ -14,21 +14,21 @@ The following files are created per task (?)
 
 For the detailed monitoring of the transformation task, the following measures are logged. Cumulative means the sum of measures in the same block, e.g.: if we have gdm-triples.closes, gdm-triples.resets, and gdm-triples.process, then gdm-triples.cumulative is the combined metrics for those three.
 
-* *gdm-models.closes* -- number of succesfully closed streams (?)
-* gdm-models.resets -- ?
-* gdm-models.process -- count = number of transformed records successfully written (?) to the gdm model
-* gdm-models.cumulative -- count = number of all gdm-models.* events ; ignore other values
+* **gdm-models.closes** -- number of succesfully closed streams (?)
+* **gdm-models.resets** -- ?
+* **gdm-models.process** -- count = number of transformed records successfully written (?) to the gdm model
+* **gdm-models.cumulative** -- count = number of all gdm-models.* events ; ignore other values
 
-* org.dswarm.persistence.model.job.Mapping.{UUID} -- (wasn't created everytime, just the first time)
-* org.dswarm.persistence.model.resource.DataModel.{UUID}.source (interesting value is (only?) the model ID)
-* org.dswarm.persistence.model.resource.DataModel.{UUID}.target (interesting value is (only?) the model ID)
+* **org.dswarm.persistence.model.job.Mapping.{UUID}** -- (wasn't created everytime, just the first time)
+* **org.dswarm.persistence.model.resource.DataModel.{UUID}.source** (interesting value is (only?) the model ID)
+* **org.dswarm.persistence.model.resource.DataModel.{UUID}.target** (interesting value is (only?) the model ID)
 
-* metamorph -- min = time to transfom with metamorph
-* gdm-transformer -- min = time to write the transfomed records to our GDM model
+* **metamorph** -- min = time to transfom with metamorph
+* **gdm-transformer** -- min = time to write the transfomed records to our GDM model
 
-* stream-input.closes -- number of succesfully closed streams (?)
-* stream-input.resets -- ?
-* stream-input.entities -- count = number of transformed entities
-* stream-input.literals -- count = number of transformed literals
-* stream-input.records -- count = number of transformed records
-* stream-input.cumulative -- count = number of all stream-input.* events ; ignore other values
+* **stream-input.closes** -- number of succesfully closed streams (?)
+* **stream-input.resets** -- ?
+* **stream-input.entities** -- count = number of transformed entities
+* **stream-input.literals** -- count = number of transformed literals
+* **stream-input.records** -- count = number of transformed records
+* **stream-input.cumulative** -- count = number of all stream-input.* events ; ignore other values
