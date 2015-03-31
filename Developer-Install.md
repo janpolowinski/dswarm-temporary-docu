@@ -79,14 +79,14 @@ apt-get install --no-install-recommends --yes mysql-server curl
 
 ### **7**. install Neo4j
 
-currently, we rely on Neo4j version 2.0.3
+currently, we rely on Neo4j version 2.2.0
 
 ```
 su
 wget -O - http://debian.neo4j.org/neotechnology.gpg.key | apt-key add -
 echo 'deb http://debian.neo4j.org/repo stable/' > /etc/apt/sources.list.d/neo4j.list
 apt-get update
-apt-get install --no-install-recommends --yes neo4j=2.0.3
+apt-get install --no-install-recommends --yes neo4j=2.2.0
 ```
 
 You can open the Neo4j Browser at `http://localhost:7474/browser/` to check that the correct version has been installed.
@@ -102,7 +102,7 @@ and add the following lines to this file.
 
 ```
 Package: neo4j
-Pin: version 2.0.3
+Pin: version 2.2.0
 Pin-Priority: 1000
 ```
 
@@ -160,7 +160,15 @@ neostore.propertystore.db.strings.mapped_memory=512M
 cache_type=weak
 ```
 
-edit `/etc/neo4j/neo4j-server.properties` and at line 75 and add our graph extension
+edit `/etc/neo4j/neo4j-server.properties` and 
+
+- at line 24, disable authentication
+
+```
+dbms.security.auth_enabled=false
+```
+
+- at line 75 and add our graph extension
 
 ```
 org.neo4j.server.thirdparty_jaxrs_classes=org.dswarm.graph.resources=/graph
