@@ -44,7 +44,7 @@ Every part can be overridden, conveniently so by using the properties-like synta
 
                     # the name of the JPA unit, matching the one in persistence.xml
                     "jpa-unit" : "DMPApp",
-    
+
                     # if 'on', verbosely log every SQL statement
                     "log-sql" : "on",
 
@@ -75,14 +75,32 @@ Every part can be overridden, conveniently so by using the properties-like synta
                 "port" : 8087
             },
 
-            # make a full dump of the configuration during startup (at INFO level)
-            "log-config-on-start" : "off",
+            logging {
+                # log to console as well
+                log-to-console = "off",
 
-            # the application-wide log level (all dswarm logging activities)
-            "loglevel": "DEBUG",
+                # make a full dump of the configuration during startup (at INFO level)
+                log-config-on-start = "off",
 
-            # the process-wide log level (all third-party logging activities)
-            "root-loglevel": "INFO",
+                # the application-wide log level (all dswarm logging activities)
+                loglevel = "DEBUG",
+
+                # the process-wide log level (all third-party logging activities)
+                root-loglevel = "INFO
+            },
+
+            # settings for detailed montoring (ingest, execution)
+            monitoring {
+
+                # report rates (events per unit) in this unit. is a j.u.c.TimeUnit
+                rate-unit = seconds,
+
+                # report durations in this unit. is a j.u.c.TimeUnit
+                duration-unit = milliseconds,
+
+                # continuously log progress of a task every ...
+                continuous-interval = 10s,
+            },
 
             # paths to use in various places
             "paths" : {
@@ -103,10 +121,13 @@ Every part can be overridden, conveniently so by using the properties-like synta
                 # settings for ES, the target for reporting
                 "elasticsearch" : {
 
-                    # this is the elasticsearch address, that will be used for the connection
+                    # this is the elasticsearch address, that will be used for the connection, will be generated from 'server' and 'port' below
                     "host" : "localhost:9200",
 
+                    # the port of the HTTP endpoint of the target instance
                     "port" : 9200,
+
+                    # the server of the target instance
                     "server" : "localhost"
                 },
 
@@ -167,7 +188,7 @@ You can start d:swarm the following way
 
     datamanagement-platform/controller$ mvn exec:java
 
-or, in case you did not place the file in the root directory, type 
+or, in case you did not place the file in the root directory, type
 
     datamanagement-platform/controller$ mvn exec:java -Dconfig.file=/path/to/dswarm.conf
 
@@ -264,6 +285,6 @@ As of datamanagement-platform commit 6d36b3bf1 (Thu Jul 24 19:12:23 2014 +0200),
     `db.mysql.username` | `dswarm.db.metadata.username` | N/A
     `db.mysql.password` | `dswarm.db.metadata.password` | N/A
 
-5. Remove all references to maven profiles in all start scripts/configurations of *backend modules* you might have. That is `mvn -PDEV ...` becomes `mvn ...`. Remember that this effects the backend only (`datamanagement-platform`), in other modules such as the unmanaged extension, maven profiles are still used. 
+5. Remove all references to maven profiles in all start scripts/configurations of *backend modules* you might have. That is `mvn -PDEV ...` becomes `mvn ...`. Remember that this effects the backend only (`datamanagement-platform`), in other modules such as the unmanaged extension, maven profiles are still used.
 
 6. At last, remove the dmp.properties file (Which might have been done already, as this step was committed via git)
