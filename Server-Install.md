@@ -244,14 +244,10 @@ plus add `ulimit -n 40000` into your neo4j service script (under `/etc/init.d', 
 
 edit `/etc/neo4j/neo4j.properties` and:
 
-- insert some storage tweaks (from http://blog.bruggen.com/2014/02/some-neo4j-import-tweaks-what-and-where.html)
+- insert some storage tweaks
 
 ```
-use_memory_mapped_buffers=true
-neostore.nodestore.db.mapped_memory=1024M
-neostore.relationshipstore.db.mapped_memory=4G
-neostore.propertystore.db.mapped_memory=1024M
-neostore.propertystore.db.strings.mapped_memory=1024M
+dbms.pagecache.memory=8g
 cache_type=weak
 ```
 
