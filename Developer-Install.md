@@ -199,7 +199,7 @@ Place a file named `dswarm.conf` somewhere in your filesystem and put in the fol
     dswarm.db.metadata.password=bar
     EOF
 
-Username and password are used to access the MySQL database (hint: use same as in step `setup MySQL` in [server-insatll](server-insatll.md))
+Username and password are used to access the MySQL database (hint: use same as in step `setup MySQL` in [server-install](server-insatll.md))
 You should not put this file under version control. Name it either `dswarm.conf` or `dmp.conf`, and place it in the root directory (of project `dswarm`). These files are already ignored by git.
 
 More information about configuration you get here: [[d:swarm Configuration|dswarm Configuration]].
@@ -212,7 +212,7 @@ Add our [Nexus server](http://nexus.slub-dresden.de:8081/nexus) to your maven se
 pushd dswarm-graph-neo4j
 mvn -U -PRELEASE -DskipTests clean package
 popd
-mv dswarm-graph-neo4j/target/graph-1.1-jar-with-dependencies.jar dswarm-graph-neo4j.jar
+mv dswarm-graph-neo4j/target/graph-1.2-jar-with-dependencies.jar dswarm-graph-neo4j.jar
 ```
 
 
