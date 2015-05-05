@@ -204,7 +204,7 @@ You can override any settings with the `-D` parameter to specify system properti
 This one is the way to go when you use containers, such as tomcat, that would not allow system properties to be set.
 
 For example, for tomcat: In your `$CATALINA_HOME`, create the file `conf/Catalina/localhost/dmp.xml`.
-More general speaking, create the file `conf/<Engine>/<Host>/<App>.war`.
+More general speaking, create the file `conf/<Engine>/<Host>/<App>.xml`.
 `<Engine>` is likely `Catalina`, `<Host>` is likely `localhost` and d:swarm is deployed as a `dmp.war`, so `<App>` is `dmp`
 
 Put the following content into the file
