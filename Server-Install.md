@@ -432,3 +432,5 @@ Now that you know which component does not run, go through
 * Check your [[dswarm Configuration]]. Are database name and password correct, i.e. the ones used when installing MySQL (step [[Server-Install#8-setup-mysql]])? Compare _dswarm/persistence/src/main/resources/create_database.sql_ with _dswarm/dswarm.conf_ or any other configuration option you use.
 * [[initialize the databases|Server-Install#18-initializereset-database]]. They may be empty or contain corrupted data caused by a failed unit tests.
 * Did you miss an update of, e.g., the neo4j version? Compare your installed version with the required version (see [[step 5|Server-Install#5-install-neo4j]])
+* Are the tmp folders and log folders existent and are they writeable (also for Tomcat)?
+  * If you specified a tmp folder in the config, make sure it contains a tmp/resources and log folder
