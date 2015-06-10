@@ -19,7 +19,7 @@ With the d:swarm ETL tool you can basically complete the following workflow:
  * how to setup and configure [[data resources|Glossary#data-resource]]
  * create [[projects|Glossary#project]], to define [[mappings|Glossary#mapping]], [[transformations|Glossary#transformation]] and [[filters|Glossary#filter]]
  * explore the [[graph data model|Glossary#graph-data-model]]
- * and export data in [RDF](http://en.wikipedia.org/wiki/Resource_Description_Framework).
+ * and export data in [RDF](http://en.wikipedia.org/wiki/Resource_Description_Framework) or XML (e.g. for feeding [Solr](http://lucene.apache.org/solr/) indices).
 
 <!--- update image at https://intranet.slub-dresden.de/display/DAT/Technical+documentation+d%3Aswarm -->
 [[img/simplified-linear-dmp-steps.png]]
