@@ -33,7 +33,7 @@ As shown below, the overall architecture consists of two major parts: the Backof
  
 End users, e.g., system librarians, usually interact with the [Backoffice we application](http://demo.dswarm.org) and may use the [[data hub browser|Graph-Exploration]] to inspect or visualize the data stored by d:swarm.
 
-[![an image of the architecture overview](https://avgl.mybalsamiq.com/mockups/1952636.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00)](https://avgl.mybalsamiq.com/mockups/1952636.png?key=27106ea66faf01c9ad98a275eac48683ac53bf00 "Architecture Overview")
+[![an image of the architecture overview](https://raw.githubusercontent.com/wiki/dswarm/dswarm-documentation/img/architecture.png)](https://raw.githubusercontent.com/wiki/dswarm/dswarm-documentation/img/architecture.png "Architecture Overview")
 
 The HTTP API provides a documentation via [[Swagger|http://swagger.io/]] and hence can be explored via the [[Swagger UI|HTTP API Discovery]]. This is a very convenient way to explore the back end's functionality. 
 
