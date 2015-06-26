@@ -43,6 +43,7 @@
 * [[Statement|Glossary#statement]]
 * [[Task|Glossary#task]]
 * [[Transformation|Glossary#transformation]]
+* [[Transformation Engine|Glossary#transformation-engine]]
 * [[URI|Glossary#uri]]
 * [[Vocabulary|Glossary#vocabulary]]
 * [[Widgets|Glossary#widgets]]
@@ -263,6 +264,10 @@ A transformation is an extended [[Function|Glossary#function]], i.e., it is a co
 
 * alternative names: -transformation process, transformation pipeline, transformation logic-
 * note: transformation is also used in more abstract descriptions (context), where transformation refers to the transformation pipeline or logic of a mapping
+
+### Transformation Engine
+
+The part of the data management application that executes the [[Tasks|Glossary#task]].
 
 ### URI
 
