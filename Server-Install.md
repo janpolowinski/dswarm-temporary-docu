@@ -148,7 +148,7 @@ npm install -g grunt-cli karma bower
 
 Create a database and a user for d:swarm. To customize the settings, edit `dswarm/persistence/src/main/resources/create_database.sql`. Do not check in this file in case you modify it. Hint: remember settings for step 13 (configure d:swarm).
 
-    mysql -uroot -p < persistence/src/main/resources/create_database.sql
+    mysql -uroot -p < dswarm/persistence/src/main/resources/create_database.sql
 
 Then, open `/etc/mysql/my.cnf` and add the following line to the section `[mysqld]` (around line 45)
 
@@ -173,7 +173,7 @@ echo "alias /var/lib/mysql/ -> /data/mysql/," >> /etc/apparmor.d/tunables/alias
 and copy whole MySQL data directory to new location
 
 ```
-cp -pr /var/lib/mysql/ /data/mysql/
+cp -pr /var/lib/mysql/* /data/mysql/
 ```
 
 
@@ -253,25 +253,25 @@ cache_type=weak
 
 edit `/etc/neo4j/neo4j-server.properties` and:
 
-- at line 12, change the database location
+- change the database location
 
 ```
 org.neo4j.server.database.location=/data/neo4j/data/graph.db
 ```
 
-- at line 24, disable authentication
+- disable authentication
 
 ```
 dbms.security.auth_enabled=false
 ```
 
-- at line 53, change the database location
+- change the rrd database location
 
 ```
 org.neo4j.server.webadmin.rrdb.location=/data/neo4j/data/rrd
 ```
 
-- at line 75 and add our graph extension
+- add our graph extension
 
 ```
 org.neo4j.server.thirdparty_jaxrs_classes=org.dswarm.graph.resources=/graph
@@ -326,7 +326,7 @@ Add our [Nexus server](http://nexus.slub-dresden.de:8081/nexus) to your maven se
 pushd dmp-graph
 mvn -U -PRELEASE -DskipTests clean package
 popd
-mv dswarm-graph-neo4j/target/graph-1.1-jar-with-dependencies.jar dswarm-graph-neo4j.jar
+mv dswarm-graph-neo4j/target/graph-1.2-jar-with-dependencies.jar dswarm-graph-neo4j.jar
 ```
 
 
@@ -344,7 +344,7 @@ mv dswarm/controller/target/dswarm-controller-0.1-SNAPSHOT.war dmp.war
 ### **15**. build frontend
 
 ```
-pushd dmp-backoffice-web; pushd yo
+pushd dswarm-backoffice-web; pushd yo
 npm install
 bower install
 STAGE=unstable DMP_HOME=../../dswarm grunt build
