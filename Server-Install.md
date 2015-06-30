@@ -100,14 +100,14 @@ apt-get install --no-install-recommends --yes mysql-server nginx curl
 
 ### **5**. install Neo4j
 
-currently, we rely on Neo4j version 2.2.0
+currently, we rely on Neo4j version 2.2.2
 
 ```
 su
 wget -O - http://debian.neo4j.org/neotechnology.gpg.key | apt-key add -
 echo 'deb http://debian.neo4j.org/repo stable/' > /etc/apt/sources.list.d/neo4j.list
 apt-get update
-apt-get install --no-install-recommends --yes neo4j=2.2.0
+apt-get install --no-install-recommends --yes neo4j=2.2.2
 ```
 
 You can open the Neo4j Browser at `http://localhost:7474/browser/` to check that the correct version has been installed.
@@ -123,7 +123,7 @@ and add the following lines to this file.
 
 ```
 Package: neo4j
-Pin: version 2.2.0
+Pin: version 2.2.2
 Pin-Priority: 1000
 ```
 
