@@ -58,7 +58,7 @@ __Note:__ If a node is selected, the detail view shows all property keys of the 
 
 ### Useful Cypher Queries
 
-This overview can provide only a brief glance at Cypher queries. There are more d:swarm related queries in the [[Cypher Cheat Sheet]]. For a detailed explanation of the capabilities of Cypher, please refer to [[Cypher Reference Card|http://docs.neo4j.org/refcard/2.0/]].
+This overview can provide only a brief glance at Cypher queries. There are more d:swarm related queries in the [[Cypher Cheat Sheet]]. For a detailed explanation of the capabilities of Cypher, please refer to [[Cypher Reference Card|http://neo4j.com/docs/2.2.2/cypher-refcard/]].
 
 * Retrieval (recursively) of all statements that belong to records of the record type `http://www.openarchives.org/OAI/2.0/recordType`, i.e. “show me all (hierarchically structured) records of this resource type in the graph”:
 
