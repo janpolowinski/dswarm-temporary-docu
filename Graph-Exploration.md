@@ -81,7 +81,7 @@ Apart from the built-in indices for node labels and relationship types you shoul
 
 * Legacy index usage example: retrieval of the statement with the statement identifier `788e0248-f417-4e72-a6ed-e8cf0baa4546`:
 
-    ``START r=rel:statement_uuids(uuid="788e0248-f417-4e72-a6ed-e8cf0baa4546") MATCH (n)-[r]->(m) RETURN n, r, m;``
+    ``START r=relationship:statement_uuids(uuid="788e0248-f417-4e72-a6ed-e8cf0baa4546") MATCH (n)-[r]->(m) RETURN n, r, m;``
 
 
 #### Available Indices
