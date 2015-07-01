@@ -42,35 +42,23 @@ Nodes can be
 </thead>
 <tbody>
 <tr>
-<td><strong>__NODETYPE__</strong></td>
-<td>Nodes always have a node type (<strong>__NODETYPE__</strong>). Node types are utilised for orientation in the graph data model. They can be any of these:</p>
-<ul>
-<li>__RESOURCE__</li>
-<li>__BNODE__</li>
-<li>__LITERAL__</li>
-<li>__TYPE_RESOURCE__</li>
-<li>__TYPE_BNODE__</li>
-</ul>
-</td>
+<td><strong>uri</strong></td>
+<td>if node has label RESOURCE</td>
 </tr>
 <tr>
-<td><strong>__URI__</strong></td>
-<td>if __NODETYPE__ == __RESOURCE__</td>
+<td><strong>value</strong></td>
+<td>if node has label LITERAL</td>
 </tr>
 <tr>
-<td><strong>__VALUE__</strong></td>
-<td>if __NODETYPE__ == __LITERAL__</td>
+<td><strong>datatype</strong></td>
+<td>if node has label LITERAL and the literal is a typed literal, i.e., of a certain data type, e.g., integer</td>
 </tr>
 <tr>
-<td><strong>__DATATYPE__</strong></td>
-<td>if __NODETYPE__ == __LITERAL__ and the literal is a typed literal, i.e., of a certain data type, e.g., integer</td>
+<td><strong>datamodel</strong></td>
+<td>if node has label RESOURCE; indicates the data model the resource belongs to</td>
 </tr>
 <tr>
-<td><strong>__DATA_MODEL__</strong></td>
-<td>if __NODETYPE__ == __RESOURCE__; indicates the data model the resource belongs to</td>
-</tr>
-<tr>
-<td><strong>__RESOURCE__</strong></td>
+<td><strong>resource</strong></td>
 <td>indicates the resource the node belongs to (in case it is a literal node or a blank node)</td>
 </tr>
 </tbody>
@@ -79,12 +67,12 @@ Nodes can be
 
 ### Explanation
 
-A record is always a resource so the node type of the record’s entry node is **\_\_RESOURCE\_\_**. Resources or parts of resources can be typed. The types of resources are used as node labels in the graph:
+A record is always a resource so one of the labels of the record’s entry node is **RESOURCE**. Resources or parts of resources can be typed. The types of resources are used as node labels in the graph:
 
 * a MABXML record, for instance, is of the type ‘Datensatz’ (record, http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#datensatzType) and
 * a field within the MABXML record is of the type ‘Feld’ (field, http://www.ddb.de/professionell/mabxml/mabxml-1.xsd#feldType).
 
-URIs are utilised as identifiers for resources, types and attributes (predicates) of statements. All edges and resource nodes have a data model attribute (**\_\_DATA\_MODEL\_\_**). It refers to the data model the statement or resource belongs to. Resource identifiers are assigned to resource nodes by the attribute **\_\_URI\_\_**. Values of literals are assigned to literal nodes by the attribute **\_\_VALUE\_\_**.
+URIs are utilised as identifiers for resources, types and attributes (predicates) of statements. All resource nodes have a data model attribute (**datamodel**). It refers to the data model the resource belongs to. All edges hava a resource attribute (**resource**). It refers to the resource the statement belongs to. Resource identifiers are assigned to resource nodes by the attribute **uri**. Values of literals are assigned to literal nodes by the attribute **value**.
 
 
 ## Edges
@@ -102,32 +90,28 @@ Edges are always attributes of resources or resource parts, e.g. mabxml:nr (http
 </thead>
 <tbody>
 <tr>
-<td><strong>__DATA_MODEL__</strong></td>
-<td><span style="color: #000000;">Indicates the data model the node belongs to</span></td>
-</tr>
-<tr>
-<td><strong>__RESOURCE__</strong></td>
+<td><strong>resource</strong></td>
 <td><span style="color: #000000;">Indicates the resource the edge belongs to</span></td>
 </tr>
 <tr>
-<td><strong>__ORDER__</strong></td>
+<td><strong>order</strong></td>
 <td><span style="color: #000000;">Signifies the &#8220;element&#8221; order of values of a certain type, e.g. &#8220;mixed XML elements&#8221;<br />
 </span></td>
 </tr>
 <tr>
-<td><strong>__INDEX__</strong></td>
+<td><strong>index</strong></td>
 <td><span style="color: #000000;">Signifies the statement index of a resource (i.e. of the original element order as occurs in XML files)</span></td>
 </tr>
 <tr>
-<td><strong>__UUID__</strong></td>
+<td><strong>uuid</strong></td>
 <td><span style="color: #000000;">Identifies a statement uniquely (in a data model)</span></td>
 </tr>
 <tr>
-<td><strong>__VALID_FROM__</strong></td>
+<td><strong>valid_from</strong></td>
 <td><span style="color: #000000;">The version number upon this statement is valid</span></td>
 </tr>
 <tr>
-<td><strong>__VALID_TO__</strong></td>
+<td><strong>valid_to</strong></td>
 <td><span style="color: #000000;">The version number until this statement was valid (i.e. upon this version number the statement is invalid)</span></td>
 </tr>
 </tbody>
