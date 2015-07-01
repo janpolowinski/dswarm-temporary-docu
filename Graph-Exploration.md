@@ -77,11 +77,11 @@ __Note:__ In the graph exploration tab, all resource types in the graph will be 
 
 ### Use of Indices
 
-Apart from the built-in indices for node labels and relationship types you should make use of further indices (which, at this stage, are implemented as [[Neo4j legacy indices|http://docs.neo4j.org/chunked/milestone/indexing.html]] that differ from the [[schema indices|http://docs.neo4j.org/chunked/milestone/query-schema-index.html]]) in order to achieve fast runtimes for your queries.
+Apart from the built-in indices for node labels and relationship types you should make use of further indices in order to achieve fast runtimes for your queries. At this stage, node indices are implemented as [[schema indices|http://docs.neo4j.org/chunked/milestone/query-schema-index.html]] and edge indices are implemented as [[Neo4j legacy indices|http://docs.neo4j.org/chunked/milestone/indexing.html]].
 
-* Retrieval of all statements connected with nodes with the resource identifier `http://data.slub-dresden.de/datamodels/2/records/788e0248-f417-4e72-a6ed-e8cf0baa4546`, i.e. statements whose subject have this identifier:
+* Legacy index usage example: retrieval of the statement with the statement identifier `788e0248-f417-4e72-a6ed-e8cf0baa4546`:
 
-    ``START n=node:resources(__URI__="http://data.slub-dresden.de/datamodels/2/records/788e0248-f417-4e72-a6ed-e8cf0baa4546") MATCH (n)-[r]->(m) RETURN n, r, m;``
+    ``START r=rel:statement_uuids(uuid="788e0248-f417-4e72-a6ed-e8cf0baa4546") MATCH (n)-[r]->(m) RETURN n, r, m;``
 
 
 #### Available Indices
@@ -90,25 +90,21 @@ There are different indices for nodes and edges.
 
 ##### Node Indices
 
-Node indices always have the prefix ‘node’. The following node indices are currently provided:
+Node indices are schema indices and don't need specific query statements, since they are utilised automatically by the query engine at query evaluation time. The following node indices are currently provided for nodes with the following labels:
 
-* **resources**: contains all resource identifiers
-  * Index attribute: **\_\_URI\_\_**
-* **resources_w_data_model**: contains all resource identifiers + data model identifiers , e.g. `http://data.slub-dresden.de/datamodels/2/records/788e0248-f417-4e72-a6ed-e8cf0baa4546 http://data.slub-dresden.de/datamodel/2/data` where the resource identifier is separated from the data model identifier by a space within the key.
-  * Index attribute: **\_\_URI_W_DATA\_MODEL\_\_**
-  * **Note**: this index is useful for efficient access to resources of a certain data model.
-* **values**: contains all values of literals
-  * Index attribute: **\_\_VALUE\_\_**
-* **resource_types**: contains all resource type identifier (class names)
-  * Index attribute: **\_\_URI\_\_**
+* **RESOURCE**: contains all resource identifiers
+  * **uri**
+  * **hash** (**note**: this index is useful for efficient access to resources of a certain data model)
+* **LITERAL**: contains all values of literals
+  * **value**
+* **RESOURCE_TYPE**: contains all resource type identifier (class names)
+  * **uri**
 
 ##### Edge Indices
 
 Edge indices always have the prefix ‘relationship’. The following edge indices are currently provided
 
 * **statement_uuids**: contains all statement uuids
-  * Index attribute: **\_\_UUID\_\_**
-* **statement_uuids_w_data_model**: contains all statement uuids with data model identifier, e.g., `http://data.slub-dresden.de/datamodel/8/data.92fa7ad5-7582-4da6-b1a0-4589cbc52664`
-  * Index attribute: **\_\_UUID\_W\_DATA\_MODEL\_\_**
+  * Index attribute: **uuid**
 
-**Note**: Index attributes have no direct relation to node attributes or edge attributes, even if they have the same label.
+**Note**: Index attributes have no direct relation to edge attributes, even if they have the same label.
