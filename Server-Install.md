@@ -401,6 +401,9 @@ python reset-dbs.py \
 Or provide the credentials and values you configured.
 Check `python reset-dbs.py --help` for additional information.
 
+## Install Task Processing Unit (TPU)
+The Task Processing Unit (TPU) allows for batch-processing ingest, transform and export tasks. Refer to the [documentation in the TPU project](https://github.com/dswarm/task-processing-unit-for-dswarm).
+
 ## Update the System
 
 ### **1**. update repository contents
