@@ -219,7 +219,7 @@ then, give tomcat some more memory
 
 ```
 su
-echo 'CATALINA_OPTS="-Xms4G -Xmx4G -XX:+CMSClassUnloadingEnabled -XX:+UseConcMarkSweepGC -XX:MaxPermSize=512M"' >> /usr/share/tomcat7/bin/setenv.sh
+echo 'export CATALINA_OPTS="-Xms4G -Xmx4G -XX:+CMSClassUnloadingEnabled -XX:+UseConcMarkSweepGC -XX:MaxPermSize=512M"' >> /usr/share/tomcat7/bin/setenv.sh
 ```
 
 And finally, you have to tell Tomcat about Java 8. Open the file `/etc/default/tomcat7` and around line 12, add this setting
