@@ -428,6 +428,7 @@ Now that you know which component does not run, go through
 <!--- even though it is most likely that the databases contain corrupted data, this is not the first point on the list since previous steps are required to initialize the dbs. -->
 
 * is _curl_ installed?
+* Did you choose a database name other than the default? If yes, you currently have to modify the `init_internal_schema.sql`, which is internally used by the script `reset-dbs.py` and change the `USE` database statement (this should be improved).
 * when building the projects with maven, did you use the `-U` option to update project dependencies?
 * Check your [[dswarm Configuration]]. Are database name and password correct, i.e., the ones used when installing MySQL (step [[Server-Install#8-setup-mysql]])? Compare _dswarm/persistence/src/main/resources/create_database.sql_ with _dswarm/dswarm.conf_ or any other configuration option you use.
 * Can Tomcat read the configuration file?
