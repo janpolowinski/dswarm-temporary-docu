@@ -323,7 +323,7 @@ Follow the instructions in [[d:swarm Configuration|dswarm Configuration]] and ma
 Add our [Nexus server](http://nexus.slub-dresden.de:8081/nexus) to your maven settings.xml. The file should be located in the folder "~/.m2". If the file doesn't exist, create it simply using this [template](templates/settings.xml).
 
 ```
-pushd dmp-graph
+pushd dswarm-graph-neo4j
 mvn -U -PRELEASE -DskipTests clean package
 popd
 mv dswarm-graph-neo4j/target/graph-1.2-jar-with-dependencies.jar dswarm-graph-neo4j.jar
@@ -420,7 +420,7 @@ First of all it's a good idea to know which of the four components front end, ba
 
 * [[front end]]: open `http://localhost:9999` in a browser. The front end should be displayed.
 * [[back end]]: open `http://localhost:8087/dmp/_ping` in a browser. The expected response is a page with the word _pong_.
-* MySQL database: open a terminal and type `mysql -udmp -p dmp` to open a connection to MySQL and select the database _dmp_. Hint: check for correct user name, password and database name in case you did not use the default values. If you can log in, type `select * from DATA_MODEL;`. At least three internal data models should be listed.
+* MySQL database: open a terminal and type `mysql -udmp -p dmp` to open a connection to MySQL and select the database _dmp_. Hint: check for correct user namdswarm-graph-neo4je, password and database name in case you did not use the default values. If you can log in, type `select * from DATA_MODEL;`. At least three internal data models should be listed.
 * Neo4j database: open `http://localhost:7474/browser/` in a browser. The Neo4j browser should open.
 
 Now that you know which component does not run, go through
