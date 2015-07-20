@@ -225,7 +225,7 @@ Tomcat has a [~~bug~~feature](https://issues.apache.org/bugzilla/show_bug.cgi?id
 remove custom configurations whenever an application is redeployed.
 Unfortunately, this mean that the previous file would get deleted with every update of d:swarm.
 
-To work around this, edit the `$CATALINA_HOME/conf/context.xml`, so that is contains the `<Environment/>` part within its `<Context/>` part.
+To work around this, edit the `$CATALINA_HOME/conf/context.xml`, so that it contains the `<Environment/>` part within its `<Context/>` part.
 
 This applies the settings for all deployed applications, though.
 
