@@ -316,7 +316,12 @@ By default, the Neo4j Server is bundled with a Web server that binds to host loc
 
 ### **12**. configure d:swarm
 
-Follow the instructions in [[d:swarm Configuration|dswarm Configuration]] and make sure Tomcat has read access to the configuration file.
+Follow the instructions in [[d:swarm Configuration|dswarm Configuration]] and make sure Tomcat has read access to the configuration file and the tmp folder if you specified one (see also hints at the bottom of this page):
+
+```
+su
+chown -R tomcat7:tomcat7 /path/to/your-tmp-folder
+```
 
 
 ### **13**. build neo4j extension
