@@ -446,4 +446,4 @@ Now that you know which component does not run, go through
 * Are the tmp folders and log folders existent and are they writeable (also for Tomcat)?
   * If you specified a tmp folder in the config, make sure it contains a tmp/resources and log folder
 * Did you set the maximum file-size for uploads (see Step 9) to a sufficient value for your scenario? 
-* In order to access the neo4j API (e.g. .../graph/gdm/ping) you may have to allow access from other than localhost (see step `neo4j configuration`). 
+* In order to access the neo4j API (e.g. .../graph/gdm/ping) you may have to allow access from other than localhost (see step "Set up neo4j"). 
