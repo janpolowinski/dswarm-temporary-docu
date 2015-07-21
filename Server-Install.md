@@ -311,7 +311,7 @@ mkdir /data/neo4j/log
 chown -R neo4j:adm /data/neo4j/log
 ```
 
-By default, the Neo4j Server is bundled with a Web server that binds to host localhost on port 7474, answering only requests from the local machine. If you need remote access to Neo4j UI, see [Secure the port and remote client connection accepts](http://docs.neo4j.org/chunked/stable/security-server.html#_secure_the_port_and_remote_client_connection_accepts)
+By default, the Neo4j Server is bundled with a Web server that binds to host localhost on port 7474, answering only requests from the local machine. If you need remote access to Neo4j UI or the API, see [Secure the port and remote client connection accepts](http://docs.neo4j.org/chunked/stable/security-server.html#_secure_the_port_and_remote_client_connection_accepts)
 
 * * *
 
@@ -430,10 +430,11 @@ First of all it's a good idea to know which of the four components front end, ba
 * [[back end]]: open `http://localhost:8087/dmp/_ping` (port defaults to 8080 for server installation)  in a browser. The expected response is a page with the word _pong_.
 * MySQL database: open a terminal and type `mysql -udmp -p dmp` to open a connection to MySQL and select the database _dmp_. Hint: check for correct user namdswarm-graph-neo4je, password and database name in case you did not use the default values. If you can log in, type `select * from DATA_MODEL;`. At least three internal data models should be listed.
 * Neo4j database: open `http://localhost:7474/browser/` in a browser. The Neo4j browser should open.
+* Neo4j API: open `http://localhost:7474/graph/gdm/ping` in a browser. The expected response is a page with the word _pong_.
 
 Now that you know which component does not run, go through
 
-<!--- even though it is most likely that the databases contain corrupted data, this is not the first point on the list since previous steps are required to initialize the dbs. -->
+<!--- even though it is most likely that the databases contain corrupted data, this is not the first point on the list since previous steps are required to initialize the dbs. --> 
 
 * is _curl_ installed?
 * Did you choose a database name other than the default? If yes, you currently have to modify the `init_internal_schema.sql`, which is internally used by the script `reset-dbs.py` and change the `USE` database statement (this should be improved).
@@ -445,3 +446,4 @@ Now that you know which component does not run, go through
 * Are the tmp folders and log folders existent and are they writeable (also for Tomcat)?
   * If you specified a tmp folder in the config, make sure it contains a tmp/resources and log folder
 * Did you set the maximum file-size for uploads (see Step 9) to a sufficient value for your scenario? 
+* In order to access the neo4j API (e.g. .../graph/gdm/ping) you may have to allow access from other than localhost (see step `neo4j configuration`). 
