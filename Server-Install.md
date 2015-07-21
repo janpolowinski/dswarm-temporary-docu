@@ -187,8 +187,11 @@ location /dmp {
         proxy_pass http://127.0.0.1:8080$uri$is_args$args;
 }
 ```
-for very long running processes, add appropriate settings for timeouts such as the `proxy_read_timeout`, see http://nginx.org/en/docs/http/ngx_http_proxy_module.html.
-
+for very long running processes, add appropriate settings for timeouts such as the `proxy_read_timeout`, see http://nginx.org/en/docs/http/ngx_http_proxy_module.html. You may also need to remove the following lines for current versions of nginx:
+```
+        listen [::]:80 default_server ipv6only=on;
+        root /usr/share/nginx/html;
+```
 move old content root and link the new one. lookout for the correct user path! (the directory will be created later on)
 
 ```
