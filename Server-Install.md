@@ -170,9 +170,10 @@ echo "alias /var/lib/mysql/ -> /data/mysql/," >> /etc/apparmor.d/tunables/alias
 /etc/init.d/apparmor reload
 ```
 
-and copy whole MySQL data directory to new location
+and copy whole MySQL data directory to new location (after stopping the mysql service)
 
 ```
+service mysql stop
 cp -pr /var/lib/mysql/* /data/mysql/
 ```
 
