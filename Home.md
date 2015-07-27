@@ -18,8 +18,8 @@ With d:swarm you can
  * create [[projects|Glossary#project]], define [[mappings|Glossary#mapping]], [[transformations|Glossary#transformation]] and [[filters|Glossary#filter]]
  * export data in [RDF](http://en.wikipedia.org/wiki/Resource_Description_Framework) or XML (e.g., for feeding [Solr](http://lucene.apache.org/solr/) indices).
 
-<!--- update image at https://intranet.slub-dresden.de/display/DAT/Technical+documentation+d%3Aswarm -->
-[[img/simplified-linear-dmp-steps.png]]
+<!--- source code for image currently stored by jan -->
+[[https://raw.githubusercontent.com/wiki/dswarm/dswarm-documentation/img/dswarm-workflow-abstract.png]]
 
 ### ... and behind the scenes
 
