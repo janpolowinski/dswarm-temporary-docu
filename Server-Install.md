@@ -420,7 +420,7 @@ pushd dswarm-graph-neo4j; git pull; popd
 pushd dswarm-backoffice-web; git pull; popd
 ```
 
-### **2**. repeat steps [[13|Server-Install#13-build-neo4j-extension]] (Building D:SWARM Graph Extension) to [[18|Server-Install#18-initializereset-database]] (Init DB) from the installation as necessary
+### **2**. repeat steps [[13|Server-Install#13-build-dswarm-graph-extension]] (Building D:SWARM Graph Extension) to [[18|Server-Install#18-initializereset-database]] (Init DB) from the installation as necessary
 
 
 ## Checklist on Errors
@@ -440,10 +440,10 @@ Now that you know which component does not run, go through
 * is _curl_ installed?
 * Did you choose a database name other than the default? If yes, you currently have to modify the `init_internal_schema.sql`, which is internally used by the script `reset-dbs.py` and change the `USE` database statement (this should be improved).
 * when building the projects with maven, did you use the `-U` option to update project dependencies?
-* Check your [[dswarm Configuration]]. Are database name and password correct, i.e., the ones used when installing MySQL (step [[Server-Install#8-setup-mysql]])? Compare _dswarm/persistence/src/main/resources/create_database.sql_ with _dswarm/dswarm.conf_ or any other configuration option you use.
+* Check your [[dswarm Configuration]]. Are database name and password correct, i.e., the ones used when installing the Metadata Repository (MySQL; step [[Server-Install#8-setup-metadata-repository-mysql]])? Compare _dswarm/persistence/src/main/resources/create_database.sql_ with _dswarm/dswarm.conf_ or any other configuration option you use.
 * Can Tomcat read the configuration file?
 * [[initialize the databases|Server-Install#18-initializereset-database]]. They may be empty or contain corrupted data caused by a failed unit tests.
-* Did you miss an update of, e.g., the neo4j version? Compare your installed version with the required version (see [[step 5|Server-Install#5-install-neo4j]])
+* Did you miss an update of, e.g., the neo4j version? Compare your installed version with the required version (see [[step 5|Server-Install#5-install-data-hub-neo4j]])
 * Are the tmp folders and log folders existent and are they writeable (also for Tomcat)?
   * If you specified a tmp folder in the config, make sure it contains a tmp/resources and log folder
 * Did you set the maximum file-size for uploads (see Step 9) to a sufficient value for your scenario? 
