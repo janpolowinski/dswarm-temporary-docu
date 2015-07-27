@@ -22,7 +22,7 @@ With the d:swarm ETL tool you can basically complete the following workflow:
  * and export data in [RDF](http://en.wikipedia.org/wiki/Resource_Description_Framework) or XML (e.g. for feeding [Solr](http://lucene.apache.org/solr/) indices).
 
 <!--- source code for image currently stored by jan -->
-[[img/dswarm_workflow_abstract.png]]
+[[https://raw.githubusercontent.com/wiki/dswarm/dswarm-documentation/img/dswarm_workflow_abstract.png]]
 
 ### ... and behind the scenes
 
