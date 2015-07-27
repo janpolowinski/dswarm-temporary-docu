@@ -390,7 +390,7 @@ su
 /etc/init.d/tomcat7 restart
 ```
 
-### **18**. initialize/reset database
+### **18**. initialize/reset Metadata Repository + Data Hub
 
 **This step requires less privileged access**
 
