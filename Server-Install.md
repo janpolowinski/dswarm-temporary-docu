@@ -446,5 +446,5 @@ Now that you know which component does not run, go through
 * Did you miss an update of, e.g., the neo4j version? Compare your installed version with the required version (see [[step 5|Server-Install#5-install-data-hub-neo4j]])
 * Are the tmp folders and log folders existent and are they writeable (also for Tomcat)?
   * If you specified a tmp folder in the config, make sure it contains a tmp/resources and log folder
-* Did you set the maximum file-size for uploads (see Step 9) to a sufficient value for your scenario? 
-* In order to access the D:SWARM Graph Extension (e.g. .../graph/gdm/ping) you may have to allow access from other than localhost (see step "Set up neo4j"). 
+* Did you set the maximum file-size for uploads (see [[Step 9|Server-Install#9--setup-nginx]]) to a sufficient value for your scenario? 
+* In order to access the D:SWARM Graph Extension (e.g. .../graph/gdm/ping) you may have to allow access from other than localhost (see step [[Setup Data Hub|Server-Install#11-setup-data-hub-neo4j]]). 
