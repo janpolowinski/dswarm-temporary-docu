@@ -3,11 +3,11 @@
 
 d:swarm is a **middle ware solution**. It forms the basis of all data management processes in a library or any other (cultural) institution dedicated to the handling of data and metadata.  Structurally, d:swarm goes in between **existing data management systems** (e.g. Integrated Library Systems) and **existing front end applications** (e.g. the library catalogue or discovery system).
 
-d:swarm is a **web application** that runs in all modern web browsers. The current release of our web application is available at [http://demo.dswarm.org](http://demo.dswarm.org). If you want to participate in the tests, [drop us a note](mailto:team@dswarm.org), and we will gladly add you to the group of testers. We are looking forward to your feedback, your ideas, your opinion and your contribution at our [mailing list](https://groups.google.com/forum/#!forum/dswarm) or [issue tracker](https://jira.slub-dresden.de).
+[[http://www.dswarm.org/wp-content/uploads/2015/04/dswarm-demo_2015-04-14.png]]
 
 Finally, d:swarm is an **ETL tool with a GUI for non-programmers**. Librarians do not need to write scripts, but can create complex transformations by Drag and Drop from a functions library and configuring them in the d:swarm Backoffice.
 
-[[http://www.dswarm.org/wp-content/uploads/2015/04/dswarm-demo_2015-04-14.png]]
+d:swarm is realized as a web application that runs in all modern web browsers. The current release of our web application is available at [http://demo.dswarm.org](http://demo.dswarm.org). If you want to participate in the tests, [drop us a note](mailto:team@dswarm.org), and we will gladly add you to the group of testers. We are looking forward to your feedback, your ideas, your opinion and your contribution at our [mailing list](https://groups.google.com/forum/#!forum/dswarm) or [issue tracker](https://jira.slub-dresden.de).
 
 ## What can you do with d:swarm?
 
@@ -20,6 +20,15 @@ With d:swarm you can
 
 <!--- source code for image currently stored by jan -->
 [[img/dswarm-workflow-abstract.png]]
+
+
+### d:swarm *Streaming* Version
+
+The d:swarm *streaming* version offers fast processing of large amounts data and is sufficient for many scenarios. You may already use it today to start with as long as the work on the full *DataHub* version of D:SWARM continues. Unlike in the *DataHub* version this does not allow for versioning/archiving.
+
+### d:swarm *DataHub* Version
+
+TODO
 
 ### ... and behind the scenes
 
