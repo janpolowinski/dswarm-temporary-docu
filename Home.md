@@ -21,8 +21,8 @@ With the d:swarm ETL tool you can basically complete the following workflow:
  * explore the [[graph data model|Glossary#graph-data-model]]
  * and export data in [RDF](http://en.wikipedia.org/wiki/Resource_Description_Framework) or XML (e.g. for feeding [Solr](http://lucene.apache.org/solr/) indices).
 
-<!--- update image at https://intranet.slub-dresden.de/display/DAT/Technical+documentation+d%3Aswarm -->
-[[img/simplified-linear-dmp-steps.png]]
+<!--- source code for image currently stored by jan -->
+[[img/dswarm_workflow_abstract.png]]
 
 ### ... and behind the scenes
 
