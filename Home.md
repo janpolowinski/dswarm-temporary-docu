@@ -1,6 +1,8 @@
 ## Introduction
 [d:swarm](http://dswarm.org) is a **data management platform** that is based on the concept of [community sharing](http://en.wikipedia.org/wiki/Sharing). It is used for the lossless transformation of data from heterogeneous sources into a flexible ([elastic](http://en.wikipedia.org/wiki/Elasticity_%28data_store%29)), data model that can be explicitly made available as [(Linked) Open Data](http://en.wikipedia.org/wiki/Linked_data) (LOD).
 
+[[http://www.dswarm.org/wp-content/uploads/2015/04/dswarm-demo_2015-04-14.png]]
+
 d:swarm is a **middle ware solution**. It forms the basis of all data management processes in a library or any other (cultural) institution dedicated to the handling of data and metadata.  Structurally, d:swarm goes in between **existing data management systems** (e.g. Integrated Library Systems) and **existing front end applications** (e.g. the library catalogue or discovery system).
 
 d:swarm (mainly) takes care of the **improvement** of the data quality facilitating the de-duplication, merging and [FRBRization](http://en.wikipedia.org/wiki/Functional_Requirements_for_Bibliographic_Records) of bibliographic data, their semantic enrichment and publication as LOD.
