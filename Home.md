@@ -19,7 +19,7 @@ With d:swarm you can
  * export data in [RDF](http://en.wikipedia.org/wiki/Resource_Description_Framework) or XML (e.g., for feeding [Solr](http://lucene.apache.org/solr/) indices).
 
 <!--- source code for image currently stored by jan -->
-[[https://raw.githubusercontent.com/wiki/dswarm/dswarm-documentation/img/dswarm-workflow-abstract.png]]
+[[img/dswarm-workflow-abstract.png]]
 
 ### ... and behind the scenes
 
