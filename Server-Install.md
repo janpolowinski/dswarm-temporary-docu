@@ -98,7 +98,7 @@ su
 apt-get install --no-install-recommends --yes mysql-server nginx curl
 ```
 
-### **5**. install Neo4j
+### **5**. install Data Hub (Neo4j)
 
 currently, we rely on Neo4j version 2.2.2
 
@@ -144,7 +144,7 @@ ln -s /usr/bin/nodejs /usr/bin/node
 npm install -g grunt-cli karma bower
 ```
 
-### **8**. setup MySQL
+### **8**. setup Metadata Repository (MySQL)
 
 Create a database and a user for d:swarm. To customize the settings, edit `dswarm/persistence/src/main/resources/create_database.sql`. Do not check in this file in case you modify it. Hint: remember settings for step 13 (configure d:swarm).
 
@@ -235,7 +235,7 @@ And finally, you have to tell Tomcat about Java 8. Open the file `/etc/default/t
 JAVA_HOME=/usr/lib/jvm/java-8-oracle
 ```
 
-### **11**. setup Neo4j
+### **11**. setup Data Hub (Neo4j)
 
 increase file handlers at `/etc/security/limits.conf`
 
@@ -312,7 +312,7 @@ mkdir /data/neo4j/log
 chown -R neo4j:adm /data/neo4j/log
 ```
 
-By default, the Neo4j Server is bundled with a Web server that binds to host localhost on port 7474, answering only requests from the local machine. If you need remote access to Neo4j UI or the API, see [Secure the port and remote client connection accepts](http://docs.neo4j.org/chunked/stable/security-server.html#_secure_the_port_and_remote_client_connection_accepts)
+By default, the Neo4j Server is bundled with a Web server that binds to host localhost on port 7474, answering only requests from the local machine. If you need remote access to the Neo4j Browser or the D:SWARM Graph Extension API, see [Secure the port and remote client connection accepts](http://docs.neo4j.org/chunked/stable/security-server.html#_secure_the_port_and_remote_client_connection_accepts)
 
 * * *
 
@@ -328,7 +328,7 @@ chown -R tomcat7:tomcat7 /path/to/your-tmp-folder
 ```
 
 
-### **13**. build neo4j extension
+### **13**. build D:SWARM Graph Extension
 Add our [Nexus server](http://nexus.slub-dresden.de:8081/nexus) to your maven settings.xml. The file should be located in the folder "~/.m2". If the file doesn't exist, create it simply using this [template](templates/settings.xml).
 
 ```
@@ -394,7 +394,7 @@ su
 
 **This step requires less privileged access**
 
-When running the backend the first time, the MySQL database needs to be initialized. When updated, a reset is required in case the schema or initial data has changed.
+When running the backend the first time, the Metadata Repository (MySQL database) needs to be initialized. When updated, a reset is required in case the schema or initial data has changed.
 lookout for the correct path (/home/user)
 
 ```
@@ -420,18 +420,18 @@ pushd dswarm-graph-neo4j; git pull; popd
 pushd dswarm-backoffice-web; git pull; popd
 ```
 
-### **2**. repeat steps [[13|Server-Install#13-build-neo4j-extension]] (Building neo4j-extension) to [[18|Server-Install#18-initializereset-database]] (Init DB) from the installation as necessary
+### **2**. repeat steps [[13|Server-Install#13-build-neo4j-extension]] (Building D:SWARM Graph Extension) to [[18|Server-Install#18-initializereset-database]] (Init DB) from the installation as necessary
 
 
 ## Checklist on Errors
 
-First of all it's a good idea to know which of the four components front end, back end, MySQL and Neo4j database does not run. If you already know, skip this list.
+First of all it's a good idea to know which of the four components frontend, backend, Metadata Repository (MySQL) and Data Hub (Neo4j database) does not run. If you already know, skip this list.
 
-* [[front end]]: open `http://localhost:9999` (port defaults to 80 for server installation) in a browser. The front end should be displayed.
-* [[back end]]: open `http://localhost:8087/dmp/_ping` (port defaults to 8080 for server installation)  in a browser. The expected response is a page with the word _pong_.
-* MySQL database: open a terminal and type `mysql -udmp -p dmp` to open a connection to MySQL and select the database _dmp_. Hint: check for correct user name, password and database name in case you did not use the default values. If you can log in, type `select * from DATA_MODEL;`. At least three internal data models should be listed.
-* Neo4j database: open `http://localhost:7474/browser/` in a browser. The Neo4j browser should open.
-* Neo4j API: open `http://localhost:7474/graph/gdm/ping` in a browser. The expected response is a page with the word _pong_.
+* [[frontend]]: open `http://localhost:9999` (port defaults to 80 for server installation) in a browser. The front end should be displayed.
+* [[backend]]: open `http://localhost:8087/dmp/_ping` (port defaults to 8080 for server installation)  in a browser. The expected response is a page with the word _pong_.
+* Metadata Repository (MySQL database): open a terminal and type `mysql -udmp -p dmp` to open a connection to MySQL and select the database _dmp_. Hint: check for correct user name, password and database name in case you did not use the default values. If you can log in, type `select * from DATA_MODEL;`. At least three internal data models should be listed.
+* Data Hub (Neo4j database): open `http://localhost:7474/browser/` in a browser. The Neo4j browser should be opened.
+* D:SWARM Graph Extension: open `http://localhost:7474/graph/gdm/ping` in a browser. The expected response is a page with the word _pong_.
 
 Now that you know which component does not run, go through
 
@@ -447,4 +447,4 @@ Now that you know which component does not run, go through
 * Are the tmp folders and log folders existent and are they writeable (also for Tomcat)?
   * If you specified a tmp folder in the config, make sure it contains a tmp/resources and log folder
 * Did you set the maximum file-size for uploads (see Step 9) to a sufficient value for your scenario? 
-* In order to access the neo4j API (e.g. .../graph/gdm/ping) you may have to allow access from other than localhost (see step "Set up neo4j"). 
+* In order to access the D:SWARM Graph Extension (e.g. .../graph/gdm/ping) you may have to allow access from other than localhost (see step "Set up neo4j"). 
