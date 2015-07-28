@@ -24,11 +24,11 @@ With d:swarm you can
 
 ### d:swarm *Streaming* Version
 
-The d:swarm *streaming* version offers fast processing of large amounts data and is sufficient for many scenarios. You may already use it today to start with as long as the work on the full *DataHub* version of D:SWARM continues. Unlike in the *DataHub* version this does not allow for versioning/archiving.
+The d:swarm *streaming* version offers fast processing of large amounts data and is sufficient for many scenarios. You may already use it today to start with as long as the work on the full *DataHub* version of D:SWARM continues. Unlike in the *DataHub* version this does not allow for versioning/archiving. See how  [[SLUB Dresden employs d:swarm]] for transforming and integrating bibliographic data sources.
 
 ### d:swarm *DataHub* Version
 
-Archiving versions of the transformed data is only possible with the *DataHub Variant* of d:swarm, which is also the basis for upcoming functionality such as deduplication, frbrization and other data quality improvements. While many steps into this direction have been taken, challenges remain with respect to scalability for very large datasets with. See this blog post.
+Archiving versions of the transformed data is only possible with the *DataHub Variant* of d:swarm, which is also the basis for upcoming functionality such as deduplication, frbrization and other data quality improvements. While many steps into this direction have been taken, challenges remain with respect to scalability for very large datasets with. See [this blog post](http://www.slub-dresden.de/blog-post-on-challenges-property-graph-handling).
 
 ### ... and behind the scenes
 
