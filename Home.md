@@ -11,16 +11,17 @@ d:swarm is realized as a web application that runs in all modern web browsers. T
 
 ## What can you do with d:swarm? / What is the idea behind d:swarm?
 
-Start watching these two ([#1](http://prezi.com/0zh_ypsezu6i/), [#2](http://www.slideshare.net/JensMittelbach/dswarm-a-library-data-management-platform-based-on-a-linked-open-data-approach)) presentations, which summarize the motivation and goals on an abstract level. Furthermore, our [user guide](https://github.com/dswarm/dswarm-documentation/wiki/Overview) provides a brief manual of how to utilise the [d:swarm Backoffice web application](http://demo.dswarm.org).
+Start watching these two ([#1](http://prezi.com/0zh_ypsezu6i/), [#2](http://www.slideshare.net/JensMittelbach/dswarm-a-library-data-management-platform-based-on-a-linked-open-data-approach)) presentations, which summarize the motivation and goals on an abstract level.
 
-With d:swarm you can ...
- * import, setup and configure [[data resources|Glossary#data-resource]]
+With the current d:swarm implementation you can ...
+ * import, set up and configure [[data resources|Glossary#data-resource]]
  * create [[projects|Glossary#project]], define [[mappings|Glossary#mapping]], [[transformations|Glossary#transformation]] and [[filters|Glossary#filter]]
  * export data in [RDF](http://en.wikipedia.org/wiki/Resource_Description_Framework) or XML (e.g., for feeding [Solr](http://lucene.apache.org/solr/) indices).
 
 <!--- source code for image currently stored by jan -->
 [[img/dswarm-workflow-abstract.png]]
 
+See our [user guide](https://github.com/dswarm/dswarm-documentation/wiki/Overview) for a brief manual of how to utilise the [d:swarm Backoffice web application](http://demo.dswarm.org). While you can transform example data directly with the d:swarm Backoffice, batch-processing large amounts of data can be done with the *[Task Processing Unit](https://github.com/dswarm/task-processing-unit-for-dswarm)* for d:swarm, initially developed by [UB Dortmund](https://www.ub.uni-dortmund.de/). 
 
 ### d:swarm *Streaming* Version
 
@@ -29,8 +30,6 @@ The d:swarm *streaming* version offers fast processing of large amounts data and
 ### d:swarm *DataHub* Version
 
 Archiving versions of the transformed data is only possible with the *DataHub Variant* of d:swarm, which is also the basis for upcoming functionality such as deduplication, frbrization and other data quality improvements. While many steps into this direction have been taken, challenges remain with respect to scalability for very large datasets with. See [this blog post](http://www.slub-dresden.de/blog-post-on-challenges-property-graph-handling).
-
-While you can transform example data directly with the d:swarm Backoffice, batch processing large amouts of data can be done with the *Task Processing Unit* for d:swarm, initially developed by UB Dortmund.
 
 ### ... and behind the scenes
 
