@@ -11,7 +11,7 @@ d:swarm is realized as a web application that runs in all modern web browsers. T
 
 ## What can you do with d:swarm? / What is the idea behind d:swarm?
 
-Start watching these two ([1](http://prezi.com/0zh_ypsezu6i/), [2](http://www.slideshare.net/JensMittelbach/dswarm-a-library-data-management-platform-based-on-a-linked-open-data-approach)) presentations, which summarize the motivation and goals on an abstract level. Furthermore, our [user guide](https://github.com/dswarm/dswarm-documentation/wiki/Overview) provides a brief manual of how to utilise the [d:swarm Backoffice web application](http://demo.dswarm.org).
+Start watching these two ([#1](http://prezi.com/0zh_ypsezu6i/), [#2](http://www.slideshare.net/JensMittelbach/dswarm-a-library-data-management-platform-based-on-a-linked-open-data-approach)) presentations, which summarize the motivation and goals on an abstract level. Furthermore, our [user guide](https://github.com/dswarm/dswarm-documentation/wiki/Overview) provides a brief manual of how to utilise the [d:swarm Backoffice web application](http://demo.dswarm.org).
 
 With d:swarm you can ...
  * import, setup and configure [[data resources|Glossary#data-resource]]
