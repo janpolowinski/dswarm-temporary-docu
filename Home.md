@@ -28,7 +28,7 @@ The d:swarm *streaming* version offers fast processing of large amounts data and
 
 ### d:swarm *DataHub* Version
 
-TODO
+Archiving versions of the transformed data is only possible with the *DataHub Variant* of d:swarm, which is also the basis for upcoming functionality such as deduplication, frbrization and other data quality improvements. While many steps into this direction have been taken, challenges remain with respect to scalability for very large datasets with. See this blog post.
 
 ### ... and behind the scenes
 
