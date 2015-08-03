@@ -225,7 +225,7 @@ Tomcat has a [~~bug~~feature](https://issues.apache.org/bugzilla/show_bug.cgi?id
 remove custom configurations whenever an application is redeployed.
 Unfortunately, this mean that the previous file would get deleted with every update of d:swarm.
 
-To work around this, edit the `$CATALINA_HOME/conf/context.xml`, so that is contains the `<Environment/>` part within its `<Context/>` part.
+To work around this, edit the `$CATALINA_HOME/conf/context.xml`, so that it contains the `<Environment/>` part within its `<Context/>` part.
 
 This applies the settings for all deployed applications, though.
 
@@ -264,7 +264,7 @@ If this does not work for you (it didn't on Ubuntu 14.04 with neither Eclipse Ke
 
 As of datamanagement-platform commit 6d36b3bf1 (Thu Jul 24 19:12:23 2014 +0200), you need to migrate from the old configuration (dmp.properties file) to the new typesafe configuration system. Contributers starting development past commit 6d36b3bf1 can skip this section. To migrate, please perform the following steps.
 
-1. create a `dswarm.conf` or `dmp.conf` file
+1. create a `dswarm.conf` file
 
 2. At least, specify the keys `dswarm.db.metadata.username` and `dswarm.db.metadata.password`
 

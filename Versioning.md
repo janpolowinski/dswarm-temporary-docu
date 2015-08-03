@@ -10,7 +10,7 @@ __Here are our pre-conditions:__
 * a CBD of resource consists of a set of statements, i.e., all statements belong to this resource (however, the subject of the statement doesn't always need to be the resource node, i.e., this is only the case for non-hierarchical resources) and this CBD belongs to certain provenance (i.e. sub graph)
 * each resource is identified by an URI (i.e. there are no root nodes in a CBD that are bnodes)
 * each CBD of a resource is a tree (not a graph)
-* some structure information is already available explicitly, e.g., `__ORDER__` property at each statement or `__NODE_TYPE__` property at each node
+* some structure information is already available explicitly, e.g., `order` property at each statement or `node type` label at each node (e.g. `RESOURCE` or `LITERAL`)
 
 __General approach:__
 * we should compute the delta on basis of an abstract model (instead of a concrete representation (serialisation))
