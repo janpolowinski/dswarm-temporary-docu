@@ -43,7 +43,7 @@ As shown below, the overall architecture consists of two major parts: the [[Back
  
 Users, e.g., system librarians, usually interact with the [Backoffice web application](http://demo.dswarm.org).
 
-[![an image of the architecture overview](/img/architecture.png)](img/architecture.png "Architecture Overview")
+[[img/architecture.png]]
 
 The HTTP API provides a documentation via [[Swagger|http://swagger.io/]] and hence can be explored via the [[Swagger UI|HTTP API Discovery]]. This is a very convenient way to explore the back end's functionality. 
 
