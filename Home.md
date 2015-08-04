@@ -1,4 +1,3 @@
-## Introduction
 [d:swarm](http://dswarm.org) is a **data management platform** that is based on the concept of [community sharing](http://en.wikipedia.org/wiki/Sharing). It is used for the lossless transformation of data from heterogeneous sources into a flexible ([elastic](http://en.wikipedia.org/wiki/Elasticity_%28data_store%29)), data model that can be explicitly made available as [(Linked) Open Data](http://en.wikipedia.org/wiki/Linked_data) (LOD).
 
 d:swarm is a **middle ware solution**. It forms the basis of all data management processes in a library or any other (cultural) institution dedicated to the handling of data and metadata.  Structurally, d:swarm goes in between **existing data management systems** (e.g. Integrated Library Systems) and **existing front end applications** (e.g. the library catalogue or discovery system).
@@ -9,19 +8,22 @@ Finally, d:swarm is an **ETL tool with a GUI for non-programmers**. Librarians d
 
 d:swarm is realized as a web application that runs in all modern web browsers. The current release of our web application is available at [http://demo.dswarm.org](http://demo.dswarm.org). If you want to participate in the tests, [drop us a note](mailto:team@dswarm.org), and we will gladly add you to the group of testers. We are looking forward to your feedback, your ideas, your opinion and your contribution at our [mailing list](https://groups.google.com/forum/#!forum/dswarm) or [issue tracker](https://jira.slub-dresden.de).
 
-## What can you do with d:swarm? / What is the idea behind d:swarm?
+## What is the d:swarm idea?
 
 Start watching these two ([#1](http://prezi.com/0zh_ypsezu6i/), [#2](http://www.slideshare.net/JensMittelbach/dswarm-a-library-data-management-platform-based-on-a-linked-open-data-approach)) presentations, which summarize the motivation and goals on an abstract level.
+
+## What can I do with d:swarm today?
 
 With the current d:swarm implementation you can ...
  * import, set up and configure [[data resources|Glossary#data-resource]]
  * create [[projects|Glossary#project]], define [[mappings|Glossary#mapping]], [[transformations|Glossary#transformation]] and [[filters|Glossary#filter]]
+ * transform data
  * export data in [RDF](http://en.wikipedia.org/wiki/Resource_Description_Framework) or XML (e.g., for feeding [Solr](http://lucene.apache.org/solr/) indices).
 
 <!--- source code for image currently stored by jan -->
 [[img/dswarm-workflow-abstract.png]]
 
-See our [user guide](https://github.com/dswarm/dswarm-documentation/wiki/Overview) for a brief manual of how to utilise the [d:swarm Backoffice web application](http://demo.dswarm.org). While you can transform example data directly with the d:swarm Backoffice, batch-processing large amounts of data can be done with the *[Task Processing Unit](https://github.com/dswarm/task-processing-unit-for-dswarm)* for d:swarm, initially developed by [UB Dortmund](https://www.ub.uni-dortmund.de/). 
+Configuring resources and creating mapping projects can be done with the [d:swarm Backoffice](http://demo.dswarm.org) web application. See our [user guide](https://github.com/dswarm/dswarm-documentation/wiki/Overview) for a brief manual of how to utilise the d:swarm BackOffice. While you can transform example data directly with the BackOffice, batch-processing large amounts of data can be done with the *[Task Processing Unit](https://github.com/dswarm/task-processing-unit-for-dswarm)* for d:swarm (TPU), initially developed by [UB Dortmund](https://www.ub.uni-dortmund.de/). When processing data with D:SWARM, you have the choice between two options -- the *Streaming* and the *DataHub* version.
 
 ### d:swarm *Streaming* Version
 
