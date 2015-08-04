@@ -4,7 +4,7 @@ d:swarm is a **middle ware solution**. It forms the basis of all data management
 
 [[http://www.dswarm.org/wp-content/uploads/2015/04/dswarm-demo_2015-04-14.png]]
 
-Finally, d:swarm is an **ETL tool with a GUI for non-programmers**. Librarians do not need to write scripts, but can create complex transformations by Drag and Drop from a functions library and configuring them in the d:swarm BackOffice. Following the concept of [community sharing](http://en.wikipedia.org/wiki/Sharing), transformations, mappings and almost any other artifact in d:swarm, which could be helpful to others, is designed for reuse.
+Finally, d:swarm is an **ETL tool with a GUI for non-programmers**. Librarians do not need to write scripts, but can create complex transformations by Drag and Drop from a functions library and configuring them in the d:swarm BackOffice. Following the concept of [community sharing](http://en.wikipedia.org/wiki/Sharing), transformations, mappings and almost any other artifact in d:swarm that could be helpful to others is designed for **reuse**.
 
 d:swarm is realized as a web application that runs in all modern web browsers. The current release of our web application is available at [http://demo.dswarm.org](http://demo.dswarm.org). If you want to participate in the tests, [drop us a note](mailto:team@dswarm.org), and we will gladly add you to the group of testers. We are looking forward to your feedback, your ideas, your opinion and your contribution at our [mailing list](https://groups.google.com/forum/#!forum/dswarm) or [issue tracker](https://jira.slub-dresden.de).
 
