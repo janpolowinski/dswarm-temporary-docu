@@ -31,19 +31,19 @@ The d:swarm *streaming* version offers fast processing of large amounts data and
 
 ### d:swarm *DataHub* Version
 
-Archiving versions of the transformed data is only possible with the *DataHub Variant* of d:swarm, which is also the basis for upcoming functionality such as deduplication, frbrization and other data quality improvements. While many steps into this direction have been taken, challenges remain with respect to scalability for very large datasets with. See [this blog post](http://www.slub-dresden.de/blog-post-on-challenges-property-graph-handling).
+Archiving versions of the transformed data is only possible with the *DataHub* version of d:swarm, which is also the basis for upcoming functionality such as deduplication, frbrization and other data quality improvements. While many steps into this direction have been taken, challenges remain with respect to scalability for very large datasets with. See [this blog post](http://www.slub-dresden.de/blog-post-on-challenges-property-graph-handling).
 
 <!--- source code for image currently stored by jan -->
 [[img/dswarm-usage-variants.png]]
 
 ### ... and behind the scenes
 
-As shown below, the overall architecture consists of two major parts: the [[Backoffice web application]] and the [[back end]]. The back end consists of four modules: 
+As shown below, the overall architecture consists of three major parts: the [[BackOffice web application]], the [TPU](https://github.com/dswarm/task-processing-unit-for-dswarm), and the [[back end]]. The back end, in turn, consists of three modules: 
  * a [[controller]] module that controls the program flow and provides a HTTP API
- * a [[converter]] that encapsulates [Metafacture](https://github.com/culturegraph/metafacture-core) to transform data
+ * a [[converter]] that encapsulates [metafacture](https://github.com/culturegraph/metafacture-core) to transform data
  * and a [[persistence]] layer to access the [[metadata repository|Glossary#metadata-repository]] (currently a relational database; MySQL) and the [[data hub|Glossary#data-hub]] (currently a graph database; [Neo4j](http://www.neo4j.org)).
- 
-Users, e.g., system librarians, usually interact with the [Backoffice web application](http://demo.dswarm.org).
+
+Users, e.g., system librarians, usually interact with the [BackOffice web application(http://demo.dswarm.org). Just like the TPU, which batch-processes ingest, transformation and export tasks, it communicates with the d:swarm backend via the controller's HTTP API.
 
 [[img/architecture.png]]
 
