@@ -23,7 +23,7 @@ With the current d:swarm implementation you can ...
 <!--- source code for image currently stored by jan -->
 [[img/dswarm-workflow-abstract.png]]
 
-Configuring resources and creating mapping projects can be done with the [d:swarm Backoffice](http://demo.dswarm.org) web application. See our [user guide](https://github.com/dswarm/dswarm-documentation/wiki/Overview) for a brief manual of how to utilise the d:swarm BackOffice. While you can transform example data directly with the BackOffice, batch-processing large amounts of data can be done with the *[Task Processing Unit](https://github.com/dswarm/task-processing-unit-for-dswarm)* for d:swarm (TPU), initially developed by [UB Dortmund](https://www.ub.uni-dortmund.de/). When processing data with D:SWARM, you have the choice between two options -- the *Streaming* and the *DataHub* version.
+Configuring resources and creating mapping projects can be done with the [d:swarm Backoffice](http://demo.dswarm.org) web application. See our [user guide](https://github.com/dswarm/dswarm-documentation/wiki/Overview) for a brief manual of how to utilise the d:swarm BackOffice. While you can transform example data directly with the BackOffice, batch-processing large amounts of data can be done with the *[Task Processing Unit](https://github.com/dswarm/task-processing-unit-for-dswarm)* for d:swarm (TPU), initially developed by [UB Dortmund](https://www.ub.uni-dortmund.de/). When processing data with D:SWARM, you have the choice between two options - the *Streaming* and the *DataHub* version.
 
 ### d:swarm *Streaming* Version
 
