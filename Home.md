@@ -31,6 +31,9 @@ The d:swarm *streaming* version offers fast processing of large amounts data and
 
 Archiving versions of the transformed data is only possible with the *DataHub Variant* of d:swarm, which is also the basis for upcoming functionality such as deduplication, frbrization and other data quality improvements. While many steps into this direction have been taken, challenges remain with respect to scalability for very large datasets with. See [this blog post](http://www.slub-dresden.de/blog-post-on-challenges-property-graph-handling).
 
+<!--- source code for image currently stored by jan -->
+[[img/dswarm-usage-variants.png]]
+
 ### ... and behind the scenes
 
 As shown below, the overall architecture consists of two major parts: the [[Backoffice web application]] and the [[back end]]. The back end consists of four modules: 
