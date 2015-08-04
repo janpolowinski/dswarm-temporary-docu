@@ -31,7 +31,7 @@ The d:swarm *streaming* version offers fast processing of large amounts data and
 
 ### d:swarm *DataHub* Version
 
-Archiving versions of the transformed data is only possible with the *DataHub* version of d:swarm, which is also the basis for [Outlook | upcoming functionality] such as deduplication, frbrization and other data quality improvements. While many steps into this direction have been taken, challenges remain with respect to scalability for very large datasets with. See [this blog post](http://www.slub-dresden.de/blog-post-on-challenges-property-graph-handling).
+Archiving versions of the transformed data is only possible with the *DataHub* version of d:swarm, which is also the basis for [[Outlook | upcoming functionality]] such as deduplication, frbrization and other data quality improvements. While many steps into this direction have been taken, challenges remain with respect to scalability for very large datasets with. See [this blog post](http://www.slub-dresden.de/blog-post-on-challenges-property-graph-handling).
 
 <!--- source code for image currently stored by jan -->
 [[img/dswarm-usage-variants.png]]
