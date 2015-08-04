@@ -38,15 +38,14 @@ Archiving versions of the transformed data is only possible with the *DataHub* v
 
 ### ... and behind the scenes
 
-As shown below, the overall architecture consists of three major parts: the [[BackOffice web application]], the [TPU](https://github.com/dswarm/task-processing-unit-for-dswarm), and the [[back end]]. The back end, in turn, consists of three modules: 
+As shown below, the overall architecture consists of three major parts: the [BackOffice web application](http://demo.dswarm.org), the [TPU](https://github.com/dswarm/task-processing-unit-for-dswarm), and the [[back end]]. The back end, in turn, consists of three modules: 
  * a [[controller]] module that controls the program flow and provides a HTTP API
  * a [[converter]] that encapsulates [metafacture](https://github.com/culturegraph/metafacture-core) to transform data
  * and a [[persistence]] layer to access the [[metadata repository|Glossary#metadata-repository]] (currently a relational database; MySQL) and the [[data hub|Glossary#data-hub]] (currently a graph database; [Neo4j](http://www.neo4j.org)).
 
-Users, e.g., system librarians, usually interact with the [BackOffice web application(http://demo.dswarm.org). Just like the TPU, which batch-processes ingest, transformation and export tasks, it communicates with the d:swarm backend via the controller's HTTP API.
-
 [[img/architecture.png]]
 
+Users, e.g., system librarians, usually interact with the [BackOffice web application](http://demo.dswarm.org). Just like the TPU, which batch-processes ingest, transformation and export tasks, it communicates with the d:swarm backend via the controller's HTTP API.
 The HTTP API provides a documentation via [[Swagger|http://swagger.io/]] and hence can be explored via the [[Swagger UI|HTTP API Discovery]]. This is a very convenient way to explore the back end's functionality. 
 
 ## How to get started?
