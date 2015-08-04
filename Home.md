@@ -1,10 +1,10 @@
-[d:swarm](http://dswarm.org) is a **data management platform** that is based on the concept of [community sharing](http://en.wikipedia.org/wiki/Sharing). It is used for the lossless transformation of data from heterogeneous sources into a flexible ([elastic](http://en.wikipedia.org/wiki/Elasticity_%28data_store%29)), data model that can be explicitly made available as [(Linked) Open Data](http://en.wikipedia.org/wiki/Linked_data) (LOD).
+[d:swarm](http://dswarm.org) is a **data management platform** that can be used for the lossless transformation of data from heterogeneous sources into a flexible ([elastic](http://en.wikipedia.org/wiki/Elasticity_%28data_store%29)), data model. This data model can serve as a single source for providing  [(Linked) Open Data](http://en.wikipedia.org/wiki/Linked_data) (LOD).
 
 d:swarm is a **middle ware solution**. It forms the basis of all data management processes in a library or any other (cultural) institution dedicated to the handling of data and metadata.  Structurally, d:swarm goes in between **existing data management systems** (e.g. Integrated Library Systems) and **existing front end applications** (e.g. the library catalogue or discovery system).
 
 [[http://www.dswarm.org/wp-content/uploads/2015/04/dswarm-demo_2015-04-14.png]]
 
-Finally, d:swarm is an **ETL tool with a GUI for non-programmers**. Librarians do not need to write scripts, but can create complex transformations by Drag and Drop from a functions library and configuring them in the d:swarm BackOffice.
+Finally, d:swarm is an **ETL tool with a GUI for non-programmers**. Librarians do not need to write scripts, but can create complex transformations by Drag and Drop from a functions library and configuring them in the d:swarm BackOffice. Following the concept of [community sharing](http://en.wikipedia.org/wiki/Sharing), transformations, mappings and almost any other artifact in d:swarm, which could be helpful to others, is designed for reuse.
 
 d:swarm is realized as a web application that runs in all modern web browsers. The current release of our web application is available at [http://demo.dswarm.org](http://demo.dswarm.org). If you want to participate in the tests, [drop us a note](mailto:team@dswarm.org), and we will gladly add you to the group of testers. We are looking forward to your feedback, your ideas, your opinion and your contribution at our [mailing list](https://groups.google.com/forum/#!forum/dswarm) or [issue tracker](https://jira.slub-dresden.de).
 
@@ -31,7 +31,7 @@ The d:swarm *streaming* version offers fast processing of large amounts data and
 
 ### d:swarm *DataHub* Version
 
-Archiving versions of the transformed data is only possible with the *DataHub* version of d:swarm, which is also the basis for upcoming functionality such as deduplication, frbrization and other data quality improvements. While many steps into this direction have been taken, challenges remain with respect to scalability for very large datasets with. See [this blog post](http://www.slub-dresden.de/blog-post-on-challenges-property-graph-handling).
+Archiving versions of the transformed data is only possible with the *DataHub* version of d:swarm, which is also the basis for [Outlook | upcoming functionality] such as deduplication, frbrization and other data quality improvements. While many steps into this direction have been taken, challenges remain with respect to scalability for very large datasets with. See [this blog post](http://www.slub-dresden.de/blog-post-on-challenges-property-graph-handling).
 
 <!--- source code for image currently stored by jan -->
 [[img/dswarm-usage-variants.png]]
