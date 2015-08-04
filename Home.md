@@ -4,7 +4,7 @@ d:swarm is a **middle ware solution**. It forms the basis of all data management
 
 [[http://www.dswarm.org/wp-content/uploads/2015/04/dswarm-demo_2015-04-14.png]]
 
-Finally, d:swarm is an **ETL tool with a GUI for non-programmers**. Librarians do not need to write scripts, but can create complex transformations by Drag and Drop from a functions library and configuring them in the d:swarm Backoffice.
+Finally, d:swarm is an **ETL tool with a GUI for non-programmers**. Librarians do not need to write scripts, but can create complex transformations by Drag and Drop from a functions library and configuring them in the d:swarm BackOffice.
 
 d:swarm is realized as a web application that runs in all modern web browsers. The current release of our web application is available at [http://demo.dswarm.org](http://demo.dswarm.org). If you want to participate in the tests, [drop us a note](mailto:team@dswarm.org), and we will gladly add you to the group of testers. We are looking forward to your feedback, your ideas, your opinion and your contribution at our [mailing list](https://groups.google.com/forum/#!forum/dswarm) or [issue tracker](https://jira.slub-dresden.de).
 
@@ -23,7 +23,7 @@ With the current d:swarm implementation you can ...
 <!--- source code for image currently stored by jan -->
 [[img/dswarm-workflow-abstract.png]]
 
-Configuring resources and creating mapping projects can be done with the [d:swarm Backoffice](http://demo.dswarm.org) web application. See our [user guide](https://github.com/dswarm/dswarm-documentation/wiki/Overview) for a brief manual of how to utilise the d:swarm BackOffice. While you can transform example data directly with the BackOffice, batch-processing large amounts of data can be done with the *[Task Processing Unit](https://github.com/dswarm/task-processing-unit-for-dswarm)* for d:swarm (TPU), initially developed by [UB Dortmund](https://www.ub.uni-dortmund.de/). When processing data with D:SWARM, you have the choice between two options - the *Streaming* and the *DataHub* version.
+Configuring resources and creating mapping projects can be done with the [d:swarm BackOffice](http://demo.dswarm.org) web application. See our [user guide](https://github.com/dswarm/dswarm-documentation/wiki/Overview) for a brief manual of how to utilise the d:swarm BackOffice. While you can transform example data directly with the BackOffice, batch-processing large amounts of data can be done with the *[Task Processing Unit](https://github.com/dswarm/task-processing-unit-for-dswarm)* for d:swarm (TPU), initially developed by [UB Dortmund](https://www.ub.uni-dortmund.de/). When processing data with D:SWARM, you have the choice between two options - the *Streaming* and the *DataHub* version.
 
 ### d:swarm *Streaming* Version
 
@@ -59,7 +59,7 @@ Installation instructions can be found in the [[Developer Install]] guide, [[d:s
 
 ### Running the System
 
-Once installed, the Backoffice (usually) runs at `http://localhost:9999`.  You may want to have a look at the [[MySQL Cheat Sheet]] for our metadata repository schema (see also our [[domain model|Domain Model]]) and use a tool of your choice to explore the database.
+Once installed, the BackOffice (usually) runs at `http://localhost:9999`.  You may want to have a look at the [[MySQL Cheat Sheet]] for our metadata repository schema (see also our [[domain model|Domain Model]]) and use a tool of your choice to explore the database.
 
 ## Contributing
 
