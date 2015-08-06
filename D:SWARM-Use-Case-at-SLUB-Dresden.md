@@ -9,6 +9,8 @@ At [SLUB Dresden](http://www.slub-dresden.de), the *Streaming version* of d:swar
 * [Gemeinsamer Bibliotheksverbund](http://www.gbv.de/)(GBV)
   * MARC-XML (currently wrapped as OAI-PMH-MARC-XML as well, to avoid too many different source data formats)
 
+[[img/use-case-slub.png]]
+
 In case a source requires specific mappings, we set up a dedicated project per source and combine the mappings during the task execution. For example, for processing the GBV data, we use the general OAI-PMH-MARC-XML mappings and those from an extra project "GBV extra", which serves for setting GBV-specific constants.
 
 The target schema we map to is a schema describing the format [Finc](https://finc.info/de/) is using for feeding the Solr index. To be able to merge the data with other sources provided via Finc, we export the data as XML compliant to this schema and import it to Solr using Shell scripts.
