@@ -4,7 +4,7 @@ At [SLUB Dresden](http://www.slub-dresden.de), the *Streaming version* of d:swar
 
 * [deutsche FOTOTHEK](http://www.deutschefotothek.de)
   * XML (containing DC and Europeana elements)
-* DEG, EBL, WILEY (Electronische Resourcen)
+* DEG, EBL, WILEY (Elektronische Resourcen)
   * OAI-PMH-MARC-XML - here we were able to use a content schema provided by d:swarm, which simplifies the handling of this format
 * [Gemeinsamer Bibliotheksverbund](http://www.gbv.de/)(GBV)
   * MARC-XML (currently wrapped as OAI-PMH-MARC-XML as well, to avoid too many different source data formats)
