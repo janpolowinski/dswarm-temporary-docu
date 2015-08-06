@@ -2,11 +2,11 @@ Based on the *DataHub version* of d:swarm, the following features are planned to
 
 [[img/dswarm-workflow-complete.png]]
 
-## FRBRization ##
-Means the conversion of flat data structures to a model of related entities implementing the FRBR standard, for example, to ensure a work is properly related to its manifestations.
-
 ## Deduplication ##
 Deduplication comprises two steps: (1) Finding duplicates (only in the easiest case this can be done via a common ID) and (2) applying an appropriate strategy for merging the duplicates.
+
+## FRBRization ##
+Means the conversion of flat data structures to a model of related entities implementing the FRBR standard, for example, to ensure a work is properly related to its manifestations.
 
 [[img/datahub-dedup-frbr.png]]
 
