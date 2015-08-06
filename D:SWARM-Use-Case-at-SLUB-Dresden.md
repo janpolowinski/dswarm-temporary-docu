@@ -1,6 +1,6 @@
 At [SLUB Dresden](http://www.slub-dresden.de), the *Streaming version* of d:swarm is used for normalising data retrieved from various sources before feeding it to a Solr server.
 
-# The following data sources are currently processed:
+The following data sources are currently processed:
 
 * [deutsche FOTOTHEK](http://www.deutschefotothek.de)
   * XML (containing DC and Europeana elements)
@@ -15,7 +15,7 @@ In case a source requires specific mappings, we set up a dedicated project per s
 
 The target schema we map to is a schema describing the format [Finc](https://finc.info/de/) is using for feeding the Solr index. To be able to merge the data with other sources provided via Finc, we export the data as XML compliant to this schema and import it to Solr using Shell scripts.
 
-# Statistics
+## Statistics ##
 Processing all data sources takes XX seconds for XX records (containing XX statements at total) on a 8-cores ... machine using XX GB RAM for the Task processing unit and ... GB RAM for the d:swarm backend.
 ... Further hardware facts ...
 
