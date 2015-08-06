@@ -27,7 +27,7 @@ Configuring resources and creating mapping projects can be done with the [d:swar
 
 ### d:swarm *Streaming* Version
 
-The d:swarm *streaming* version offers fast processing of large amounts data and is sufficient for many scenarios. You may already use it today to start with as long as the work on the full *DataHub* version of D:SWARM continues. Unlike in the *DataHub* version this does not allow for versioning/archiving. See how  [[SLUB Dresden employs d:swarm]] for transforming and integrating bibliographic data sources.
+The d:swarm *streaming* version offers fast processing of large amounts data and is sufficient for many scenarios. You may already use it today to start with as long as the work on the full *DataHub* version of D:SWARM continues. Unlike in the *DataHub* version this does not allow for versioning/archiving. See how  [[SLUB Dresden employs d:swarm]] for transforming and integrating bibliographic data sources. (Currently, streaming the export is implemented for XML, RDF will be added on demand.) 
 
 ### d:swarm *DataHub* Version
 
