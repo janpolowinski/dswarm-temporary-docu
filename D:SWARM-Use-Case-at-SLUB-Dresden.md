@@ -11,6 +11,8 @@ At [SLUB Dresden](http://www.slub-dresden.de), the *Streaming version* of d:swar
 
 In case a source requires specific mappings, we set up a dedicated project per source and combine the mappings during the task execution. For example, for processing the GBV data, we use the general OAI-PMH-MARC-XML mappings and those from an extra project "GBV extra", which serves for setting GBV-specific constants.
 
+The target schema we map to is a schema describing the format [Finc](https://finc.info/de/) is using for feeding the Solr index. To be able to merge the data with other sources provided via Finc, we export the data as XML compliant to this schema and import it to Solr using Shell scripts.
+
 # Statistics
 Processing all data sources takes XX seconds for XX records (containing XX statements at total) on a 8-cores ... machine using XX GB RAM for the Task processing unit and ... GB RAM for the d:swarm backend.
 ... Further hardware facts ...
