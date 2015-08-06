@@ -17,4 +17,9 @@ A prerequisite for the above mentioned data quality procedures is the ability to
 
 [[img/datahub-filter-by.png]]
 
+## Community Sharing ###
+
+While most artifacts in d:swarm are already modelled to support reuse and sharing, we are planning to make sharing a prominent feature, easily accessible from various views in the *d:swarm BackOffice*. Sharing and discussing projects, transformations and mappings with other users facing the same data management tasks should be possible. 
+
+
 <!-- Further things to mention: semantic enrichment, publication as LOD (not only RDF) -->
