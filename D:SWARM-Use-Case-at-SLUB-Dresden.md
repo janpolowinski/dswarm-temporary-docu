@@ -26,7 +26,7 @@ In case a source requires specific mappings, we set up a dedicated project for t
 ## Transforming Data with the D:SWARM Task Processing Unit
 We use the Task Processing Unit for d:swarm (TPU) to batch process all data, separated by the data source. For each source, a TPU configuration has been written, which states where the source data folder is located, what mapping projects to employ, which processing mode to use and, finally, where to store the exported data.
 
-We used the following configuration of the TPU (here an example for "deutsche FOTOTHEK"), which results in a streaming behavior, not persisting the trasnformed data, but directly exporting it as XML (some properties not shown for clarity, use this [full example](https://github.com/dswarm/task-processing-unit-for-dswarm) as a template):
+We used the following configuration of the TPU (here an example for "deutsche FOTOTHEK"), which results in a streaming behavior, not persisting the transformed data, but directly exporting it as XML (some properties not shown for clarity, use this [full example](https://github.com/dswarm/task-processing-unit-for-dswarm) as a template):
 
 ```
 service.name=fotothek-on-the-fly
