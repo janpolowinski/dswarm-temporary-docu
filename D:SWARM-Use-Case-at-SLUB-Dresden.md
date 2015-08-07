@@ -21,9 +21,9 @@ Further hardware facts:
 * HD with SSD cache (but no SSD disk), 500GB, extra partition for all data and logs
 * up to 4,5 GHz used
 * up to 70% of the total RAM used
- 
-[[img/example-use-case-fotothek-comparison-source-target-data.png]]
 
-[[img/example-complex-transformation.png]]
+Below you find an example of the source format (OAI-PMH + DC-elements and Europeana; on the left) and export (Finc Solr schema compliant XML; on the right) format.
+ 
+<!--[[img/example-use-case-fotothek-comparison-source-target-data.png]]-->
 
 <!-- screenshot metrics view evtl. --> 
