@@ -2,7 +2,7 @@ At [SLUB Dresden](http://www.slub-dresden.de), the *Streaming version* of d:swar
 
 [[img/use-case-slub.png]]
 
-## Data sources and formats
+## Data Sources and Formats
 
 The following data sources are currently processed with d:swarm at SLUB Dresden:
 
@@ -17,7 +17,7 @@ The target schema we map to, is a schema describing the format that [Finc](https
 
 [[img/example-use-case-fotothek-comparison-source-target-data.png]]
 
-# The Mapping process
+# The Mapping Process
 For each source, we defined one or multiple mapping projects, all mapping to the same target schema (the Finc Solr schema). 
 In case a source requires specific mappings, we set up a dedicated project for this source and combined the mappings during the task execution. For example, for processing the GBV data, we use the general OAI-PMH-MARCXML mappings and those from an extra project "GBV extra", which serves for setting GBV-specific constants.  A preview of the transformation defined by our mapping project for data from the "deutsche FOTOTHEK" is shown below.
 
