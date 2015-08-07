@@ -13,7 +13,7 @@ The following data sources are currently processed with d:swarm at SLUB Dresden:
 * [Gemeinsamer Bibliotheksverbund](http://www.gbv.de/) (GBV)
   * MARCXML (currently wrapped as OAI-PMH-MARCXML as well, to avoid too many different source data formats)
 
-The target schema we map to, is a schema describing the format that [Finc](https://finc.info/de/) is using for feeding the Solr index. To be able to merge the data with other sources provided via Finc, we export the data as XML compliant to this schema. Below you find an example of the source format (OAI-PMH + DC-elements and Europeana; on the left) and export format (Finc Solr schema compliant XML; on the right).
+The target schema we map to, is a schema describing the format that [Finc](https://finc.info/de/) is using for feeding the Solr index. To be able to merge the data with other sources provided via Finc, we export the data as XML compliant to this schema. Below, you find an example of a source format (OAI-PMH + DC-elements and Europeana) on the left and the export format (Finc Solr schema compliant XML) on the right hand side.
 
 [[img/example-use-case-fotothek-comparison-source-target-data.png]]
 
