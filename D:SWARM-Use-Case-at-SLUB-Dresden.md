@@ -15,7 +15,7 @@ In case a source requires specific mappings, we set up a dedicated project per s
 
 The target schema we map to is a schema describing the format [Finc](https://finc.info/de/) is using for feeding the Solr index. To be able to merge the data with other sources provided via Finc, we export the data as XML compliant to this schema and import it to Solr using Shell scripts.
 
-Below you find an example of the source format (OAI-PMH + DC-elements and Europeana; on the left) and export (Finc Solr schema compliant XML; on the right) format.
+Below you find an example of the source format (OAI-PMH + DC-elements and Europeana; on the left) and export format (Finc Solr schema compliant XML; on the right).
 
 [[img/example-use-case-fotothek-comparison-source-target-data.png]]
 
