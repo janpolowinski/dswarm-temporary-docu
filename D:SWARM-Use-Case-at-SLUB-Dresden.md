@@ -22,13 +22,8 @@ Further hardware facts:
 * up to 4,5 GHz used
 * up to 70% of the total RAM used
  
+[[img/example-use-case-fotothek-comparison-source-target-data.png]]
 
-<!-- screenshot quell-daten ? --> 
-
-<!-- screenshot komplexe transformation --> 
-
-<!-- screenshot export solr xml --> 
-
-<!-- screenshot solr import results --> 
+[[img/example-complex-transformation.png]]
 
 <!-- screenshot metrics view evtl. --> 
