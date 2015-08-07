@@ -28,7 +28,7 @@ We use the Task Processing Unit for d:swarm (TPU) to batch process all data, sep
 
 We used the following configuration of the TPU (here an example for "deutsche FOTOTHEK"), which results in a streaming behavior, not persisting the trasnformed data, but directly exporting it as XML (some properties not shown for clarity, use this [full example](https://github.com/dswarm/task-processing-unit-for-dswarm) as a template):
 
-`
+```
 service.name=fotothek-on-the-fly
 resource.watchfolder=/data/source-data/productive/fotothek
 configuration.name=/home/dmp/config/xml-configuration.json
@@ -45,7 +45,7 @@ results.folder=/data/target-data/productive/fotothek
 engine.threads=8
 engine.dswarm.api=http://localhost/dmp/
 ...
-`
+```
 
 ## Statistics ##
 
