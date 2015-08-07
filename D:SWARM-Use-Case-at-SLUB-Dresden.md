@@ -1,4 +1,4 @@
-At [SLUB Dresden](http://www.slub-dresden.de), the *Streaming version* of d:swarm is used for normalising data retrieved from various sources before feeding it to a [Solr](http://lucene.apache.org/solr/) server. Clients such as the new SLUB Katalog (beta) can then request data from Solr and present it to library users.
+At [SLUB Dresden](http://www.slub-dresden.de), the *Streaming version* of d:swarm is used for normalising data retrieved from various sources before feeding it to a [Solr](http://lucene.apache.org/solr/) server. Clients such as the new [SLUB Katalog (beta)](http://katalogbeta.slub-dresden.de/) can then request data from Solr and present it to library users.
 
 [[img/use-case-slub.png]]
 
@@ -13,7 +13,7 @@ The following data sources are currently processed with d:swarm at SLUB Dresden:
 * [Gemeinsamer Bibliotheksverbund](http://www.gbv.de/) (GBV)
   * MARCXML (currently wrapped as OAI-PMH-MARCXML as well, to avoid too many different source data formats)
 
-The target schema we map to, is a schema describing the format [Finc](https://finc.info/de/) is using for feeding the Solr index. To be able to merge the data with other sources provided via Finc, we export the data as XML compliant to this schema. Below you find an example of the source format (OAI-PMH + DC-elements and Europeana; on the left) and export format (Finc Solr schema compliant XML; on the right).
+The target schema we map to, is a schema describing the format that [Finc](https://finc.info/de/) is using for feeding the Solr index. To be able to merge the data with other sources provided via Finc, we export the data as XML compliant to this schema. Below you find an example of the source format (OAI-PMH + DC-elements and Europeana; on the left) and export format (Finc Solr schema compliant XML; on the right).
 
 [[img/example-use-case-fotothek-comparison-source-target-data.png]]
 
