@@ -23,6 +23,30 @@ In case a source requires specific mappings, we set up a dedicated project for t
 
 [[img/screenshot-fotothek-mapping-project.png]]
 
+## Transforming Data with the D:SWARM Task Processing Unit
+We use the Task Processing Unit for d:swarm (TPU) to batch process all data, separated by the data source. For each source, a TPU configuration has been written, which states where the source data folder is located, what mapping projects to employ, which processing mode to use and, finally, where to store the exported data.
+
+We used the following configuration of the TPU (here an example for "deutsche FOTOTHEK"), which results in a streaming behavior, not persisting the trasnformed data, but directly exporting it as XML (some properties not shown for clarity, use this [full example](https://github.com/dswarm/task-processing-unit-for-dswarm) as a template):
+
+`
+service.name=fotothek-on-the-fly
+resource.watchfolder=/data/source-data/productive/fotothek
+configuration.name=/home/dmp/config/xml-configuration.json
+prototype.projectID=a6c53e2f-6b59-87b7-ca78-08f96cb6c6a7
+prototype.outputDataModelID=5fddf2c5-916b-49dc-a07d-af04020c17f7
+...
+init.multiple_data_models=true
+task.do_ingest_on_the_fly=true
+task.do_export_on_the_fly=true
+transform.do=true
+...
+results.persistInDMP=false
+results.folder=/data/target-data/productive/fotothek
+engine.threads=8
+engine.dswarm.api=http://localhost/dmp/
+...
+`
+
 ## Statistics ##
 
 Processing all data sources takes XX seconds for XX records (containing XX statements at total) on a 8-cores, 64 GB RAM Linux (Ubuntu 12.04, 64-Bit) machine using 32GB RAM for the TPU and 24GB RAM for the d:swarm backend.
