@@ -36,11 +36,11 @@ prototype.projectID=a6c53e2f-6b59-87b7-ca78-08f96cb6c6a7
 prototype.outputDataModelID=5fddf2c5-916b-49dc-a07d-af04020c17f7
 ...
 init.multiple_data_models=true
-task.do_ingest_on_the_fly=true
-task.do_export_on_the_fly=true
 transform.do=true
-...
+task.do_ingest_on_the_fly=true
 results.persistInDMP=false
+task.do_export_on_the_fly=true
+...
 results.folder=/data/target-data/productive/fotothek
 engine.threads=8
 engine.dswarm.api=http://localhost/dmp/
