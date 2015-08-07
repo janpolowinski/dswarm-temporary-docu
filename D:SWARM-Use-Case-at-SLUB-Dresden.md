@@ -23,7 +23,7 @@ Further hardware facts:
 * up to 70% of the total RAM used
 
 Below you find an example of the source format (OAI-PMH + DC-elements and Europeana; on the left) and export (Finc Solr schema compliant XML; on the right) format.
- 
-<!--[[img/example-use-case-fotothek-comparison-source-target-data.png]]-->
+
+[[img/example-use-case-fotothek-comparison-source-target-data.png]]
 
 <!-- screenshot metrics view evtl. --> 
