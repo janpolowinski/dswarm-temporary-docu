@@ -8,7 +8,7 @@ The following data sources are currently processed with d:swarm at SLUB Dresden:
 
 * [deutsche FOTOTHEK](http://www.deutschefotothek.de)
   * OAI-PMH-XML (containing elements from the [DC-Elements](http://purl.org/dc/elements/1.1/) and [Europeana](http://europeana.eu/terms) namespace)
-* E-book Library, E-Book packages from Wiley, deGruyter (EBL, WILEY, DEG)
+* Ebook Library, E-Book packages from Wiley, deGruyter (EBL, WILEY, DEG)
   * [OAI-PMH-MARCXML](http://www.loc.gov/standards/marcxml/)
 * [Gemeinsamer Bibliotheksverbund](http://www.gbv.de/) (GBV)
   * MARCXML (currently wrapped as OAI-PMH-MARCXML as well, to avoid too many different source data formats)
