@@ -126,7 +126,7 @@ npm install -g grunt-cli karma bower
 
 ### **10**. setup MySQL
 
-Create a database and a user for d:swarm. To customize the settings, edit `dswarm/persistence/src/main/resources/create_database.sql`. Do not check in this file in case you modify it. Hint: remember settings for step 13 (configure d:swarm).
+Create a database and a user for d:swarm. To customize the settings, edit `dswarm/persistence/src/main/resources/create_database.sql`. Do not check in this file in case you modify it. Hint: remember settings for step 12 (configure d:swarm).
 
     mysql -uroot -p < persistence/src/main/resources/create_database.sql
 
@@ -199,8 +199,8 @@ Place a file named `dswarm.conf` somewhere in your filesystem and put in the fol
     dswarm.db.metadata.password=bar
     EOF
 
-Username and password are used to access the MySQL database (hint: use same as in step `setup MySQL` in [server-install](server-insatll.md))
-You should not put this file under version control. Name it either `dswarm.conf` or `dmp.conf`, and place it in the root directory (of project `dswarm`). These files are already ignored by git.
+Username and password are used to access the MySQL database (hint: use same as in step 9 `Setup MySQL`)
+You should not put this file under version control. Name it `dswarm.conf` and place it in the root directory of the project `dswarm`. This file is ignored by git.
 
 More information about configuration you get here: [[d:swarm Configuration|dswarm Configuration]].
 
